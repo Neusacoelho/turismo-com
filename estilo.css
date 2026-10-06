@@ -1,0 +1,111 @@
+[02:59, 06/10/2026] NEUSA COELHO: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo.com — Descubra o Mundo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="brasil.html">Brasil</a>
+        <a href="brasil-fotos.html">📸 Fotos</a>
+        <a href="portugal.html">Portugal</a>
+        <a href="portugal-fotos.html">📸 Fotos</a>
+        <a href="franca.html">França</a>
+        <a href="franca-fotos.html">📸 Fotos</a>
+        <a href="espanha.html">Espanha</a>
+        <a href="espanha-fotos.html">📸 Fotos</a>
+        <a href="italia.html">Itália<…
+[03:08, 06/10/2026] NEUSA COELHO: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0047ab;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0047ab;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.foto-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+}
+
+.foto-card img {
+    width: 100%;
+    max-width: 360px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 auto 10px;
+}
+
+footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
