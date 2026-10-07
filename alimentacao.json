@@ -1,0 +1,12 @@
+{
+  "brasil": [
+    {"prato": "Feijoada", "tipo": "Prato Principal", "preco_medio": "R$ 45,00"},
+    {"prato": "Pão de Queijo", "tipo": "Lanche", "preco_medio": "R$ 6,00"}
+  ],
+  "italia": [
+    {"prato": "Pizza Napolitana", "tipo": "Prato Principal", "preco_medio": "€ 12,00"}
+  ],
+  "franca": [
+    {"prato": "Croissant", "tipo": "Café da Manhã", "preco_medio": "€ 3,50"}
+  ]
+}

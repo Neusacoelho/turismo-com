@@ -1,0 +1,12 @@
+{
+  "brasil": [
+    {"nome": "Pousada Morada das Águas", "tipo": "Pousada", "cidade": "Paraty - RJ", "preco": "R$ 150 a R$ 350"},
+    {"nome": "Hotel Costa do Sol", "tipo": "Hotel", "cidade": "Salvador - BA", "preco": "R$ 200 a R$ 500"}
+  ],
+  "franca": [
+    {"nome": "Hôtel du Jardin", "tipo": "Hotel", "cidade": "Paris", "preco": "€ 80 a € 200"}
+  ],
+  "portugal": [
+    {"nome": "Pensão Aurora", "tipo": "Pousada", "cidade": "Lisboa", "preco": "€ 50 a € 120"}
+  ]
+}

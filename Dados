@@ -1,0 +1,71 @@
+{
+  "brasil": {
+    "nome": "Brasil",
+    "capital": "Brasília",
+    "cultura": "Povo acolhedor, festas, carnaval, música, futebol e diversidade.",
+    "gastronomia": "Feijoada, pão de queijo, acarajé, churrasco, café.",
+    "passeios": ["Cristo Redentor - RJ", "Praias do Nordeste", "Floresta Amazônica", "Cataratas do Iguaçu"],
+    "moeda": "Real (R$)",
+    "cambio": "Casas autorizadas, bancos e agências de viagem."
+  },
+
+  "franca": {
+    "nome": "França",
+    "capital": "Paris",
+    "cultura": "Arte, moda, gastronomia, monumentos históricos e romantismo.",
+    "gastronomia": "Crozissant, queijos, vinhos, baguetes, macarons.",
+    "passeios": ["Torre Eiffel", "Museu do Louvre", "Arco do Triunfo", "Rio Sena"],
+    "moeda": "Euro (€)",
+    "cambio": "Casas de câmbio nos centros turísticos e aeroportos."
+  },
+
+  "espanha": {
+    "nome": "Espanha",
+    "capital": "Madri",
+    "cultura": "Festas, flamenco, arquitetura, praias e alegria.",
+    "gastronomia": "Paella, tapas, jamón, sangria, churros.",
+    "passeios": ["Sagrada Família - Barcelona", "Alhambra - Granada", "Praias de Málaga"],
+    "moeda": "Euro (€)",
+    "cambio": "Bancos e casas de câmbio nas grandes cidades."
+  },
+
+  "italia": {
+    "nome": "Itália",
+    "capital": "Roma",
+    "cultura": "História, arte renascentista, arquitetura e tradição familiar.",
+    "gastronomia": "Pizza, massa, lasanha, gelato, vinho.",
+    "passeios": ["Coliseu - Roma", "Vaticano", "Torre de Pisa", "Veneza"],
+    "moeda": "Euro (€)",
+    "cambio": "Casas de câmbio e agências turísticas."
+  },
+
+  "japao": {
+    "nome": "Japão",
+    "capital": "Tóquio",
+    "cultura": "Respeito, tradição, tecnologia, templos e cerimônia do chá.",
+    "gastronomia": "Sushi, sashimi, ramen, tempurá, missoshiro.",
+    "passeios": ["Monte Fuji", "Templo de Kinkaku-ji - Quioto", "Shibuya - Tóquio"],
+    "moeda": "Iene (¥)",
+    "cambio": "Aeroportos e bancos autorizados."
+  },
+
+  "china": {
+    "nome": "China",
+    "capital": "Pequim",
+    "cultura": "História milenar, filosofia, artes marciais e festivais.",
+    "gastronomia": "Arroz, macarrão, dim sum, chá, pratos picantes.",
+    "passeios": ["Grande Muralha", "Cidade Proibida", "Exército de Terracota"],
+    "moeda": "Renminbi / Yuan (¥)",
+    "cambio": "Bancos oficiais e aeroportos."
+  },
+
+  "portugal": {
+    "nome": "Portugal",
+    "capital": "Lisboa",
+    "cultura": "Navegação, fado, azulejos, calor humano e tradições.",
+    "gastronomia": "Pastel de nata, bacalhau, vinho do Porto, queijo da Serra.",
+    "passeios": ["Torre de Belém", "São Jorge", "Porto", "Sintra"],
+    "moeda": "Euro (€)",
+    "cambio": "Casas de câmbio e agências em todo o país."
+  }
+}
