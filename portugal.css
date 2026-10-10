@@ -1,0 +1,28 @@
+/* Mantem os estilos compartilhados e limita os cartoes em telas pequenas.
+   Os 30px correspondem ao padding horizontal existente (15px de cada lado),
+   considerando que o reset de box-sizing em estilo.css esta comprometido. */
+.pagina-portugal .galeria .foto-card {
+    max-width: calc(100% - 30px);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .creditos-fotos {
+    margin-top: 24px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .creditos-fotos summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pagina-portugal .creditos-fotos ul {
+    padding-left: 24px;
+}
+
+.pagina-portugal .creditos-fotos li {
+    margin-top: 8px;
+}
