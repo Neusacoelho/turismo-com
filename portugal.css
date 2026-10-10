@@ -26,3 +26,239 @@
 .pagina-portugal .creditos-fotos li {
     margin-top: 8px;
 }
+
+.pagina-portugal .banner-portugal {
+    margin: 0 0 24px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #0047ab;
+    color: white;
+}
+
+.pagina-portugal .banner-portugal > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: clamp(220px, 32vw, 400px);
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pagina-portugal .banner-portugal-texto {
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .banner-portugal-texto h3 {
+    margin: 0 0 8px;
+    color: inherit;
+}
+
+.pagina-portugal .banner-portugal-texto p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pagina-portugal .video-portugal {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pagina-portugal .video-portugal iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.pagina-portugal .video-portugal-fonte {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .video-portugal-figura {
+    margin: 0;
+}
+
+.pagina-portugal .paisagens-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.pagina-portugal .paisagem-cartao {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .paisagem-cartao img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pagina-portugal .paisagem-cartao figcaption {
+    padding: 15px;
+}
+
+.pagina-portugal .paisagem-cartao h4 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
+
+.pagina-portugal .paisagem-cartao p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pagina-portugal .paisagens-creditos {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .pagina-portugal .paisagens-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-portugal .gastronomia-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.pagina-portugal .gastronomia-cartao {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .gastronomia-cartao img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pagina-portugal .gastronomia-cartao figcaption {
+    padding: 15px;
+}
+
+.pagina-portugal .gastronomia-cartao h4 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
+
+.pagina-portugal .gastronomia-cartao p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (width < 600px) {
+    .pagina-portugal .gastronomia-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-portugal .informacoes-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.pagina-portugal .informacao-cartao {
+    min-width: 0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    overflow-wrap: anywhere;
+}
+
+.pagina-portugal .informacao-cartao dt {
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.pagina-portugal .informacao-cartao dd {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (width < 600px) {
+    .pagina-portugal .informacoes-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-portugal .gastronomia-foto-link {
+    display: block;
+}
+
+.pagina-portugal .gastronomia-cartao .gastronomia-credito {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.pagina-portugal main > p,
+.pagina-portugal .secao[aria-labelledby="gastronomia-portugal"] > p {
+    margin: 0 0 1.25em;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .pagina-portugal header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .pagina-portugal header nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-width: 44px;
+        min-height: 44px;
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 12px;
+        font-size: 1rem;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .pagina-portugal main > p,
+    .pagina-portugal .secao[aria-labelledby="gastronomia-portugal"] > p {
+        font-size: 1rem;
+    }
+}
