@@ -1,50 +1,439 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasil — Turismo.com</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="brasil.css">
 </head>
-<body>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-    
-    <a href="index.html">🏠 Início</a>
-    <a href="brasil.html">Brasil</a>
-   
+<body class="pagina-brasil pagina-brasil-inicio">
+    <a class="brasil-pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <a href="portugal.html">Portugal</a>
-    <a href="franca.html">França</a>
-    <a href="espanha.html">Espanha</a>
-    <a href="italia.html">Itália</a>
-    <a href="japao.html">Japão</a>
-    <a href="china.html">China</a>
-    <a href="hospedagem.html">🏨 Hospedagem</a>
-    <a href="alimentacao.html">🍽️ Alimentação</a>
-    <a href="compras.html">🛍️ Compras</a>
-    <a href="contato.html">Contato</a>
-</nav>
-    
-</header>
+    <!-- Cabeçalho principal do Turismo.com -->
+    <header class="cabecalho-principal">
+        <div class="barra-cabecalho">
 
-        <h3>🏖️ Praias</h3>
-        <p>Copacabana, Ipanema, Jericoacoara, Fernando de Noronha...</p>
-    </div>
-    <div class="secao">
-        <h3>🌿 Natureza</h3>
-        <p>Amazônia, Pantanal, Cataratas do Iguaçu — natureza exuberante!</p>
-    </div>
-    <div class="secao">
-        <h3>🍽️ Gastronomia</h3>
-        <p>Feijoada, pão de queijo, churrasco, acarajé — sabores únicos!</p>
-    </div>
-</main>
+            <!-- Identidade do site -->
+            <a href="index.html" class="marca">
+                <span class="marca-simbolo">✈</span>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
+
+            <!-- O controle precede os links para preservar a ordem de Tab no celular. -->
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="true"
+                    aria-controls="navegacao-principal" disabled>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de navegação -->
+            <nav class="navegacao" id="navegacao-principal" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+
+                <!-- Lista de países -->
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="true"
+                            aria-controls="lista-paises" disabled>
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown" id="lista-paises">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                    </div>
+                </div>
+
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="conteudo" tabindex="-1">
+
+        <!-- Apresentação principal de brasil -->
+        <section class="banner-brasil" aria-labelledby="titulo-banner-brasil">
+
+            <img src="imagens-brasil/pao-de-acucar.jpg" alt="Pão de Açúcar no Rio de Janeiro, Brasil" width="1920"
+                height="1285" aria-describedby="credito-banner-pao-de-acucar">
+
+            <div class="banner-brasil-conteudo">
+                <div class="banner-brasil-texto">
+                    <span class="banner-etiqueta">DESCUBRA O BRASIL</span>
+
+                    <h1 id="titulo-banner-brasil">
+                        Brasil: diversidade de sabores e culturas
+                    </h1>
+
+                    <p>
+                        Explore um país de muitas raízes, cores e sabores, onde cada região revela uma nova experiência.
+                    </p>
+
+                    <a href="#titulo-apresentacao" class="banner-botao">
+                        Explorar o Brasil →
+                    </a>
+                    <p class="brasil-foto-credito" id="credito-banner-pao-de-acucar">
+                        Pão de Açúcar: <a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">© Wilfredor / Wikimedia Commons</a> ·
+                        Dedicaçaõ ao domínio público: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a>.
+                        (crédito voluntário) Recorte apenas na exibição.
+                        
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Informações rápidas: faixa de largura total, como no template aprovado. -->
+        <section class="resumo-brasil" aria-label="Informações rápidas sobre brasil">
+            <div class="resumo-conteudo">
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🏛️</span>
+                    <div>
+                        <span class="resumo-label">CAPITAL</span>
+                        <strong>Brasília</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗣️</span>
+                    <div>
+                        <span class="resumo-label">IDIOMA</span>
+                        <strong>Português</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">💵</span>
+                    <div>
+                        <span class="resumo-label">MOEDA</span>
+                        <strong>REAL (R$)</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">☀️</span>
+                    <div>
+                        <span class="resumo-label">MELHOR ÉPOCA</span>
+                        <strong>Setembro a dezembro</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <div class="conteudo-brasil">
+            <!-- Introdução ao destino -->
+            <section class="apresentacao-brasil" aria-labelledby="titulo-apresentacao">
+
+                <div class="apresentacao-titulo">
+                    <span class="apresentacao-etiqueta">
+                        BEM-VINDO AO BRASIL
+                    </span>
+
+                    <h2 id="titulo-apresentacao">
+                        Um país com grande diversidade cultural e gastronômica!
+                    </h2>
+                </div>
+
+                <div class="apresentacao-textos">
+                    <p>
+                        O Brasil, localizado na América do Sul, encanta pela riqueza de sua diversidade cultural, pela mistura de tradições e pela variedade de sua gastronomia. A influência dos povos indígenas, africanos, europeus e de diferentes comunidades imigrantes contribuiu para formar uma identidade única, presente na música, nas festas populares, nas danças, no artesanato e nos costumes de cada região.
+                    </p>
+
+                    <p>
+                        Da feijoada e do pão de queijo aos sabores do acarajé, do tacacá e do churrasco gaúcho, a culinária brasileira reflete a história e os ingredientes de cada lugar. Do Carnaval às festas juninas, das praias tropicais à Floresta Amazônica, o país oferece experiências que celebram sua pluralidade cultural, suas paisagens e a hospitalidade de seu povo.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Cartões para explorar brasil -->
+            <section class="explorar-brasil" aria-label="Explore mais sobre brasil">
+
+                <div class="explorar-cartoes">
+
+                    <!-- Cultura -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">01</span>
+
+                        <h3>Cultura</h3>
+
+                        <p>
+                            Descubra a diversidade cultural brasileira, marcada pelas influências indígenas, africanas e europeias, presentes na música, nas danças, nas festas populares e nas tradições regionais.
+                        </p>
+
+                        <a href="paises/brasil/cultura.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Gastronomia -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">02</span>
+
+                        <h3>Gastronomia</h3>
+
+                        <p>
+                            Explore os sabores do Brasil, do pão de queijo mineiro e do acarajé baiano ao churrasco gaúcho, à feijoada e aos pratos típicos da Amazônia.
+                        </p>
+
+                        <a href="paises/brasil/gastronomia.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Pontos turísticos -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">03</span>
+
+                        <h3>Pontos turísticos</h3>
+
+                        <p>
+                            Conheça as paisagens brasileiras, do Cristo Redentor e das praias do Rio de Janeiro às Cataratas do Iguaçu, à Floresta Amazônica e aos encantos históricos de Salvador e Ouro Preto.
+                        </p>
+
+                        <a href="paises/brasil/pontos-turisticos.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Curiosidades -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">04</span>
+
+                        <h3>Curiosidades</h3>
+
+                        <p>
+                            Descubra fatos surpreendentes sobre a sua diversidade de sotaques, suas festas populares, seus costumes regionais e a riqueza de sua biodiversidade.
+                        </p>
+
+                        <a href="paises/brasil/curiosidades.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Destaque para a galeria de brasil -->
+            <section class="destaque-galeria" aria-labelledby="titulo-destaque-galeria">
+
+                <!-- Fotografia de destaque -->
+                <div class="destaque-galeria-imagem">
+                    <img src="imagens-brasil/pao-de-acucar.jpg" alt="Pão de Açúcar, no Rio de Janeiro, Brasil" loading="lazy"
+                        aria-describedby="credito-galeria-pao-de-acucar">
+                </div>
+
+                <!-- Apresentação da galeria -->
+                <div class="destaque-galeria-conteudo">
+
+                    <span class="destaque-galeria-etiqueta">
+                        OLHARES SOBRE O BRASIL
+                    </span>
+
+                    <h2 id="titulo-destaque-galeria">
+                        Qual estado conhecer primeiro?
+                    </h2>
+
+                    <p>
+                        Conheça algumas das mais diversas e ricas paisagens que compõem o Brasil!
+                    </p>
+
+                    <a href="brasil-fotos.html" class="destaque-galeria-botao">
+                        Abrir galeria →
+                    </a>
+                    <p class="brasil-foto-credito" id="credito-galeria-pao-de-acucar">
+                        Pão de Açúcar: <a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">© Wilfredor / Wikimedia Commons</a> ·
+                        Dedicação ao domínio público: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a>.
+                        (crédito volutário) Recorte apenas na exibição.
+                    </p>
+
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+    <!-- Rodapé principal do Turismo.com -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+
+            <!-- Apresentação do projeto -->
+            <div class="rodape-sobre">
+                <h2>✈ TURISMO<span>.COM</span></h2>
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+            </div>
+
+            <!-- Links de navegação -->
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="brasil.html">Brasil</a>
+                <a href="brasil-fotos.html">Galeria de Brasil</a>
+            </nav>
+
+            <!-- Serviços -->
+            <nav class="rodape-coluna" aria-label="Serviços">
+                <h3>Serviços</h3>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+
+            <!-- Informações -->
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+            <p>Projeto acadêmico desenvolvido em equipe.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        (() => {
+            const pagina = document.body;
+            const cabecalho = pagina.querySelector(".cabecalho-principal");
+            const botaoMenu = cabecalho.querySelector(".botao-menu");
+            const navegacao = cabecalho.querySelector(".navegacao");
+            const botaoPaises = cabecalho.querySelector(".botao-dropdown");
+            const grupoPaises = cabecalho.querySelector(".grupo-dropdown");
+            const listaPaises = cabecalho.querySelector(".menu-dropdown");
+            const telaCompacta = window.matchMedia("(max-width: 980px)");
+            const permiteHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+            let modoAnterior = telaCompacta.matches;
+            let focoAntesDaMudanca = null;
+            let paisesPorHover = false;
+
+            // Clique, hover e teclado compartilham o mesmo estado visual e ARIA.
+            function definirPaises(aberto, porHover = false) {
+                paisesPorHover = aberto && porHover;
+                grupoPaises.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                const expandido = aberto && telaCompacta.matches;
+                navegacao.classList.toggle("aberta", expandido);
+                botaoMenu.setAttribute("aria-expanded", String(expandido));
+                botaoMenu.setAttribute("aria-label", expandido ? "Fechar menu" : "Abrir menu");
+                if (!expandido) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", () => {
+                definirMenu(botaoMenu.getAttribute("aria-expanded") !== "true");
+            });
+            botaoPaises.addEventListener("click", () => {
+                // O primeiro clique confirma a abertura por hover; o próximo fecha.
+                definirPaises(paisesPorHover || botaoPaises.getAttribute("aria-expanded") !== "true");
+            });
+            grupoPaises.addEventListener("pointerenter", (evento) => {
+                if (permiteHover.matches && evento.pointerType === "mouse" &&
+                    botaoPaises.getAttribute("aria-expanded") !== "true") definirPaises(true, true);
+            });
+            grupoPaises.addEventListener("pointerleave", () => {
+                if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", (evento) => {
+                if (evento.key !== "Escape") return;
+                if (grupoPaises.classList.contains("aberto")) {
+                    const devolverFoco = grupoPaises.contains(document.activeElement);
+                    definirPaises(false);
+                    if (devolverFoco) botaoPaises.focus();
+                } else if (telaCompacta.matches && navegacao.classList.contains("aberta")) {
+                    const devolverFoco = cabecalho.contains(document.activeElement);
+                    definirMenu(false);
+                    if (devolverFoco) botaoMenu.focus();
+                } else {
+                    return;
+                }
+                evento.preventDefault();
+            });
+
+            document.addEventListener("click", (evento) => {
+                if (!cabecalho.contains(evento.target)) {
+                    const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                    const focoNosPaises = listaPaises.contains(document.activeElement);
+                    definirMenu(false);
+                    if (focoNoMenu) botaoMenu.focus();
+                    else if (focoNosPaises) botaoPaises.focus();
+                } else if (!grupoPaises.contains(evento.target)) {
+                    definirPaises(false);
+                }
+            });
+            grupoPaises.addEventListener("focusout", (evento) => {
+                if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
+            });
+            cabecalho.addEventListener("focusout", (evento) => {
+                // O CSS pode ocultar o foco antes de o navegador avisar a mudança de largura.
+                if (telaCompacta.matches !== modoAnterior && evento.relatedTarget === null) {
+                    focoAntesDaMudanca = evento.target;
+                }
+                if (!cabecalho.contains(evento.relatedTarget)) definirMenu(false);
+            });
+            navegacao.addEventListener("click", (evento) => {
+                if (!evento.target.closest("a")) return;
+                const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                const focoNosPaises = listaPaises.contains(document.activeElement);
+                definirMenu(false);
+                if (focoNoMenu) botaoMenu.focus();
+                else if (focoNosPaises) botaoPaises.focus();
+            });
+            telaCompacta.addEventListener("change", () => {
+                const foco = focoAntesDaMudanca || document.activeElement;
+                focoAntesDaMudanca = null;
+                modoAnterior = telaCompacta.matches;
+                definirMenu(false);
+                if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
+                else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) {
+                    navegacao.querySelector("a").focus();
+                }
+            });
+
+            // Só recolhe a navegação depois de os controles estarem funcionais.
+            botaoMenu.disabled = false;
+            botaoPaises.disabled = false;
+            definirMenu(false);
+            pagina.classList.add("menu-pronto");
+        })();
+    </script>
+
 </body>
+
 </html>

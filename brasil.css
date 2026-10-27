@@ -1,0 +1,1113 @@
+
+/* ===== ESTRUTURA PRINCIPAL DE brasil ===== */
+
+/* Remove a caixa branca que envolve todo o conteúdo */
+.pagina-brasil main {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 32px auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Largura total apenas na página principal; as demais páginas mantêm sua estrutura. */
+.pagina-brasil.pagina-brasil-inicio main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+/* Mantém as medidas originais do conteúdo e o alinhamento do texto do banner. */
+.pagina-brasil-inicio .conteudo-brasil,
+.pagina-brasil-inicio .banner-brasil-conteudo {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+
+/* ===== APRESENTAÇÃO DE brasil ===== */
+
+.pagina-brasil .apresentacao-brasil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    max-width: 1180px;
+    margin: 72px auto;
+    padding: 0 24px;
+    text-align: left;
+}
+
+/* Etiqueta acima do título */
+.pagina-brasil .apresentacao-etiqueta {
+    display: block;
+    margin-bottom: 18px;
+    color: #00a7b5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Título à esquerda */
+.pagina-brasil .apresentacao-brasil h2 {
+    margin: 0;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Parágrafos à direita */
+.pagina-brasil .apresentacao-textos p {
+    margin: 0 0 20px;
+    color: #465d69;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.pagina-brasil .apresentacao-textos p:last-child {
+    margin-bottom: 0;
+}
+
+/* Apresentação responsiva */
+@media (max-width: 768px) {
+    .pagina-brasil .apresentacao-brasil {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin: 48px auto;
+        padding: 0 8px;
+    }
+
+    .pagina-brasil .apresentacao-brasil h2 {
+        font-size: clamp(30px, 7vw, 40px);
+    }
+
+    .pagina-brasil .apresentacao-textos p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+
+
+/* Ajusta as margens em telas pequenas */
+@media (max-width: 600px) {
+    .pagina-brasil main {
+        width: calc(100% - 32px);
+        margin: 24px auto;
+    }
+
+    .pagina-brasil-inicio .conteudo-brasil,
+    .pagina-brasil-inicio .banner-brasil-conteudo {
+        width: calc(100% - 32px);
+    }
+}
+
+.pagina-brasil .galeria .foto-card {
+    max-width: calc(100% - 30px);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .creditos-fotos {
+    margin-top: 24px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .creditos-fotos summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pagina-brasil .creditos-fotos ul {
+    padding-left: 24px;
+}
+
+.pagina-brasil .creditos-fotos li {
+    margin-top: 8px;
+}
+
+
+/* ===== BANNER PRINCIPAL DE brasil ===== */
+
+.pagina-brasil .banner-brasil {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 480px;
+    margin: 0 0 32px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #163b50;
+    color: #ffffff;
+}
+
+/* A fotografia alcança as bordas; a faixa de informações encosta no banner. */
+.pagina-brasil.pagina-brasil-inicio .banner-brasil {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* Fotografia de destaque */
+.pagina-brasil .banner-brasil > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Degradê para melhorar a leitura */
+.pagina-brasil .banner-brasil::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 34, 48, 0.88) 0%,
+        rgba(10, 34, 48, 0.55) 55%,
+        rgba(10, 34, 48, 0.12) 100%
+    );
+}
+
+/* Texto sobre a fotografia */
+.pagina-brasil .banner-brasil-texto {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    padding: 48px;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .banner-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #67e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.pagina-brasil .banner-brasil-texto h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.15;
+}
+
+.pagina-brasil .banner-brasil-texto p {
+    margin: 0 0 26px;
+    color: #f0f7f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Botão principal */
+.pagina-brasil .banner-botao {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #00a7b5;
+    color: #001018;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.pagina-brasil .banner-botao:hover {
+    background: #008b98;
+}
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+    .pagina-brasil .banner-brasil {
+        min-height: 420px;
+        border-radius: 12px;
+    }
+
+    .pagina-brasil .banner-brasil-texto {
+        padding: 28px 22px;
+    }
+
+    .pagina-brasil .banner-brasil-texto p {
+        font-size: 15px;
+    }
+}
+
+
+.pagina-brasil .video-brasil {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pagina-brasil .video-brasil iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.pagina-brasil .video-brasil-fonte {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .video-brasil-figura {
+    margin: 0;
+}
+
+.pagina-brasil .paisagens-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.pagina-brasil .paisagem-cartao {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .paisagem-cartao img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pagina-brasil .paisagem-cartao figcaption {
+    padding: 15px;
+}
+
+.pagina-brasil .paisagem-cartao h4 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
+
+.pagina-brasil .paisagem-cartao p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pagina-brasil .paisagens-creditos {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .pagina-brasil .paisagens-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-brasil .gastronomia-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.pagina-brasil .gastronomia-cartao {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .gastronomia-cartao img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pagina-brasil .gastronomia-cartao figcaption {
+    padding: 15px;
+}
+
+.pagina-brasil .gastronomia-cartao h4 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
+
+.pagina-brasil .gastronomia-cartao p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+@media (width < 600px) {
+    .pagina-brasil .gastronomia-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-brasil .informacoes-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.pagina-brasil .informacao-cartao {
+    min-width: 0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    overflow-wrap: anywhere;
+}
+
+.pagina-brasil .informacao-cartao dt {
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.pagina-brasil .informacao-cartao dd {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ===== RODAPÉ TURISMO.COM ===== */
+
+.pagina-brasil .rodape-principal {
+    background-color: #163b50;
+    color: #ffffff;
+    padding: 48px 24px 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.pagina-brasil .rodape-conteudo {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 36px;
+}
+
+/* Apresentação do site */
+.pagina-brasil .rodape-sobre h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.pagina-brasil .rodape-sobre h2 span {
+    color: #00c2cf;
+}
+
+.pagina-brasil .rodape-sobre p {
+    max-width: 280px;
+    color: #d4e2e8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Colunas de links */
+.pagina-brasil .rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+}
+
+.pagina-brasil .rodape-coluna h3 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.pagina-brasil .rodape-coluna a {
+    color: #d4e2e8;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+}
+
+.pagina-brasil .rodape-coluna a:hover {
+    color: #00c2cf;
+    text-decoration: underline;
+}
+
+/* Direitos autorais */
+.pagina-brasil .rodape-inferior {
+    max-width: 1180px;
+    margin: 36px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #456678;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.pagina-brasil .rodape-inferior p {
+    color: #d4e2e8;
+    font-size: 12px;
+}
+
+/* Rodapé responsivo */
+@media (max-width: 768px) {
+    .pagina-brasil .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .pagina-brasil .rodape-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-brasil .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .pagina-brasil .rodape-principal {
+        padding: 36px 24px 20px;
+    }
+}
+
+
+@media (width < 600px) {
+    .pagina-brasil .informacoes-cartoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.pagina-brasil .gastronomia-foto-link {
+    display: block;
+}
+
+.pagina-brasil .gastronomia-cartao .gastronomia-credito {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.pagina-brasil main>p,
+.pagina-brasil .secao[aria-labelledby="gastronomia-brasil"]>p {
+    margin: 0 0 1.25em;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .pagina-brasil main>p,
+    .pagina-brasil .secao[aria-labelledby="gastronomia-brasil"]>p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== CABEÇALHO E MENU ===== */
+.pagina-brasil .cabecalho-principal {
+    background: #fff;
+    border-bottom: 1px solid #dce6e9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+    color: #163b50;
+}
+
+.pagina-brasil .barra-cabecalho {
+    box-sizing: border-box;
+    max-width: 1280px;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pagina-brasil .marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #163b50;
+    text-decoration: none;
+}
+
+.pagina-brasil .marca-simbolo {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #00a7b5;
+    color: #fff;
+    font-size: 24px;
+}
+
+.pagina-brasil .marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.pagina-brasil .marca-texto strong { font-size: 17px; }
+.pagina-brasil .marca-texto strong span { color: #00a7b5; }
+.pagina-brasil .marca-texto small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #667d89;
+}
+
+.pagina-brasil .cabecalho-principal .navegacao {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.pagina-brasil .cabecalho-principal .navegacao a {
+    margin: 0; /* Neutraliza a margem global de nav a */
+}
+
+.pagina-brasil .cabecalho-principal .navegacao a,
+.pagina-brasil .cabecalho-principal .botao-dropdown {
+    box-sizing: border-box;
+    color: #163b50;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.pagina-brasil .cabecalho-principal .navegacao a:hover,
+.pagina-brasil .cabecalho-principal .botao-dropdown:hover { color: #00a7b5; }
+
+.pagina-brasil .grupo-dropdown { position: relative; }
+.pagina-brasil .botao-dropdown {
+    background: transparent;
+    border: 0;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.pagina-brasil .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #dce6e9;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px #163b501a;
+}
+
+.pagina-brasil .cabecalho-principal .menu-dropdown a {
+    display: block;
+    margin: 0;
+    padding: 9px 12px;
+    min-height: 0;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.pagina-brasil .cabecalho-principal .menu-dropdown a:hover { background: #e0f4f5; }
+.pagina-brasil .grupo-dropdown:hover .menu-dropdown,
+.pagina-brasil .grupo-dropdown.aberto .menu-dropdown { display: block; }
+
+.pagina-brasil .botao-menu {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.pagina-brasil .botao-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: #163b50;
+}
+
+/* Uma coluna compacta no celular e no tablet */
+@media (max-width: 980px) {
+    .pagina-brasil .botao-menu { display: block; }
+
+    .pagina-brasil .cabecalho-principal .navegacao {
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        width: auto;
+        height: auto;
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px #163b5020;
+    }
+
+    .pagina-brasil .cabecalho-principal .navegacao.aberta { display: flex; }
+
+    .pagina-brasil .cabecalho-principal .navegacao > a,
+    .pagina-brasil .cabecalho-principal .navegacao > .grupo-dropdown {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .pagina-brasil .cabecalho-principal .navegacao > a,
+    .pagina-brasil .cabecalho-principal .botao-dropdown {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 11px 14px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .pagina-brasil .menu-dropdown {
+        position: static;
+        min-width: 0;
+        margin: 0 0 4px;
+        padding: 4px;
+        box-shadow: none;
+    }
+
+    .pagina-brasil .cabecalho-principal .menu-dropdown a {
+        padding: 9px 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .pagina-brasil .barra-cabecalho { padding: 12px 16px; gap: 8px; }
+    .pagina-brasil .marca { gap: 8px; }
+    .pagina-brasil .marca-texto strong { font-size: 15px; }
+    .pagina-brasil .marca-texto small { font-size: 8px; letter-spacing: 1.5px; }
+}
+
+
+/* Acessibilidade e melhoria progressiva apenas na página principal de brasil. */
+.pagina-brasil-inicio :is(a, button, summary):focus-visible {
+    outline: 3px solid #006b75;
+    outline-offset: 5px;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+.pagina-brasil-inicio .brasil-pular {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 18px;
+    transform: translateY(-200%);
+    border-radius: 6px;
+    background: #fff;
+    color: #163b50;
+    font-weight: 700;
+    text-decoration: none;
+}
+.pagina-brasil-inicio .brasil-pular:focus { transform: translateY(0); }
+.pagina-brasil-inicio #conteudo { scroll-margin-top: 100px; }
+
+/* Com script, a classe de estado é a única responsável por exibir o submenu. */
+.pagina-brasil-inicio.menu-pronto .grupo-dropdown .menu-dropdown { display: none; }
+.pagina-brasil-inicio.menu-pronto .grupo-dropdown.aberto .menu-dropdown { display: block; }
+
+/* Sem script, todos os links ficam no fluxo e nenhum controle depende de clique. */
+.pagina-brasil-inicio:not(.menu-pronto) .cabecalho-principal { position: static; }
+.pagina-brasil-inicio:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
+.pagina-brasil-inicio:not(.menu-pronto) .botao-menu { display: none; }
+.pagina-brasil-inicio:not(.menu-pronto) .cabecalho-principal .navegacao {
+    position: static;
+    display: flex;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    flex-wrap: wrap;
+    box-shadow: none;
+}
+.pagina-brasil-inicio:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    box-shadow: none;
+}
+.pagina-brasil-inicio:not(.menu-pronto) .botao-dropdown { cursor: default; }
+
+/* =====================================
+   INFORMAÇÕES RÁPIDAS SOBRE brasil
+===================================== */
+
+.pagina-brasil-inicio .resumo-brasil {
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Fundo de ponta a ponta; informações alinhadas à largura de leitura do template. */
+.pagina-brasil-inicio .resumo-conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-block: 28px;
+}
+
+.pagina-brasil-inicio .resumo-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-width: 0;
+    padding: 8px 18px;
+    text-align: left;
+}
+
+/* A mesma largura para os ícones mantém títulos e valores alinhados em todas as colunas. */
+.pagina-brasil-inicio .resumo-icone {
+    flex: 0 0 26px;
+    min-width: 0;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.pagina-brasil-inicio .resumo-item:not(:last-child) {
+    border-right: 1px solid #e1e8eb;
+}
+
+.pagina-brasil-inicio .resumo-item > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.pagina-brasil-inicio .resumo-label {
+    color: #607784;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.pagina-brasil-inicio .resumo-item strong {
+    color: #163b50;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .pagina-brasil-inicio .resumo-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-block: 12px;
+    }
+
+    .pagina-brasil-inicio .resumo-item {
+        justify-content: flex-start;
+        padding: 20px 24px;
+    }
+
+    .pagina-brasil-inicio .resumo-item:not(:last-child) {
+        border-right: none;
+    }
+
+    .pagina-brasil-inicio .resumo-item:nth-child(odd) {
+        border-right: 1px solid #e1e8eb;
+    }
+
+    .pagina-brasil-inicio .resumo-item:nth-child(n + 3) {
+        border-top: 1px solid #e1e8eb;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .pagina-brasil-inicio .resumo-conteudo {
+        grid-template-columns: 1fr;
+        width: calc(100% - 32px);
+        padding-block: 8px;
+    }
+
+    .pagina-brasil-inicio .resumo-item {
+        padding: 16px 8px;
+    }
+
+    .pagina-brasil-inicio .resumo-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .pagina-brasil-inicio .resumo-item + .resumo-item {
+        border-top: 1px solid #e1e8eb;
+    }
+}
+
+
+/* ===== CARTÕES PARA EXPLORAR brasil ===== */
+
+.pagina-brasil .explorar-brasil {
+    margin: 32px 0 72px;
+}
+
+.pagina-brasil .explorar-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Aparência dos cartões */
+.pagina-brasil .explorar-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e6edef;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+}
+
+/* Número turquesa */
+.pagina-brasil .cartao-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: #e0f4f5;
+    color: #008b98;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Títulos */
+.pagina-brasil .explorar-cartao h3 {
+    margin: 0 0 14px;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Descrições */
+.pagina-brasil .explorar-cartao p {
+    margin: 0 0 24px;
+    color: #465d69;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Links */
+.pagina-brasil .cartao-link {
+    margin-top: auto;
+    color: #008b98;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pagina-brasil .cartao-link:hover {
+    color: #163b50;
+    text-decoration: underline;
+}
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .pagina-brasil .explorar-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .pagina-brasil .explorar-brasil {
+        margin: 24px 0 48px;
+    }
+
+    .pagina-brasil .explorar-cartoes {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pagina-brasil .explorar-cartao {
+        padding: 24px;
+    }
+}
+
+
+/* ===== DESTAQUE PARA A GALERIA DE brasil ===== */
+
+.pagina-brasil .destaque-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 340px;
+    margin: 0 0 72px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #163b50;
+    color: #ffffff;
+}
+
+/* Fotografia à esquerda */
+.pagina-brasil .destaque-galeria-imagem {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.pagina-brasil .destaque-galeria-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Conteúdo à direita */
+.pagina-brasil .destaque-galeria-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px;
+}
+
+/* Etiqueta */
+.pagina-brasil .destaque-galeria-etiqueta {
+    margin-bottom: 16px;
+    color: #67e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Título */
+.pagina-brasil .destaque-galeria h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Descrição */
+.pagina-brasil .destaque-galeria p {
+    margin: 0 0 28px;
+    color: #d4e2e8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Botão da galeria */
+.pagina-brasil .destaque-galeria-botao {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #00a7b5;
+    color: #001018;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.pagina-brasil .destaque-galeria-botao:hover {
+    background: #008b98;
+    color: #001018;
+}
+
+/* Créditos das duas utilizações do Palácio da Pena na principal. */
+.pagina-brasil-inicio :is(.banner-brasil-texto, .destaque-galeria-conteudo) .brasil-foto-credito {
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pagina-brasil-inicio .brasil-foto-credito a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+    .pagina-brasil .destaque-galeria {
+        grid-template-columns: 1fr;
+        margin-bottom: 48px;
+    }
+
+    .pagina-brasil .destaque-galeria-imagem img {
+        height: 260px;
+    }
+
+    .pagina-brasil .destaque-galeria-conteudo {
+        padding: 32px 24px;
+    }
+
+    .pagina-brasil .destaque-galeria h2 {
+        font-size: 32px;
+    }
+}
+

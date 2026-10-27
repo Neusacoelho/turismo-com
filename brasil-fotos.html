@@ -3,77 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos do Brasil: Cristo Redentor, Cataratas do Iguaçu, Pelourinho, Fernando de Noronha, Floresta Amazônica e Pantanal.">
     <title>Brasil — Pontos Turísticos</title>
-    <link rel="stylesheet" href="estilo.css">
+     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+    <link rel="stylesheet" href="brasil-fotos.css">
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
+<body class="tc-site pais-brasil pagina-galeria-brasil" data-raiz="./"
+      data-pais-nome="Brasil" data-pais-url="brasil.html" data-galeria-url="brasil-fotos.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="brasil-fotos.html" class="ativo">📸 Fotos do Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="franca-fotos.html">📸 Fotos da França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="japao-fotos.html">📸 Fotos do Japão</a>
-        <a href="china.html">China</a>
-        <a href="china-fotos.html">📸 Fotos da China</a>
-        <a href="hospedagem.html">🏠 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛒 Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="index.html">TURISMO.COM — Início</a>
+            <a href="brasil.html">Brasil</a>
+            <a href="brasil-fotos.html" aria-current="page">Galeria do Brasil</a>
+        </nav>
+    </header>
 
-<main>
-    <h2>Brasil — Pontos Turísticos</h2>
-    <div class="galeria">
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Cristo_Redentor_Rio_de_Janeiro.jpg" alt="Cristo Redentor">
-            <h3>✝️ Cristo Redentor — Rio de Janeiro</h3>
-            <p>Um dos símbolos do Brasil! Vista panorâmica maravilhosa da cidade.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Cataratas_do_Igua%C3%A7u_-_Iguazu_Falls_-_Brazil.jpg" alt="Cataratas do Iguaçu">
-            <h3>💧 Cataratas do Iguaçu — Paraná</h3>
-            <p>Patrimônio Mundial! Mais de 270 quedas d'água em meio à floresta tropical.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Pelourinho_Salvador_Bahia.jpg" alt="Pelourinho">
-            <h3>🎭 Pelourinho — Salvador</h3>
+    <main id="conteudo" tabindex="-1">
+        <div class="tc-container">
+            <header class="pg-apresentacao">
+                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+                    <ol>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portugal.html">Brasil</a></li>
+                        <li><span aria-current="page">Galeria</span></li>
+                    </ol>
+                </nav>
+                <p class="tc-etiqueta">Brasil — Pontos Turísticos</p>
+                <h1>Galeria de fotos do Brasil</h1>
+                <p class="pg-introducao">Seis das diversas experiências maravilhosas das quais você pode experimentar!</p>
+            </header>
+
+ <section class="tc-galeria pg-grade" aria-label="Fotografias de Portugal">
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/cristo-redentor.jpg" alt="Vista do Cristo Redentor sobre as nuvens."
+                         width="1920" height="1440" fetchpriority="high" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">✝️</span> Cristo Redentor — Rio de Janeiro</h2>
+                        <p>Um dos símbolos do Brasil! Vista panorâmica e maravilhosa da cidade.</p>
+                    </figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/cataratas-do-iguacu.jpg" alt="Vista panorâmica das Cataratas do Iguaçu"
+                         width="1920" height="1285" loading="lazy" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">💧</span> Cataratas do Iguaçu — Paraná</h2>
+                        <p>Patrimônio Mundial! Mais de 270 quedas d'água em meio à floresta tropical.</p>
+                    </figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/Centro-Histórico-Pelourinho-Bahia.jpg" alt="Centro histórico Pelourinho"
+                         width="1920" height="1440" loading="lazy" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">🎭</span> Pelourinho — Salvador</h2>
             <p>Centro histórico com cores, música, dança e cultura afro-brasileira!</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Fernando_de_Noronha_Pernambuco.jpg" alt="Fernando de Noronha">
-            <h3>🏝️ Fernando de Noronha — Pernambuco</h3>
-            <p>Paraíso de águas azuis, praias desertas e vida marinha exuberante!</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Amazon_Rainforest.jpg" alt="Floresta Amazônica">
-            <h3>🌳 Floresta Amazônica — Manaus</h3>
-            <p>A maior floresta do mundo! Biodiversidade única e rios gigantes.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pantanal_Mato_Grosso.jpg" alt="Pantanal">
-            <h3>🐆 Pantanal — Mato Grosso</h3>
-            <p>Melhor lugar do mundo para ver animais selvagens! Jacarés, araras e onças.</p>
-        </div>
-    </div>
-    <p style="text-align: center; margin-top: 30px;">
-        ← Voltar para a <a href="brasil.html">página do Brasil</a>
-    </p>
-</main>
+                    </figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/fernando-de-noronha.jpg" alt="Entardecer em Fernando de Noronha"
+                         width="1920" height="1329" loading="lazy" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">🏝️</span> Fernando de Noronha — Pernambuco</h2>
+                        <p>Paraíso de águas azuis, praias desertas e vida marinha exuberante!</p>
+                    </figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/floresta-amazonica.jpg" alt="A Floresta Amazônica perto da cidade vista de um avião"
+                         width="1920" height="1440" loading="lazy" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">🌳</span> Floresta Amazônica — Manaus</h2>
+                        <p>A maior floresta do mundo! Biodiversidade única e rios gigantes.</p>
+                    </figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-brasil/Pantanal-Mato-Grosso-Brasil.jpg" alt="Vista do Pantanal."
+                         width="1920" height="1440" loading="lazy" decoding="async">
+                    <figcaption>
+                        <h2><span class="pg-icone" aria-hidden="true">🐆</span> Pantanal — Mato Grosso</h2>
+                        <p>Melhor lugar do mundo para ver animais selvagens! Jacarés, araras e onças.</p>
+                    </figcaption>
+                </figure>
+            </section>
 
-<footer>
-    <p>&copy; 2026 Turismo.com — Fotos e Pontos Turísticos do Brasil</p>
-</footer>
+            <div class="tc-acoes pg-retorno">
+                <a class="tc-botao" href="brasil.html">← Voltar para o Brasil</a>
+            </div>
+
+            <aside class="pg-creditos" aria-label="Autoria e licenças das fotografias">
+                <details class="creditos-fotos" id="creditos-fotografias">
+                    <summary>Créditos das fotografias</summary>
+                    <p class="pg-nota-creditos">As fotografias são redimensionadas e recortadas apenas na exibição. Os arquivos originais foram preservados; as adaptações CC BY-SA mantêm a licença correspondente.</p>
+                    <ul>
+                        <li><strong>Cristo Redentor — Rio de Janeiro</strong> — “Redentor Over Clouds 1.jpg”, de Donatas Dabravolskas. <a href="https://commons.wikimedia.org/wiki/File:Redentor_Over_Clouds_1.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                        <li><strong>Cataratas do Iguaçu — Paraná</strong> — “Cataratas do Iguaçu (2022).jpg”. de Priscila Bruder. <a href="https://commons.wikimedia.org/wiki/File:Cataratas_do_Iguaçu_(2022).jpg">Original no Wikimedia Commons</a>. Dedicação ao domínio público: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a> (crédito voluntário).</li>
+                        <li><strong>Pelourinho — Salvador</strong> — “Centro Histórico Pelourinho Bahia.jpg”, de Milena Cintra. <a href="https://commons.wikimedia.org/wiki/File:Centro_Histórico_Pelourinho_Bahia.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                        <li><strong>Fernando de Noronha — Pernambuco</strong> — “Sunset at Noronhas' beach.jpg”, de Nicolas Albuquerque Wolf. <a href="https://commons.wikimedia.org/wiki/File:Sunset_at_Noronhas%27_beach.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.</li>
+                        <li><strong>Floresta Amazônica — Manaus</strong> — “Amazon Rainforest near Manaus.jpg”, de lubasi. <a href="https://commons.wikimedia.org/wiki/File:Amazon_Rainforest_near_Manaus.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</li>
+                        <li><strong>Pantanal — Mato Grosso</strong> — “Pantanal, Mato Grosso, Brasil.jpg”, de Filipefrazao. <a href="https://commons.wikimedia.org/wiki/File:Pantanal,_Mato_Grosso,_Brasil.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.</li>
+                    </ul>
+                </details>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé compartilhado com quatro colunas e links disponíveis sem JavaScript. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container">
+            <div class="tc-rodape-grade">
+                <div class="tc-fluxo">
+                    <h2>✈ TURISMO<span>.COM</span></h2>
+                    <p>Descubra destinos, culturas e experiências ao redor do mundo.</p>
+                </div>
+                <nav class="tc-rodape-coluna" aria-label="Explorar no rodapé">
+                    <h3>Explorar</h3>
+                    <a href="index.html">Início</a>
+                    <a href="brasil.html">Brasil</a>
+                    <a href="brasil-fotos.css">Galeria do país</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Serviços no rodapé">
+                    <h3>Serviços</h3>
+                    <a href="hospedagem.html">Hospedagem</a>
+                    <a href="alimentacao.html">Alimentação</a>
+                    <a href="compras.html">Compras</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Informações no rodapé">
+                    <h3>Informações</h3>
+                    <a href="contato.html">Contato</a>
+                </nav>
+            </div>
+            <div class="tc-rodape-inferior">
+                <p>© 2026 Turismo.com</p>
+                <p>Projeto acadêmico desenvolvido em equipe.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
