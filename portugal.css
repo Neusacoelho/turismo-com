@@ -1,6 +1,10 @@
 
 /* ===== ESTRUTURA PRINCIPAL DE PORTUGAL ===== */
 
+body.pagina-portugal {
+    font-family: Arial, sans-serif;
+}
+
 /* Remove a caixa branca que envolve todo o conteúdo */
 .pagina-portugal main {
     max-width: 1280px;

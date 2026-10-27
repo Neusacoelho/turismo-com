@@ -28,10 +28,10 @@
         ["China", "china.html"]
     ];
     const servicos = [
-        ["Hospedagem", "hospedagem.html"],
-        ["Alimentação", "alimentacao.html"],
-        ["Compras", "compras.html"],
-        ["Contato", "contato.html"]
+        ["Hospedagem", pagina.classList.contains("pais-portugal") ? "paises/portugal/hospedagem.html" : "hospedagem.html"],
+        ["Alimentação", pagina.classList.contains("pais-portugal") ? "paises/portugal/alimentacao.html" : "alimentacao.html"],
+        ["Compras", pagina.classList.contains("pais-portugal") ? "paises/portugal/compras.html" : "compras.html"],
+        ["Contato", pagina.classList.contains("pais-portugal") ? "paises/portugal/contato.html" : "contato.html"]
     ];
 
     function criarLink(texto, caminho) {
@@ -124,9 +124,9 @@
         }
         // Separa os grupos só no rodapé. A lista do cabeçalho mantém Contato.
         preencherLinks(conteudo.querySelector('[aria-label="Serviços no rodapé"]'),
-            servicos.filter(([, caminho]) => caminho !== "contato.html"));
+            servicos.filter(([, caminho]) => !caminho.endsWith("contato.html")));
         preencherLinks(conteudo.querySelector('[aria-label="Informações no rodapé"]'),
-            servicos.filter(([, caminho]) => caminho === "contato.html"));
+            servicos.filter(([, caminho]) => caminho.endsWith("contato.html")));
         conteudo.querySelector(".tc-rodape-inferior p").textContent =
             `© ${new Date().getFullYear()} Turismo.com`;
         rodape.replaceChildren(conteudo);
