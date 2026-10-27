@@ -1,0 +1,106 @@
+/* Componente de rodapé exclusivo de Portugal.
+   Inspirado no rodapé de portugal.html, sem alterar cabeçalho ou conteúdo.
+   Carregar APÓS os demais estilos da página. */
+.tc-site.pais-portugal .tc-rodape {
+    margin-top: 40px;
+    padding: 48px 24px 20px;
+    background: #163b50;
+    color: #d4e2e8;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.tc-site.pais-portugal .tc-rodape > .tc-container {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, minmax(0, 1fr));
+    gap: 36px;
+    align-items: start;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-fluxo h2 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-fluxo h2 span { color: #00c2cf; }
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-grade > .tc-fluxo > p {
+    max-width: 280px;
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna h3 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a {
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a:hover,
+.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a:focus-visible {
+    color: #00c2cf;
+    text-decoration: underline;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #456678;
+}
+
+.tc-site.pais-portugal .tc-rodape .tc-rodape-inferior p {
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+    .tc-site.pais-portugal .tc-rodape .tc-rodape-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-site.pais-portugal .tc-rodape { padding: 36px 24px 20px; }
+    .tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+}

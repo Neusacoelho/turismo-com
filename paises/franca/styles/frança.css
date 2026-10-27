@@ -686,3 +686,55 @@ button {
         scroll-behavior: auto;
     }
 }
+
+
+/* Acessibilidade: pular para o conteúdo */
+
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 9999;
+    padding: 12px 18px;
+    background: #142b3b;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.pular-conteudo:focus {
+    top: 15px;
+}
+
+/* Créditos das fotografias */
+
+.credito-imagem {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    color: #687982;
+    line-height: 1.5;
+}
+
+.credito-imagem a {
+    color: #245b78;
+    text-decoration: underline;
+}
+
+.credito-imagem a:hover {
+    color: #142b3b;
+}
+
+/* Foco acessível */
+
+.foto-card:focus-within {
+    outline: 2px solid #245b78;
+    outline-offset: 3px;
+}
+
+/* Respeitar usuários que reduzem animações */
+
+@media (prefers-reduced-motion: reduce) {
+    .foto-card img {
+        transition: none;
+    }
+}

@@ -1,127 +1,871 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça o Japão: cidades, cultura, paisagens e dicas para viajar.">
     <title>Japão — TURISMO.COM</title>
-
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/componentes.css">
-    <link rel="stylesheet" href="assets/css/pais.css">
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="japao.css">
-    <script src="assets/js/site.js" defer></script>
+
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="tc-site pais-japao"
-      data-raiz="./"
-      data-pais-nome="Japão"
-      data-pais-url="japao.html"
-      data-galeria-url="japao-fotos.html">
+<body class="pagina-japao pagina-japao-inicio">
 
-    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="tc-cabecalho" data-tc-cabecalho>
-        <div class="tc-container tc-fallback-cabecalho">
-            <a class="tc-marca" href="index.html">
-                <span class="tc-marca-simbolo" aria-hidden="true">✈</span>
-                <span class="tc-marca-texto"><strong>TURISMO<span>.COM</span></strong><small>DESCUBRA O MUNDO</small></span>
+    <!-- Cabeçalho principal do Turismo.com -->
+    <header class="cabecalho-principal">
+        <div class="barra-cabecalho">
+
+            <!-- Identidade do site -->
+            <a href="index.html" class="marca">
+                <span class="marca-simbolo">✈</span>
+
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
             </a>
-            <nav class="tc-navegacao-basica" aria-label="Navegação básica">
+
+            <!-- Menu de navegação -->
+            <nav class="navegacao" aria-label="Menu principal">
                 <a href="index.html">Início</a>
-                <a href="japao.html" aria-current="page">Japão</a>
-                <a href="japao-fotos.html">Fotos do Japão</a>
-                <a href="contato.html">Contato</a>
+
+                <!-- Lista de países -->
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html" aria-current="page">Japão</a>
+                        <a href="china.html">China</a>
+                    </div>
+                </div>
+                <a href="paises/japao/hospedagem.html">Hospedagem</a>
+                <a href="paises/japao/alimentacao.html">Alimentação</a>
+                <a href="paises/japao/compras.html">Compras</a>
+                <a href="paises/japao/contato.html">Contato</a>
             </nav>
+
+            <!-- Botão para o menu no celular -->
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
     </header>
 
+
     <main id="conteudo" tabindex="-1">
-        <section class="tc-banner japao-banner" aria-labelledby="titulo-japao">
-            <div class="tc-container japao-banner-conteudo">
-                <p class="tc-etiqueta">Ásia Oriental · Cultura e natureza</p>
-                <h1 id="titulo-japao">Descubra o Japão</h1>
-                <p>Um destino onde cidades cheias de energia convivem com templos históricos, montanhas e tradições preservadas ao longo de gerações.</p>
-                <div class="tc-acoes">
-                    <a class="tc-botao japao-botao" href="japao-fotos.html">Explorar a galeria de fotos</a>
-                    <a class="tc-botao tc-botao-contorno japao-botao-secundario" href="#sobre">Conhecer o país</a>
+
+        <!-- Apresentação principal do Japão -->
+        <section class="banner-japao" aria-labelledby="titulo-banner-japao">
+
+            <img src="https://img.freepik.com/fotos-premium/paisagem-panoramica-aerea-da-montanha-fuji-montanha-iconica-e-simbolica-do-japao-paisagem-panoramica-do-por-do-sol-de-fujisan-ao-entardecer-kawaguchiko-yamanashi-japao_73899-10056.jpg?w=2000" alt="Monte Fuji ao fundo de uma paisagem no Japão" width="1920"
+                height="1285">
+
+            <div class="banner-japao-conteudo">
+                <div class="banner-japao-texto">
+                    <span class="banner-etiqueta">ÁSIA ORIENTAL · CULTURA E NATUREZA</span>
+
+                    <h1 id="titulo-banner-japao">
+                        Descubra o Japão
+                    </h1>
+
+                    <p>
+                        Um destino onde cidades cheias de energia convivem
+                        com templos históricos, montanhas e tradições
+                        preservadas ao longo de gerações.
+                    </p>
+
+                    <div class="banner-acoes">
+                        <a href="#sobre" class="banner-botao">
+                            Conhecer o país →
+                        </a>
+                        <a href="japao-fotos.html" class="banner-botao banner-botao-contorno">
+                            Explorar a galeria de fotos
+                        </a>
+                    </div>
+
+                    <!-- Atalhos para as seções da página -->
+                    <ul class="banner-atalhos" aria-label="Atalhos da página">
+                        <li><a href="#conteudo-cidades">Cidades</a></li>
+                        <li><a href="#conteudo-pontos-turisticos">Pontos turísticos</a></li>
+                        <li><a href="#conteudo-roteiro">Roteiro</a></li>
+                        <li><a href="#conteudo-curiosidades">Curiosidades</a></li>
+                        <li><a href="#conteudo-dicas">Dicas</a></li>
+                    </ul>
                 </div>
+            </div>
+
+        </section>
+
+
+        <!-- Informações rápidas: faixa de largura total -->
+        <section class="resumo-japao" aria-label="Informações rápidas sobre o Japão">
+            <div class="resumo-conteudo">
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗼</span>
+                    <div>
+                        <span class="resumo-label">CAPITAL</span>
+                        <strong>Tóquio</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗣️</span>
+                    <div>
+                        <span class="resumo-label">IDIOMA PRINCIPAL</span>
+                        <strong>Japonês</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">💴</span>
+                    <div>
+                        <span class="resumo-label">MOEDA</span>
+                        <strong>Iene (JPY)</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🌸</span>
+                    <div>
+                        <span class="resumo-label">MELHOR ÉPOCA</span>
+                        <strong>Março a maio e outubro a novembro</strong>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <div class="tc-container japao-conteudo">
-            <section class="tc-resumo japao-resumo" aria-label="Informações rápidas sobre o Japão">
-                <div><dt>Capital</dt><dd>Tóquio</dd></div>
-                <div><dt>Moeda</dt><dd>Iene (JPY)</dd></div>
-                <div><dt>Idioma principal</dt><dd>Japonês</dd></div>
+
+        <div class="conteudo-japao">
+
+            <!-- Introdução ao destino -->
+            <section class="apresentacao-japao" id="sobre" aria-labelledby="titulo-apresentacao">
+
+                <div class="apresentacao-titulo">
+                    <span class="apresentacao-etiqueta">
+                        CONHEÇA O DESTINO
+                    </span>
+
+                    <h2 id="titulo-apresentacao">
+                        Um país de contrastes.
+                    </h2>
+                </div>
+
+                <div class="apresentacao-textos">
+                    <p>
+                        Japão é um país insular da Ásia Oriental. É conhecido
+                        pela combinação de tecnologia, transporte urbano,
+                        artes tradicionais, culinária regional e paisagens
+                        que mudam bastante ao longo das estações.
+                    </p>
+
+                    <p>
+                        Em uma mesma viagem, é possível visitar bairros
+                        movimentados, jardins tranquilos, castelos,
+                        santuários e regiões montanhosas. A experiência varia
+                        conforme a cidade e a época do ano.
+                    </p>
+                </div>
+
             </section>
 
-            <section class="tc-secao tc-fluxo" id="sobre" aria-labelledby="sobre-titulo">
-                <p class="tc-etiqueta">Conheça o destino</p>
-                <h2 id="sobre-titulo">Um país de contrastes</h2>
-                <p>Japão é um país insular da Ásia Oriental. É conhecido pela combinação de tecnologia, transporte urbano, artes tradicionais, culinária regional e paisagens que mudam bastante ao longo das estações.</p>
-                <p>Em uma mesma viagem, é possível visitar bairros movimentados, jardins tranquilos, castelos, santuários e regiões montanhosas. A experiência varia conforme a cidade e a época do ano.</p>
+
+            <!-- Cartões para explorar o Japão -->
+            <section class="explorar-japao" aria-label="Explore mais sobre o Japão">
+
+                <div class="explorar-cartoes">
+
+                    <!-- Cultura -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">01</span>
+
+                        <h3>Cultura</h3>
+
+                        <p>
+                            Descubra os costumes, as artes tradicionais,
+                            os festivais e a contemplação das flores de
+                            cerejeira que marcam a identidade japonesa.
+                        </p>
+
+                        <a href="paises/japao/cultura.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Gastronomia -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">02</span>
+
+                        <h3>Gastronomia</h3>
+
+                        <p>
+                            Conheça o sushi, o ramen, a tempura, o soba
+                            e o okonomiyaki, além das especialidades
+                            de cada região.
+                        </p>
+
+                        <a href="paises/japao/gastronomia.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Pontos turísticos -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">03</span>
+
+                        <h3>Pontos turísticos</h3>
+
+                        <p>
+                            Explore templos, santuários, castelos,
+                            montanhas e bairros que mostram os muitos
+                            lados do país.
+                        </p>
+
+                        <a href="paises/japao/pontos-turisticos.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Curiosidades -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">04</span>
+
+                        <h3>Curiosidades</h3>
+
+                        <p>
+                            Descubra costumes, hábitos e detalhes
+                            surpreendentes sobre o modo de vida
+                            japonês.
+                        </p>
+
+                        <a href="paises/japao/curiosidades.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                </div>
+
             </section>
 
-            <section class="tc-secao tc-fluxo" aria-labelledby="cidades-titulo">
-                <p class="tc-etiqueta">Lugares para conhecer</p>
-                <h2 id="cidades-titulo">Cidades marcantes</h2>
-                <div class="tc-cartoes japao-cartoes">
-                    <article class="tc-cartao japao-cartao">
-                        <span class="tc-cartao-numero">01 · Metrópole</span>
+
+            <!-- O Japão em números -->
+            <section class="japao-numeros revelar" aria-labelledby="titulo-numeros">
+
+                <span class="secao-etiqueta">O JAPÃO EM NÚMEROS</span>
+                <h2 id="titulo-numeros" class="secao-titulo">Um arquipélago de montanhas e tradição.</h2>
+
+                <div class="numeros-grade">
+
+                    <div class="numero-item">
+                        <strong>+6.800</strong>
+                        <span>ilhas formam o arquipélago japonês</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>~70%</strong>
+                        <span>do território é coberto por montanhas e florestas</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>3.776 m</strong>
+                        <span>de altura tem o Monte Fuji, o ponto mais alto do país</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>1964</strong>
+                        <span>ano em que o primeiro trem-bala (shinkansen) entrou em operação</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Cidades marcantes -->
+            <section class="japao-cidades revelar" id="conteudo-cidades" aria-labelledby="titulo-cidades">
+
+                <span class="secao-etiqueta">LUGARES PARA CONHECER</span>
+                <h2 id="titulo-cidades" class="secao-titulo">Cidades marcantes.</h2>
+
+                <div class="cidades-grade">
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🗼</span>
+                        <span class="ponto-tag">01 · Metrópole</span>
                         <h3>Tóquio</h3>
-                        <p>A capital combina bairros modernos, lojas, museus, parques e santuários históricos.</p>
+                        <p>
+                            A capital combina bairros modernos, lojas, museus,
+                            parques e santuários históricos.
+                        </p>
                     </article>
-                    <article class="tc-cartao japao-cartao">
-                        <span class="tc-cartao-numero">02 · Tradição</span>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🏯</span>
+                        <span class="ponto-tag">02 · Tradição</span>
                         <h3>Quioto</h3>
-                        <p>Conhecida por templos, jardins, casas tradicionais e paisagens especialmente populares na época das cerejeiras.</p>
+                        <p>
+                            Conhecida por templos, jardins, casas tradicionais
+                            e paisagens especialmente populares na época das
+                            cerejeiras.
+                        </p>
                     </article>
-                    <article class="tc-cartao japao-cartao">
-                        <span class="tc-cartao-numero">03 · Gastronomia</span>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🍜</span>
+                        <span class="ponto-tag">03 · Gastronomia</span>
                         <h3>Osaka</h3>
-                        <p>Uma cidade famosa por sua cena gastronômica, áreas comerciais muito animadas e pontos de interesse históricos.</p>
+                        <p>
+                            Uma cidade famosa por sua cena gastronômica,
+                            áreas comerciais muito animadas e pontos de
+                            interesse históricos.
+                        </p>
                     </article>
+
                 </div>
+
             </section>
 
-            <section class="tc-secao tc-fluxo" aria-labelledby="cultura-titulo">
-                <p class="tc-etiqueta">Tradições e cotidiano</p>
-                <h2 id="cultura-titulo">Cultura japonesa</h2>
-                <div class="japao-duas-colunas">
-                    <article class="japao-painel">
+
+            <!-- Pontos turísticos -->
+            <section class="japao-pontos revelar" id="conteudo-pontos-turisticos"
+                aria-labelledby="titulo-pontos">
+
+                <span class="secao-etiqueta">PONTOS TURÍSTICOS</span>
+                <h2 id="titulo-pontos" class="secao-titulo">Lugares que valem a viagem.</h2>
+                <p class="secao-intro">
+                    De santuários centenários a montanhas e ilhas sagradas:
+                    seis paradas para entender por que o Japão encanta
+                    viajantes do mundo todo.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">⛩️</span>
+                        <span class="ponto-tag">Tóquio</span>
+                        <h3>Templo Sensō-ji</h3>
+                        <p>
+                            O templo mais antigo da cidade fica no bairro de
+                            Asakusa, ao fim de uma rua de lojinhas tradicionais.
+                            Vá cedo para aproveitar com menos gente.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🗻</span>
+                        <span class="ponto-tag">Região do Fuji</span>
+                        <h3>Monte Fuji</h3>
+                        <p>
+                            O símbolo do país pode ser admirado dos lagos da
+                            região ou de Hakone. Em dias limpos, a vista é
+                            inesquecível.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🦊</span>
+                        <span class="ponto-tag">Quioto</span>
+                        <h3>Fushimi Inari</h3>
+                        <p>
+                            Milhares de portões vermelhos (torii) formam
+                            trilhas pela montanha. Quanto mais cedo ou mais
+                            tarde, mais tranquila a caminhada.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🦌</span>
+                        <span class="ponto-tag">Nara</span>
+                        <h3>Parque de Nara e Tōdai-ji</h3>
+                        <p>
+                            Cervos circulam livremente pelo parque, ao lado de
+                            um templo que abriga uma enorme estátua de Buda.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🦀</span>
+                        <span class="ponto-tag">Osaka</span>
+                        <h3>Dōtonbori</h3>
+                        <p>
+                            Letreiros luminosos, canal e muita comida de rua.
+                            À noite, é o coração da animação da cidade.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🌊</span>
+                        <span class="ponto-tag">Hiroshima</span>
+                        <h3>Ilha de Miyajima</h3>
+                        <p>
+                            Famosa pelo portão torii que parece flutuar na
+                            maré alta. A ilha também tem trilhas e vistas
+                            amplas do mar interior.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Roteiro sugerido -->
+            <section class="japao-roteiro revelar" id="conteudo-roteiro" aria-labelledby="titulo-roteiro">
+
+                <span class="secao-etiqueta">ROTEIRO SUGERIDO</span>
+                <h2 id="titulo-roteiro" class="secao-titulo">10 dias para conhecer o essencial.</h2>
+                <p class="secao-intro">
+                    Uma sugestão equilibrada entre cidade, tradição e natureza.
+                    Ajuste os dias conforme o seu ritmo.
+                </p>
+
+                <ol class="roteiro-linha">
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 1 a 3</span>
+                        <h3>Tóquio</h3>
+                        <p>
+                            Asakusa e o templo Sensō-ji, os cruzamentos e as
+                            lojas de Shibuya, parques, museus e uma noite para
+                            jantar em uma izakaya.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 4 e 5</span>
+                        <h3>Monte Fuji e Hakone</h3>
+                        <p>
+                            Saia de Tóquio rumo à região dos lagos para ver o
+                            Monte Fuji e experimente um banho em onsen, as
+                            fontes termais japonesas.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 6 a 8</span>
+                        <h3>Quioto e Nara</h3>
+                        <p>
+                            Fushimi Inari, templos e jardins de Quioto e um
+                            passeio de um dia a Nara, para ver os cervos e o
+                            templo Tōdai-ji.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 9 e 10</span>
+                        <h3>Osaka</h3>
+                        <p>
+                            Castelo de Osaka, as ruas de Dōtonbori e muita
+                            comida para fechar a viagem com sabor.
+                        </p>
+                    </li>
+
+                </ol>
+
+            </section>
+
+
+            <!-- Cultura japonesa -->
+            <section class="japao-cultura revelar" aria-labelledby="titulo-cultura">
+
+                <span class="secao-etiqueta">TRADIÇÕES E COTIDIANO</span>
+                <h2 id="titulo-cultura" class="secao-titulo">Cultura japonesa.</h2>
+
+                <div class="curiosidades-grade">
+
+                    <article class="curiosidade-cartao">
                         <h3>Costumes e respeito</h3>
-                        <p>Boas maneiras, atenção aos espaços compartilhados e respeito às regras locais são importantes. Em templos e santuários, observe as orientações e a sinalização de cada lugar.</p>
+                        <p>
+                            Boas maneiras, atenção aos espaços compartilhados
+                            e respeito às regras locais são importantes. Em
+                            templos e santuários, observe as orientações e a
+                            sinalização de cada lugar.
+                        </p>
                     </article>
-                    <article class="japao-painel">
+
+                    <article class="curiosidade-cartao">
                         <h3>Arte e celebrações</h3>
-                        <p>Caligrafia, cerâmica, teatro tradicional, festivais locais e a contemplação das flores de cerejeira fazem parte de diferentes expressões culturais do país.</p>
+                        <p>
+                            Caligrafia, cerâmica, teatro tradicional, festivais
+                            locais e a contemplação das flores de cerejeira
+                            fazem parte de diferentes expressões culturais do
+                            país.
+                        </p>
                     </article>
+
                 </div>
+
             </section>
 
-            <section class="tc-secao tc-fluxo" aria-labelledby="comida-titulo">
-                <p class="tc-etiqueta">Sabores do Japão</p>
-                <h2 id="comida-titulo">Gastronomia</h2>
-                <p>A culinária japonesa é variada e regional. Entre os pratos conhecidos estão sushi, ramen, tempura, soba e okonomiyaki. Ingredientes, preparo e apresentação podem mudar bastante de uma região para outra.</p>
+
+            <!-- Gastronomia -->
+            <section class="japao-gastronomia revelar" aria-labelledby="titulo-comida">
+
+                <span class="secao-etiqueta">SABORES DO JAPÃO</span>
+                <h2 id="titulo-comida" class="secao-titulo">Gastronomia.</h2>
+                <p class="secao-intro">
+                    A culinária japonesa é variada e regional. Entre os pratos
+                    conhecidos estão sushi, ramen, tempura, soba e okonomiyaki.
+                    Ingredientes, preparo e apresentação podem mudar bastante
+                    de uma região para outra.
+                </p>
+
+                <ul class="chips">
+                    <li>🍣 Sushi</li>
+                    <li>🍜 Ramen</li>
+                    <li>🍤 Tempura</li>
+                    <li>🥢 Soba</li>
+                    <li>🥞 Okonomiyaki</li>
+                </ul>
+
             </section>
 
-            <section class="tc-secao japao-chamada tc-fluxo" aria-labelledby="fotos-titulo">
-                <div>
-                    <p class="tc-etiqueta">Inspire sua viagem</p>
-                    <h2 id="fotos-titulo">Veja o Japão em imagens</h2>
-                    <p>Explore uma seleção de paisagens, templos e lugares conhecidos do país.</p>
+
+            <!-- Curiosidades -->
+            <section class="japao-curiosidades revelar" id="conteudo-curiosidades"
+                aria-labelledby="titulo-curiosidades">
+
+                <span class="secao-etiqueta">CURIOSIDADES</span>
+                <h2 id="titulo-curiosidades" class="secao-titulo">Detalhes que só quem conhece sabe.</h2>
+
+                <!-- Caixa interativa -->
+                <div class="voce-sabia" aria-live="polite">
+                    <span class="voce-sabia-etiqueta">VOCÊ SABIA?</span>
+                    <p id="voce-sabia-texto">
+                        Os japoneses chamam o país de Nihon ou Nippon (日本),
+                        que significa “origem do sol”.
+                    </p>
+                    <button type="button" class="voce-sabia-botao" id="voce-sabia-botao">
+                        Outra curiosidade ↻
+                    </button>
                 </div>
-                <a class="tc-botao japao-botao" href="japao-fotos.html">Abrir galeria de fotos →</a>
+
+                <div class="curiosidades-grade">
+
+                    <article class="curiosidade-cartao">
+                        <h3>Hanami</h3>
+                        <p>
+                            É o hábito de se reunir sob as cerejeiras em flor
+                            para fazer piqueniques e apreciar a paisagem.
+                            Acontece principalmente entre março e abril.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Sapatos na entrada</h3>
+                        <p>
+                            Em casas, ryokans e alguns restaurantes, é costume
+                            tirar os sapatos na entrada e usar chinelos
+                            oferecidos no local.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Sem gorjeta</h3>
+                        <p>
+                            Deixar gorjeta não faz parte da cultura. O bom
+                            serviço já é esperado, e o valor extra pode até
+                            causar estranhamento.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Silêncio no transporte</h3>
+                        <p>
+                            Em trens e metrôs, conversar em voz baixa e deixar
+                            o celular no modo silencioso é sinal de respeito
+                            aos outros passageiros.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Palavras em japonês -->
+            <section class="japao-palavras revelar" aria-labelledby="titulo-palavras">
+
+                <span class="secao-etiqueta">FALE COMO UM JAPONÊS</span>
+                <h2 id="titulo-palavras" class="secao-titulo">Cinco palavras para começar.</h2>
+
+                <div class="palavras-grade">
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-japones">こんにちは</span>
+                        <strong>Konnichiwa</strong>
+                        <span>Olá / boa tarde</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-japones">ありがとう</span>
+                        <strong>Arigatō</strong>
+                        <span>Obrigado(a)</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-japones">すみません</span>
+                        <strong>Sumimasen</strong>
+                        <span>Com licença / desculpe</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-japones">いただきます</span>
+                        <strong>Itadakimasu</strong>
+                        <span>Dito antes de comer</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-japones">はい / いいえ</span>
+                        <strong>Hai / Iie</strong>
+                        <span>Sim / Não</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Dicas de viagem -->
+            <section class="japao-dicas revelar" id="conteudo-dicas" aria-labelledby="titulo-dicas">
+
+                <span class="secao-etiqueta">DICAS DE VIAGEM</span>
+                <h2 id="titulo-dicas" class="secao-titulo">Para viajar com tranquilidade.</h2>
+
+                <div class="dicas-grade">
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">🚆</span>
+                        <div>
+                            <h3>Transporte público</h3>
+                            <p>
+                                Trens e metrôs cobrem as grandes cidades. Um
+                                cartão recarregável de transporte facilita
+                                muito os deslocamentos do dia a dia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">🌸</span>
+                        <div>
+                            <h3>Alta temporada</h3>
+                            <p>
+                                Na época das cerejeiras e das folhas de outono,
+                                hospedagens e atrações lotam. Reserve com
+                                bastante antecedência.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">💴</span>
+                        <div>
+                            <h3>Dinheiro em espécie</h3>
+                            <p>
+                                Cartões são aceitos em muitos lugares, mas
+                                templos, pequenos restaurantes e máquinas
+                                automáticas ainda pedem iene em dinheiro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">🗑️</span>
+                        <div>
+                            <h3>Lixo e limpeza</h3>
+                            <p>
+                                Há poucas lixeiras nas ruas. Leve uma sacola
+                                para guardar o lixo até encontrar um local
+                                adequado para descartá-lo.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Destaque para a galeria do Japão -->
+            <section class="destaque-galeria" aria-labelledby="titulo-destaque-galeria">
+
+                <!-- Fotografia de destaque -->
+                <div class="destaque-galeria-imagem">
+                    <img src="https://img.freepik.com/fotos-premium/templo-budista-do-mosteiro-higashi-honganji-na-antiga-cidade-historica-de-quioto-no-japao_770123-11780.jpg" alt="Templo tradicional em Quioto, no Japão" loading="lazy">
+                </div>
+
+                <!-- Apresentação da galeria -->
+                <div class="destaque-galeria-conteudo">
+
+                    <span class="destaque-galeria-etiqueta">
+                        INSPIRE SUA VIAGEM
+                    </span>
+
+                    <h2 id="titulo-destaque-galeria">
+                        Veja o Japão em imagens.
+                    </h2>
+
+                    <p>
+                        Explore uma seleção de paisagens, templos e lugares
+                        conhecidos do país.
+                    </p>
+
+                    <a href="japao-fotos.html" class="destaque-galeria-botao">
+                        Abrir galeria de fotos →
+                    </a>
+
+                </div>
+
             </section>
         </div>
+
     </main>
 
-    <footer class="tc-rodape" data-tc-rodape>
-        <div class="tc-container japao-rodape-basico">
+
+    <!-- Botão para voltar ao topo -->
+    <a href="#" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">↑</a>
+
+
+    <!-- Rodapé principal do Turismo.com -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+
+            <!-- Apresentação do projeto -->
+            <div class="rodape-sobre">
+                <h2>✈ TURISMO<span>.COM</span></h2>
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+            </div>
+
+            <!-- Links de navegação -->
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="japao.html">Japão</a>
+                <a href="japao-fotos.html">Galeria de fotos do Japão</a>
+            </nav>
+
+            <!-- Serviços -->
+            <nav class="rodape-coluna" aria-label="Serviços">
+                <h3>Serviços</h3>
+                <a href="paises/japao/hospedagem.html">Hospedagem</a>
+                <a href="paises/japao/alimentacao.html">Alimentação</a>
+                <a href="paises/japao/compras.html">Compras</a>
+            </nav>
+
+            <!-- Informações -->
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="paises/japao/contato.html">Contato</a>
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior">
             <p>© 2026 TURISMO.COM — Projeto acadêmico desenvolvido em equipe.</p>
-            <a href="japao-fotos.html">Galeria de fotos do Japão</a>
+            <p>Todos os direitos reservados.</p>
         </div>
     </footer>
+
+
+
+    <script>
+        // Controla o menu em celulares e tablets
+        const botaoMenu = document.querySelector(".botao-menu");
+        const navegacao = document.querySelector(".navegacao");
+        const botaoPaises = document.querySelector(".botao-dropdown");
+        const grupoPaises = document.querySelector(".grupo-dropdown");
+
+        botaoMenu.addEventListener("click", () => {
+            const aberto = navegacao.classList.toggle("aberta");
+
+            botaoMenu.setAttribute("aria-expanded", aberto);
+            botaoMenu.setAttribute(
+                "aria-label",
+                aberto ? "Fechar menu" : "Abrir menu"
+            );
+        });
+
+        // Abre e fecha a lista de países ao clicar
+        botaoPaises.addEventListener("click", () => {
+            const aberto = grupoPaises.classList.toggle("aberto");
+            botaoPaises.setAttribute("aria-expanded", aberto);
+        });
+
+
+        // Mostra as seções com uma animação suave ao rolar a página
+        const secoesParaRevelar = document.querySelectorAll(".revelar");
+
+        if ("IntersectionObserver" in window) {
+            const observador = new IntersectionObserver((entradas) => {
+                entradas.forEach((entrada) => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add("revelada");
+                        observador.unobserve(entrada.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            secoesParaRevelar.forEach((secao) => observador.observe(secao));
+        } else {
+            secoesParaRevelar.forEach((secao) => secao.classList.add("revelada"));
+        }
+
+
+        // Caixa "Você sabia?": mostra uma curiosidade diferente a cada clique
+        const curiosidades = [
+            "Os japoneses chamam o país de Nihon ou Nippon (日本), que significa “origem do sol”.",
+            "O Monte Fuji tem 3.776 metros de altura e é o ponto mais alto do Japão. Ele é considerado sagrado e aparece em muitas obras de arte.",
+            "O primeiro trem-bala do mundo, o shinkansen, ligou Tóquio a Osaka em 1964, pouco antes dos Jogos Olímpicos de Tóquio.",
+            "Em Nara, centenas de cervos vivem soltos no parque e, pela tradição xintoísta, já foram considerados mensageiros dos deuses.",
+            "Os japoneses dizem “itadakimasu” antes de comer, como forma de agradecer pelo alimento e por quem o preparou.",
+            "O Japão é formado por milhares de ilhas, mas quatro delas (Honshu, Hokkaido, Kyushu e Shikoku) concentram a maior parte do território.",
+            "Em muitas cidades japonesas é comum encontrar máquinas de venda automática com bebidas quentes e geladas, até em ruas bem tranquilas."
+        ];
+
+        const textoCuriosidade = document.getElementById("voce-sabia-texto");
+        const botaoCuriosidade = document.getElementById("voce-sabia-botao");
+        let curiosidadeAtual = 0;
+
+        botaoCuriosidade.addEventListener("click", () => {
+            curiosidadeAtual = (curiosidadeAtual + 1) % curiosidades.length;
+            textoCuriosidade.classList.add("trocando");
+
+            setTimeout(() => {
+                textoCuriosidade.textContent = curiosidades[curiosidadeAtual];
+                textoCuriosidade.classList.remove("trocando");
+            }, 180);
+        });
+
+
+        // Botão de voltar ao topo: aparece depois de rolar a página
+        const botaoTopo = document.getElementById("voltar-topo");
+
+        window.addEventListener("scroll", () => {
+            botaoTopo.classList.toggle("visivel", window.scrollY > 700);
+        });
+    </script>
+
 </body>
+
 </html>

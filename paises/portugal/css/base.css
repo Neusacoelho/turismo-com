@@ -1,0 +1,88 @@
+/* Base própria de Portugal: tokens, tipografia, reset, foco e contêiner usados pela galeria.
+   Extraído de assets/css/base.css. O escopo com :where preserva a especificidade. */
+.tc-site:where(.pais-portugal) {
+    --tc-turquesa: #00a7b5;
+    --tc-marinho: #163b50;
+    --tc-branco: #ffffff;
+    --tc-fundo: #f4f7f8;
+    --tc-texto: #465d69;
+    --tc-link: #006b75;
+    --tc-borda: #dce6e9;
+    --tc-suave: #e0f4f5;
+    margin: 0;
+    background: var(--tc-fundo);
+    color: var(--tc-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.tc-site:where(.pais-portugal),
+.tc-site:where(.pais-portugal) *,
+.tc-site:where(.pais-portugal) *::before,
+.tc-site:where(.pais-portugal) *::after {
+    box-sizing: border-box;
+}
+
+.tc-site:where(.pais-portugal) :where(h1, h2, h3, p, figure, ul, ol, dl) {
+    margin: 0;
+}
+
+.tc-site:where(.pais-portugal) :where(h1, h2, h3) {
+    color: var(--tc-marinho); line-height: 1.2;
+}
+
+.tc-site:where(.pais-portugal) h1 {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+}
+
+.tc-site:where(.pais-portugal) h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.tc-site:where(.pais-portugal) h3 {
+    font-size: 1.25rem;
+}
+
+.tc-site:where(.pais-portugal) a {
+    color: var(--tc-link); text-underline-offset: 0.2em;
+}
+
+.tc-site:where(.pais-portugal) a:hover {
+    text-decoration-thickness: 0.15em;
+}
+
+.tc-site:where(.pais-portugal) img {
+    display: block; max-width: 100%; height: auto;
+}
+
+.tc-site:where(.pais-portugal) :where(button, input, textarea, select) {
+    font: inherit;
+}
+
+.tc-site:where(.pais-portugal) button {
+    cursor: pointer;
+}
+
+.tc-site:where(.pais-portugal) :focus-visible {
+    outline: 3px solid var(--tc-link);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--tc-branco);
+}
+
+.tc-site:where(.pais-portugal) .tc-container {
+    width: calc(100% - 3rem);
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+.tc-site:where(.pais-portugal) :where([id]) {
+    scroll-margin-top: 7rem;
+}
+
+@media (max-width: 600px) {
+    .tc-site:where(.pais-portugal) .tc-container {
+        width: calc(100% - 2rem);
+    }
+}

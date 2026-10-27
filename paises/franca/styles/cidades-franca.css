@@ -340,3 +340,192 @@
         transition: none !important;
     }
 }
+
+/* =====================================
+   BANNER PRINCIPAL COM IMAGEM DE FUNDO
+===================================== */
+
+.cidade-hero {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #222;
+}
+
+/* Imagem de fundo */
+
+.cidade-hero-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Camada escura sobre a imagem */
+
+.cidade-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.40) 50%,
+        rgba(0, 0, 0, 0.10) 100%
+    );
+}
+
+/* Texto sobre a imagem */
+
+.cidade-hero-texto {
+    max-width: 650px;
+    color: #fff;
+}
+
+.cidade-hero-texto .cidade-kicker {
+    color: #fff;
+}
+
+.cidade-hero-texto h1 {
+    color: #fff;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    margin: 15px 0;
+}
+
+.cidade-hero-texto p {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Créditos da fotografia */
+
+.cidade-hero-creditos {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: 2;
+
+    color: #fff;
+    font-size: 11px;
+
+    background: rgba(0, 0, 0, 0.45);
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.cidade-hero-creditos a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .cidade-hero {
+        min-height: 480px;
+    }
+
+    .cidade-hero-overlay {
+        padding: 30px 22px;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.30)
+        );
+    }
+
+    .cidade-hero-texto h1 {
+        font-size: 3rem;
+    }
+
+    .cidade-hero-texto p {
+        font-size: 1rem;
+    }
+
+    .cidade-hero-creditos {
+        right: 8px;
+        bottom: 8px;
+        font-size: 9px;
+    }
+}
+
+/* =====================================
+   IMAGENS DOS PONTOS TURÍSTICOS
+===================================== */
+
+.info-card .imagem-com-creditos {
+    width: 100%;
+    margin: 0 0 18px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.info-card .imagem-com-creditos img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.4s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.info-card .imagem-com-creditos img:hover {
+    transform: scale(1.04);
+}
+
+/* Créditos das fotografias */
+
+.info-card .imagem-com-creditos figcaption {
+    padding: 8px 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+}
+
+/* Links dos créditos */
+
+.info-card .imagem-com-creditos figcaption a {
+    color: #777;
+    text-decoration: underline;
+}
+
+.info-card .imagem-com-creditos figcaption a:hover {
+    color: #b8860b;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .info-card .imagem-com-creditos img {
+        height: 260px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .info-card .imagem-com-creditos img {
+        height: 230px;
+    }
+
+}
