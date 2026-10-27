@@ -1,4 +1,3 @@
-Japao paginas · JS
 // Scripts compartilhados das subpáginas do Japão (cultura, gastronomia, pontos turísticos, curiosidades)
 (function () {
     "use strict";
