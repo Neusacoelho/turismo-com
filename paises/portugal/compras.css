@@ -1,0 +1,146 @@
+/* Compras de Portugal — estilo exclusivo desta página.
+   Carregar após css/base.css, css/componentes.css e css/pais.css.
+   Não altera o cabeçalho, o rodapé ou outras páginas. */
+
+.pagina-compras main {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.pagina-compras main :is(h1, h2, h3) {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+/* Apresentação sem imagem externa: identidade visual do TURISMO.COM. */
+.pagina-compras .compras-banner {
+    padding-block: 4.5rem 5rem;
+    background: linear-gradient(120deg, #12394c 0%, #163b50 65%, #087e8d 100%);
+}
+.pagina-compras .compras-banner::before { background: transparent; }
+.pagina-compras .compras-banner .tc-migalhas { margin-bottom: 3.5rem; }
+.pagina-compras .compras-banner h1 {
+    max-width: none;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: clamp(2.7rem, 5.4vw, 4.7rem);
+    line-height: 1.1;
+}
+.pagina-compras .compras-banner > .tc-container > p:last-child {
+    max-width: 39rem;
+    color: #e2eff2;
+    font-size: 1.08rem;
+}
+
+/* Introdução e títulos de seção. */
+.pagina-compras .compras-introducao { padding-block: 5rem 3.5rem; }
+.pagina-compras .compras-introducao h2,
+.pagina-compras .compras-opcoes h2,
+.pagina-compras .compras-continuar h2 {
+    margin-bottom: 1.1rem;
+    color: #163b50;
+    font-size: clamp(2rem, 3.3vw, 3rem);
+    line-height: 1.16;
+}
+.pagina-compras .compras-introducao > p:last-child {
+    max-width: 54rem;
+    font-size: 1.05rem;
+}
+.pagina-compras .compras-opcoes {
+    padding-top: 1.2rem;
+    padding-bottom: 5rem;
+}
+.pagina-compras .compras-opcoes h2 { margin-bottom: 2rem; }
+
+/* Três cartões informativos: nenhuma página adicional é necessária. */
+.pagina-compras .compras-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+.pagina-compras .compras-cartao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    min-width: 0;
+    padding: 2rem;
+    border: 1px solid #e3ecef;
+    border-radius: 1.1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 59 80 / 7%);
+}
+.pagina-compras .compras-cartao .tc-cartao-numero {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #e0f4f5;
+    color: #006b75;
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+.pagina-compras .compras-cartao h3 {
+    color: #163b50;
+    font-size: clamp(1.45rem, 2vw, 1.8rem);
+    line-height: 1.25;
+}
+.pagina-compras .compras-cartao p {
+    color: #465d69;
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+.pagina-compras .compras-cartao > a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 0.7rem;
+    color: #006b75;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+}
+.pagina-compras .compras-cartao > a:hover { color: #163b50; }
+
+/* Orientação prática em destaque. */
+.pagina-compras .compras-dica {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.35fr) 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.6rem 2rem;
+    border-left: 4px solid #00a7b5;
+    border-radius: 0.7rem;
+    background: #e0f4f5;
+}
+.pagina-compras .compras-dica h2 {
+    color: #163b50;
+    font-size: 1.6rem;
+}
+.pagina-compras .compras-dica p { font-size: 0.95rem; }
+
+.pagina-compras .compras-continuar { padding-block: 4.5rem 5rem; }
+.pagina-compras .compras-continuar .tc-acoes { margin-top: 1.5rem; }
+
+@media (max-width: 900px) {
+    .pagina-compras .compras-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-compras .compras-cartao:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+    .pagina-compras .compras-banner { padding-block: 3rem 3.5rem; }
+    .pagina-compras .compras-banner .tc-migalhas { margin-bottom: 2.5rem; }
+    .pagina-compras .compras-introducao { padding-block: 3rem 2rem; }
+    .pagina-compras .compras-opcoes { padding-bottom: 3rem; }
+    .pagina-compras .compras-grade { grid-template-columns: 1fr; }
+    .pagina-compras .compras-cartao:last-child { grid-column: auto; }
+    .pagina-compras .compras-cartao { padding: 1.5rem; }
+    .pagina-compras .compras-dica { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+    .pagina-compras .compras-continuar { padding-block: 3rem; }
+}
+
+/* Caminho de navegação no banner: mesmo padrão de Cultura e Hospedagem. */
+.pagina-compras .tc-banner .tc-migalhas,
+.pagina-compras .tc-banner .tc-migalhas a { color: #fff; }
+.pagina-compras .tc-banner .tc-migalhas a { text-decoration: none; }
+.pagina-compras .tc-banner .tc-migalhas a:hover { text-decoration: underline; }
