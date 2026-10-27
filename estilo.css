@@ -312,3 +312,187 @@ html { scroll-behavior: smooth; }
 .js .pagina-inicio .revelar { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .js .pagina-inicio .revelar.revelada { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js .pagina-inicio .revelar { opacity: 1; transform: none; transition: none; } }
+
+/* ===== PÁGINAS LEGAIS ===== */
+
+.pagina-legal {
+    background: #f7f9fa;
+    color: #344650;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.politica-container {
+    width: min(100% - 40px, 900px);
+    margin: 65px auto 90px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e0e9ec;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(20, 43, 59, 0.05);
+    line-height: 1.8;
+}
+
+.politica-container h1,
+.politica-container h2 {
+    color: #142b3b;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.politica-container h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 12px;
+}
+
+.politica-container h2 {
+    font-size: 1.4rem;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.politica-container p {
+    margin-bottom: 15px;
+}
+
+.politica-container ul {
+    padding-left: 25px;
+    margin-bottom: 18px;
+}
+
+.politica-container a {
+    color: #245b78;
+}
+
+.politica-data {
+    color: #687982;
+    font-size: .9rem;
+}
+
+.politica-voltar {
+    display: inline-block;
+    margin-top: 35px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .politica-container {
+        width: calc(100% - 24px);
+        margin: 25px auto 50px;
+        padding: 22px;
+    }
+}
+/* =====================================
+   AVISO DE COOKIES — TURISMO.COM
+===================================== */
+
+.aviso-cookies {
+    position: fixed;
+    z-index: 99999;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    background: #fff;
+    color: #333;
+
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cookies-conteudo {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cookies-conteudo h2 {
+    color: #183b56;
+    margin-top: 0;
+}
+
+.cookies-conteudo p {
+    line-height: 1.6;
+}
+
+.cookies-conteudo a {
+    color: #1769aa;
+}
+
+.cookies-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cookies-botoes button,
+#salvar-preferencias {
+    padding: 12px 18px;
+    border: 1px solid #183b56;
+    border-radius: 6px;
+    background: #fff;
+    color: #183b56;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cookies-botoes button:last-child,
+#salvar-preferencias {
+    background: #183b56;
+    color: #fff;
+}
+
+.cookies-botoes button:hover,
+#salvar-preferencias:hover {
+    opacity: 0.85;
+}
+
+#configuracoes-cookies {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+#configuracoes-cookies label {
+    display: block;
+    margin: 12px 0;
+}
+
+#salvar-preferencias {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.aviso-cookies[hidden],
+#configuracoes-cookies[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .aviso-cookies {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 18px;
+    }
+
+    .cookies-botoes {
+        flex-direction: column;
+    }
+
+    .cookies-botoes button {
+        width: 100%;
+    }
+}
+.botao-preferencias-cookies {
+    position: fixed;
+    z-index: 9998;
+    left: 12px;
+    bottom: 12px;
+    padding: 10px 14px;
+    background: #183b56;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

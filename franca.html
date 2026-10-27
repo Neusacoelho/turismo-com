@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,290 +11,292 @@
 
 <body class="pagina-franca">
 
-<header class="cabecalho-principal">
+    <header class="cabecalho-principal">
 
-    <a class="marca" href="index.html">
-        <span class="marca-simbolo">✈</span>
+        <a class="marca" href="index.html">
+            <span class="marca-simbolo">✈</span>
 
-        <span class="marca-texto">
-            <strong>Turismo <span>pelo Mundo</span></strong>
-            <small>GUIA DA FRANÇA</small>
-        </span>
-    </a>
+            <span class="marca-texto">
+                <strong>Turismo <span>pelo Mundo</span></strong>
+                <small>GUIA DA FRANÇA</small>
+            </span>
+        </a>
 
-    <button
-        class="botao-menu"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <nav class="navegacao">
-        <a class="ativo" href="index.html">Início</a>
-        <a href="paises/franca/pages/cultura-franca.html">Cultura</a>
+        <nav class="navegacao">
+            <a class="ativo" href="index.html">Início</a>
+            <a href="paises/franca/pages/cultura-franca.html">Cultura</a>
 
-        <div class="grupo-dropdown">
-            <button
-                class="botao-dropdown"
-                type="button"
-                aria-expanded="false">
-                Cidades ▾
-            </button>
+            <div class="grupo-dropdown">
+                <button class="botao-dropdown" type="button" aria-expanded="false">
+                    Cidades ▾
+                </button>
 
-            <div class="menu-dropdown">
+                <div class="menu-dropdown">
+                    <a href="paises/franca/pages/paris.html">Paris</a>
+                    <a href="paises/franca/pages/nice.html">Nice</a>
+                    <a href="paises/franca/pages/lyon.html">Lyon</a>
+                    <a href="paises/franca/pages/bordeaux.html">Bordeaux</a>
+                    <a href="paises/franca/pages/estrasburgo.html">Estrasburgo</a>
+                </div>
+
+                <button class="botao-dropdown" type="button" aria-expanded="true" aria-controls="lista-paises" disabled>
+                    Países ▾
+                </button>
+                <div class="menu-dropdown" id="lista-paises">
+                    <a href="brasil.html">Brasil</a>
+                    <a href="portugal.html">Portugal</a>
+                    <a href="franca.html">França</a>
+                    <a href="espanha.html">Espanha</a>
+                    <a href="italia.html">Itália</a>
+                    <a href="japao.html">Japão</a>
+                    <a href="china.html">China</a>
+                    <a href="grecia.html">Grécia</a>
+                </div>
+            </div>
+
+            <a href="hospedagem.html">Hospedagem</a>
+            <a href="alimentacao.html">Alimentação</a>
+            <a href="compras.html">Compras</a>
+            <a href="contato.html">Contato</a>
+            </div>
+
+            <a href="paises/franca/pages/franca-fotos.html">Galeria</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="banner-franca">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=85"
+                alt="Torre Eiffel em Paris">
+
+            <div class="banner-franca-texto">
+                <span class="banner-etiqueta">EUROPA · CULTURA · HISTÓRIA</span>
+                <h1>Descubra a França</h1>
+                <p>
+                    Explore monumentos históricos, cidades encantadoras, museus,
+                    paisagens e uma gastronomia reconhecida mundialmente.
+                </p>
+                <a class="banner-botao" href="#explorar">Explorar destinos</a>
+            </div>
+        </section>
+
+        <section class="resumo-franca">
+            <article>
+                <span>📍</span>
+                <div>
+                    <small>Capital</small>
+                    <strong>Paris</strong>
+                </div>
+            </article>
+
+            <article>
+                <span>🗣️</span>
+                <div>
+                    <small>Idioma oficial</small>
+                    <strong>Francês</strong>
+                </div>
+            </article>
+
+            <article>
+                <span>💶</span>
+                <div>
+                    <small>Moeda</small>
+                    <strong>Euro (€)</strong>
+                </div>
+            </article>
+
+            <article>
+                <span>🏛️</span>
+                <div>
+                    <small>Patrimônio</small>
+                    <strong>História e arte</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="apresentacao-franca">
+            <div>
+                <span class="etiqueta">BIENVENUE EN FRANCE</span>
+                <h2>Um país de tradições e descobertas</h2>
+            </div>
+
+            <div>
+                <p>
+                    A França está localizada na Europa Ocidental e reúne paisagens
+                    variadas, desde praias mediterrâneas até montanhas e campos rurais.
+                </p>
+
+                <p>
+                    Sua história, arquitetura, arte, moda e culinária atraem visitantes
+                    de diferentes partes do mundo. Cada região possui costumes e
+                    especialidades próprias.
+                </p>
+
+                <a class="link-destaque" href="paises/franca/pages/cultura-franca.html">
+                    Conheça a cultura francesa →
+                </a>
+            </div>
+        </section>
+
+        <section id="explorar" class="secao">
+            <span class="etiqueta">DESTINOS PRINCIPAIS</span>
+            <h2>Escolha sua próxima cidade</h2>
+            <p class="subtitulo">
+                Conheça algumas cidades francesas e descubra o que cada uma oferece.
+            </p>
+
+            <div class="explorar-cartoes">
+                <article class="explorar-cartao">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+                        alt="Paris">
+                    <div class="cartao-corpo">
+                        <span>01 · ÎLE-DE-FRANCE</span>
+                        <h3>Paris</h3>
+                        <p>
+                            A Torre Eiffel, o Louvre, avenidas históricas e bairros
+                            cheios de vida.
+                        </p>
+                        <a href="paises/franca/pages/paris.html">Explorar Paris →</a>
+                    </div>
+                </article>
+
+                <article class="explorar-cartao">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
+                        alt="Litoral ensolarado">
+                    <div class="cartao-corpo">
+                        <span>02 · COSTA AZUL</span>
+                        <h3>Nice</h3>
+                        <p>
+                            Mar Mediterrâneo, passeios à beira-mar e arquitetura
+                            colorida.
+                        </p>
+                        <a href="paises/franca/pages/nice.html">Explorar Nice →</a>
+                    </div>
+                </article>
+
+                <article class="explorar-cartao">
+                    <img src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?auto=format&fit=crop&w=800&q=80"
+                        alt="Arquitetura de Lyon">
+                    <div class="cartao-corpo">
+                        <span>03 · AUVERGNE-RHÔNE-ALPES</span>
+                        <h3>Lyon</h3>
+                        <p>
+                            Centro histórico, passagens tradicionais e culinária
+                            regional.
+                        </p>
+                        <a href="paises/franca/pages/lyon.html">Explorar Lyon →</a>
+                    </div>
+                </article>
+
+                <article class="explorar-cartao">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80"
+                        alt="Arquitetura urbana">
+                    <div class="cartao-corpo">
+                        <span>04 · NOVA AQUITÂNIA</span>
+                        <h3>Bordeaux</h3>
+                        <p>
+                            Praças elegantes, arquitetura clássica e tradição vinícola.
+                        </p>
+                        <a href="paises/franca/pages/bordeaux.html">Explorar Bordeaux →</a>
+                    </div>
+                </article>
+
+                <article class="explorar-cartao">
+                    <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=800&q=80"
+                        alt="Casas históricas europeias">
+                    <div class="cartao-corpo">
+                        <span>05 · GRAND EST</span>
+                        <h3>Estrasburgo</h3>
+                        <p>
+                            Casas enxaimel, canais e influências francesas e alemãs.
+                        </p>
+                        <a href="paises/franca/pages/estrasburgo.html">Explorar Estrasburgo →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="chamada-cultura">
+            <div>
+                <span class="etiqueta">SABORES E TRADIÇÕES</span>
+                <h2>Mais do que monumentos</h2>
+                <p>
+                    Descubra pratos tradicionais, hábitos culturais, festas e
+                    curiosidades da França.
+                </p>
+            </div>
+
+            <a class="banner-botao" href="paises/franca/pages/cultura-franca.html">
+                Explorar a cultura
+            </a>
+        </section>
+
+        <section class="secao">
+            <span class="etiqueta">INSPIRAÇÃO</span>
+            <h2>Veja a França em imagens</h2>
+            <p class="subtitulo">
+                Uma seleção visual de paisagens e lugares para conhecer.
+            </p>
+            <a class="link-destaque" href="paises/franca/pages/franca-fotos.html">
+                Abrir galeria de fotos →
+            </a>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div>
+                <h2>Turismo <span>pelo Mundo</span></h2>
+                <p>Um guia educacional para descobrir a França.</p>
+            </div>
+
+            <div>
+                <h3>Destinos</h3>
                 <a href="paises/franca/pages/paris.html">Paris</a>
                 <a href="paises/franca/pages/nice.html">Nice</a>
                 <a href="paises/franca/pages/lyon.html">Lyon</a>
                 <a href="paises/franca/pages/bordeaux.html">Bordeaux</a>
                 <a href="paises/franca/pages/estrasburgo.html">Estrasburgo</a>
             </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="paises/franca/pages/cultura-franca.html">Cultura e gastronomia</a>
+                <a href="paises/franca/pages/franca-fotos.html">Galeria de fotos</a>
+            </div>
         </div>
 
-        <a href="paises/franca/pages/franca-fotos.html">Galeria</a>
-    </nav>
-
-</header>
-
-<main>
-    <section class="banner-franca">
-        <img
-            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=85"
-            alt="Torre Eiffel em Paris"
-        >
-
-        <div class="banner-franca-texto">
-            <span class="banner-etiqueta">EUROPA · CULTURA · HISTÓRIA</span>
-            <h1>Descubra a França</h1>
-            <p>
-                Explore monumentos históricos, cidades encantadoras, museus,
-                paisagens e uma gastronomia reconhecida mundialmente.
-            </p>
-            <a class="banner-botao" href="#explorar">Explorar destinos</a>
-        </div>
-    </section>
-
-    <section class="resumo-franca">
-        <article>
-            <span>📍</span>
-            <div>
-                <small>Capital</small>
-                <strong>Paris</strong>
-            </div>
-        </article>
-
-        <article>
-            <span>🗣️</span>
-            <div>
-                <small>Idioma oficial</small>
-                <strong>Francês</strong>
-            </div>
-        </article>
-
-        <article>
-            <span>💶</span>
-            <div>
-                <small>Moeda</small>
-                <strong>Euro (€)</strong>
-            </div>
-        </article>
-
-        <article>
-            <span>🏛️</span>
-            <div>
-                <small>Patrimônio</small>
-                <strong>História e arte</strong>
-            </div>
-        </article>
-    </section>
-
-    <section class="apresentacao-franca">
-        <div>
-            <span class="etiqueta">BIENVENUE EN FRANCE</span>
-            <h2>Um país de tradições e descobertas</h2>
-        </div>
-
-        <div>
-            <p>
-                A França está localizada na Europa Ocidental e reúne paisagens
-                variadas, desde praias mediterrâneas até montanhas e campos rurais.
-            </p>
-
-            <p>
-                Sua história, arquitetura, arte, moda e culinária atraem visitantes
-                de diferentes partes do mundo. Cada região possui costumes e
-                especialidades próprias.
-            </p>
-
-            <a class="link-destaque" href="paises/franca/pages/cultura-franca.html">
-                Conheça a cultura francesa →
-            </a>
-        </div>
-    </section>
-
-    <section id="explorar" class="secao">
-        <span class="etiqueta">DESTINOS PRINCIPAIS</span>
-        <h2>Escolha sua próxima cidade</h2>
-        <p class="subtitulo">
-            Conheça algumas cidades francesas e descubra o que cada uma oferece.
+        <p class="rodape-inferior">
+            © 2026 Turismo pelo Mundo · Projeto educacional
         </p>
+    </footer>
 
-        <div class="explorar-cartoes">
-            <article class="explorar-cartao">
-                <img
-                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
-                    alt="Paris"
-                >
-                <div class="cartao-corpo">
-                    <span>01 · ÎLE-DE-FRANCE</span>
-                    <h3>Paris</h3>
-                    <p>
-                        A Torre Eiffel, o Louvre, avenidas históricas e bairros
-                        cheios de vida.
-                    </p>
-                    <a href="paises/franca/pages/paris.html">Explorar Paris →</a>
-                </div>
-            </article>
+    <script>
+        (() => {
+            const menu = document.querySelector(".botao-menu");
+            const nav = document.querySelector(".navegacao");
+            const dropdown = document.querySelector(".botao-dropdown");
+            const grupo = document.querySelector(".grupo-dropdown");
 
-            <article class="explorar-cartao">
-                <img
-                    src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
-                    alt="Litoral ensolarado"
-                >
-                <div class="cartao-corpo">
-                    <span>02 · COSTA AZUL</span>
-                    <h3>Nice</h3>
-                    <p>
-                        Mar Mediterrâneo, passeios à beira-mar e arquitetura
-                        colorida.
-                    </p>
-                    <a href="paises/franca/pages/nice.html">Explorar Nice →</a>
-                </div>
-            </article>
+            menu?.addEventListener("click", () => {
+                const aberto = nav.classList.toggle("aberta");
+                menu.setAttribute("aria-expanded", String(aberto));
+            });
 
-            <article class="explorar-cartao">
-                <img
-                    src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?auto=format&fit=crop&w=800&q=80"
-                    alt="Arquitetura de Lyon"
-                >
-                <div class="cartao-corpo">
-                    <span>03 · AUVERGNE-RHÔNE-ALPES</span>
-                    <h3>Lyon</h3>
-                    <p>
-                        Centro histórico, passagens tradicionais e culinária
-                        regional.
-                    </p>
-                    <a href="paises/franca/pages/lyon.html">Explorar Lyon →</a>
-                </div>
-            </article>
-
-            <article class="explorar-cartao">
-                <img
-                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80"
-                    alt="Arquitetura urbana"
-                >
-                <div class="cartao-corpo">
-                    <span>04 · NOVA AQUITÂNIA</span>
-                    <h3>Bordeaux</h3>
-                    <p>
-                        Praças elegantes, arquitetura clássica e tradição vinícola.
-                    </p>
-                    <a href="paises/franca/pages/bordeaux.html">Explorar Bordeaux →</a>
-                </div>
-            </article>
-
-            <article class="explorar-cartao">
-                <img
-                    src="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=800&q=80"
-                    alt="Casas históricas europeias"
-                >
-                <div class="cartao-corpo">
-                    <span>05 · GRAND EST</span>
-                    <h3>Estrasburgo</h3>
-                    <p>
-                        Casas enxaimel, canais e influências francesas e alemãs.
-                    </p>
-                    <a href="paises/franca/pages/estrasburgo.html">Explorar Estrasburgo →</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="chamada-cultura">
-        <div>
-            <span class="etiqueta">SABORES E TRADIÇÕES</span>
-            <h2>Mais do que monumentos</h2>
-            <p>
-                Descubra pratos tradicionais, hábitos culturais, festas e
-                curiosidades da França.
-            </p>
-        </div>
-
-        <a class="banner-botao" href="paises/franca/pages/cultura-franca.html">
-            Explorar a cultura
-        </a>
-    </section>
-
-    <section class="secao">
-        <span class="etiqueta">INSPIRAÇÃO</span>
-        <h2>Veja a França em imagens</h2>
-        <p class="subtitulo">
-            Uma seleção visual de paisagens e lugares para conhecer.
-        </p>
-        <a class="link-destaque" href="paises/franca/pages/franca-fotos.html">
-            Abrir galeria de fotos →
-        </a>
-    </section>
-</main>
-
-<footer class="rodape-principal">
-    <div class="rodape-conteudo">
-        <div>
-            <h2>Turismo <span>pelo Mundo</span></h2>
-            <p>Um guia educacional para descobrir a França.</p>
-        </div>
-
-        <div>
-            <h3>Destinos</h3>
-            <a href="paises/franca/pages/paris.html">Paris</a>
-            <a href="paises/franca/pages/nice.html">Nice</a>
-            <a href="paises/franca/pages/lyon.html">Lyon</a>
-            <a href="paises/franca/pages/bordeaux.html">Bordeaux</a>
-            <a href="paises/franca/pages/estrasburgo.html">Estrasburgo</a>
-        </div>
-
-        <div>
-            <h3>Explore</h3>
-            <a href="paises/franca/pages/cultura-franca.html">Cultura e gastronomia</a>
-            <a href="paises/franca/pages/franca-fotos.html">Galeria de fotos</a>
-        </div>
-    </div>
-
-    <p class="rodape-inferior">
-        © 2026 Turismo pelo Mundo · Projeto educacional
-    </p>
-</footer>
-
-<script>
-    (() => {
-        const menu = document.querySelector(".botao-menu");
-        const nav = document.querySelector(".navegacao");
-        const dropdown = document.querySelector(".botao-dropdown");
-        const grupo = document.querySelector(".grupo-dropdown");
-
-        menu?.addEventListener("click", () => {
-            const aberto = nav.classList.toggle("aberta");
-            menu.setAttribute("aria-expanded", String(aberto));
-        });
-
-        dropdown?.addEventListener("click", () => {
-            const aberto = grupo.classList.toggle("aberto");
-            dropdown.setAttribute("aria-expanded", String(aberto));
-        });
-    })();
-</script>
+            dropdown?.addEventListener("click", () => {
+                const aberto = grupo.classList.toggle("aberto");
+                dropdown.setAttribute("aria-expanded", String(aberto));
+            });
+        })();
+    </script>
 
 </body>
+
 </html>

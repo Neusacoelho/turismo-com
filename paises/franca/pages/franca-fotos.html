@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galeria de fotos da França: monumentos, cidades, arquitetura e paisagens.">
+    <meta name="description"
+        content="Galeria de fotografias da França: monumentos, cidades, arquitetura e paisagens, com créditos e licenças das imagens.">
+    <meta name="robots" content="index, follow">
     <title>Galeria da França | Turismo pelo Mundo</title>
-
     <link rel="stylesheet" href="../styles/frança.css">
 
     <style>
@@ -48,7 +48,7 @@
             transform: scale(1.04);
         }
 
-        .foto-card div {
+        .foto-card-conteudo {
             padding: 18px;
         }
 
@@ -61,6 +61,39 @@
         .foto-card p {
             margin: 0;
             color: #526570;
+        }
+
+        .credito-imagem {
+            display: block;
+            margin-top: 12px;
+            font-size: .75rem;
+            color: #687982;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .credito-imagem a {
+            color: #245b78;
+            text-decoration: underline;
+        }
+
+        .credito-imagem a:hover {
+            color: #142b3b;
+        }
+
+        .foto-card:focus-within {
+            outline: 2px solid #245b78;
+            outline-offset: 3px;
+        }
+
+        .nota-licencas {
+            width: min(100% - 40px, 1180px);
+            margin: 0 auto 45px;
+            padding: 18px 20px;
+            border-left: 4px solid #245b78;
+            background: #f3f7f8;
+            color: #344b57;
+            line-height: 1.6;
         }
 
         @media (max-width: 800px) {
@@ -78,30 +111,46 @@
                 height: 230px;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .foto-card img {
+                transition: none;
+            }
+        }
     </style>
 </head>
 
 <body class="pagina-franca">
 
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo
+    </a>
+
     <header class="cabecalho-principal">
-        <a class="marca" href="franca.html">
-            <span class="marca-simbolo">🇫🇷</span>
+
+        <a class="marca" href="../../../index.html">
+            <span class="marca-simbolo" aria-hidden="true">✈</span>
+
             <span class="marca-texto">
                 <strong>Turismo <span>pelo Mundo</span></strong>
                 <small>GALERIA DA FRANÇA</small>
             </span>
         </a>
 
-        <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">
+        <button type="button" class="botao-menu" aria-label="Abrir menu" aria-controls="menu-principal"
+            aria-expanded="false">
             ☰
         </button>
 
-        <nav class="navegacao">
-            <a href="franca.html">Início</a>
+        <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+
+            <a href="../../../index.html">Início</a>
+
             <a href="cultura-franca.html">Cultura</a>
 
             <div class="grupo-dropdown">
-                <button class="botao-dropdown" aria-expanded="false">
+
+                <button type="button" class="botao-dropdown" aria-expanded="false">
                     Cidades ▾
                 </button>
 
@@ -112,144 +161,448 @@
                     <a href="bordeaux.html">Bordeaux</a>
                     <a href="estrasburgo.html">Estrasburgo</a>
                 </div>
+
             </div>
 
-            <a class="ativo" href="franca-fotos.html">Galeria</a>
+            <a class="ativo" href="franca-fotos.html" aria-current="page">
+                Galeria
+            </a>
+
         </nav>
+
     </header>
 
-    <main>
-        <section class="galeria-intro">
-            <span class="etiqueta">PAISAGENS E ARQUITETURA</span>
-            <h1>França em imagens</h1>
+    <main id="conteudo">
+
+        <section class="galeria-intro" aria-labelledby="titulo-galeria">
+
+            <span class="etiqueta">
+                PAISAGENS E ARQUITETURA
+            </span>
+
+            <h1 id="titulo-galeria">
+                França em imagens
+            </h1>
+
             <p>
-                Uma seleção de imagens para conhecer alguns dos cenários,
+                Uma seleção de fotografias para conhecer alguns dos cenários,
                 monumentos e regiões francesas.
             </p>
+
         </section>
 
-        <section class="galeria-grid">
+        <section class="galeria-grid" aria-label="Galeria de fotografias da França">
+
+            <!-- PARIS — TORRE EIFFEL -->
 
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
-                    alt="Torre Eiffel em Paris"
-                >
-                <div>
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower%2CParis.jpg?width=1200"
+                    alt="Torre Eiffel em Paris, fotografada em alta resolução" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
                     <h2>Paris</h2>
-                    <p>Monumentos e avenidas históricas.</p>
+
+                    <p>
+                        A Torre Eiffel, um dos monumentos mais conhecidos
+                        e importantes da França.
+                    </p>
+
+                    <small class="credito-imagem">
+
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Commonists" target="_blank"
+                            rel="noopener noreferrer">
+                            Commonists
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Eiffel_Tower%2CParis.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        <br>
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            Creative Commons BY-SA 4.0
+                        </a>.
+
+                        <br>
+
+                        Fotografia utilizada sem modificações.
+
+                    </small>
+
                 </div>
+
             </article>
 
+            <!-- RUA DE BUCI — PARIS -->
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85"
-                    alt="Rua parisiense"
-                >
-                <div>
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Rue_de_Buci%2C_Paris%2C_France.jpg?width=1200"
+                    alt="Rua de Buci, em Paris, França">
+
+                <div class="foto-card-conteudo">
                     <h2>Ruas de Paris</h2>
-                    <p>Cafés, edifícios e vida urbana.</p>
+
+                    <p>
+                        A Rue de Buci, localizada no charmoso bairro
+                        de Saint-Germain-des-Prés, representa o
+                        cotidiano e a arquitetura das ruas parisienses.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Maxim75" target="_blank"
+                            rel="noopener noreferrer">Maksym Kozlenko (Maxim75)</a>.
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Rue_de_Buci,_Paris,_France.jpg" target="_blank"
+                            rel="noopener noreferrer">Wikimedia Commons</a>.
+                        <br>
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">CC BY-SA 4.0</a>.
+                        <br>
+
+                        Imagem redimensionada para exibição no site.
+                    </small>
                 </div>
             </article>
 
+            <!-- COSTA AZUL -->
+
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
-                    alt="Mar e costa"
-                >
-                <div>
+
+                <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nice_cote_azur.jpg"
+                    alt="Vista da praia e da Baía dos Anjos em Nice" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
                     <h2>Costa Azul</h2>
-                    <p>Mar Mediterrâneo e paisagens litorâneas.</p>
+
+                    <p>
+                        Mar Mediterrâneo e paisagem litorânea de Nice.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Kevinbeets1995" target="_blank"
+                            rel="noopener noreferrer">
+                            Kevinbeets1995
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Nice_cote_azur.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+
                 </div>
+
             </article>
 
+            <!-- LYON -->
+
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?auto=format&fit=crop&w=1000&q=85"
-                    alt="Arquitetura histórica"
-                >
-                <div>
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Place_des_Terreaux%2C_h%C3%B4tel_de_ville_de_Lyon.jpg"
+                    alt="Prefeitura de Lyon na Place des Terreaux" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
                     <h2>Lyon</h2>
-                    <p>História, praças e gastronomia.</p>
+
+                    <p>
+                        Edifícios históricos e a Place des Terreaux.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia: Philippe Alès.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Place_des_Terreaux,_h%C3%B4tel_de_ville_de_Lyon.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+
                 </div>
+
             </article>
 
+            <!-- BORDEAUX -->
+
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=85"
-                    alt="Edifícios europeus"
-                >
-                <div>
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Bordeaux_-_Place_de_la_Bourse.jpg"
+                    alt="Place de la Bourse em Bordeaux" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
                     <h2>Bordeaux</h2>
-                    <p>Arquitetura clássica e espaços urbanos.</p>
+
+                    <p>
+                        Arquitetura clássica e o conjunto monumental da Place de la Bourse.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Christophe.Finot" target="_blank"
+                            rel="noopener noreferrer">
+                            Christophe.Finot
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Bordeaux_-_Place_de_la_Bourse.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 2.5
+                        </a>.
+                    </small>
+
                 </div>
+
             </article>
 
+            <!-- ESTRASBURGO -->
+
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1000&q=85"
-                    alt="Centro histórico europeu"
-                >
-                <div>
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_-_Petite_France_%281%29.jpg"
+                    alt="Casas tradicionais e canais de Estrasburgo" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
                     <h2>Estrasburgo</h2>
-                    <p>Casas tradicionais e canais.</p>
+
+                    <p>
+                        Casas tradicionais e canais do bairro Petite France.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:CaptainHaddock" target="_blank"
+                            rel="noopener noreferrer">
+                            Rémi Jouan (CaptainHaddock)
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Strasbourg_-_Petite_France_(1).jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 2.5
+                        </a>.
+                    </small>
+
                 </div>
+
             </article>
 
-            <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1000&q=85"
-                    alt="Vista da Torre Eiffel"
-                >
-                <div>
-                    <h2>Monumentos</h2>
-                    <p>Marcos históricos e culturais.</p>
-                </div>
-            </article>
+            <!-- PROVENÇA -->
 
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85"
-                    alt="Arquitetura de cidade francesa"
-                >
-                <div>
-                    <h2>Vida urbana</h2>
-                    <p>Ruas para explorar caminhando.</p>
+
+                <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/France_Landscape.jpg"
+                    alt="Paisagem rural de Gordes, na Provença" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
+                    <h2>Provença</h2>
+
+                    <p>
+                        Paisagem rural da região de Gordes, no sul da França.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Jenna_Post" target="_blank"
+                            rel="noopener noreferrer">
+                            Jenna Post
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:France_Landscape.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+
                 </div>
+
             </article>
 
+            <!-- PAISAGENS DA PROVENÇA -->
+
             <article class="foto-card">
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
-                    alt="Paisagem natural"
-                >
-                <div>
-                    <h2>Paisagens</h2>
-                    <p>A diversidade natural do território francês.</p>
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Landscape_Provence_France_1.jpg"
+                    alt="Campo de lavanda na Provença" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
+                    <h2>Paisagens da Provença</h2>
+
+                    <p>
+                        Paisagem rural típica do sul francês.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://www.peace-on-earth.org/" target="_blank" rel="noopener noreferrer">
+                            Jialiang Gao
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Landscape_Provence_France_1.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 3.0
+                        </a>.
+                    </small>
+
                 </div>
+
+            </article>
+
+            <!-- ARQUITETURA ALSACIANA -->
+
+            <article class="foto-card">
+
+                <img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Petite_France_vue_du_pont_Saint-Martin_mars_2015.jpg"
+                    alt="Vista do bairro Petite France em Estrasburgo" referrerpolicy="no-referrer">
+
+                <div class="foto-card-conteudo">
+
+                    <h2>Arquitetura alsaciana</h2>
+
+                    <p>
+                        Construções históricas de Estrasburgo.
+                    </p>
+
+                    <small class="credito-imagem">
+                        Fotografia:
+                        <a href="https://commons.wikimedia.org/wiki/User:Ctruongngoc" target="_blank"
+                            rel="noopener noreferrer">
+                            Claude TRUONG-NGOC
+                        </a>.
+
+                        <br>
+
+                        Fonte:
+                        <a href="https://commons.wikimedia.org/wiki/File:Strasbourg_Petite_France_vue_du_pont_Saint-Martin_mars_2015.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Wikimedia Commons
+                        </a>.
+
+                        Licença:
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 3.0
+                        </a>.
+
+                        O fotógrafo solicita comunicação para reutilização fora dos projetos Wikimedia.
+                    </small>
+
+                </div>
+
             </article>
 
         </section>
+
+        <aside class="nota-licencas">
+
+            <strong>Sobre os créditos e as licenças:</strong>
+
+            As fotografias desta galeria foram selecionadas no Wikimedia Commons.
+            As licenças Creative Commons permitem reutilização sob condições
+            específicas, incluindo atribuição dos autores e, nas licenças BY-SA,
+            compartilhamento de adaptações sob licença compatível.
+
+            Consulte sempre a página original de cada arquivo antes de reutilizar.
+
+        </aside>
+
     </main>
 
+    <!-- RODAPÉ -->
+
     <footer class="rodape-principal">
+
         <div class="rodape-conteudo">
+
             <div>
                 <h2>Turismo <span>pelo Mundo</span></h2>
-                <p>Um guia educacional para descobrir a França.</p>
+
+                <p>
+                    Um guia educacional para descobrir a França.
+                </p>
             </div>
 
             <div>
                 <h3>Destinos</h3>
+
                 <a href="paris.html">Paris</a>
                 <a href="nice.html">Nice</a>
                 <a href="lyon.html">Lyon</a>
@@ -259,34 +612,71 @@
 
             <div>
                 <h3>Explore</h3>
+
                 <a href="cultura-franca.html">Cultura</a>
                 <a href="../../../index.html">Página principal</a>
             </div>
+
+            <div>
+                <h3>Informações legais</h3>
+
+                <a href="../../../privacidade.html">
+                    Política de Privacidade
+                </a>
+
+                <a href="../../../termos-de-uso.html">
+                    Termos de Uso
+                </a>
+
+                <a href="../../../creditos-imagens.html">
+                    Créditos das imagens
+                </a>
+            </div>
+
         </div>
 
         <p class="rodape-inferior">
             © 2026 Turismo pelo Mundo · Projeto educacional
         </p>
+
     </footer>
+
+    <!-- MENU RESPONSIVO -->
 
     <script>
         (() => {
+
             const menu = document.querySelector(".botao-menu");
             const nav = document.querySelector(".navegacao");
+
             const dropdown = document.querySelector(".botao-dropdown");
             const grupo = document.querySelector(".grupo-dropdown");
 
             menu?.addEventListener("click", () => {
+
                 const aberto = nav.classList.toggle("aberta");
-                menu.setAttribute("aria-expanded", String(aberto));
+
+                menu.setAttribute(
+                    "aria-expanded",
+                    String(aberto)
+                );
+
             });
 
             dropdown?.addEventListener("click", () => {
+
                 const aberto = grupo.classList.toggle("aberto");
-                dropdown.setAttribute("aria-expanded", String(aberto));
+
+                dropdown.setAttribute(
+                    "aria-expanded",
+                    String(aberto)
+                );
+
             });
+
         })();
     </script>
 
 </body>
+
 </html>
