@@ -1,0 +1,762 @@
+/* ==========================================================================
+   ESPANHA — Folha de Estilos Local (Turismo.com)
+   Escopo estrito sob .tc-site.pais-espanha para preservar componentes comuns.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variáveis locais e configuração de contexto
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha {
+    --esp-dourado: #b87b24;
+    --esp-dourado-suave: #fdf6ec;
+    --esp-rubi: #9e2a2b;
+    --esp-rubi-suave: #fdf2f2;
+    --esp-sombra-suave: 0 4px 20px rgba(22, 59, 80, 0.07);
+    --esp-sombra-hover: 0 10px 28px rgba(22, 59, 80, 0.12);
+    --esp-borda-sutil: #e2e9ec;
+    --esp-raio-card: 14px;
+}
+
+.tc-site.pais-espanha main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.tc-site.pais-espanha .espanha-container {
+    max-width: 1240px;
+    width: calc(100% - 48px);
+    margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Hero / Banner Principal
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 540px;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--tc-marinho);
+    color: var(--tc-branco);
+}
+
+.tc-site.pais-espanha .espanha-hero-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 38%;
+    background-color: #0b1f2b;
+}
+
+/* Gradiente composto para garantir legibilidade com alta fidelidade */
+.tc-site.pais-espanha .espanha-hero-pelicula {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 32, 45, 0.92) 0%,
+        rgba(10, 32, 45, 0.68) 52%,
+        rgba(10, 32, 45, 0.25) 100%
+    );
+}
+
+.tc-site.pais-espanha .espanha-hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    padding: 56px 0;
+}
+
+.tc-site.pais-espanha .espanha-etiqueta-hero {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(0, 167, 181, 0.2);
+    border: 1px solid rgba(103, 232, 240, 0.4);
+    color: #82f1f7;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.tc-site.pais-espanha .espanha-hero h1 {
+    margin: 0 0 18px;
+    color: var(--tc-branco);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.tc-site.pais-espanha .espanha-hero-subtitulo {
+    margin: 0 0 28px;
+    color: #e4eef2;
+    font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+    line-height: 1.6;
+    max-width: 620px;
+}
+
+.tc-site.pais-espanha .espanha-hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.tc-site.pais-espanha .espanha-botao-contorno-claro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--tc-branco);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--tc-branco);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tc-site.pais-espanha .espanha-botao-contorno-claro:hover {
+    background: var(--tc-branco);
+    color: var(--tc-marinho);
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. Faixa de Informações Rápidas (Dados Essenciais)
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-resumo {
+    background-color: var(--tc-branco);
+    border-bottom: 1px solid var(--esp-borda-sutil);
+    box-shadow: 0 2px 8px rgba(22, 59, 80, 0.04);
+}
+
+.tc-site.pais-espanha .espanha-resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-block: 24px;
+}
+
+.tc-site.pais-espanha .espanha-resumo-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 24px;
+}
+
+.tc-site.pais-espanha .espanha-resumo-item:not(:last-child) {
+    border-right: 1px solid var(--esp-borda-sutil);
+}
+
+.tc-site.pais-espanha .espanha-resumo-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--tc-suave);
+    color: var(--tc-link);
+}
+
+.tc-site.pais-espanha .espanha-resumo-icone svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.tc-site.pais-espanha .espanha-resumo-texto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 3px;
+}
+
+.tc-site.pais-espanha .espanha-resumo-rotulo {
+    color: #607784;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.tc-site.pais-espanha .espanha-resumo-valor {
+    color: var(--tc-marinho);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   4. Seção de Apresentação Editorial
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-apresentacao {
+    padding-block: 72px;
+}
+
+.tc-site.pais-espanha .espanha-apresentacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.tc-site.pais-espanha .espanha-tag-secao {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--tc-link);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.tc-site.pais-espanha .espanha-apresentacao h2 {
+    margin: 0;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.tc-site.pais-espanha .espanha-apresentacao-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.tc-site.pais-espanha .espanha-apresentacao-textos p {
+    color: var(--tc-texto);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.tc-site.pais-espanha .espanha-destaque-citacao {
+    padding: 18px 22px;
+    border-left: 4px solid var(--tc-turquesa);
+    background: var(--tc-branco);
+    border-radius: 0 10px 10px 0;
+    box-shadow: var(--esp-sombra-suave);
+    font-style: italic;
+    color: var(--tc-marinho);
+}
+
+/* --------------------------------------------------------------------------
+   5. Destinos Imperdíveis (Cards com Fotografia e Badges)
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-secao-destinos {
+    padding-block: 72px;
+    background: #eef3f5;
+}
+
+.tc-site.pais-espanha .espanha-cabecalho-secao {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 48px;
+}
+
+.tc-site.pais-espanha .espanha-cabecalho-secao h2 {
+    margin: 8px 0 14px;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.85rem, 3vw, 2.5rem);
+    font-weight: 500;
+}
+
+.tc-site.pais-espanha .espanha-cabecalho-secao p {
+    color: var(--tc-texto);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.tc-site.pais-espanha .espanha-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.tc-site.pais-espanha .espanha-cards-grid .espanha-card:nth-child(4),
+.tc-site.pais-espanha .espanha-cards-grid .espanha-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+.tc-site.pais-espanha .espanha-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--tc-branco);
+    border: 1px solid var(--esp-borda-sutil);
+    border-radius: var(--esp-raio-card);
+    box-shadow: var(--esp-sombra-suave);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tc-site.pais-espanha .espanha-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--esp-sombra-hover);
+}
+
+.tc-site.pais-espanha .espanha-card-figura {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: #dbe4e8;
+    margin: 0;
+}
+
+.tc-site.pais-espanha .espanha-card-figura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.tc-site.pais-espanha .espanha-card:hover .espanha-card-figura img {
+    transform: scale(1.04);
+}
+
+.tc-site.pais-espanha .espanha-card-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 1;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(22, 59, 80, 0.85);
+    backdrop-filter: blur(4px);
+    color: var(--tc-branco);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.tc-site.pais-espanha .espanha-card-corpo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px;
+}
+
+.tc-site.pais-espanha .espanha-card-corpo h3 {
+    margin: 0 0 10px;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.tc-site.pais-espanha .espanha-card-corpo p {
+    margin: 0 0 18px;
+    color: var(--tc-texto);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    flex-grow: 1;
+}
+
+.tc-site.pais-espanha .espanha-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.tc-site.pais-espanha .espanha-card-tag {
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--tc-suave);
+    color: var(--tc-link);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.tc-site.pais-espanha .espanha-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    color: var(--tc-link);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tc-site.pais-espanha .espanha-card-link:hover {
+    color: var(--tc-marinho);
+    transform: translateX(3px);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   6. Seção de Cultura e Tradições
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-secao-cultura {
+    padding-block: 80px;
+    background: var(--tc-branco);
+}
+
+.tc-site.pais-espanha .espanha-cultura-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.tc-site.pais-espanha .espanha-cultura-item {
+    position: relative;
+    padding: 36px 30px;
+    border-radius: var(--esp-raio-card);
+    background: #f8fafb;
+    border: 1px solid var(--esp-borda-sutil);
+    box-shadow: var(--esp-sombra-suave);
+}
+
+.tc-site.pais-espanha .espanha-cultura-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    background: var(--tc-suave);
+    color: var(--tc-link);
+}
+
+.tc-site.pais-espanha .espanha-cultura-icone svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+.tc-site.pais-espanha .espanha-cultura-item h3 {
+    margin: 0 0 14px;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.tc-site.pais-espanha .espanha-cultura-item p {
+    color: var(--tc-texto);
+    font-size: 0.96rem;
+    line-height: 1.7;
+    margin: 0 0 16px;
+}
+
+.tc-site.pais-espanha .espanha-cultura-destaques {
+    padding-left: 20px;
+    margin: 0;
+    color: var(--tc-marinho);
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.tc-site.pais-espanha .espanha-cultura-destaques li::marker {
+    color: var(--tc-turquesa);
+}
+
+/* --------------------------------------------------------------------------
+   7. Seção de Gastronomia Espanhola
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-secao-gastronomia {
+    padding-block: 80px;
+    background: #f4f8fa;
+    border-top: 1px solid var(--esp-borda-sutil);
+    border-bottom: 1px solid var(--esp-borda-sutil);
+}
+
+.tc-site.pais-espanha .espanha-gastronomia-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tc-site.pais-espanha .espanha-gastro-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--tc-branco);
+    border-radius: var(--esp-raio-card);
+    border: 1px solid var(--esp-borda-sutil);
+    overflow: hidden;
+    box-shadow: var(--esp-sombra-suave);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tc-site.pais-espanha .espanha-gastro-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--esp-sombra-hover);
+}
+
+.tc-site.pais-espanha .espanha-gastro-foto {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #dbe4e8;
+    margin: 0;
+}
+
+.tc-site.pais-espanha .espanha-gastro-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.tc-site.pais-espanha .espanha-gastro-card:hover .espanha-gastro-foto img {
+    transform: scale(1.05);
+}
+
+.tc-site.pais-espanha .espanha-gastro-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tc-site.pais-espanha .espanha-gastro-conteudo h3 {
+    margin: 0 0 8px;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.tc-site.pais-espanha .espanha-gastro-conteudo p {
+    margin: 0;
+    color: var(--tc-texto);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   8. Destaque da Galeria (Prévia com CTA para espanha-fotos.html)
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-secao-galeria {
+    padding-block: 76px;
+    background: var(--tc-branco);
+}
+
+.tc-site.pais-espanha .espanha-galeria-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--tc-marinho);
+    color: var(--tc-branco);
+    box-shadow: 0 8px 30px rgba(22, 59, 80, 0.15);
+}
+
+.tc-site.pais-espanha .espanha-galeria-foto {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    background-color: #0b1f2b;
+    margin: 0;
+}
+
+.tc-site.pais-espanha .espanha-galeria-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tc-site.pais-espanha .espanha-galeria-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 56px 48px;
+}
+
+.tc-site.pais-espanha .espanha-galeria-conteudo .espanha-tag-secao {
+    color: #67e8f0;
+}
+
+.tc-site.pais-espanha .espanha-galeria-conteudo h2 {
+    margin: 0 0 18px;
+    color: var(--tc-branco);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.tc-site.pais-espanha .espanha-galeria-conteudo p {
+    margin: 0 0 28px;
+    color: #d4e2e8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   9. Encerramento / CTA de Planejamento de Viagem
+   -------------------------------------------------------------------------- */
+.tc-site.pais-espanha .espanha-secao-fechamento {
+    padding-block: 64px 80px;
+    background: #eef3f5;
+    text-align: center;
+}
+
+.tc-site.pais-espanha .espanha-fechamento-caixa {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 44px 36px;
+    background: var(--tc-branco);
+    border-radius: var(--esp-raio-card);
+    border: 1px solid var(--esp-borda-sutil);
+    box-shadow: var(--esp-sombra-suave);
+}
+
+.tc-site.pais-espanha .espanha-fechamento-caixa h2 {
+    margin: 0 0 14px;
+    color: var(--tc-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    font-weight: 500;
+}
+
+.tc-site.pais-espanha .espanha-fechamento-caixa p {
+    margin: 0 0 28px;
+    color: var(--tc-texto);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.tc-site.pais-espanha .espanha-fechamento-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Responsividade (Breakpoints alinhados ao projeto: 980px, 768px, 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1040px) {
+    .tc-site.pais-espanha .espanha-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tc-site.pais-espanha .espanha-cards-grid .espanha-card:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .tc-site.pais-espanha .espanha-gastronomia-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .tc-site.pais-espanha .espanha-resumo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 20px;
+    }
+
+    .tc-site.pais-espanha .espanha-resumo-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .tc-site.pais-espanha .espanha-apresentacao-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tc-site.pais-espanha .espanha-cultura-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .tc-site.pais-espanha .espanha-galeria-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pais-espanha .espanha-galeria-foto {
+        min-height: 260px;
+    }
+
+    .tc-site.pais-espanha .espanha-galeria-conteudo {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 680px) {
+    .tc-site.pais-espanha .espanha-container {
+        width: calc(100% - 32px);
+    }
+
+    .tc-site.pais-espanha .espanha-hero {
+        min-height: 460px;
+    }
+
+    .tc-site.pais-espanha .espanha-hero-conteudo {
+        padding: 40px 0;
+    }
+
+    .tc-site.pais-espanha .espanha-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pais-espanha .espanha-cards-grid .espanha-card:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .tc-site.pais-espanha .espanha-gastronomia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pais-espanha .espanha-fechamento-caixa {
+        padding: 32px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-site.pais-espanha .espanha-resumo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pais-espanha .espanha-resumo-item {
+        border-right: none !important;
+        padding: 10px 12px;
+    }
+
+    .tc-site.pais-espanha .espanha-resumo-item + .espanha-resumo-item {
+        border-top: 1px solid var(--esp-borda-sutil);
+    }
+
+    .tc-site.pais-espanha .espanha-hero-botoes,
+    .tc-site.pais-espanha .espanha-fechamento-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tc-site.pais-espanha .espanha-hero-botoes a,
+    .tc-site.pais-espanha .espanha-fechamento-links a {
+        text-align: center;
+    }
+
+    .tc-site.pais-espanha .espanha-galeria-conteudo {
+        padding: 30px 20px;
+    }
+}
+
