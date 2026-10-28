@@ -27,6 +27,19 @@
         ["Japão", "japao.html"],
         ["China", "china.html"]
     ];
+    const paisesPortugal = [
+        ["Brasil", "brasil.html"],
+        ["Portugal", "portugal.html"],
+        ["Grécia", "grecia.html"],
+        ["França", "franca.html"],
+        ["Espanha", "espanha.html"],
+        ["Itália", "italia.html"],
+        ["Japão", "japao.html"],
+        ["México", "mexico.html"],
+        ["China", "china.html"],
+        ["Estados Unidos", "estados-unidos.html"],
+        ["República Dominicana", "paises/republica-dominicana/republica-dominicana.html"]
+    ];
     const servicos = [
         ["Hospedagem", pagina.classList.contains("pais-portugal") ? "paises/portugal/hospedagem.html" : "hospedagem.html"],
         ["Alimentação", pagina.classList.contains("pais-portugal") ? "paises/portugal/alimentacao.html" : "alimentacao.html"],
@@ -87,7 +100,7 @@
         conteudo.querySelector("[data-tc-marca]").href = new URL("index.html", raiz).href;
         const navegacao = conteudo.querySelector(".tc-navegacao");
         navegacao.prepend(criarLink("Início", "index.html"));
-        preencherLinks(conteudo.querySelector(".tc-lista-paises"), paises);
+        preencherLinks(conteudo.querySelector(".tc-lista-paises"), pagina.classList.contains("pais-portugal") ? paisesPortugal : paises);
         preencherLinks(navegacao, servicos);
         cabecalho.replaceChildren(conteudo);
     }
