@@ -1,0 +1,49 @@
+/* Componente visual compartilhado pelos rodapés de Portugal. */
+.redes-sociais-portugal {
+    display: grid;
+    gap: 0.625rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais-portugal__titulo {
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.redes-sociais-portugal__icones {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.redes-sociais-portugal__icone {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    color: #00A7B5;
+    background: #ffffff;
+    border: 1px solid #00A7B5;
+    border-radius: 50%;
+}
+
+.redes-sociais-portugal__icone svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: currentColor;
+}
+
+@media (max-width: 480px) {
+    .redes-sociais-portugal__icones {
+        gap: 0.5rem;
+    }
+
+    .redes-sociais-portugal__icone {
+        width: 2rem;
+        height: 2rem;
+    }
+}
