@@ -3,56 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia completo de turismo pela Espanha: cidades históricas, arte, cultura, gastronomia autêntica e paisagens mediterrâneas inesquecíveis.">
     <title>Espanha — Turismo.com</title>
-    <link rel="stylesheet" href="estilo.css">
+    <!-- Folhas de estilo na ordem definida pelo Design System do projeto -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+    <link rel="stylesheet" href="espanha.css">
+    <!-- Script corporativo com gerenciamento de cabeçalho, menu e rodapé -->
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
+<body class="tc-site pais-espanha pagina-inicio" data-raiz="./"
+      data-pais-nome="Espanha" data-pais-url="espanha.html" data-galeria-url="espanha-fotos.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
+    <!-- Cabeçalho compartilhado gerado dinamicamente por site.js.
+         A navegação básica abaixo garante acessibilidade e fallback sem JavaScript. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="index.html">TURISMO.COM — Início</a>
+            <a href="espanha.html" aria-current="page">Espanha</a>
+            <a href="espanha-fotos.html">Galeria da Espanha</a>
+            <a href="hospedagem.html">Hospedagem</a>
+            <a href="alimentacao.html">Alimentação</a>
+            <a href="compras.html">Compras</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
 
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="grecia.html">Grécia</a>
-        <a href="franca.html">França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia.html">Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="china.html">China</a>
-        <a href="hospedagem.html">🏨 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛍️ Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <main id="conteudo" tabindex="-1">
+        <!-- ===== BANNER PRINCIPAL / HERO ===== -->
+        <section class="espanha-hero" aria-labelledby="titulo-hero-espanha">
+            <img class="espanha-hero-imagem"
+                 src="https://cdn.pixabay.com/photo/2020/05/12/18/29/city-5164368_1280.jpg"
+                 alt="Praça de Espanha em Sevilha, com monumentais galerias em semicírculo, pontes e canais navegáveis."
+                 width="1280" height="720" fetchpriority="high">
+            <div class="espanha-hero-pelicula" aria-hidden="true"></div>
 
-<main>
-    <h2>Espanha 🇪🇸</h2>
-    
-    <div class="secao">
-        <h3>🏙️ Cidades</h3>
-        <p>Madri, Barcelona, Sevilha — Sagrada Família, Palácios, cultura vibrante!</p>
-    </div>
+            <div class="espanha-container">
+                <div class="espanha-hero-conteudo">
+                    <span class="espanha-etiqueta-hero">Destinos da Europa</span>
+                    <h1 id="titulo-hero-espanha">Espanha: arte, patrimônio e alma mediterrânea</h1>
+                    <p class="espanha-hero-subtitulo">
+                        De vilas mouriscas e metrópoles vanguardistas a enseadas de águas calmas e ricas celebrações regionais, descubra uma das terras mais fascinantes do mundo.
+                    </p>
+                    <div class="espanha-hero-botoes">
+                        <a href="#destinos" class="tc-botao">Explorar destinos</a>
+                        <a href="#cultura" class="espanha-botao-contorno-claro">Descobrir a cultura</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="secao">
-        <h3>🏖️ Paisagens</h3>
-        <p>Costa do Sol, Ilhas Baleares, Picos da Europa — praias e montanhas incríveis!</p>
-    </div>
+        <!-- ===== FAIXA DE DADOS ESSENCIAIS ===== -->
+        <section class="espanha-resumo" aria-label="Informações essenciais sobre a Espanha" id="resumo">
+            <div class="espanha-container">
+                <div class="espanha-resumo-grid">
+                    <div class="espanha-resumo-item">
+                        <span class="espanha-resumo-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7v3h20V7L12 2zm-8 7h16v11H4V9zm2 2v7h3v-7H6zm5 0v7h2v-7h-2zm4 0v7h3v-7h-3z"/></svg>
+                        </span>
+                        <div class="espanha-resumo-texto">
+                            <span class="espanha-resumo-rotulo">Capital</span>
+                            <span class="espanha-resumo-valor">Madri</span>
+                        </div>
+                    </div>
+                    <div class="espanha-resumo-item">
+                        <span class="espanha-resumo-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 9h-4v2h4v-2zm3-3H7v2h10V8zm0-3H7v2h10V5z"/></svg>
+                        </span>
+                        <div class="espanha-resumo-texto">
+                            <span class="espanha-resumo-rotulo">Idioma oficial</span>
+                            <span class="espanha-resumo-valor">Espanhol (castelhano)</span>
+                        </div>
+                    </div>
+                    <div class="espanha-resumo-item">
+                        <span class="espanha-resumo-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M15 18.5a7.5 7.5 0 0 1-6.9-4.5H15v-2H7.6a7.5 7.5 0 0 1 0-2H15v-2H8.1A7.5 7.5 0 0 1 15 3.5c1.9 0 3.7.7 5 2l1.4-1.4A9.5 9.5 0 0 0 15 1.5C9.8 1.5 5.5 5.8 5.5 11H3v2h2.5c0 1.2.2 2.4.7 3.5H3v2h3.9A9.5 9.5 0 0 0 15 20.5c2.5 0 4.8-1 6.4-2.6l-1.4-1.4a7.5 7.5 0 0 1-5 2z"/></svg>
+                        </span>
+                        <div class="espanha-resumo-texto">
+                            <span class="espanha-resumo-rotulo">Moeda</span>
+                            <span class="espanha-resumo-valor">Euro (€)</span>
+                        </div>
+                    </div>
+                    <div class="espanha-resumo-item">
+                        <span class="espanha-resumo-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.28 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+                        </span>
+                        <div class="espanha-resumo-texto">
+                            <span class="espanha-resumo-rotulo">Melhor época</span>
+                            <span class="espanha-resumo-valor">Primavera e Outono</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="secao">
-        <h3>🥘 Gastronomia</h3>
-        <p>Paella, jamón, tortilha, sangria — sabores intensos e alegres!</p>
-    </div>
-</main>
+        <!-- ===== APRESENTAÇÃO EDITORIAL ===== -->
+        <section class="espanha-apresentacao" aria-labelledby="titulo-apresentacao">
+            <div class="espanha-container">
+                <div class="espanha-apresentacao-grid">
+                    <div>
+                        <span class="espanha-tag-secao">Península Ibérica</span>
+                        <h2 id="titulo-apresentacao">Um mosaico milenar de relevos, culturas e tradições</h2>
+                    </div>
+                    <div class="espanha-apresentacao-textos">
+                        <p>
+                            Banhada pelo Mar Mediterrâneo e pelo Oceano Atlântico, a Espanha ocupa a maior parte da Península Ibérica. Sua trajetória histórica é marcada pelo encontro de civilizações: a herança romana em aquedutos monumentais, séculos de esplendor mourisco no sul e a transição para a modernidade em centros de inovação e design.
+                        </p>
+                        <p>
+                            Composta por 17 comunidades autônomas e duas cidades autônomas, a Espanha preserva uma diversidade geográfica e cultural singular. O viajante encontra desde os picos nevados dos Pireneus e as colinas verdes da Galícia até as planícies douradas de Castela e o litoral luminoso da Andaluzia.
+                        </p>
+                        <div class="espanha-destaque-citacao">
+                            "Viajar pela Espanha é percorrer camadas vivas da história, onde cada praça é um ponto de encontro e cada região cultiva com orgulho sua identidade."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+        <!-- ===== DESTINOS IMPERDÍVEIS ===== -->
+        <section class="espanha-secao-destinos" id="destinos" aria-labelledby="titulo-destinos">
+            <div class="espanha-container">
+                <div class="espanha-cabecalho-secao">
+                    <span class="espanha-tag-secao">Roteiro Recomendado</span>
+                    <h2 id="titulo-destinos">Destinos imperdíveis pelo território espanhol</h2>
+                    <p>
+                        Conheça cinco cidades e regiões que sintetizam a riqueza arquitetônica, a intensidade urbana e as belezas naturais da Espanha.
+                    </p>
+                </div>
 
+                <div class="espanha-cards-grid">
+                    <!-- Card 1: Madrid -->
+                    <article class="espanha-card">
+                        <div class="espanha-card-figura">
+                            <span class="espanha-card-badge">Comunidade de Madri</span>
+                            <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1200&q=80"
+                                 alt="Perspectiva da Gran Vía e arquitetura clássica em Madri"
+                                 loading="lazy" width="600" height="375">
+                        </div>
+                        <div class="espanha-card-corpo">
+                            <h3>Madri</h3>
+                            <p>
+                                A capital cosmopolita combina elegantes alamedas, o monumental Palácio Real e o verde do Parque do Retiro. É lar do celebrado "Triângulo da Arte", reunindo as obras-primas dos museus do Prado, Reina Sofía e Thyssen-Bornemisza.
+                            </p>
+                            <div class="espanha-card-tags">
+                                <span class="espanha-card-tag">Museu do Prado</span>
+                                <span class="espanha-card-tag">Parque do Retiro</span>
+                                <span class="espanha-card-tag">Gran Vía</span>
+                            </div>
+                            <a href="#galeria" class="espanha-card-link">Ver fotos de Madri →</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Barcelona -->
+                    <article class="espanha-card">
+                        <div class="espanha-card-figura">
+                            <span class="espanha-card-badge">Catalunha</span>
+                            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=1200&q=80"
+                                 alt="Torres da Basílica da Sagrada Família projetada por Antoni Gaudí em Barcelona"
+                                 loading="lazy" width="600" height="375">
+                        </div>
+                        <div class="espanha-card-corpo">
+                            <h3>Barcelona</h3>
+                            <p>
+                                Capital do modernismo catalão, a cidade à beira do Mediterrâneo encanta com a arquitetura orgânica de Antoni Gaudí, as ruelas medievais do Bairro Gótico e a atmosfera vibrante da orla de Barceloneta.
+                            </p>
+                            <div class="espanha-card-tags">
+                                <span class="espanha-card-tag">Sagrada Família</span>
+                                <span class="espanha-card-tag">Parque Güell</span>
+                                <span class="espanha-card-tag">Bairro Gótico</span>
+                            </div>
+                            <a href="#galeria" class="espanha-card-link">Ver fotos de Barcelona →</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Sevilha -->
+                    <article class="espanha-card">
+                        <div class="espanha-card-figura">
+                            <span class="espanha-card-badge">Andaluzia</span>
+                            <img src="https://images.unsplash.com/photo-1558642084-fd07fae5282e?auto=format&fit=crop&w=1200&q=80"
+                                 alt="Galerias ornamentadas com azulejos e arcos em Sevilha"
+                                 loading="lazy" width="600" height="375">
+                        </div>
+                        <div class="espanha-card-corpo">
+                            <h3>Sevilha</h3>
+                            <p>
+                                O coração da Andaluzia pulsa ao som da guitarra flamenca e do aroma de laranjeiras. Abriga a grandiosa Praça de Espanha, os jardins e mosaicos do Real Alcázar e a Catedral gótica com a emblemática torre da Giralda.
+                            </p>
+                            <div class="espanha-card-tags">
+                                <span class="espanha-card-tag">Praça de Espanha</span>
+                                <span class="espanha-card-tag">Real Alcázar</span>
+                                <span class="espanha-card-tag">Giralda</span>
+                            </div>
+                            <a href="#galeria" class="espanha-card-link">Ver fotos de Sevilha →</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Granada -->
+                    <article class="espanha-card">
+                        <div class="espanha-card-figura">
+                            <span class="espanha-card-badge">Andaluzia</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Patio_de_los_Leones.jpg"
+                                 alt="Interior do Pátio dos Leões na Alhambra de Granada, com colunatas de mármore e arcos mouriscos rendados"
+                                 loading="lazy" width="600" height="375">
+                        </div>
+                        <div class="espanha-card-corpo">
+                            <h3>Granada</h3>
+                            <p>
+                                Guardada pela cordilheira da Sierra Nevada, Granada é o ápice do legado hispano-muçulmano no continente. A cidadela de Alhambra e os jardins do Generalife impressionam pela sofisticação de suas fontes, arabescos e pátios.
+                            </p>
+                            <div class="espanha-card-tags">
+                                <span class="espanha-card-tag">Alhambra</span>
+                                <span class="espanha-card-tag">Generalife</span>
+                                <span class="espanha-card-tag">Albaicín</span>
+                            </div>
+                            <a href="#galeria" class="espanha-card-link">Ver fotos de Granada →</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: Ilhas Baleares -->
+                    <article class="espanha-card">
+                        <div class="espanha-card-figura">
+                            <span class="espanha-card-badge">Arquipélago Mediterrâneo</span>
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+                                 alt="Enseada com águas cristalinas azul-turquesa e barcos ancorados em Maiorca"
+                                 loading="lazy" width="600" height="375">
+                        </div>
+                        <div class="espanha-card-corpo">
+                            <h3>Ilhas Baleares</h3>
+                            <p>
+                                Compostas por Mallorca, Menorca, Ibiza e Formentera, as Baleares aliam natureza intocada e vilarejos serenos de pedra a praias e calas de águas translúcidas, ideais para o descanso e a contemplação.
+                            </p>
+                            <div class="espanha-card-tags">
+                                <span class="espanha-card-tag">Mallorca</span>
+                                <span class="espanha-card-tag">Menorca</span>
+                                <span class="espanha-card-tag">Calas Naturais</span>
+                            </div>
+                            <a href="#galeria" class="espanha-card-link">Ver fotos das Ilhas →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CULTURA, ARTE E TRADIÇÕES ===== -->
+        <section class="espanha-secao-cultura" id="cultura" aria-labelledby="titulo-cultura">
+            <div class="espanha-container">
+                <div class="espanha-cabecalho-secao">
+                    <span class="espanha-tag-secao">Expressão &amp; Identidade</span>
+                    <h2 id="titulo-cultura">Tradição, arte e diversidade cultural</h2>
+                    <p>
+                        A criatividade espanhola se manifesta na engenhosidade de suas construções, no pioneirismo de seus pintores e na força das celebrações populares.
+                    </p>
+                </div>
+
+                <div class="espanha-cultura-grid">
+                    <div class="espanha-cultura-item">
+                        <div class="espanha-cultura-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4.5l5 4.5v6H7v-6l5-4.5z"/></svg>
+                        </div>
+                        <h3>Arquitetura Secular e Vanguardista</h3>
+                        <p>
+                            A paisagem urbana espanhola reflete séculos de evolução estilística, unindo mestria medieval e arrojo contemporâneo:
+                        </p>
+                        <ul class="espanha-cultura-destaques">
+                            <li><strong>Mourisca e Mudéjar:</strong> arcos em ferradura, gessos detalhados e azulejaria geométrica.</li>
+                            <li><strong>Gótica e Renascentista:</strong> catedrais imponentes como as de Burgos, Toledo e Sevilha.</li>
+                            <li><strong>Modernismo e Vanguarda:</strong> a genialidade de Gaudí e ícones modernos como a Cidade das Artes de Valência.</li>
+                        </ul>
+                    </div>
+
+                    <div class="espanha-cultura-item">
+                        <div class="espanha-cultura-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.23 19.57 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-4 8c-.83 0-1.5-.67-1.5-1.5S7.17 8 8 8s1.5.67 1.5 1.5S8.83 11 8 11zm4-3c-.83 0-1.5-.67-1.5-1.5S11.17 5 12 5s1.5.67 1.5 1.5S12.83 8 12 8zm4 3c-.83 0-1.5-.67-1.5-1.5S15.17 8 16 8s1.5.67 1.5 1.5S16.83 11 16 11z"/></svg>
+                        </div>
+                        <h3>Mestres Universais das Artes</h3>
+                        <p>
+                            A pintura espanhola produziu alguns dos nomes mais influentes e reverenciados de toda a história ocidental:
+                        </p>
+                        <ul class="espanha-cultura-destaques">
+                            <li><strong>Velázquez e Goya:</strong> a maestria do claro-escuro, o retrato da corte e a crítica social.</li>
+                            <li><strong>Pablo Picasso:</strong> cofundador do Cubismo e autor de murais universais de paz como Guernica.</li>
+                            <li><strong>Dalí e Miró:</strong> o Surrealismo onírico e a poesia das formas abstratas e coloridas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="espanha-cultura-item">
+                        <div class="espanha-cultura-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                        </div>
+                        <h3>Festas e Patrimônio Imaterial</h3>
+                        <p>
+                            A vida comunitária na Espanha se expressa em festejos tradicionais e manifestações artísticas declaradas patrimônio mundial:
+                        </p>
+                        <ul class="espanha-cultura-destaques">
+                            <li><strong>O Flamenco:</strong> arte com canto profundo, violão virtuoso e dança expressiva originária da Andaluzia.</li>
+                            <li><strong>Celebrações Populares:</strong> as Fallas de Valência, as festas da Semana Santa e feiras de primavera.</li>
+                            <li><strong>Pluralidade Linguística:</strong> valorização de idiomas e costumes como o catalão, o galego e o euskera.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GASTRONOMIA TÍPICA ===== -->
+        <section class="espanha-secao-gastronomia" id="gastronomia" aria-labelledby="titulo-gastronomia">
+            <div class="espanha-container">
+                <div class="espanha-cabecalho-secao">
+                    <span class="espanha-tag-secao">Sabores Autênticos</span>
+                    <h2 id="titulo-gastronomia">A arte do bem comer e a partilha à mesa</h2>
+                    <p>
+                        Com alicerces na dieta mediterrânea, o receituário espanhol valoriza o azeite de oliva extravirgem, o frescor dos produtos locais e a convivência.
+                    </p>
+                </div>
+
+                <div class="espanha-gastronomia-grid">
+                    <article class="espanha-gastro-card">
+                        <div class="espanha-gastro-foto">
+                            <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=800&q=80"
+                                 alt="Paella tradicional com arroz açafranado, frutos do mar e limão"
+                                 loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="espanha-gastro-conteudo">
+                            <h3>Paella Valenciana</h3>
+                            <p>
+                                Nascida nos campos de Valência, reúne arroz de grão curto cozido lentamente com açafrão, caldo saboroso, legumes frescos, aves ou frutos do mar na tradicional panela de ferro.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="espanha-gastro-card">
+                        <div class="espanha-gastro-foto">
+                            <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+                                 alt="Variedade de tapas espanholas servidas em travessas com pães artesanais"
+                                 loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="espanha-gastro-conteudo">
+                            <h3>Tapas e Pintxos</h3>
+                            <p>
+                                O ritual de "tapear" é um dos maiores símbolos sociais espanhóis: porções variadas como patatas bravas, gambas al ajillo, croquetas e fatias montadas saboreadas entre amigos.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="espanha-gastro-card">
+                        <div class="espanha-gastro-foto">
+                            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=80"
+                                 alt="Fatia dourada de tortilla de patatas espanhola servida em prato de cerâmica"
+                                 loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="espanha-gastro-conteudo">
+                            <h3>Tortilla de Patatas</h3>
+                            <p>
+                                O clássico absoluto das casas e tabernas: batatas fatiadas e confitadas suavemente em azeite de oliva, unidas a ovos frescos batidos até atingir uma consistência dourada e cremosa por dentro.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="espanha-gastro-card">
+                        <div class="espanha-gastro-foto">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80"
+                                 alt="Tábua tradicional com fatias finas de jamón ibérico curado e azeitonas"
+                                 loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="espanha-gastro-conteudo">
+                            <h3>Jamón Ibérico &amp; Queijos</h3>
+                            <p>
+                                Presunto nobre curado naturalmente nas serras da Espanha, servido em lascas finas ao lado de queijos artesanais com Denominação de Origem, como o Queijo Manchego, e vinhos regionais.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DESTAQUE DA GALERIA ===== -->
+        <section class="espanha-secao-galeria" id="galeria" aria-labelledby="titulo-destaque-galeria">
+            <div class="espanha-container">
+                <div class="espanha-galeria-banner">
+                    <div class="espanha-galeria-foto">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Fachada_principal_del_Museo_del_Prado_de_Madrid.jpg"
+                             alt="Fachada principal neoclássica do Museu do Prado em Madri, com pórtico de colunas e estátua de Velázquez"
+                             loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="espanha-galeria-conteudo">
+                        <span class="espanha-tag-secao">Acervo Fotográfico</span>
+                        <h2 id="titulo-destaque-galeria">Olhares sobre a Espanha: história e contrastes</h2>
+                        <p>
+                            Explore em detalhes os monumentos, parques e recantos preservados de norte a sul do país em nossa galeria dedicada de fotografias em alta definição.
+                        </p>
+                        <a href="espanha-fotos.html" class="tc-botao">Abrir galeria completa →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ENCERRAMENTO E GUIA PRÁTICO ===== -->
+        <section class="espanha-secao-fechamento" aria-labelledby="titulo-fechamento">
+            <div class="espanha-container">
+                <div class="espanha-fechamento-caixa">
+                    <span class="espanha-tag-secao">Planeje Sua Viagem</span>
+                    <h2 id="titulo-fechamento">Pronto para vivenciar a Espanha?</h2>
+                    <p>
+                        Acesse nossas recomendações práticas para organizar estadias confortáveis, conhecer restaurantes imperdíveis e planejar passeios inesquecíveis.
+                    </p>
+                    <div class="espanha-fechamento-links">
+                        <a href="hospedagem.html" class="tc-botao">Onde ficar</a>
+                        <a href="alimentacao.html" class="tc-botao tc-botao-contorno">Onde comer</a>
+                        <a href="compras.html" class="tc-botao tc-botao-contorno">O que comprar</a>
+                        <a href="#conteudo" class="tc-botao tc-botao-contorno">Voltar ao topo ↑</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé corporativo oficial de 4 colunas gerado por site.js.
+         A navegação básica é mantida no HTML para assegurar acesso completo sem JS. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 Turismo.com — Projeto acadêmico desenvolvido em equipe.</p>
+            <nav class="tc-navegacao-basica" aria-label="Navegação básica do rodapé">
+                <a href="espanha.html">Espanha</a>
+                <a href="espanha-fotos.html">Galeria da Espanha</a>
+                <a href="index.html">Início do projeto</a>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

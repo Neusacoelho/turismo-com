@@ -1,0 +1,204 @@
+/* ==========================================================================
+   ESPANHA — Galeria de Fotos (Turismo.com)
+   Estilos exclusivos da galeria, escopados sob .tc-site.pagina-galeria-espanha.
+   ========================================================================== */
+
+.tc-site.pagina-galeria-espanha {
+    background: var(--tc-branco);
+}
+
+.tc-site.pagina-galeria-espanha main :is(h1, h2) {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+.tc-site.pagina-galeria-espanha .pg-apresentacao {
+    padding-block: 36px 48px;
+}
+
+.tc-site.pagina-galeria-espanha .tc-migalhas {
+    margin-bottom: 32px;
+    font-size: 0.9rem;
+}
+
+.tc-site.pagina-galeria-espanha .tc-migalhas a {
+    text-decoration: none;
+    color: var(--tc-link);
+}
+
+.tc-site.pagina-galeria-espanha .tc-migalhas a:hover {
+    text-decoration: underline;
+}
+
+.tc-site.pagina-galeria-espanha .pg-apresentacao .tc-etiqueta {
+    margin-bottom: 14px;
+}
+
+.tc-site.pagina-galeria-espanha h1 {
+    max-width: 24ch;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--tc-marinho);
+}
+
+.tc-site.pagina-galeria-espanha .pg-introducao {
+    max-width: 720px;
+    margin-top: 18px;
+    font-size: 1.1rem;
+    color: var(--tc-texto);
+    line-height: 1.7;
+}
+
+/* Grade de Fotos (2 colunas no desktop, 1 no mobile) */
+.tc-site.pagina-galeria-espanha .pg-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--tc-borda);
+    border-radius: 14px;
+    background: var(--tc-branco);
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin: 0;
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(22, 59, 80, 0.1);
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao-figura {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: #dbe4e8;
+    margin: 0;
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao-figura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao:hover .pg-cartao-figura img {
+    transform: scale(1.04);
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao figcaption {
+    padding: 24px 26px 28px;
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao h2 {
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    line-height: 1.25;
+    color: var(--tc-marinho);
+    margin: 0;
+}
+
+.tc-site.pagina-galeria-espanha .pg-localizacao {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tc-link);
+}
+
+.tc-site.pagina-galeria-espanha .pg-cartao p {
+    margin: 12px 0 0;
+    line-height: 1.65;
+    color: var(--tc-texto);
+    font-size: 0.96rem;
+}
+
+/* Botão de Retorno e Créditos */
+.tc-site.pagina-galeria-espanha .pg-retorno {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.tc-site.pagina-galeria-espanha .pg-creditos {
+    margin-top: 48px;
+    padding-block: 28px;
+    border-top: 1px solid var(--tc-borda);
+    font-size: 0.9rem;
+    color: var(--tc-texto);
+}
+
+.tc-site.pagina-galeria-espanha .creditos-fotos summary {
+    width: fit-content;
+    max-width: 100%;
+    padding-block: 8px;
+    color: var(--tc-marinho);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tc-site.pagina-galeria-espanha .pg-nota-creditos {
+    max-width: 80ch;
+    margin-block: 12px 16px;
+    line-height: 1.6;
+}
+
+.tc-site.pagina-galeria-espanha .creditos-fotos ul {
+    padding-left: 22px;
+}
+
+.tc-site.pagina-galeria-espanha .creditos-fotos li + li {
+    margin-top: 10px;
+}
+
+.tc-site.pagina-galeria-espanha .tc-rodape[data-tc-rodape] {
+    margin-top: 24px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .tc-site.pagina-galeria-espanha .pg-grade {
+        gap: 24px 20px;
+    }
+
+    .tc-site.pagina-galeria-espanha .pg-cartao figcaption {
+        padding: 20px 20px 22px;
+    }
+}
+
+@media (max-width: 680px) {
+    .tc-site.pagina-galeria-espanha .pg-apresentacao {
+        padding-block: 24px 32px;
+    }
+
+    .tc-site.pagina-galeria-espanha .tc-migalhas {
+        margin-bottom: 24px;
+    }
+
+    .tc-site.pagina-galeria-espanha .pg-introducao {
+        margin-top: 16px;
+        font-size: 1rem;
+    }
+
+    .tc-site.pagina-galeria-espanha .pg-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pagina-galeria-espanha .pg-retorno {
+        margin-top: 36px;
+    }
+
+    .tc-site.pagina-galeria-espanha .pg-creditos {
+        margin-top: 32px;
+        padding-block: 20px;
+    }
+}
+
