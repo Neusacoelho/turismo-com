@@ -1,0 +1,174 @@
+/* Páginas temáticas do México, com o mesmo sistema visual das páginas internas. */
+.pais-mexico {
+  background: #f7f8f8;
+}
+.pais-mexico .tc-banner {
+  min-height: 390px;
+  padding-block: 3rem;
+}
+.pais-mexico .tc-banner-imagem {
+  object-position: center 46%;
+}
+.pais-mexico .mexico-banner-conteudo {
+  position: relative;
+  z-index: 1;
+}
+.pais-mexico .tc-migalhas {
+  margin-bottom: 2rem;
+}
+.pais-mexico .tc-migalhas,
+.pais-mexico .tc-migalhas a {
+  color: #fff;
+}
+.pais-mexico .mexico-banner-texto {
+  max-width: 42rem;
+  padding-block: 2.5rem;
+  color: #fff;
+}
+.pais-mexico .mexico-banner-texto h1 {
+  max-width: 18ch;
+  margin-block: 0.5rem 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.08;
+}
+.pais-mexico .mexico-banner-texto p {
+  max-width: 38rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.pais-mexico .mexico-secao {
+  padding-block: 3.5rem;
+}
+.pais-mexico .mexico-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  align-items: start;
+  gap: 3rem;
+}
+.pais-mexico .mexico-intro h2,
+.pais-mexico .mexico-titulo h2 {
+  margin: 0.4rem 0 1rem;
+  color: var(--tc-marinho);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.pais-mexico .mexico-texto {
+  color: #435662;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.pais-mexico .mexico-texto p + p {
+  margin-top: 1rem;
+}
+.pais-mexico .mexico-titulo {
+  max-width: 46rem;
+  margin-bottom: 1.75rem;
+}
+.pais-mexico .mexico-grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+.pais-mexico .mexico-card {
+  overflow: hidden;
+  border: 1px solid var(--tc-borda);
+  border-radius: 0.85rem;
+  background: #fff;
+}
+.pais-mexico .mexico-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.pais-mexico .mexico-card-conteudo {
+  padding: 1.35rem 1.5rem 1.6rem;
+}
+.pais-mexico .mexico-card h3 {
+  margin: 0.25rem 0 0.65rem;
+  color: var(--tc-marinho);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+}
+.pais-mexico .mexico-card p {
+  color: #435662;
+  line-height: 1.7;
+}
+.pais-mexico .mexico-card .tc-etiqueta {
+  margin-bottom: 0.35rem;
+}
+.pais-mexico .mexico-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+.pais-mexico .mexico-lista article {
+  padding: 1.35rem 1.5rem;
+  border-left: 4px solid #b63d3f;
+  background: #fff;
+}
+.pais-mexico .mexico-lista h3 {
+  margin-bottom: 0.35rem;
+  color: var(--tc-marinho);
+}
+.pais-mexico .mexico-lista p {
+  color: #435662;
+  line-height: 1.7;
+}
+.pais-mexico .mexico-nota {
+  margin-top: 1.5rem;
+  padding: 1.3rem 1.5rem;
+  border-radius: 0.75rem;
+  background: #f1e9e2;
+  color: #3e4f58;
+  line-height: 1.7;
+}
+.pais-mexico .mexico-retorno {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+.pais-mexico .mexico-creditos {
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--tc-borda);
+  font-size: 0.9rem;
+}
+.pais-mexico .mexico-creditos summary {
+  color: var(--tc-marinho);
+  font-weight: 700;
+  cursor: pointer;
+}
+.pais-mexico .mexico-creditos ul {
+  margin-top: 0.8rem;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+.pais-mexico .mexico-creditos li + li {
+  margin-top: 0.5rem;
+}
+@media (max-width: 800px) {
+  .pais-mexico .mexico-intro {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .pais-mexico .mexico-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .pais-mexico .tc-banner {
+    min-height: 340px;
+  }
+  .pais-mexico .mexico-secao {
+    padding-block: 2.5rem;
+  }
+  .pais-mexico .mexico-grade,
+  .pais-mexico .mexico-lista {
+    grid-template-columns: 1fr;
+  }
+}

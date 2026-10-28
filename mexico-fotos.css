@@ -1,0 +1,129 @@
+/* Estilos da galeria do México, seguindo o padrão visual de Portugal. */
+.pagina-galeria-mexico {
+  background: var(--tc-branco);
+}
+.pagina-galeria-mexico main :is(h1, h2) {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+.pagina-galeria-mexico .pg-apresentacao {
+  padding-block: 36px 48px;
+}
+.pagina-galeria-mexico .tc-migalhas {
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+.pagina-galeria-mexico .tc-migalhas a {
+  text-decoration: none;
+}
+.pagina-galeria-mexico .tc-migalhas a:hover {
+  text-decoration: underline;
+}
+.pagina-galeria-mexico .pg-apresentacao .tc-etiqueta {
+  margin-bottom: 18px;
+}
+.pagina-galeria-mexico h1 {
+  max-width: 22ch;
+  font-size: clamp(36px, 4.3vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.pagina-galeria-mexico .pg-introducao {
+  max-width: 640px;
+  margin-top: 22px;
+  font-size: 17px;
+}
+.pagina-galeria-mexico .pg-grade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 28px;
+}
+.pagina-galeria-mexico .pg-cartao {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--tc-borda);
+  border-radius: 12px;
+  background: var(--tc-branco);
+}
+.pagina-galeria-mexico .pg-cartao img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+}
+.pagina-galeria-mexico .pg-cartao figcaption {
+  padding: 26px 28px 30px;
+}
+.pagina-galeria-mexico .pg-cartao h2 {
+  font-size: clamp(23px, 2vw, 29px);
+  line-height: 1.25;
+}
+.pagina-galeria-mexico .pg-icone {
+  font-size: 0.72em;
+  vertical-align: 0.06em;
+}
+.pagina-galeria-mexico .pg-cartao p {
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.pagina-galeria-mexico .pg-retorno {
+  justify-content: center;
+  margin-top: 44px;
+}
+.pagina-galeria-mexico .pg-creditos {
+  margin-top: 36px;
+  padding-block: 24px;
+  border-top: 1px solid var(--tc-borda);
+  font-size: 14px;
+}
+.pagina-galeria-mexico .creditos-fotos summary {
+  width: fit-content;
+  max-width: 100%;
+  padding-block: 8px;
+  color: var(--tc-marinho);
+  font-weight: 700;
+  cursor: pointer;
+}
+.pagina-galeria-mexico .pg-nota-creditos {
+  max-width: 80ch;
+  margin-block: 12px 16px;
+}
+.pagina-galeria-mexico .creditos-fotos ul {
+  padding-left: 22px;
+}
+.pagina-galeria-mexico .creditos-fotos li + li {
+  margin-top: 12px;
+}
+.pagina-galeria-mexico .tc-rodape[data-tc-rodape] {
+  margin-top: 24px;
+}
+@media (max-width: 900px) {
+  .pagina-galeria-mexico .pg-grade {
+    gap: 24px 20px;
+  }
+  .pagina-galeria-mexico .pg-cartao figcaption {
+    padding: 22px 20px 24px;
+  }
+}
+@media (max-width: 600px) {
+  .pagina-galeria-mexico .pg-apresentacao {
+    padding-block: 24px 32px;
+  }
+  .pagina-galeria-mexico .tc-migalhas {
+    margin-bottom: 28px;
+  }
+  .pagina-galeria-mexico .pg-introducao {
+    margin-top: 18px;
+    font-size: 16px;
+  }
+  .pagina-galeria-mexico .pg-grade {
+    grid-template-columns: 1fr;
+  }
+  .pagina-galeria-mexico .pg-retorno {
+    margin-top: 32px;
+  }
+  .pagina-galeria-mexico .pg-creditos {
+    margin-top: 28px;
+    padding-block: 20px;
+  }
+}
