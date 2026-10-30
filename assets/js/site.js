@@ -25,7 +25,9 @@
         ["Espanha", "espanha.html"],
         ["Itália", "italia.html"],
         ["Japão", "japao.html"],
-        ["China", "china.html"]
+        ["China", "china.html"],
+          ["República Dominicana", "republica-dominicana.html"],
+        
     ];
     const paisesPortugal = [
         ["Brasil", "brasil.html"],
@@ -38,7 +40,7 @@
         ["México", "mexico.html"],
         ["China", "china.html"],
         ["Estados Unidos", "estados-unidos.html"],
-        ["República Dominicana", "paises/republica-dominicana/republica-dominicana.html"]
+        ["República Dominicana", "republica-dominicana.html"]
     ];
     const servicos = [
         ["Hospedagem", pagina.classList.contains("pais-portugal") ? "paises/portugal/hospedagem.html" : "hospedagem.html"],
