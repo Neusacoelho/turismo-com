@@ -232,6 +232,22 @@ html {
     content: "🏯";
 }
 
+.foto-slot.sem-foto[data-arquivo*="estados-unidos"] {
+    background: linear-gradient(160deg, #3a7bd5 0%, #163b50 100%);
+}
+
+.foto-slot.sem-foto[data-arquivo*="estados-unidos"]::before {
+    content: "🗽";
+}
+
+.foto-slot.sem-foto[data-arquivo*="republica-dominicana"] {
+    background: linear-gradient(160deg, #1fc7d6 0%, #163b50 100%);
+}
+
+.foto-slot.sem-foto[data-arquivo*="republica-dominicana"]::before {
+    content: "🏝️";
+}
+
 
 /* ===== CABEÇALHO (branco, logo "T" + menu central + botão à direita) ===== */
 .pagina-inicio .cabecalho-principal {
@@ -769,9 +785,11 @@ html {
 
 
 /* ===== DESTINOS: cartões grandes de foto, com nome sobre a imagem ===== */
+/* Grade de 6 colunas: cada cartão ocupa 2 (três por linha). Com 11 países,
+   os dois últimos ficam centralizados na última linha. */
 .pagina-inicio .destinos-grade {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -780,6 +798,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    grid-column: span 2;
     min-width: 0;
     min-height: 400px;
     overflow: hidden;
@@ -788,6 +807,20 @@ html {
     color: #fff;
     box-shadow: 0 10px 28px rgba(22, 59, 80, .18);
     transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Última linha incompleta (2 cartões): centraliza */
+.pagina-inicio .destino-cartao:nth-last-child(2):nth-child(3n + 1) {
+    grid-column: 2 / span 2;
+}
+
+.pagina-inicio .destino-cartao:last-child:nth-child(3n + 2) {
+    grid-column: 4 / span 2;
+}
+
+/* Última linha com 1 cartão: centraliza */
+.pagina-inicio .destino-cartao:last-child:nth-child(3n + 1) {
+    grid-column: 3 / span 2;
 }
 
 .pagina-inicio .destino-cartao:hover {
@@ -890,19 +923,38 @@ html {
     color: #0c2a3b;
 }
 
+/* Tablet: duas colunas; o último cartão (ímpar) fica centralizado */
 @media (max-width: 1100px) {
     .pagina-inicio .destinos-grade {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .pagina-inicio .destino-cartao,
+    .pagina-inicio .destino-cartao:nth-last-child(2):nth-child(3n + 1),
+    .pagina-inicio .destino-cartao:last-child:nth-child(3n + 2),
+    .pagina-inicio .destino-cartao:last-child:nth-child(3n + 1) {
+        grid-column: auto;
+    }
+
+    .pagina-inicio .destino-cartao:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 11px);
+    }
 }
 
+/* Celular: uma coluna */
 @media (max-width: 600px) {
     .pagina-inicio .destinos-grade {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    .pagina-inicio .destino-cartao {
+    .pagina-inicio .destino-cartao,
+    .pagina-inicio .destino-cartao:last-child:nth-child(odd) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: auto;
         min-height: 360px;
     }
 }
@@ -1244,17 +1296,4 @@ html {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-}
-.pagina-inicio .destinos-grade {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.foto-slot.sem-foto[data-arquivo*="estados-unidos"] {
-    background: linear-gradient(160deg, #3a7bd5 0%, #163b50 100%);
-}
-
-.foto-slot.sem-foto[data-arquivo*="estados-unidos"]::before {
-    content: "🗽";
 }
