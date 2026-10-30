@@ -1,0 +1,776 @@
+/* =====================================================
+   TURISMO.COM — CONTATO
+   Mesmo visual da página inicial.
+   Paleta: azul-petróleo #163b50 | turquesa #0aa3b3 | claro #a4eaf0 | branco
+   Tudo restrito a .pagina-contato para não afetar outras páginas.
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.pagina-contato {
+    margin: 0;
+    background: #f0f5f5;
+    color: #163b50;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.pagina-contato *,
+.pagina-contato *::before,
+.pagina-contato *::after {
+    box-sizing: border-box;
+}
+
+.pagina-contato h1,
+.pagina-contato h2,
+.pagina-contato h3,
+.pagina-contato p,
+.pagina-contato ul {
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-contato ul {
+    list-style: none;
+}
+
+/* Remove a caixa branca do estilo.css */
+.pagina-contato main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.pagina-contato main:focus {
+    outline: none;
+}
+
+.pagina-contato .ct-container {
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .pagina-contato .ct-container {
+        width: calc(100% - 32px);
+    }
+}
+
+.pagina-contato :is(a, button):focus-visible {
+    outline: 3px solid #0aa3b3;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.pagina-contato .ct-pular {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 18px;
+    transform: translateY(-180%);
+    border-radius: 8px;
+    background: #fff;
+    color: #163b50;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pagina-contato .ct-pular:focus {
+    transform: translateY(0);
+}
+
+
+/* ===== CABEÇALHO ===== */
+.pagina-contato .cabecalho-principal {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+    background: #fff;
+    color: #163b50;
+    border-bottom: 1px solid #e3ecef;
+    box-shadow: 0 2px 14px rgba(22, 59, 80, .06);
+    text-align: left;
+}
+
+.pagina-contato .barra-cabecalho {
+    max-width: 1280px;
+    min-height: 78px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pagina-contato .marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #163b50;
+    text-decoration: none;
+}
+
+.pagina-contato .marca-simbolo {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 58% 42% 52% 48% / 48% 55% 45% 52%;
+    background: #0aa3b3;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pagina-contato .marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pagina-contato .marca-texto strong {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: #163b50;
+}
+
+.pagina-contato .marca-texto strong span {
+    color: #0aa3b3;
+}
+
+.pagina-contato .marca-texto small {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    color: #4f7388;
+}
+
+.pagina-contato .cabecalho-principal .navegacao {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.pagina-contato .cabecalho-principal .navegacao a,
+.pagina-contato .cabecalho-principal .botao-dropdown {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #163b50;
+    font: 600 14px/1.4 inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.pagina-contato .cabecalho-principal .navegacao > a:hover,
+.pagina-contato .cabecalho-principal .botao-dropdown:hover {
+    color: #0aa3b3;
+}
+
+.pagina-contato .cabecalho-principal .navegacao > a[aria-current="page"] {
+    padding: 9px 16px;
+    border-radius: 10px;
+    background: #e3f4f6;
+    color: #0b7f8c;
+    font-weight: 700;
+}
+
+.pagina-contato .botao-dropdown .seta {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 13px;
+    transform: translateY(-2px);
+}
+
+.pagina-contato .grupo-dropdown {
+    position: relative;
+}
+
+.pagina-contato .botao-dropdown {
+    border: 0;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.pagina-contato .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -12px;
+    min-width: 210px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #dce6e9;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(22, 59, 80, .15);
+}
+
+.pagina-contato .cabecalho-principal .menu-dropdown a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.pagina-contato .cabecalho-principal .menu-dropdown a:hover {
+    background: #e0f4f5;
+}
+
+.pagina-contato .grupo-dropdown:hover .menu-dropdown,
+.pagina-contato .grupo-dropdown.aberto .menu-dropdown {
+    display: block;
+}
+
+.pagina-contato .botao-menu {
+    display: none;
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.pagina-contato .botao-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: #163b50;
+}
+
+@media (max-width: 1060px) {
+    .pagina-contato .botao-menu {
+        display: block;
+    }
+
+    .pagina-contato .cabecalho-principal .navegacao {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 12px 28px rgba(22, 59, 80, .2);
+    }
+
+    .pagina-contato .cabecalho-principal .navegacao.aberta {
+        display: flex;
+    }
+
+    .pagina-contato .cabecalho-principal .navegacao > a,
+    .pagina-contato .cabecalho-principal .botao-dropdown {
+        display: block;
+        width: 100%;
+        padding: 11px 14px;
+        text-align: left;
+    }
+
+    .pagina-contato .menu-dropdown {
+        position: static;
+        min-width: 0;
+        margin: 0 0 4px;
+        padding: 4px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .pagina-contato .barra-cabecalho {
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .pagina-contato .marca-texto strong {
+        font-size: 15px;
+    }
+
+    .pagina-contato .marca-texto small {
+        font-size: 9px;
+    }
+}
+
+
+/* ===== BANNER ===== */
+.pagina-contato .ct-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 88px 0 130px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(10, 163, 179, .45), transparent 45%),
+        linear-gradient(135deg, #0c2a3b 0%, #163b50 48%, #1f5470 100%);
+}
+
+.pagina-contato .ct-etiqueta {
+    display: block;
+    margin-bottom: 18px;
+    color: #1fc7d6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.pagina-contato .ct-banner h1 {
+    max-width: 720px;
+    margin-bottom: 22px;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.5px;
+}
+
+.pagina-contato .ct-banner h1 em {
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+    color: #a4eaf0;
+}
+
+.pagina-contato .ct-banner p {
+    max-width: 540px;
+    color: #eaf6f9;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+    .pagina-contato .ct-banner {
+        padding: 56px 0 120px;
+    }
+
+    .pagina-contato .ct-banner p {
+        font-size: 16px;
+    }
+}
+
+
+/* ===== TIPOS DE HOSPEDAGEM (cartões sobre o banner) ===== */
+.pagina-contato .ct-tipos {
+    position: relative;
+    z-index: 3;
+    margin-top: -64px;
+}
+
+.pagina-contato .ct-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.pagina-contato .secao {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: 32px 28px;
+    border: 1px solid #e6edef;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(22, 59, 80, .12);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.pagina-contato .secao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(22, 59, 80, .22);
+}
+
+.pagina-contato .secao-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background: #e0f4f5;
+    font-size: 30px;
+    transition: background .2s ease;
+}
+
+.pagina-contato .secao:hover .secao-icone {
+    background: #0aa3b3;
+}
+
+.pagina-contato .secao h3 {
+    margin-bottom: 12px;
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.pagina-contato .secao p {
+    margin-bottom: 22px;
+    color: #465d69;
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+
+.pagina-contato .secao-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.pagina-contato .secao-tags li {
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: #f0f5f5;
+    color: #0b7f8c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+@media (max-width: 1100px) {
+    .pagina-contato .ct-grade {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+        margin-inline: auto;
+    }
+}
+
+
+/* ===== CHAMADA FINAL ===== */
+.pagina-contato .ct-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 72px 0 80px;
+    padding: 40px 44px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(22, 59, 80, .08);
+}
+
+.pagina-contato .ct-continuar .ct-etiqueta {
+    margin-bottom: 10px;
+    color: #0aa3b3;
+    letter-spacing: 2px;
+}
+
+.pagina-contato .ct-continuar h2 {
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pagina-contato .ct-acoes {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pagina-contato .ct-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 13px 22px;
+    border: 1px solid #0aa3b3;
+    border-radius: 10px;
+    background: #0aa3b3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.pagina-contato .ct-botao:hover {
+    background: #08909e;
+    border-color: #08909e;
+    transform: translateY(-2px);
+}
+
+.pagina-contato .ct-botao-contorno {
+    background: #fff;
+    color: #0b7f8c;
+}
+
+.pagina-contato .ct-botao-contorno:hover {
+    background: #163b50;
+    border-color: #163b50;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .pagina-contato .ct-continuar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 56px 0 64px;
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-contato .ct-acoes {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+/* ===== RODAPÉ ===== */
+.pagina-contato .rodape-principal {
+    margin: 0;
+    padding: 52px 24px 20px;
+    background: #163b50;
+    color: #fff;
+    border-top: 4px solid #0aa3b3;
+    text-align: left;
+}
+
+.pagina-contato .rodape-conteudo {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 36px;
+}
+
+.pagina-contato .rodape-sobre h2 {
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.pagina-contato .rodape-sobre h2 span {
+    color: #1fc7d6;
+}
+
+.pagina-contato .rodape-sobre p {
+    max-width: 280px;
+    color: #d4e2e8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pagina-contato .rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.pagina-contato .rodape-coluna h3 {
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.pagina-contato .rodape-coluna a {
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.pagina-contato .rodape-coluna a:hover {
+    color: #a4eaf0;
+    transform: translateX(4px);
+}
+
+.pagina-contato .rodape-inferior {
+    max-width: 1180px;
+    margin: 36px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #456678;
+}
+
+.pagina-contato .rodape-inferior p {
+    color: #d4e2e8;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .pagina-contato .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .pagina-contato .rodape-inferior {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-contato .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* ===== DADOS DE CONTATO ===== */
+.pagina-contato .secao-valor {
+    margin-bottom: 22px;
+    color: #163b50;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.pagina-contato .secao-valor a {
+    color: #0b7f8c;
+    text-decoration: none;
+}
+
+.pagina-contato .secao-valor a:hover {
+    text-decoration: underline;
+}
+
+.pagina-contato .secao-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #0b7f8c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: gap .2s ease, color .2s ease;
+}
+
+.pagina-contato .secao-link:hover {
+    gap: 12px;
+    color: #0aa3b3;
+}
+
+
+/* ===== GUIAS POR PAÍS ===== */
+.pagina-contato .ct-paises {
+    margin: 72px 0 0;
+}
+
+.pagina-contato .ct-paises .ct-etiqueta {
+    margin-bottom: 14px;
+    color: #0aa3b3;
+    letter-spacing: 2px;
+}
+
+.pagina-contato .ct-paises h2 {
+    margin-bottom: 12px;
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pagina-contato .ct-paises-intro {
+    max-width: 640px;
+    margin-bottom: 32px;
+    color: #465d69;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.pagina-contato .ct-paises-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.pagina-contato .ct-pais {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    padding: 22px 22px 20px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    color: #163b50;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(22, 59, 80, .07);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.pagina-contato .ct-pais:hover {
+    transform: translateY(-4px);
+    border-color: #0aa3b3;
+    box-shadow: 0 16px 32px rgba(22, 59, 80, .16);
+}
+
+.pagina-contato .ct-pais-regiao {
+    color: #0b7f8c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.pagina-contato .ct-pais strong {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.pagina-contato .ct-pais-acao {
+    margin-top: auto;
+    padding-top: 10px;
+    color: #0b7f8c;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .pagina-contato .ct-paises {
+        margin-top: 56px;
+    }
+
+    .pagina-contato .ct-paises-grade {
+        grid-template-columns: 1fr;
+    }
+}

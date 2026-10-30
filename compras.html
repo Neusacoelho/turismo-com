@@ -4,52 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compras — Turismo.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="compras.css">
 </head>
-<body>
+<body class="pagina-compras">
+    <a class="comp-pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="grecia.html">Grécia</a>
-        <a href="franca.html">França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="china.html">China</a>
-         <a href="republica-dominicana.html">República Dominicana</a>
-        <a href="hospedagem.html">🏨 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html" class="ativo">🛍️ Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="cabecalho-principal" id="topo">
+        <div class="barra-cabecalho">
+            <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
+                <span class="marca-simbolo" aria-hidden="true">T</span>
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
 
-<main>
-    <h2>🛍️ Compras & Lojas Locais</h2>
+            <button class="botao-menu" type="button" aria-label="Abrir menu"
+                    aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
 
-    <div class="secao">
-        <h3>🎯 Artesanato Regional</h3>
-        <p>Peças únicas feitas à mão! Lembranças, bijuterias, tecidos, cerâmicas e trabalhos artesanais com a cara do lugar.</p>
-    </div>
+            <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+                <a href="index.html">Início</a>
 
-    <div class="secao">
-        <h3>🛒 Mercados & Feiras</h3>
-        <p>Produtos frescos, queijos, doces, vinhos, especiarias e produtos típicos direto do produtor.</p>
-    </div>
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span class="seta" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="mexico.html">México</a>
+                        <a href="china.html">China</a>
+                        <a href="estados-unidos.html">Estados Unidos</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+                    </div>
+                </div>
 
-    <div class="secao">
-        <h3>🏬 Lojas & Centros Comerciais</h3>
-        <p>Moda, acessórios, decoração e marcas locais. Tudo para levar um pedacinho da viagem para casa!</p>
-    </div>
-</main>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html" aria-current="page">Compras</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+    <main id="conteudo" tabindex="-1">
 
+        <!-- ===== BANNER ===== -->
+        <section class="comp-banner" aria-labelledby="titulo-compras">
+            <div class="comp-container">
+                <span class="comp-etiqueta">Onde comprar</span>
+                <h1 id="titulo-compras">Compras e lojas locais, <em>com a cara do lugar.</em></h1>
+                <p>
+                    Artesanato, mercados e lojas para levar um pedacinho
+                    de cada viagem para casa.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== OPÇÕES DE COMPRAS ===== -->
+        <section class="comp-tipos" aria-label="Opções de compras">
+            <div class="comp-container">
+                <div class="comp-grade">
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🎯</span>
+                        <h3>Artesanato Regional</h3>
+                        <p>Peças únicas feitas à mão! Lembranças, bijuterias, tecidos, cerâmicas e trabalhos artesanais com a cara do lugar.</p>
+                        <ul class="secao-tags">
+                            <li>Feito à mão</li>
+                            <li>Bijuterias</li>
+                            <li>Tecidos</li>
+                            <li>Cerâmicas</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🛒</span>
+                        <h3>Mercados &amp; Feiras</h3>
+                        <p>Produtos frescos, queijos, doces, vinhos, especiarias e produtos típicos direto do produtor.</p>
+                        <ul class="secao-tags">
+                            <li>Queijos</li>
+                            <li>Doces</li>
+                            <li>Vinhos</li>
+                            <li>Especiarias</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🏬</span>
+                        <h3>Lojas &amp; Centros Comerciais</h3>
+                        <p>Moda, acessórios, decoração e marcas locais. Tudo para levar um pedacinho da viagem para casa!</p>
+                        <ul class="secao-tags">
+                            <li>Moda</li>
+                            <li>Acessórios</li>
+                            <li>Decoração</li>
+                            <li>Marcas locais</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <!-- ===== POR PAÍS ===== -->
+                <section class="comp-paises" aria-labelledby="titulo-por-pais">
+                    <span class="comp-etiqueta">Guias por país</span>
+                    <h2 id="titulo-por-pais">Compras em cada destino</h2>
+                    <p class="comp-paises-intro">Descubra o que levar de lembrança nos países que já têm um guia próprio de compras.</p>
+                    <ul class="comp-paises-grade">
+                        <li>
+                            <a class="comp-pais" href="paises/portugal/compras.html">
+                                <span class="comp-pais-regiao">Europa</span>
+                                <strong>Portugal</strong>
+                                <span class="comp-pais-acao">Ver compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="comp-pais" href="paises/grecia/compras.html">
+                                <span class="comp-pais-regiao">Europa</span>
+                                <strong>Grécia</strong>
+                                <span class="comp-pais-acao">Ver compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="comp-pais" href="paises/japao/compras.html">
+                                <span class="comp-pais-regiao">Ásia</span>
+                                <strong>Japão</strong>
+                                <span class="comp-pais-acao">Ver compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="comp-pais" href="paises/china/compras.html">
+                                <span class="comp-pais-regiao">Ásia</span>
+                                <strong>China</strong>
+                                <span class="comp-pais-acao">Ver compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="comp-pais" href="estados-unidos/hospedagem-compras.html">
+                                <span class="comp-pais-regiao">América do Norte</span>
+                                <strong>Estados Unidos</strong>
+                                <span class="comp-pais-acao">Ver hospedagem e compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ===== CONTINUAR EXPLORANDO ===== -->
+                <section class="comp-continuar" aria-labelledby="titulo-continuar">
+                    <div>
+                        <span class="comp-etiqueta">Continue planejando</span>
+                        <h2 id="titulo-continuar">Mala pronta? Escolha seu próximo destino.</h2>
+                    </div>
+                    <nav class="comp-acoes" aria-label="Continue explorando">
+                        <a class="comp-botao comp-botao-contorno" href="alimentacao.html">Alimentação</a>
+                        <a class="comp-botao" href="index.html#destinos">Ver destinos <span aria-hidden="true">→</span></a>
+                    </nav>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="rodape-sobre">
+                <h2>Turismo<span>.com</span></h2>
+                <p>Seu guia completo para explorar os destinos mais incríveis do mundo.</p>
+            </div>
+            <nav class="rodape-coluna" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var botaoMenu = document.querySelector(".botao-menu");
+            var menu = document.getElementById("menu-principal");
+            var grupo = document.querySelector(".grupo-dropdown");
+            var botaoPaises = grupo.querySelector(".botao-dropdown");
+
+            function definirPaises(aberto) {
+                grupo.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                menu.classList.toggle("aberta", aberto);
+                botaoMenu.setAttribute("aria-expanded", String(aberto));
+                botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                if (!aberto) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", function () {
+                definirMenu(!menu.classList.contains("aberta"));
+            });
+
+            botaoPaises.addEventListener("click", function (e) {
+                e.stopPropagation();
+                definirPaises(!grupo.classList.contains("aberto"));
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!grupo.contains(e.target)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key !== "Escape") return;
+                if (grupo.classList.contains("aberto")) {
+                    definirPaises(false);
+                    botaoPaises.focus();
+                } else if (menu.classList.contains("aberta")) {
+                    definirMenu(false);
+                    botaoMenu.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -4,40 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato — Turismo.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="contato.css">
 </head>
-<body>
+<body class="pagina-contato">
+    <a class="ct-pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="grecia.html">Grécia</a>
-        <a href="franca.html">França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="china.html">China</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="contato.html">Contato</a>
-        <a href="republica-dominicana.html">República Dominicana</a>
-    </nav>
-</header>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="cabecalho-principal" id="topo">
+        <div class="barra-cabecalho">
+            <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
+                <span class="marca-simbolo" aria-hidden="true">T</span>
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
 
-<main>
-    <h2>Entre em Contato 📬</h2>
-    <div class="secao">
-        <p><strong>E-mail:</strong> contatoneusa.turismo@gmail.com/p>
-        <p><strong>Telefone/WhatsApp:</strong> (51) 92003-3077</p>
-        <p><strong>Endereço:</strong> Sapucaia do Sul — RS, Brasil</p>
-    </div>
-</main>
+            <button class="botao-menu" type="button" aria-label="Abrir menu"
+                    aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+            <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+                <a href="index.html">Início</a>
 
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span class="seta" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="mexico.html">México</a>
+                        <a href="china.html">China</a>
+                        <a href="estados-unidos.html">Estados Unidos</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+                    </div>
+                </div>
+
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html" aria-current="page">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+
+        <!-- ===== BANNER ===== -->
+        <section class="ct-banner" aria-labelledby="titulo-contato">
+            <div class="ct-container">
+                <span class="ct-etiqueta">Contato</span>
+                <h1 id="titulo-contato">Entre em contato, <em>vamos conversar.</em></h1>
+                <p>
+                    Dúvidas, sugestões ou ideias de viagem? Fale com a nossa
+                    equipe por e-mail, telefone ou WhatsApp.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== DADOS DE CONTATO ===== -->
+        <section class="ct-tipos" aria-label="Formas de contato">
+            <div class="ct-container">
+                <div class="ct-grade">
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">📧</span>
+                        <h3>E-mail</h3>
+                        <p class="secao-valor">
+                            <a href="mailto:contatoneusa.turismo@gmail.com">contatoneusa.turismo@gmail.com</a>
+                        </p>
+                        <a class="secao-link" href="mailto:contatoneusa.turismo@gmail.com">
+                            Enviar e-mail <span aria-hidden="true">→</span>
+                        </a>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">📱</span>
+                        <h3>Telefone / WhatsApp</h3>
+                        <p class="secao-valor">
+                            <a href="tel:+5551920033077">(51) 92003-3077</a>
+                        </p>
+                        <a class="secao-link" href="https://wa.me/5551920033077">
+                            Chamar no WhatsApp <span aria-hidden="true">→</span>
+                        </a>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">📍</span>
+                        <h3>Endereço</h3>
+                        <p class="secao-valor">Sapucaia do Sul — RS, Brasil</p>
+                        <ul class="secao-tags">
+                            <li>Sapucaia do Sul</li>
+                            <li>Rio Grande do Sul</li>
+                            <li>Brasil</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <!-- ===== POR PAÍS ===== -->
+                <section class="ct-paises" aria-labelledby="titulo-por-pais">
+                    <span class="ct-etiqueta">Guias por país</span>
+                    <h2 id="titulo-por-pais">Contato por país</h2>
+                    <p class="ct-paises-intro">Veja os canais de contato dos países que já têm uma página própria.</p>
+                    <ul class="ct-paises-grade">
+                        <li>
+                            <a class="ct-pais" href="paises/portugal/contato.html">
+                                <span class="ct-pais-regiao">Europa</span>
+                                <strong>Portugal</strong>
+                                <span class="ct-pais-acao">Ver contato <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ct-pais" href="paises/grecia/contato.html">
+                                <span class="ct-pais-regiao">Europa</span>
+                                <strong>Grécia</strong>
+                                <span class="ct-pais-acao">Ver contato <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ct-pais" href="paises/japao/contato.html">
+                                <span class="ct-pais-regiao">Ásia</span>
+                                <strong>Japão</strong>
+                                <span class="ct-pais-acao">Ver contato <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ===== CONTINUAR EXPLORANDO ===== -->
+                <section class="ct-continuar" aria-labelledby="titulo-continuar">
+                    <div>
+                        <span class="ct-etiqueta">Continue explorando</span>
+                        <h2 id="titulo-continuar">Que tal planejar a sua próxima viagem?</h2>
+                    </div>
+                    <nav class="ct-acoes" aria-label="Continue explorando">
+                        <a class="ct-botao ct-botao-contorno" href="sobre.html">Sobre o projeto</a>
+                        <a class="ct-botao" href="index.html#destinos">Ver destinos <span aria-hidden="true">→</span></a>
+                    </nav>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="rodape-sobre">
+                <h2>Turismo<span>.com</span></h2>
+                <p>Seu guia completo para explorar os destinos mais incríveis do mundo.</p>
+            </div>
+            <nav class="rodape-coluna" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var botaoMenu = document.querySelector(".botao-menu");
+            var menu = document.getElementById("menu-principal");
+            var grupo = document.querySelector(".grupo-dropdown");
+            var botaoPaises = grupo.querySelector(".botao-dropdown");
+
+            function definirPaises(aberto) {
+                grupo.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                menu.classList.toggle("aberta", aberto);
+                botaoMenu.setAttribute("aria-expanded", String(aberto));
+                botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                if (!aberto) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", function () {
+                definirMenu(!menu.classList.contains("aberta"));
+            });
+
+            botaoPaises.addEventListener("click", function (e) {
+                e.stopPropagation();
+                definirPaises(!grupo.classList.contains("aberto"));
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!grupo.contains(e.target)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key !== "Escape") return;
+                if (grupo.classList.contains("aberto")) {
+                    definirPaises(false);
+                    botaoPaises.focus();
+                } else if (menu.classList.contains("aberta")) {
+                    definirMenu(false);
+                    botaoMenu.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

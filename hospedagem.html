@@ -4,50 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospedagem — Turismo.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="hospedagem.css">
 </head>
-<body>
+<body class="pagina-hospedagem">
+    <a class="hosp-pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="china.html">China</a>
-        <a href="hospedagem.html" class="ativo">🏨 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛍️ Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="cabecalho-principal" id="topo">
+        <div class="barra-cabecalho">
+            <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
+                <span class="marca-simbolo" aria-hidden="true">T</span>
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
 
-<main>
-    <h2>🏨 Onde Ficar — Hospedagem</h2>
+            <button class="botao-menu" type="button" aria-label="Abrir menu"
+                    aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
 
-    <div class="secao">
-        <h3>🏩 Hotéis</h3>
-        <p>Conforto, serviços completos, atendimento 24h, café da manhã incluso, Wi-Fi, estacionamento e muito mais!</p>
-    </div>
+            <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+                <a href="index.html">Início</a>
 
-    <div class="secao">
-        <h3>🏡 Pousadas</h3>
-        <p>Charme e aconchego! Ambiente familiar, decoração única, café da manhã caseiro e perto das belezas locais.</p>
-    </div>
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span class="seta" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="mexico.html">México</a>
+                        <a href="china.html">China</a>
+                        <a href="estados-unidos.html">Estados Unidos</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+                    </div>
+                </div>
 
-    <div class="secao">
-        <h3>🏢 Apartamentos & Apart-Hotéis</h3>
-        <p>Como em casa! Cozinha completa, espaço para família, privacidade e valores ótimos para estadias longas.</p>
-    </div>
-</main>
+                <a href="hospedagem.html" aria-current="page">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+    <main id="conteudo" tabindex="-1">
 
+        <!-- ===== BANNER ===== -->
+        <section class="hosp-banner" aria-labelledby="titulo-hospedagem">
+            <div class="hosp-container">
+                <span class="hosp-etiqueta">Onde ficar</span>
+                <h1 id="titulo-hospedagem">Hospedagem para <em>cada estilo de viagem.</em></h1>
+                <p>
+                    Hotéis, pousadas e apartamentos para você descansar bem
+                    e aproveitar cada destino.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== TIPOS DE HOSPEDAGEM ===== -->
+        <section class="hosp-tipos" aria-label="Tipos de hospedagem">
+            <div class="hosp-container">
+                <div class="hosp-grade">
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🏩</span>
+                        <h3>Hotéis</h3>
+                        <p>Conforto, serviços completos, atendimento 24h, café da manhã incluso, Wi-Fi, estacionamento e muito mais!</p>
+                        <ul class="secao-tags">
+                            <li>Atendimento 24h</li>
+                            <li>Café da manhã</li>
+                            <li>Wi-Fi</li>
+                            <li>Estacionamento</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🏡</span>
+                        <h3>Pousadas</h3>
+                        <p>Charme e aconchego! Ambiente familiar, decoração única, café da manhã caseiro e perto das belezas locais.</p>
+                        <ul class="secao-tags">
+                            <li>Ambiente familiar</li>
+                            <li>Café caseiro</li>
+                            <li>Perto das belezas locais</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🏢</span>
+                        <h3>Apartamentos &amp; Apart-Hotéis</h3>
+                        <p>Como em casa! Cozinha completa, espaço para família, privacidade e valores ótimos para estadias longas.</p>
+                        <ul class="secao-tags">
+                            <li>Cozinha completa</li>
+                            <li>Espaço para família</li>
+                            <li>Estadias longas</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <!-- ===== POR PAÍS ===== -->
+                <section class="hosp-paises" aria-labelledby="titulo-por-pais">
+                    <span class="hosp-etiqueta">Guias por país</span>
+                    <h2 id="titulo-por-pais">Hospedagem em cada destino</h2>
+                    <p class="hosp-paises-intro">Veja onde ficar nos países que já têm um guia próprio de hospedagem.</p>
+                    <ul class="hosp-paises-grade">
+                        <li>
+                            <a class="hosp-pais" href="paises/portugal/hospedagem.html">
+                                <span class="hosp-pais-regiao">Europa</span>
+                                <strong>Portugal</strong>
+                                <span class="hosp-pais-acao">Ver hospedagem <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hosp-pais" href="paises/grecia/hospedagem.html">
+                                <span class="hosp-pais-regiao">Europa</span>
+                                <strong>Grécia</strong>
+                                <span class="hosp-pais-acao">Ver hospedagem <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hosp-pais" href="paises/japao/hospedagem.html">
+                                <span class="hosp-pais-regiao">Ásia</span>
+                                <strong>Japão</strong>
+                                <span class="hosp-pais-acao">Ver hospedagem <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hosp-pais" href="paises/china/hospedagem.html">
+                                <span class="hosp-pais-regiao">Ásia</span>
+                                <strong>China</strong>
+                                <span class="hosp-pais-acao">Ver hospedagem <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hosp-pais" href="estados-unidos/hospedagem-compras.html">
+                                <span class="hosp-pais-regiao">América do Norte</span>
+                                <strong>Estados Unidos</strong>
+                                <span class="hosp-pais-acao">Ver hospedagem e compras <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ===== CONTINUAR EXPLORANDO ===== -->
+                <section class="hosp-continuar" aria-labelledby="titulo-continuar">
+                    <div>
+                        <span class="hosp-etiqueta">Continue planejando</span>
+                        <h2 id="titulo-continuar">Já escolheu onde ficar? Veja o que comer e comprar.</h2>
+                    </div>
+                    <nav class="hosp-acoes" aria-label="Continue explorando">
+                        <a class="hosp-botao hosp-botao-contorno" href="index.html#destinos">Ver destinos</a>
+                        <a class="hosp-botao" href="alimentacao.html">Alimentação <span aria-hidden="true">→</span></a>
+                    </nav>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="rodape-sobre">
+                <h2>Turismo<span>.com</span></h2>
+                <p>Seu guia completo para explorar os destinos mais incríveis do mundo.</p>
+            </div>
+            <nav class="rodape-coluna" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var botaoMenu = document.querySelector(".botao-menu");
+            var menu = document.getElementById("menu-principal");
+            var grupo = document.querySelector(".grupo-dropdown");
+            var botaoPaises = grupo.querySelector(".botao-dropdown");
+
+            function definirPaises(aberto) {
+                grupo.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                menu.classList.toggle("aberta", aberto);
+                botaoMenu.setAttribute("aria-expanded", String(aberto));
+                botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                if (!aberto) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", function () {
+                definirMenu(!menu.classList.contains("aberta"));
+            });
+
+            botaoPaises.addEventListener("click", function (e) {
+                e.stopPropagation();
+                definirPaises(!grupo.classList.contains("aberto"));
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!grupo.contains(e.target)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key !== "Escape") return;
+                if (grupo.classList.contains("aberto")) {
+                    definirPaises(false);
+                    botaoPaises.focus();
+                } else if (menu.classList.contains("aberta")) {
+                    definirMenu(false);
+                    botaoMenu.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

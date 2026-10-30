@@ -4,51 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alimentação — Turismo.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="alimentacao.css">
 </head>
-<body>
+<body class="pagina-alimentacao">
+    <a class="ali-pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header><h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-<nav>
-    <a href="index.html">🏠 Início</a>
-    <a href="brasil.html">Brasil</a>
-    <a href="portugal.html">Portugal</a>
-    <a href="grecia.html">Grécia</a>
-    <a href="franca.html">França</a>
-    <a href="espanha.html">Espanha</a>
-    <a href="italia.html">Itália</a>
-    <a href="japao.html">Japão</a>
-    <a href="china.html">China</a>
-    <a href="republica-dominicana.html">República Dominicana</a>
-    <a href="hospedagem.html">🏨 Hospedagem</a>
-    <a href="alimentacao.html" class="ativo">🍽️ Alimentação</a>
-    <a href="compras.html">🛍️ Compras</a>
-    <a href="contato.html">Contato</a>
-</nav>
-</header>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="cabecalho-principal" id="topo">
+        <div class="barra-cabecalho">
+            <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
+                <span class="marca-simbolo" aria-hidden="true">T</span>
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
 
-<main>
-    <h2>🍽️ Onde Comer — Gastronomia</h2>
+            <button class="botao-menu" type="button" aria-label="Abrir menu"
+                    aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
 
-    <div class="secao">
-        <h3>🍴 Restaurantes Típicos</h3>
-        <p>Sabores autênticos de cada região! Pratos tradicionais, ingredientes locais e receitas passadas de geração em geração.</p>
-    </div>
+            <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+                <a href="index.html">Início</a>
 
-    <div class="secao">
-        <h3>🥘 Cozinha Internacional</h3>
-        <p>Variedade para todos os gostos! Comida italiana, japonesa, francesa, portuguesa e muito mais perto de você.</p>
-    </div>
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span class="seta" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="mexico.html">México</a>
+                        <a href="china.html">China</a>
+                        <a href="estados-unidos.html">Estados Unidos</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+                    </div>
+                </div>
 
-    <div class="secao">
-        <h3>☕ Lanchonetes & Cafés</h3>
-        <p>Parada obrigatória! Pães, bolos, cafés especiais, lanches e doces típicos para saborear a qualquer hora.</p>
-    </div>
-</main>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html" aria-current="page">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+    <main id="conteudo" tabindex="-1">
 
+        <!-- ===== BANNER ===== -->
+        <section class="ali-banner" aria-labelledby="titulo-alimentacao">
+            <div class="ali-container">
+                <span class="ali-etiqueta">Onde comer</span>
+                <h1 id="titulo-alimentacao">Gastronomia para <em>todos os paladares.</em></h1>
+                <p>
+                    Restaurantes típicos, cozinha internacional e cafés para
+                    saborear cada destino do começo ao fim do dia.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== OPÇÕES PARA COMER ===== -->
+        <section class="ali-tipos" aria-label="Opções para comer">
+            <div class="ali-container">
+                <div class="ali-grade">
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🍴</span>
+                        <h3>Restaurantes Típicos</h3>
+                        <p>Sabores autênticos de cada região! Pratos tradicionais, ingredientes locais e receitas passadas de geração em geração.</p>
+                        <ul class="secao-tags">
+                            <li>Pratos tradicionais</li>
+                            <li>Ingredientes locais</li>
+                            <li>Receitas de família</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">🥘</span>
+                        <h3>Cozinha Internacional</h3>
+                        <p>Variedade para todos os gostos! Comida italiana, japonesa, francesa, portuguesa e muito mais perto de você.</p>
+                        <ul class="secao-tags">
+                            <li>Italiana</li>
+                            <li>Japonesa</li>
+                            <li>Francesa</li>
+                            <li>Portuguesa</li>
+                        </ul>
+                    </article>
+
+                    <article class="secao">
+                        <span class="secao-icone" aria-hidden="true">☕</span>
+                        <h3>Lanchonetes &amp; Cafés</h3>
+                        <p>Parada obrigatória! Pães, bolos, cafés especiais, lanches e doces típicos para saborear a qualquer hora.</p>
+                        <ul class="secao-tags">
+                            <li>Pães e bolos</li>
+                            <li>Cafés especiais</li>
+                            <li>Doces típicos</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <!-- ===== POR PAÍS ===== -->
+                <section class="ali-paises" aria-labelledby="titulo-por-pais">
+                    <span class="ali-etiqueta">Guias por país</span>
+                    <h2 id="titulo-por-pais">Onde comer em cada destino</h2>
+                    <p class="ali-paises-intro">Conheça a gastronomia dos países que já têm um guia próprio de alimentação.</p>
+                    <ul class="ali-paises-grade">
+                        <li>
+                            <a class="ali-pais" href="paises/portugal/alimentacao.html">
+                                <span class="ali-pais-regiao">Europa</span>
+                                <strong>Portugal</strong>
+                                <span class="ali-pais-acao">Ver alimentação <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ali-pais" href="paises/grecia/alimentacao.html">
+                                <span class="ali-pais-regiao">Europa</span>
+                                <strong>Grécia</strong>
+                                <span class="ali-pais-acao">Ver alimentação <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ali-pais" href="paises/japao/alimentacao.html">
+                                <span class="ali-pais-regiao">Ásia</span>
+                                <strong>Japão</strong>
+                                <span class="ali-pais-acao">Ver alimentação <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ali-pais" href="paises/china/alimentacao.html">
+                                <span class="ali-pais-regiao">Ásia</span>
+                                <strong>China</strong>
+                                <span class="ali-pais-acao">Ver alimentação <span aria-hidden="true">→</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ===== CONTINUAR EXPLORANDO ===== -->
+                <section class="ali-continuar" aria-labelledby="titulo-continuar">
+                    <div>
+                        <span class="ali-etiqueta">Continue planejando</span>
+                        <h2 id="titulo-continuar">Barriga cheia? Veja onde ficar e o que comprar.</h2>
+                    </div>
+                    <nav class="ali-acoes" aria-label="Continue explorando">
+                        <a class="ali-botao ali-botao-contorno" href="hospedagem.html">Hospedagem</a>
+                        <a class="ali-botao" href="compras.html">Compras <span aria-hidden="true">→</span></a>
+                    </nav>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="rodape-sobre">
+                <h2>Turismo<span>.com</span></h2>
+                <p>Seu guia completo para explorar os destinos mais incríveis do mundo.</p>
+            </div>
+            <nav class="rodape-coluna" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var botaoMenu = document.querySelector(".botao-menu");
+            var menu = document.getElementById("menu-principal");
+            var grupo = document.querySelector(".grupo-dropdown");
+            var botaoPaises = grupo.querySelector(".botao-dropdown");
+
+            function definirPaises(aberto) {
+                grupo.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                menu.classList.toggle("aberta", aberto);
+                botaoMenu.setAttribute("aria-expanded", String(aberto));
+                botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                if (!aberto) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", function () {
+                definirMenu(!menu.classList.contains("aberta"));
+            });
+
+            botaoPaises.addEventListener("click", function (e) {
+                e.stopPropagation();
+                definirPaises(!grupo.classList.contains("aberto"));
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!grupo.contains(e.target)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key !== "Escape") return;
+                if (grupo.classList.contains("aberto")) {
+                    definirPaises(false);
+                    botaoPaises.focus();
+                } else if (menu.classList.contains("aberta")) {
+                    definirMenu(false);
+                    botaoMenu.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
