@@ -577,3 +577,74 @@
     .pagina-cultura .cultura-acoes { width: 100%; flex-direction: column; }
     .pagina-cultura .cultura-creditos { margin-bottom: 32px; }
 }
+
+.pagina-cultura .cultura-origens { padding-bottom: 96px; }
+.pagina-cultura .cultura-origens .cultura-titulo-secao h2 { max-width: 640px; }
+ 
+.pagina-cultura .cultura-origem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    padding-block: 40px;
+}
+ 
+/* Cartão da imagem: mesmo raio, borda e sombra dos cartões de tradições. */
+.pagina-cultura .cultura-origem-foto {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+ 
+.pagina-cultura .cultura-origem-foto img,
+.pagina-cultura .cultura-origem-foto .cultura-imagem-pendente {
+    display: grid;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+ 
+.pagina-cultura .cultura-origem-texto { min-width: 0; }
+.pagina-cultura .cultura-origem-texto .cultura-etiqueta { margin-bottom: 14px; }
+.pagina-cultura .cultura-origem-texto h3 {
+    margin: 0 0 16px;
+    font-size: clamp(26px, 2.6vw, 36px);
+    letter-spacing: -0.02em;
+}
+.pagina-cultura .cultura-origem-texto > p:not(.cultura-etiqueta) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+ 
+/* Alterna os lados (foto à direita) nas seções pares. */
+.pagina-cultura .cultura-origem-invertida .cultura-origem-foto { order: 2; }
+ 
+/* ---------- Responsivo ---------- */
+@media (max-width: 980px) {
+    .pagina-cultura .cultura-origem { gap: 36px; }
+}
+ 
+@media (max-width: 768px) {
+    .pagina-cultura .cultura-origens { padding-bottom: 64px; }
+    .pagina-cultura .cultura-origem {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-block: 28px;
+    }
+    /* No celular, a foto vem sempre antes do texto. */
+    .pagina-cultura .cultura-origem-invertida .cultura-origem-foto { order: 0; }
+    .pagina-cultura .cultura-origem-texto > p:not(.cultura-etiqueta) { font-size: 15px; }
+}
+ 
+@media (max-width: 600px) {
+    .pagina-cultura .cultura-origem-foto img,
+    .pagina-cultura .cultura-origem-foto .cultura-imagem-pendente { aspect-ratio: 1.6; }
+}

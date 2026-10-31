@@ -1,4 +1,4 @@
-/* Estilos exclusivos da galeria. Cabeçalho e rodapé vêm dos componentes compartilhados. */
+
 .pagina-galeria-brasil { background: var(--tc-branco); }
 
 .pagina-galeria-brasil main :is(h1, h2) {
