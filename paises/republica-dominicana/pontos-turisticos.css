@@ -1,0 +1,212 @@
+/* Conteúdo exclusivo de Pontos Turísticos. Menu e base vêm dos arquivos compartilhados. */
+.pagina-pontos-turisticos main { font-family: Arial, sans-serif; line-height: 1.6; }
+.pagina-pontos-turisticos main :is(h1, h2, h3) {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.pagina-pontos-turisticos main h2 { font-size: clamp(32px, 3.5vw, 52px); line-height: 1.12; letter-spacing: -0.025em; }
+.pagina-pontos-turisticos main h3 { font-size: 25px; line-height: 1.2; }
+.pagina-pontos-turisticos main .tc-etiqueta {
+    margin-bottom: 18px;
+    color: #007a85;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+}
+.pagina-pontos-turisticos main :is(a, summary):focus-visible {
+    outline: 3px solid var(--tc-link);
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+.pagina-pontos-turisticos .pt-secao { padding-block: 96px; }
+.pagina-pontos-turisticos .pt-titulo { margin-bottom: 40px; }
+.pagina-pontos-turisticos .pt-titulo > p:last-child { max-width: 850px; margin-top: 18px; font-size: 16px; line-height: 1.8; }
+
+/* Banner panorâmico e migalhas no padrão das outras internas dos países. */
+.pagina-pontos-turisticos .pt-banner { overflow: hidden; padding: 0; background: var(--tc-marinho); }
+.pagina-pontos-turisticos .pt-banner::before {
+    background: linear-gradient(90deg, rgb(10 34 48 / 82%), rgb(10 34 48 / 16%));
+}
+.pagina-pontos-turisticos .pt-banner .tc-banner-imagem { object-position: center 57%; }
+.pagina-pontos-turisticos .pt-banner-conteudo {
+    position: relative;
+    display: flex;
+    min-height: 560px;
+    padding-block: 50px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.pagina-pontos-turisticos .pt-banner .tc-migalhas { margin: 0; font-size: 13px; }
+.pagina-pontos-turisticos .pt-banner .tc-migalhas ol { align-items: center; gap: 10px; }
+.pagina-pontos-turisticos .pt-banner .tc-migalhas li + li::before { margin-right: 10px; padding-right: 0; color: #bed5dd; }
+.pagina-pontos-turisticos .pt-banner .tc-migalhas a { font-weight: 400; text-decoration: none; }
+.pagina-pontos-turisticos .pt-banner .tc-migalhas a:hover { text-decoration: underline; }
+.pagina-pontos-turisticos .pt-banner .tc-migalhas [aria-current] { color: #d4e2e8; }
+.pagina-pontos-turisticos .pt-banner-texto { margin-top: 112px; }
+.pagina-pontos-turisticos .pt-banner .tc-etiqueta { color: #67e8f0; }
+.pagina-pontos-turisticos .pt-banner h1 {
+    max-width: 850px;
+    margin-bottom: 20px;
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+.pagina-pontos-turisticos .pt-banner-texto > p:last-child { max-width: 650px; color: #eef5f7; font-size: 18px; line-height: 1.7; }
+.pagina-pontos-turisticos .pt-banner .pt-banner-credito {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgb(10 34 48 / 88%);
+    font-size: 12px;
+    line-height: 1.4;
+}
+.pagina-pontos-turisticos .pt-banner-credito a { color: var(--tc-branco); }
+.pagina-pontos-turisticos .pt-banner :focus-visible { outline-color: #a1f6fa; }
+
+/* Apresentação e destaque numérico do PDF. */
+.pagina-pontos-turisticos .pt-apresentacao {
+    display: grid;
+    grid-template-columns: 1.12fr 1.2fr 0.55fr;
+    align-items: start;
+    gap: 56px;
+    padding-block: 96px 112px;
+}
+.pagina-pontos-turisticos .pt-apresentacao > .tc-fluxo { font-size: 16px; line-height: 1.8; }
+.pagina-pontos-turisticos .pt-apresentacao > .tc-fluxo > * + * { margin-top: 20px; }
+.pagina-pontos-turisticos .pt-numero { padding: 32px 28px; border-radius: 22px; background: var(--tc-suave); font-size: 14px; line-height: 1.7; }
+.pagina-pontos-turisticos .pt-numero strong { display: block; margin-bottom: 8px; color: #007a85; font-family: Georgia, serif; font-size: 48px; font-weight: 500; line-height: 1; }
+
+/* Cartões de destinos e patrimônio: mesma largura, fotos e base de texto alinhadas. */
+.pagina-pontos-turisticos .pt-destinos { padding-top: 0; }
+.pagina-pontos-turisticos .pt-grade-quatro { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.pagina-pontos-turisticos .pt-cartao { display: flex; min-width: 0; overflow: hidden; flex-direction: column; border-radius: 18px; background: var(--tc-branco); box-shadow: 0 10px 28px rgb(22 59 80 / 6%); }
+.pagina-pontos-turisticos .pt-cartao > img { width: 100%; height: 240px; object-fit: cover; }
+.pagina-pontos-turisticos .pt-cartao-conteudo { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 24px; }
+.pagina-pontos-turisticos .pt-regiao { margin-bottom: 10px; color: #007a85; font-size: 11px; font-weight: 700; line-height: 1.6; letter-spacing: 1px; text-transform: uppercase; }
+.pagina-pontos-turisticos .pt-cartao h3 { margin-bottom: 14px; }
+.pagina-pontos-turisticos .pt-cartao-conteudo > p:not(.pt-regiao, .pt-cartao-nota) { margin-bottom: 24px; font-size: 14px; line-height: 1.8; }
+.pagina-pontos-turisticos .pt-cartao .pt-cartao-nota { width: 100%; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--tc-borda); color: var(--tc-marinho); font-size: 12px; font-weight: 700; }
+.pagina-pontos-turisticos .pt-patrimonio { background: var(--tc-marinho); color: #d4e2e8; }
+.pagina-pontos-turisticos .pt-patrimonio :is(h2, h3) { color: var(--tc-branco); }
+.pagina-pontos-turisticos .pt-patrimonio .tc-etiqueta { color: #67e8f0; }
+.pagina-pontos-turisticos .pt-patrimonio .pt-cartao { background: #294e63; box-shadow: none; }
+.pagina-pontos-turisticos .pt-patrimonio .pt-regiao { color: #a1f6fa; }
+.pagina-pontos-turisticos .pt-patrimonio .pt-cartao h3 { min-height: 2.4em; font-size: 23px; }
+.pagina-pontos-turisticos .pt-patrimonio .pt-cartao-conteudo > p:last-child { margin: auto 0 0; }
+.pagina-pontos-turisticos .pt-cartao > .pt-foto-castelo { object-position: center 42%; }
+
+/* Galeria assimétrica: Parque nacional Los Haitises à esquerda; ilhas e litoral à direita. */
+.pagina-pontos-turisticos .pt-natureza { background: var(--tc-branco); }
+.pagina-pontos-turisticos .pt-paisagens { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, 240px); gap: 16px; }
+.pagina-pontos-turisticos .pt-paisagem { position: relative; min-width: 0; overflow: hidden; isolation: isolate; border-radius: 18px; background: var(--tc-marinho); }
+.pagina-pontos-turisticos .pt-paisagem::after { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 25%, rgb(6 25 34 / 92%)); content: ""; }
+.pagina-pontos-turisticos .pt-paisagem > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.pagina-pontos-turisticos .pt-paisagem figcaption { display: flex; min-height: 100%; flex-direction: column; justify-content: flex-end; padding: 24px; color: var(--tc-branco); }
+.pagina-pontos-turisticos .pt-paisagem .pt-regiao { margin-bottom: 6px; color: #a1f6fa; }
+.pagina-pontos-turisticos .pt-paisagem h3 { color: var(--tc-branco); }
+.pagina-pontos-turisticos .pt-paisagem figcaption > p:last-child:not(.pt-regiao) { max-width: 500px; margin-top: 12px; font-size: 14px; }
+.pagina-pontos-turisticos .pt-paisagem-haitises { grid-column: 1 / 3; grid-row: 1 / 3; }
+.pagina-pontos-turisticos .pt-paisagem-praias { grid-column: 3 / 5; }
+.pagina-pontos-turisticos .pt-paisagem-praias > img { object-position: center 60%; }
+
+/* Roteiros e faixa de dicas são conteúdo informativo, sem controles sem ação. */
+.pagina-pontos-turisticos .pt-grade-tres { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.pagina-pontos-turisticos .pt-roteiro { display: flex; align-items: flex-start; gap: 20px; min-width: 0; padding: 28px; border-radius: 18px; background: var(--tc-branco); box-shadow: 0 10px 28px rgb(22 59 80 / 6%); }
+.pagina-pontos-turisticos .pt-roteiro > div { min-width: 0; }
+.pagina-pontos-turisticos .pt-roteiro h3 { margin-bottom: 12px; font-size: 24px; }
+.pagina-pontos-turisticos .pt-roteiro > div > p:last-child { font-size: 14px; line-height: 1.8; }
+.pagina-pontos-turisticos .pt-dias { flex: 0 0 68px; padding: 16px 8px; border-radius: 12px; background: var(--tc-suave); color: var(--tc-link); font-size: 11px; font-weight: 700; line-height: 1.2; letter-spacing: 1px; text-align: center; text-transform: uppercase; }
+.pagina-pontos-turisticos .pt-dias strong { display: block; margin-bottom: 4px; font-family: Georgia, serif; font-size: 34px; font-weight: 500; }
+.pagina-pontos-turisticos .pt-dicas-faixa { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; border: 1px solid #e6edef; border-radius: 18px; background: var(--tc-branco); list-style: none; }
+.pagina-pontos-turisticos .pt-dicas-faixa li { display: flex; gap: 14px; min-width: 0; padding: 28px 24px; }
+.pagina-pontos-turisticos .pt-dicas-faixa li + li { border-left: 1px solid #e6edef; }
+.pagina-pontos-turisticos .pt-dicas-faixa li > span { flex-shrink: 0; padding-top: 3px; color: var(--tc-link); font-size: 11px; font-weight: 700; white-space: nowrap; }
+.pagina-pontos-turisticos .pt-dicas-faixa h3 { margin-bottom: 10px; font-size: 22px; }
+.pagina-pontos-turisticos .pt-dicas-faixa p { font-size: 14px; line-height: 1.8; }
+
+.pagina-pontos-turisticos .pt-continuar { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-block: 96px 32px; padding: 44px; border-radius: 18px; background: var(--tc-branco); box-shadow: 0 10px 28px rgb(22 59 80 / 6%); }
+.pagina-pontos-turisticos .pt-continuar > div { max-width: 550px; }
+.pagina-pontos-turisticos .pt-continuar h2 { font-size: 32px; }
+.pagina-pontos-turisticos .pt-continuar .tc-acoes { flex-shrink: 0; flex-wrap: nowrap; justify-content: flex-end; margin-top: 0; }
+.pagina-pontos-turisticos .pt-continuar .tc-botao { font-size: 13px; }
+.pagina-pontos-turisticos .pt-creditos { margin-block: 24px 32px; font-size: 13px; line-height: 1.8; }
+.pagina-pontos-turisticos .pt-creditos summary { width: fit-content; padding-block: 8px; color: var(--tc-marinho); font-weight: 700; cursor: pointer; }
+.pagina-pontos-turisticos .pt-creditos p { margin-block: 12px; }
+.pagina-pontos-turisticos .pt-creditos ul { padding-left: 24px; }
+.pagina-pontos-turisticos .pt-creditos li { margin-block: 8px; }
+
+/* Rodapé local: mesmas medidas, agrupamentos e pontos de quebra de Gastronomia. */
+.pagina-pontos-turisticos .tc-rodape { margin-top: 40px; padding-block: 48px 20px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; }
+.pagina-pontos-turisticos .tc-rodape > .tc-container { width: calc(100% - 48px); max-width: 1180px; }
+.pagina-pontos-turisticos .tc-rodape-grade { grid-template-columns: 2fr repeat(3, 1fr); gap: 36px; }
+.pagina-pontos-turisticos .tc-rodape h2 { margin-bottom: 14px; font-size: 22px; line-height: 1.6; }
+.pagina-pontos-turisticos .tc-rodape h2 span { color: #00c2cf; }
+.pagina-pontos-turisticos .tc-rodape h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.6; }
+.pagina-pontos-turisticos .tc-rodape-grade > .tc-fluxo > p { max-width: 280px; margin: 0; line-height: 1.7; }
+.pagina-pontos-turisticos .tc-rodape-coluna { gap: 12px; }
+.pagina-pontos-turisticos .tc-rodape-coluna a { font-size: 14px; font-weight: 400; text-decoration: none; }
+.pagina-pontos-turisticos .tc-rodape-coluna a:hover { text-decoration: underline; }
+.pagina-pontos-turisticos .tc-rodape-inferior { display: flex; justify-content: space-between; gap: 12px; margin-top: 36px; padding-top: 20px; border-color: #456678; font-size: 12px; }
+
+@media (max-width: 1100px) {
+    .pagina-pontos-turisticos .pt-apresentacao { gap: 28px; }
+    .pagina-pontos-turisticos .pt-roteiro { gap: 14px; padding: 24px; }
+    .pagina-pontos-turisticos .pt-continuar { align-items: flex-start; flex-direction: column; }
+    .pagina-pontos-turisticos .pt-continuar .tc-acoes { flex-wrap: wrap; justify-content: flex-start; }
+}
+@media (max-width: 980px) {
+    .pagina-pontos-turisticos .pt-grade-quatro { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-pontos-turisticos .pt-grade-tres { grid-template-columns: 1fr; }
+    .pagina-pontos-turisticos .pt-apresentacao { grid-template-columns: 1fr 1fr; padding-block: 72px; }
+    .pagina-pontos-turisticos .pt-numero { display: flex; grid-column: 1 / -1; align-items: center; gap: 24px; }
+    .pagina-pontos-turisticos .pt-numero strong { flex-shrink: 0; margin: 0; }
+    .pagina-pontos-turisticos .pt-numero p { max-width: 360px; }
+    .pagina-pontos-turisticos .pt-dicas-faixa { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-pontos-turisticos .pt-dicas-faixa li:nth-child(3) { border-left: 0; }
+    .pagina-pontos-turisticos .pt-dicas-faixa li:nth-child(n + 3) { border-top: 1px solid #e6edef; }
+}
+@media (max-width: 768px) {
+    .pagina-pontos-turisticos .pt-secao { padding-block: 64px; }
+    .pagina-pontos-turisticos .pt-banner-conteudo { min-height: 470px; padding-block: 32px 90px; }
+    .pagina-pontos-turisticos .pt-banner-texto { margin-top: 80px; }
+    .pagina-pontos-turisticos .pt-banner-texto > p:last-child { font-size: 16px; }
+    .pagina-pontos-turisticos .pt-apresentacao { grid-template-columns: 1fr; gap: 28px; }
+    .pagina-pontos-turisticos .pt-quebra { display: none; }
+    .pagina-pontos-turisticos .pt-numero { grid-column: auto; }
+    .pagina-pontos-turisticos .pt-destinos { padding-top: 0; }
+    .pagina-pontos-turisticos .pt-titulo { margin-bottom: 28px; }
+    .pagina-pontos-turisticos .pt-titulo > p:last-child { font-size: 15px; }
+    .pagina-pontos-turisticos .pt-paisagens { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 340px 260px 260px; }
+    .pagina-pontos-turisticos .pt-paisagem-douro { grid-column: 1 / -1; grid-row: auto; }
+    .pagina-pontos-turisticos .pt-paisagem-praias { grid-column: 1 / -1; }
+    .pagina-pontos-turisticos .pt-continuar { gap: 28px; margin-top: 64px; padding: 32px; }
+    .pagina-pontos-turisticos .tc-rodape-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .pagina-pontos-turisticos .tc-rodape-inferior { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+    .pagina-pontos-turisticos .pt-banner::before { background: linear-gradient(90deg, rgb(10 34 48 / 82%), rgb(10 34 48 / 52%)); }
+    .pagina-pontos-turisticos .pt-banner-conteudo { min-height: 440px; }
+    .pagina-pontos-turisticos .pt-banner h1 { font-size: clamp(40px, 10vw, 56px); }
+    .pagina-pontos-turisticos .pt-banner .pt-banner-credito { font-size: 11px; }
+    .pagina-pontos-turisticos .pt-apresentacao { padding-block: 56px; }
+    .pagina-pontos-turisticos .pt-numero { padding: 24px; }
+    .pagina-pontos-turisticos .pt-grade-quatro,
+    .pagina-pontos-turisticos .pt-dicas-faixa { grid-template-columns: 1fr; }
+    .pagina-pontos-turisticos .pt-cartao > img { height: auto; aspect-ratio: 4 / 3; }
+    .pagina-pontos-turisticos .pt-patrimonio .pt-cartao h3 { min-height: 0; }
+    .pagina-pontos-turisticos .pt-paisagens { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .pagina-pontos-turisticos .pt-paisagem { grid-column: auto; min-height: 300px; }
+    .pagina-pontos-turisticos .pt-paisagem-douro { min-height: 380px; }
+    .pagina-pontos-turisticos .pt-dicas-faixa li + li { border-left: 0; border-top: 1px solid #e6edef; }
+    .pagina-pontos-turisticos .pt-continuar { padding: 28px 24px; }
+    .pagina-pontos-turisticos .pt-continuar h2 { font-size: 28px; }
+    .pagina-pontos-turisticos .pt-continuar .tc-acoes { width: 100%; flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 480px) {
+    .pagina-pontos-turisticos .tc-rodape { padding-top: 36px; }
+    .pagina-pontos-turisticos .tc-rodape-grade { grid-template-columns: 1fr; gap: 28px; }
+}

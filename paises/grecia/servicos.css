@@ -1,0 +1,276 @@
+/* =====================================================
+   TURISMO.COM — PÁGINAS DE SERVIÇOS
+   (hospedagem, alimentação, compras, contato — de qualquer país)
+   Mesma identidade da página inicial.
+   Paleta: azul-petróleo #163b50 | turquesa #0aa3b3 | claro #a4eaf0 | branco
+   Não precisa mexer no HTML: as fontes são carregadas por este arquivo.
+===================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap");
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.pagina-servico {
+    margin: 0;
+    background: #f0f5f5;
+    color: #163b50;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.pagina-servico *, .pagina-servico *::before, .pagina-servico *::after { box-sizing: border-box; }
+.pagina-servico h1, .pagina-servico h2, .pagina-servico h3,
+.pagina-servico p, .pagina-servico ul { margin: 0; padding: 0; }
+.pagina-servico a { color: #0b7f8c; }
+.pagina-servico a:focus-visible,
+.pagina-servico button:focus-visible { outline: 3px solid #a4eaf0; outline-offset: 3px; }
+
+/* Remove a caixa branca do estilo.css */
+.pagina-servico main {
+    max-width: none; width: 100%; margin: 0; padding: 0;
+    background: transparent; box-shadow: none; border-radius: 0; text-align: left;
+}
+
+
+/* ===== CABEÇALHO (igual ao da página inicial) ===== */
+.pagina-servico .cabecalho-principal {
+    position: sticky; top: 0; z-index: 100; padding: 0;
+    background: #fff; border-bottom: 1px solid #e3ecef;
+    box-shadow: 0 2px 14px rgba(22, 59, 80, .06); text-align: left;
+}
+.pagina-servico .barra-cabecalho {
+    max-width: 1280px; min-height: 78px; margin: 0 auto; padding: 10px 24px;
+    display: flex; align-items: center; gap: 24px;
+}
+
+.pagina-servico .marca { display: flex; align-items: center; gap: 12px; flex-shrink: 0; color: #163b50; text-decoration: none; }
+/* O HTML tem "✈"; aqui ele vira o "T" turquesa da página inicial */
+.pagina-servico .marca-simbolo {
+    display: grid; place-items: center; width: 44px; height: 44px;
+    border-radius: 58% 42% 52% 48% / 48% 55% 45% 52%;
+    background: #0aa3b3; color: #fff; font-size: 0; line-height: 0; overflow: hidden;
+}
+.pagina-servico .marca-simbolo::before {
+    content: "T"; font-family: "Playfair Display", Georgia, serif; font-size: 26px; font-weight: 700; line-height: 1;
+}
+.pagina-servico .marca strong { font-size: 17px; font-weight: 700; letter-spacing: 1px; color: #163b50; }
+.pagina-servico .marca strong span { color: #0aa3b3; }
+
+.pagina-servico .marca-texto { display: flex; flex-direction: column; gap: 2px; }
+.pagina-servico .marca-texto small { font-size: 11px; font-weight: 600; letter-spacing: 2.2px; color: #4f7388; }
+.pagina-servico .botao-dropdown .seta { display: inline-block; margin-left: 2px; font-size: 13px; transform: translateY(-2px); }
+
+/* Botão "Guia visual" (à direita) */
+.pagina-servico .menu-dropdown.menu-direita { left: auto; right: 0; }
+.pagina-servico .botao-dropdown.botao-guia {
+    padding: 11px 18px; border-radius: 10px; background: #e3f4f6; color: #0b7f8c; font-size: 13.5px; font-weight: 700;
+    transition: background .2s ease, color .2s ease;
+}
+.pagina-servico .botao-dropdown.botao-guia:hover { background: #0aa3b3; color: #fff; }
+.pagina-servico .nav-guia { margin-left: auto; }
+
+.pagina-servico .navegacao {
+    display: flex; flex: 1; align-items: center; justify-content: center; gap: 28px;
+    margin: 0; padding: 0; background: transparent;
+}
+.pagina-servico .navegacao a,
+.pagina-servico .botao-dropdown {
+    margin: 0; color: #163b50; font-family: inherit; font-size: 14px; font-weight: 600; line-height: 1.4; text-decoration: none;
+}
+.pagina-servico .navegacao > a { padding: 6px 0; border-bottom: 2px solid transparent; }
+.pagina-servico .navegacao > a:hover,
+.pagina-servico .botao-dropdown:hover { color: #0aa3b3; }
+.pagina-servico .navegacao > a.ativo { color: #0aa3b3; border-bottom-color: #0aa3b3; }
+
+.pagina-servico .grupo-dropdown { position: relative; }
+.pagina-servico .botao-dropdown { background: none; border: 0; padding: 10px 0; cursor: pointer; }
+.pagina-servico .menu-dropdown {
+    display: none; position: absolute; top: 100%; left: -12px; min-width: 190px; padding: 8px;
+    background: #fff; border: 1px solid #dce6e9; border-radius: 12px; box-shadow: 0 12px 28px rgba(22, 59, 80, .15);
+}
+.pagina-servico .menu-dropdown a { display: block; padding: 9px 12px; border-radius: 8px; border: 0; }
+.pagina-servico .menu-dropdown a:hover { background: #e0f4f5; }
+.pagina-servico .grupo-dropdown:hover .menu-dropdown,
+.pagina-servico .grupo-dropdown.aberto .menu-dropdown { display: block; }
+
+.pagina-servico .botao-menu { display: none; margin-left: auto; background: none; border: 0; padding: 8px; cursor: pointer; }
+.pagina-servico .botao-menu span { display: block; width: 25px; height: 2px; margin: 5px 0; background: #163b50; }
+
+@media (max-width: 1060px) {
+    .pagina-servico .botao-menu { display: block; }
+    .pagina-servico .navegacao {
+        display: none; position: absolute; top: 100%; left: 16px; right: 16px;
+        max-height: calc(100dvh - 100px); overflow-y: auto;
+        flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 10px;
+        background: #fff; border-radius: 14px; box-shadow: 0 12px 28px rgba(22, 59, 80, .2);
+    }
+    .pagina-servico .navegacao.aberta { display: flex; }
+    .pagina-servico .navegacao > a,
+    .pagina-servico .botao-dropdown { display: block; width: 100%; padding: 11px 14px; text-align: left; }
+    .pagina-servico .navegacao > a { border-bottom: 0; border-radius: 8px; }
+    .pagina-servico .navegacao > a.ativo { background: #e0f4f5; }
+    .pagina-servico .nav-guia { margin-left: 0; }
+    .pagina-servico .botao-dropdown.botao-guia { margin-top: 6px; }
+    .pagina-servico .menu-dropdown, .pagina-servico .menu-dropdown.menu-direita { position: static; min-width: 0; margin: 0 0 4px; padding: 4px; box-shadow: none; }
+}
+@media (max-width: 400px) {
+    .pagina-servico .barra-cabecalho { padding: 10px 16px; gap: 8px; }
+    .pagina-servico .marca strong { font-size: 15px; }
+}
+
+
+/* ===== BANNER (mesmo clima do hero da página inicial) ===== */
+.pagina-servico .sv-banner {
+    position: relative; overflow: hidden; padding: 84px 0 92px; color: #fff;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(164, 234, 240, .26), transparent 45%),
+        radial-gradient(circle at 5% 100%, rgba(10, 163, 179, .32), transparent 45%),
+        linear-gradient(135deg, #0c2a3b 0%, #163b50 50%, #1f5470 100%);
+}
+.pagina-servico .sv-banner::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, .10) 1.2px, transparent 1.4px);
+    background-size: 28px 28px;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+    mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+}
+.pagina-servico .sv-banner::after {
+    content: ""; position: absolute; right: -160px; top: -180px; width: 520px; height: 520px;
+    border: 2px dashed rgba(164, 234, 240, .3); border-radius: 50%; pointer-events: none;
+}
+.pagina-servico .sv-wrap { position: relative; z-index: 1; width: calc(100% - 48px); max-width: 1180px; margin: 0 auto; }
+
+.pagina-servico .sv-etiqueta { display: inline-block; margin-bottom: 16px; color: #1fc7d6; font-size: 12px; font-weight: 700; letter-spacing: 3px; }
+.pagina-servico .sv-banner h1 {
+    max-width: 760px; margin-bottom: 18px; color: #fff;
+    font-family: "Playfair Display", Georgia, serif; font-size: clamp(36px, 5.4vw, 64px); font-weight: 700; line-height: 1.1;
+    text-shadow: 0 4px 28px rgba(0, 0, 0, .25);
+}
+.pagina-servico .sv-banner p { max-width: 620px; color: #e3f1f5; font-size: 18px; line-height: 1.7; }
+
+
+/* ===== SEÇÕES ===== */
+.pagina-servico .sv-secao { padding: 64px 0 0; }
+.pagina-servico .sv-secao:last-of-type { padding-bottom: 80px; }
+.pagina-servico .sv-secao:has(+ .sv-aviso) { padding-bottom: 0; }
+
+.pagina-servico .sv-secao h2 {
+    margin-bottom: 14px; color: #163b50;
+    font-family: "Playfair Display", Georgia, serif; font-size: clamp(28px, 3.2vw, 40px); font-weight: 500; line-height: 1.2;
+}
+.pagina-servico .sv-secao h2::after {
+    content: ""; display: block; width: 56px; height: 3px; margin-top: 14px; border-radius: 3px;
+    background: linear-gradient(90deg, #0aa3b3, #a4eaf0);
+}
+.pagina-servico .sv-intro { max-width: 720px; margin-bottom: 28px; color: #465d69; font-size: 16.5px; line-height: 1.75; }
+/* Parágrafo de introdução vazio (algumas seções não têm texto): só mantém o espaçamento */
+.pagina-servico .sv-intro:empty { display: block; height: 14px; margin: 0; }
+
+
+/* ===== CARDS ===== */
+.pagina-servico .sv-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+
+.pagina-servico .sv-card {
+    position: relative; overflow: hidden; padding: 26px 24px;
+    border: 1px solid #e1ecee; border-radius: 18px; background: #fff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, .05);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.pagina-servico .sv-card::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, #0aa3b3, #a4eaf0);
+    transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+.pagina-servico .sv-card:hover { transform: translateY(-5px); border-color: #bfe6e9; box-shadow: 0 16px 34px rgba(22, 59, 80, .13); }
+.pagina-servico .sv-card:hover::before { transform: scaleX(1); }
+
+.pagina-servico .sv-card .ic {
+    display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: 16px;
+    border-radius: 14px; background: #e0f4f5; font-size: 24px; transition: background .25s ease;
+}
+.pagina-servico .sv-card:hover .ic { background: #bfeff3; }
+.pagina-servico .sv-card h3 { margin-bottom: 8px; color: #163b50; font-family: "Playfair Display", Georgia, serif; font-size: 21px; font-weight: 500; line-height: 1.25; }
+.pagina-servico .sv-card p,
+.pagina-servico .sv-card li { color: #465d69; font-size: 15px; line-height: 1.7; }
+.pagina-servico .sv-card ul { padding-left: 18px; }
+
+
+/* ===== TABELAS ===== */
+.pagina-servico .sv-tabela {
+    width: 100%; overflow-x: auto; border: 1px solid #e1ecee; border-radius: 18px;
+    background: #fff; box-shadow: 0 4px 18px rgba(22, 59, 80, .05);
+}
+.pagina-servico table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 15px; }
+.pagina-servico th {
+    padding: 15px 18px; background: #163b50; color: #fff; text-align: left;
+    font-size: 12.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+}
+.pagina-servico td { padding: 14px 18px; border-top: 1px solid #e9f0f1; color: #465d69; vertical-align: top; }
+.pagina-servico td:first-child { color: #163b50; font-weight: 700; }
+.pagina-servico tr:nth-child(even) td { background: #f7fbfb; }
+.pagina-servico tr:hover td { background: #e9f7f8; }
+
+
+/* ===== AVISO (fica solto no <main>, por isso tem largura própria) ===== */
+.pagina-servico .sv-aviso {
+    width: calc(100% - 48px); max-width: 1180px; margin: 28px auto 80px; padding: 18px 22px;
+    border-left: 4px solid #0aa3b3; border-radius: 0 14px 14px 0;
+    background: #e0f4f5; color: #163b50; font-size: 15px;
+}
+.pagina-servico .sv-secao + .sv-aviso { margin-top: 36px; }
+
+
+/* ===== FORMULÁRIO (contato) ===== */
+.pagina-servico .sv-duas { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: start; }
+
+.pagina-servico .sv-form {
+    display: grid; gap: 16px; padding: 30px; border: 1px solid #e1ecee; border-radius: 20px;
+    background: #fff; box-shadow: 0 14px 36px rgba(22, 59, 80, .1);
+}
+.pagina-servico .sv-form label { display: grid; gap: 6px; color: #163b50; font-size: 14px; font-weight: 700; }
+.pagina-servico .sv-form input,
+.pagina-servico .sv-form select,
+.pagina-servico .sv-form textarea {
+    width: 100%; padding: 12px 14px; border: 1.5px solid #cfe3e6; border-radius: 10px;
+    background: #fff; color: #163b50; font: inherit; font-weight: 400;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.pagina-servico .sv-form textarea { resize: vertical; min-height: 140px; }
+.pagina-servico .sv-form input:focus,
+.pagina-servico .sv-form select:focus,
+.pagina-servico .sv-form textarea:focus { outline: 0; border-color: #0aa3b3; box-shadow: 0 0 0 4px rgba(10, 163, 179, .18); }
+
+.pagina-servico .sv-botao {
+    justify-self: start; padding: 14px 28px; border: 0; border-radius: 10px;
+    background: #0aa3b3; color: #fff; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0, 120, 135, .3);
+    transition: background .2s ease, transform .2s ease;
+}
+.pagina-servico .sv-botao:hover { background: #08909e; transform: translateY(-2px); }
+
+/* Na coluna estreita do contato os cards ficam um embaixo do outro */
+.pagina-servico .sv-duas .sv-grade { grid-template-columns: 1fr; }
+
+@media (max-width: 860px) {
+    .pagina-servico .sv-duas { grid-template-columns: 1fr; }
+    .pagina-servico .sv-form { padding: 22px; }
+}
+
+
+/* ===== RODAPÉ ===== */
+.pagina-servico .rodape-principal { margin: 0; padding: 52px 24px 20px; background: #163b50; border-top: 4px solid #0aa3b3; color: #fff; text-align: left; }
+.pagina-servico .rodape-conteudo { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(2, 1fr); gap: 36px; }
+.pagina-servico .rodape-conteudo h2 { margin-bottom: 12px; color: #fff; font-size: 22px; }
+.pagina-servico .rodape-conteudo h2 span { color: #1fc7d6; }
+.pagina-servico .rodape-conteudo p { max-width: 300px; color: #d4e2e8; font-size: 14px; line-height: 1.7; }
+.pagina-servico .rodape-coluna { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.pagina-servico .rodape-coluna h3 { margin-bottom: 4px; color: #fff; font-size: 15px; }
+.pagina-servico .rodape-coluna a { color: #d4e2e8; font-size: 14px; text-decoration: none; transition: color .2s ease, transform .2s ease; }
+.pagina-servico .rodape-coluna a:hover { color: #a4eaf0; transform: translateX(4px); }
+.pagina-servico .rodape-inferior { max-width: 1180px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid #456678; color: #d4e2e8; font-size: 12px; }
+
+@media (max-width: 700px) {
+    .pagina-servico .rodape-conteudo { grid-template-columns: 1fr; gap: 28px; }
+    .pagina-servico .sv-banner { padding: 52px 0 60px; }
+    .pagina-servico .sv-secao { padding-top: 48px; }
+}

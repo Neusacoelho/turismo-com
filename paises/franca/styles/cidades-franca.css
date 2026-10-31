@@ -1,0 +1,531 @@
+/* =========================================
+   CIDADES DA FRANÇA — ESTILOS COMPARTILHADOS
+========================================= */
+
+.pagina-cidade {
+    --cidade-azul-escuro: #142b3b;
+    --cidade-azul: #254e63;
+    --cidade-azul-claro: #e8f2f5;
+    --cidade-turquesa: #00a7b5;
+    --cidade-texto: #354b57;
+    --cidade-fundo: #ffffff;
+
+    margin: 0;
+    color: var(--cidade-texto);
+    background: var(--cidade-fundo);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.pagina-cidade *,
+.pagina-cidade *::before,
+.pagina-cidade *::after {
+    box-sizing: border-box;
+}
+
+.pagina-cidade img {
+    display: block;
+    max-width: 100%;
+}
+
+.pagina-cidade a {
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.cidade-conteudo {
+    width: 100%;
+    margin: 0;
+    overflow: clip;
+}
+
+.cidade-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: clamp(420px, 58vw, 680px);
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--cidade-azul-escuro);
+    color: #ffffff;
+}
+
+.cidade-hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg,
+            rgba(12, 35, 49, 0.9),
+            rgba(12, 35, 49, 0.56) 56%,
+            rgba(12, 35, 49, 0.12));
+}
+
+.cidade-hero>img {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cidade-hero-texto {
+    width: min(100% - 48px, 1180px);
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+.cidade-kicker {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--cidade-turquesa);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.cidade-hero .cidade-kicker {
+    color: #8ff0f2;
+}
+
+.cidade-hero h1 {
+    max-width: 850px;
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.cidade-hero p {
+    max-width: 680px;
+    margin: 0 0 30px;
+    color: #f1f6f8;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.8;
+}
+
+.cidade-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--cidade-turquesa);
+    color: #082d37;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cidade-cta:hover {
+    background: #83e7e9;
+    color: #082d37;
+}
+
+.cidade-intro {
+    width: min(100% - 48px, 900px);
+    margin: 72px auto;
+}
+
+.cidade-intro h2,
+.cidade-secao h2 {
+    margin: 0 0 18px;
+    color: var(--cidade-azul-escuro);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.cidade-intro p,
+.cidade-secao>p {
+    margin: 0 0 18px;
+    color: #526570;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.cidade-intro>a:not(.cidade-cta) {
+    color: var(--cidade-azul);
+    font-weight: 700;
+}
+
+.cidade-secao {
+    width: min(100% - 48px, 1180px);
+    margin: 76px auto;
+    scroll-margin-top: 30px;
+}
+
+.cidade-secao-cinza {
+    width: 100%;
+    margin: 76px 0;
+    padding: 64px max(24px, calc((100% - 1180px) / 2));
+    background: #f3f7f8;
+}
+
+.cidade-secao-cinza>h2,
+.cidade-secao-cinza>p,
+.cidade-secao-cinza>.info-grid {
+    max-width: 1180px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 26px;
+    border: 1px solid #e0e8eb;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(20, 43, 59, 0.05);
+}
+
+.info-card h3 {
+    margin: 0 0 12px;
+    color: var(--cidade-azul-escuro);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.info-card p {
+    margin: 0 0 12px;
+    color: #526570;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.info-card .card-endereco {
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 0.9rem;
+}
+
+.card-link {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-top: 14px;
+    color: #087c8a;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: #064c57;
+    text-decoration: underline;
+}
+
+.aviso-dados {
+    width: min(100% - 48px, 1180px);
+    margin: 50px auto;
+    padding: 22px 24px;
+    border-left: 4px solid var(--cidade-turquesa);
+    border-radius: 0 8px 8px 0;
+    background: var(--cidade-azul-claro);
+    color: #354b57;
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+.voltar-cidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    width: min(100% - 48px, 1180px);
+    margin: 54px auto 72px;
+}
+
+.voltar-cidades a {
+    color: #087c8a;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.voltar-cidades a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para tablets */
+
+@media (max-width: 900px) {
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cidade-secao-cinza {
+        padding: 52px 24px;
+    }
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .cidade-hero {
+        min-height: 500px;
+    }
+
+    .cidade-hero::after {
+        background: linear-gradient(90deg,
+                rgba(12, 35, 49, 0.86),
+                rgba(12, 35, 49, 0.45));
+    }
+
+    .cidade-hero-texto {
+        width: calc(100% - 36px);
+        padding: 44px 0;
+    }
+
+    .cidade-hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .cidade-intro,
+    .cidade-secao {
+        width: calc(100% - 36px);
+        margin: 48px auto;
+    }
+
+    .cidade-intro h2,
+    .cidade-secao h2 {
+        font-size: 2rem;
+    }
+
+    .cidade-secao-cinza {
+        margin: 48px 0;
+        padding: 42px 18px;
+    }
+
+    .info-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
+
+    .aviso-dados {
+        width: calc(100% - 36px);
+        margin: 38px auto;
+        padding: 18px;
+    }
+
+    .voltar-cidades {
+        width: calc(100% - 36px);
+        margin: 42px auto 52px;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-cidade *,
+    .pagina-cidade *::before,
+    .pagina-cidade *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* =====================================
+   BANNER PRINCIPAL COM IMAGEM DE FUNDO
+===================================== */
+
+.cidade-hero {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #222;
+}
+
+/* Imagem de fundo */
+
+.cidade-hero-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Camada escura sobre a imagem */
+
+.cidade-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.40) 50%,
+        rgba(0, 0, 0, 0.10) 100%
+    );
+}
+
+/* Texto sobre a imagem */
+
+.cidade-hero-texto {
+    max-width: 650px;
+    color: #fff;
+}
+
+.cidade-hero-texto .cidade-kicker {
+    color: #fff;
+}
+
+.cidade-hero-texto h1 {
+    color: #fff;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    margin: 15px 0;
+}
+
+.cidade-hero-texto p {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Créditos da fotografia */
+
+.cidade-hero-creditos {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: 2;
+
+    color: #fff;
+    font-size: 11px;
+
+    background: rgba(0, 0, 0, 0.45);
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.cidade-hero-creditos a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .cidade-hero {
+        min-height: 480px;
+    }
+
+    .cidade-hero-overlay {
+        padding: 30px 22px;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.30)
+        );
+    }
+
+    .cidade-hero-texto h1 {
+        font-size: 3rem;
+    }
+
+    .cidade-hero-texto p {
+        font-size: 1rem;
+    }
+
+    .cidade-hero-creditos {
+        right: 8px;
+        bottom: 8px;
+        font-size: 9px;
+    }
+}
+
+/* =====================================
+   IMAGENS DOS PONTOS TURÍSTICOS
+===================================== */
+
+.info-card .imagem-com-creditos {
+    width: 100%;
+    margin: 0 0 18px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.info-card .imagem-com-creditos img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.4s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.info-card .imagem-com-creditos img:hover {
+    transform: scale(1.04);
+}
+
+/* Créditos das fotografias */
+
+.info-card .imagem-com-creditos figcaption {
+    padding: 8px 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+}
+
+/* Links dos créditos */
+
+.info-card .imagem-com-creditos figcaption a {
+    color: #777;
+    text-decoration: underline;
+}
+
+.info-card .imagem-com-creditos figcaption a:hover {
+    color: #b8860b;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .info-card .imagem-com-creditos img {
+        height: 260px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .info-card .imagem-com-creditos img {
+        height: 230px;
+    }
+
+}

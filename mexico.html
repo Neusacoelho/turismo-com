@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conheça o México: cidades, cultura, sabores e lugares históricos para explorar."
+    />
+    <title>México — Turismo.com</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="portugal.css" />
+    <style>
+      .pagina-portugal .banner-mexico {
+        background: linear-gradient(
+          115deg,
+          #681d25 0%,
+          #a52d32 48%,
+          #e1a23c 100%
+        );
+      }
+      .pagina-portugal .banner-mexico::before {
+        content: "";
+        position: absolute;
+        right: 8%;
+        bottom: -0.45em;
+        color: rgba(255, 255, 255, 0.12);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(250px, 42vw, 560px);
+        line-height: 1;
+      }
+      .pagina-portugal .resumo-mexico .resumo-icone {
+        color: #a52d32;
+      }
+      .pagina-portugal .mexico-galeria-arte {
+        display: grid;
+        min-height: 340px;
+        place-items: center;
+        background:
+          radial-gradient(circle at 68% 35%, #e6ac46 0 3%, transparent 3.5%),
+          linear-gradient(145deg, #974349, #9c6471 70%);
+      }
+      .pagina-portugal .mexico-galeria-arte span {
+        color: rgba(25, 116, 22, 0.82);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(5rem, 14vw, 11rem);
+        letter-spacing: 0.12em;
+      }
+      .pagina-portugal .mexico-fonte {
+        margin: 0 24px 48px;
+        color: #526570;
+        font-size: 14px;
+      }
+      .pagina-portugal .mexico-fonte a {
+        color: #288c35;
+      }
+      @media (max-width: 768px) {
+        .pagina-portugal .mexico-galeria-arte {
+          min-height: 260px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="pagina-portugal pagina-portugal-inicio">
+    <a class="portugal-pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho-principal">
+      <div class="barra-cabecalho">
+        <a href="index.html" class="marca">
+          <span class="marca-simbolo">✈</span>
+          <span class="marca-texto"
+            ><strong>TURISMO<span>.COM</span></strong
+            ><small>DESCUBRA O MUNDO</small></span
+          >
+        </a>
+        <button
+          class="botao-menu"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="true"
+          aria-controls="navegacao-principal"
+          disabled
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav
+          class="navegacao"
+          id="navegacao-principal"
+          aria-label="Menu principal"
+        >
+          <a href="index.html">Início</a>
+          <div class="grupo-dropdown">
+            <button
+              class="botao-dropdown"
+              type="button"
+              aria-expanded="true"
+              aria-controls="lista-paises"
+              disabled
+            >
+              Países <span>⌄</span>
+            </button>
+            <div class="menu-dropdown" id="lista-paises">
+              <a href="brasil.html">Brasil</a
+              ><a href="portugal.html">Portugal</a
+              ><a href="franca.html">França</a>
+              <a href="espanha.html">Espanha</a><a href="italia.html">Itália</a
+              ><a href="japao.html">Japão</a>
+              <a href="mexico.html" aria-current="page">México</a>
+              <a href="china.html">China</a>
+              <a href="republica-dominicana.html">República Dominicana</a>
+              <a href="grecia.html">Grécia</a>
+            </div>
+          </div>
+          <a href="hospedagem.html">Hospedagem</a
+          ><a href="alimentacao.html">Alimentação</a>
+          <a href="compras.html">Compras</a><a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+      <section
+        class="banner-portugal banner-mexico"
+        aria-labelledby="titulo-banner-mexico"
+      >
+        <div class="banner-portugal-conteudo">
+          <div class="banner-portugal-texto">
+            <span class="banner-etiqueta">DESCUBRA O MÉXICO</span>
+            <h1 id="titulo-banner-mexico">
+              México: Uma terra de cores vibrantes, sabores intensos e praias
+              paradisíacas.
+            </h1>
+            <p>
+              Explore praias, patrimônios históricos, cultura ancestral e
+              gastronomia incomparável.
+            </p>
+            <a href="#titulo-apresentacao" class="banner-botao"
+              >Explorar o México →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="resumo-portugal resumo-mexico"
+        aria-label="Informações rápidas sobre o México"
+      >
+        <div class="resumo-conteudo">
+          <div class="resumo-item">
+            <span class="resumo-icone" aria-hidden="true">🏛️</span>
+            <div>
+              <span class="resumo-label">CAPITAL</span
+              ><strong>Cidade do México</strong>
+            </div>
+          </div>
+          <div class="resumo-item">
+            <span class="resumo-icone" aria-hidden="true">🗣️</span>
+            <div>
+              <span class="resumo-label">IDIOMA OFICIAL</span
+              ><strong>Espanhol</strong>
+            </div>
+          </div>
+          <div class="resumo-item">
+            <span class="resumo-icone" aria-hidden="true">💴</span>
+            <div>
+              <span class="resumo-label">MOEDA</span
+              ><strong>Peso mexicano(Mex$)</strong>
+            </div>
+          </div>
+          <div class="resumo-item">
+            <span class="resumo-icone" aria-hidden="true">🍂</span>
+            <div>
+              <span class="resumo-label">ÉPOCAS AGRADÁVEIS</span
+              ><strong>Dezembro a Abril</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="conteudo-portugal">
+        <section
+          class="apresentacao-portugal"
+          aria-labelledby="titulo-apresentacao"
+        >
+          <div class="apresentacao-titulo">
+            <span class="apresentacao-etiqueta">BEM-VINDO AO MÉXICO</span>
+            <h2 id="titulo-apresentacao">
+              O México é um destino que pulsa vida, cores e contrastes
+              inesquecíveis.
+            </h2>
+          </div>
+          <div class="apresentacao-textos">
+            <p>
+              Prepare-se para uma viagem que combina praias caribenhas de águas
+              cristalinas, mistérios de civilizações antigas e uma das
+              gastronomias mais celebradas do planeta. Seja para relaxar em um
+              resort cinco estrelas ou desbravar ruinas maias escondidas na
+              selva, o México tem o roteiro perfeito para sua próxima aventura.
+            </p>
+            <p>
+              Banhado pelo Mar do Caribe e pelo Oceano Pacífico, o país abriga
+              praias de areia branca e águas azul-turqueza, como Cancún, Rivera
+              e Los Cabos.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="explorar-portugal"
+          aria-label="Explore mais sobre o México"
+        >
+          <div class="explorar-cartoes">
+            <article class="explorar-cartao">
+              <span class="cartao-numero">01</span>
+              <h3>Cultura e história</h3>
+              <p>
+                Sinta a energia vibrante de um povo acolhedor, expressa em
+                festas ricasem significados, músicas tradicionais e artesanatos
+                cheios de cor.
+              </p>
+              <a href="paises/mexico/cultura.html" class="cartao-link"
+                >Explorar cultura e história →</a
+              >
+            </article>
+            <article class="explorar-cartao">
+              <span class="cartao-numero">02</span>
+              <h3>Gastronomia</h3>
+              <p>
+                Comer no México é viver uma celebração de cores, aromas e
+                texturas. Esqueça as adaptações internacionais: a verdadeira
+                culinária mexicana é surpreendente. Conheça os pratos
+                emblemáticos que você precisa saborear em sua viagem.
+              </p>
+              <a href="paises/mexico/gastronomia.html" class="cartao-link"
+                >Conhecer os sabores →</a
+              >
+            </article>
+            <article class="explorar-cartao">
+              <span class="cartao-numero">03</span>
+              <h3>Paisagens e cidades</h3>
+              <p>
+                O México é um mosaico de cenários fascinantes onde praias
+                caribenhas e cenotes sagrados convivem com a grandiosidade da
+                natureza.
+              </p>
+              <a href="paises/mexico/paisagens-cidades.html" class="cartao-link"
+                >Explorar lugares →</a
+              >
+            </article>
+            <article class="explorar-cartao">
+              <span class="cartao-numero">04</span>
+              <h3>Uma viagem plural</h3>
+              <p>
+                Do deserto que encontra o mar em Cabo San Lucas às ricas ruas de
+                paralelepípedo de Oaxaca, cada canto revela um cartão-postal.
+              </p>
+              <a href="paises/mexico/viagem-plural.html" class="cartao-link"
+                >Planejar uma viagem →</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="destaque-galeria"
+          aria-labelledby="titulo-destaque-mexico"
+        >
+          <div
+            class="destaque-galeria-imagem mexico-galeria-arte"
+            aria-hidden="true"
+          >
+            <span>MX</span>
+          </div>
+          <div class="destaque-galeria-conteudo">
+            <span class="destaque-galeria-etiqueta"
+              >OLHARES SOBRE O MÉXICO</span
+            >
+            <h2 id="titulo-destaque-mexico">
+              História e paisagens em cada parada.
+            </h2>
+            <p>
+              Veja alguns dos lugares que ajudam a contar a diversidade do país,
+              paisagens costeiras, paraísos tropicais e sítios arqueológicos
+              imersos na natureza.
+            </p>
+            <a href="mexico-fotos.html" class="destaque-galeria-botao"
+              >Abrir galeria →</a
+            >
+          </div>
+        </section>
+        <p class="mexico-fonte">
+          Referências históricas:
+          <a href="https://whc.unesco.org/en/documents/110178/"
+            >Pirâmide escalonada de Kukulkan</a
+          >,
+          <a href="https://whc.unesco.org/en/documents/118186/"
+            >Centro Histórico da Cidade do México</a
+          >
+          e
+          <a href="https://whc.unesco.org/en/documents/128158/"
+            >Zona de Monumentos Históricos de Querétaro</a
+          >
+          — UNESCO.
+        </p>
+      </div>
+    </main>
+
+    <footer class="rodape-principal">
+      <div class="rodape-conteudo">
+        <div class="rodape-sobre">
+          <h2>✈ TURISMO<span>.COM</span></h2>
+          <p>
+            Descubra destinos, culturas e experiências incríveis ao redor do
+            mundo.
+          </p>
+        </div>
+        <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+          <h3>Explorar</h3>
+          <a href="index.html">Início</a><a href="mexico.html">México</a
+          ><a href="mexico-fotos.html">Galeria do México</a>
+        </nav>
+        <nav class="rodape-coluna" aria-label="Serviços">
+          <h3>Serviços</h3>
+          <a href="hospedagem.html">Hospedagem</a
+          ><a href="alimentacao.html">Alimentação</a
+          ><a href="compras.html">Compras</a>
+        </nav>
+        <nav class="rodape-coluna" aria-label="Informações">
+          <h3>Informações</h3>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+      <div class="rodape-inferior">
+        <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+        <p>Projeto acadêmico desenvolvido em equipe.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const pagina = document.body;
+        const cabecalho = pagina.querySelector(".cabecalho-principal");
+        const botaoMenu = cabecalho.querySelector(".botao-menu");
+        const navegacao = cabecalho.querySelector(".navegacao");
+        const botaoPaises = cabecalho.querySelector(".botao-dropdown");
+        const grupoPaises = cabecalho.querySelector(".grupo-dropdown");
+        const listaPaises = cabecalho.querySelector(".menu-dropdown");
+        const telaCompacta = window.matchMedia("(max-width: 980px)");
+        const permiteHover = window.matchMedia(
+          "(hover: hover) and (pointer: fine)",
+        );
+        let modoAnterior = telaCompacta.matches;
+        let focoAntesDaMudanca = null;
+        let paisesPorHover = false;
+        function definirPaises(aberto, porHover = false) {
+          paisesPorHover = aberto && porHover;
+          grupoPaises.classList.toggle("aberto", aberto);
+          botaoPaises.setAttribute("aria-expanded", String(aberto));
+        }
+        function definirMenu(aberto) {
+          const expandido = aberto && telaCompacta.matches;
+          navegacao.classList.toggle("aberta", expandido);
+          botaoMenu.setAttribute("aria-expanded", String(expandido));
+          botaoMenu.setAttribute(
+            "aria-label",
+            expandido ? "Fechar menu" : "Abrir menu",
+          );
+          if (!expandido) definirPaises(false);
+        }
+        botaoMenu.addEventListener("click", () =>
+          definirMenu(botaoMenu.getAttribute("aria-expanded") !== "true"),
+        );
+        botaoPaises.addEventListener("click", () =>
+          definirPaises(
+            paisesPorHover ||
+              botaoPaises.getAttribute("aria-expanded") !== "true",
+          ),
+        );
+        grupoPaises.addEventListener("pointerenter", (evento) => {
+          if (
+            permiteHover.matches &&
+            evento.pointerType === "mouse" &&
+            botaoPaises.getAttribute("aria-expanded") !== "true"
+          )
+            definirPaises(true, true);
+        });
+        grupoPaises.addEventListener("pointerleave", () => {
+          if (!grupoPaises.contains(document.activeElement))
+            definirPaises(false);
+        });
+        document.addEventListener("keydown", (evento) => {
+          if (evento.key !== "Escape") return;
+          if (grupoPaises.classList.contains("aberto")) {
+            const devolverFoco = grupoPaises.contains(document.activeElement);
+            definirPaises(false);
+            if (devolverFoco) botaoPaises.focus();
+          } else if (
+            telaCompacta.matches &&
+            navegacao.classList.contains("aberta")
+          ) {
+            const devolverFoco = cabecalho.contains(document.activeElement);
+            definirMenu(false);
+            if (devolverFoco) botaoMenu.focus();
+          } else return;
+          evento.preventDefault();
+        });
+        document.addEventListener("click", (evento) => {
+          if (!cabecalho.contains(evento.target)) {
+            const focoNoMenu =
+              telaCompacta.matches &&
+              navegacao.contains(document.activeElement);
+            const focoNosPaises = listaPaises.contains(document.activeElement);
+            definirMenu(false);
+            if (focoNoMenu) botaoMenu.focus();
+            else if (focoNosPaises) botaoPaises.focus();
+          } else if (!grupoPaises.contains(evento.target)) definirPaises(false);
+        });
+        grupoPaises.addEventListener("focusout", (evento) => {
+          if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
+        });
+        cabecalho.addEventListener("focusout", (evento) => {
+          if (
+            telaCompacta.matches !== modoAnterior &&
+            evento.relatedTarget === null
+          )
+            focoAntesDaMudanca = evento.target;
+          if (!cabecalho.contains(evento.relatedTarget)) definirMenu(false);
+        });
+        navegacao.addEventListener("click", (evento) => {
+          if (!evento.target.closest("a")) return;
+          const focoNoMenu =
+            telaCompacta.matches && navegacao.contains(document.activeElement);
+          const focoNosPaises = listaPaises.contains(document.activeElement);
+          definirMenu(false);
+          if (focoNoMenu) botaoMenu.focus();
+          else if (focoNosPaises) botaoPaises.focus();
+        });
+        telaCompacta.addEventListener("change", () => {
+          const foco = focoAntesDaMudanca || document.activeElement;
+          focoAntesDaMudanca = null;
+          modoAnterior = telaCompacta.matches;
+          definirMenu(false);
+          if (telaCompacta.matches && navegacao.contains(foco))
+            botaoMenu.focus();
+          else if (
+            !telaCompacta.matches &&
+            (foco === botaoMenu || listaPaises.contains(foco))
+          )
+            navegacao.querySelector("a").focus();
+        });
+        botaoMenu.disabled = false;
+        botaoPaises.disabled = false;
+        definirMenu(false);
+        pagina.classList.add("menu-pronto");
+      })();
+    </script>
+  </body>
+</html>

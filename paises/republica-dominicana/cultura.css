@@ -1,0 +1,579 @@
+/* Estilos exclusivos de Cultura. As folhas compartilhadas são carregadas antes desta. */
+.pagina-paises.pagina-cultura {
+    --cultura-turquesa: #00a7b5;
+    --cultura-marinho: #163b50;
+    --cultura-fundo: #f4f7f8;
+    --cultura-texto: #465d69;
+    --cultura-suave: #e0f4f5;
+    background: var(--cultura-fundo);
+    color: var(--cultura-texto);
+}
+
+.pagina-paises.pagina-cultura main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-cultura .cultura-container {
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.pagina-cultura h1,
+.pagina-cultura main h2,
+.pagina-cultura main h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.pagina-cultura main h2 {
+    margin: 0;
+    color: var(--cultura-marinho);
+    font-size: clamp(32px, 3.5vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+
+.pagina-cultura main h3 {
+    color: var(--cultura-marinho);
+    line-height: 1.2;
+}
+
+.pagina-cultura :is(a, button, summary):focus-visible {
+    outline: 3px solid var(--cultura-turquesa);
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+.pagina-cultura main:focus { outline: none; }
+
+.pagina-cultura .cultura-pular {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 18px;
+    transform: translateY(-180%);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--cultura-marinho);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pagina-cultura .cultura-pular:focus { transform: translateY(0); }
+
+/* Nesta página, o estado visual acompanha o botão e seu aria-expanded. */
+.pagina-cultura .grupo-dropdown:hover .menu-dropdown { display: none; }
+.pagina-cultura .grupo-dropdown.aberto .menu-dropdown { display: block; }
+.pagina-cultura:not(.menu-pronto) .grupo-dropdown:is(:hover, :focus-within) .menu-dropdown { display: block; }
+
+.pagina-cultura .botao-menu { display: none; }
+
+.pagina-cultura .cultura-etiqueta {
+    margin: 0 0 18px;
+    color: #007a85;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.pagina-cultura .cultura-titulo-secao { margin-bottom: 40px; }
+.pagina-cultura .cultura-titulo-secao h2 { max-width: 670px; }
+.pagina-cultura .cultura-titulo-secao > p:last-child {
+    margin: 18px 0 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Os espaços sem fotografia não carregam URLs externas nem arquivos inexistentes. */
+.pagina-cultura .cultura-imagem-pendente {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #e7eef0, #d4e3e7);
+    color: #526e7b;
+}
+
+.pagina-cultura .cultura-imagem-pendente > span {
+    padding: 8px 14px;
+    border: 1px solid #b5cbd1;
+    border-radius: 24px;
+    font-size: 12px;
+}
+
+/* Banner de largura total, seguindo a disposição do PDF. */
+.pagina-cultura .cultura-banner {
+    position: relative;
+    isolation: isolate;
+    background: var(--cultura-marinho);
+    color: #fff;
+}
+
+.pagina-cultura .cultura-banner-foto {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    background-image: url("imagens/Azueï.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pagina-cultura .cultura-banner::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgb(10 34 48 / 76%), rgb(10 34 48 / 12%));
+    content: "";
+}
+
+.pagina-cultura .cultura-banner-conteudo {
+    position: relative;
+    display: flex;
+    min-height: 560px;
+    padding-block: 50px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pagina-cultura .cultura-migalhas { margin: 0; }
+.pagina-cultura .cultura-migalhas ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    font-size: 13px;
+}
+
+.pagina-cultura .cultura-migalhas li + li::before {
+    margin-right: 10px;
+    color: #bed5dd;
+    content: "/";
+}
+
+.pagina-cultura .cultura-migalhas a {
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+}
+
+.pagina-cultura .cultura-migalhas [aria-current] { color: #d4e2e8; }
+.pagina-cultura .cultura-banner-texto { margin-top: 88px; }
+.pagina-cultura .cultura-banner .cultura-etiqueta { color: #67e8f0; }
+.pagina-cultura .cultura-banner h1 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+
+.pagina-cultura .cultura-banner-texto > p:last-child {
+    max-width: 650px;
+    margin: 0;
+    color: #eef5f7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.pagina-cultura .cultura-banner-credito {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    max-width: 600px;
+    margin: 0;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgb(10 34 48 / 80%);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    z-index: 10;
+}
+
+.pagina-cultura .cultura-banner-credito a { color: #fff; text-decoration: underline; }
+
+/* Apresentação em três colunas e tradições em quatro cartões. */
+.pagina-cultura .cultura-apresentacao {
+    display: grid;
+    grid-template-columns: 1.12fr 1.2fr 0.55fr;
+    align-items: start;
+    gap: 56px;
+    padding-block: 96px 112px;
+}
+
+.pagina-cultura .cultura-apresentacao-texto p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.pagina-cultura .cultura-apresentacao-texto p:last-child { margin-bottom: 0; }
+
+.pagina-cultura .cultura-destaque {
+    padding: 32px 28px;
+    border-radius: 22px;
+    background: var(--cultura-suave);
+}
+
+.pagina-cultura .cultura-destaque strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #007a85;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+}
+.pagina-cultura .cultura-destaque p { font-size: 14px; line-height: 1.7; }
+
+.pagina-cultura .cultura-tradicoes { padding-bottom: 96px; }
+.pagina-cultura .cultura-tradicoes .cultura-titulo-secao h2 { max-width: 560px; }
+.pagina-cultura .cultura-tradicoes-grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-cultura .cultura-tradicao {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-cultura .cultura-tradicao-foto {
+    width: 100%;
+    max-height: 230px;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+.pagina-cultura .cultura-tradicao-texto { padding: 24px; }
+.pagina-cultura .cultura-tradicao h3 { margin: 0 0 12px; font-size: 26px; }
+.pagina-cultura .cultura-tradicao p { margin: 0; font-size: 14px; line-height: 1.8; }
+
+/* Patrimônio: uma fotografia maior, outra vertical e uma citação. */
+.pagina-cultura .cultura-patrimonio {
+    padding-block: 96px;
+    background: var(--cultura-marinho);
+    color: #d4e2e8;
+}
+.pagina-cultura .cultura-patrimonio .cultura-etiqueta { color: #67e8f0; }
+.pagina-cultura .cultura-patrimonio :is(h2, h3) { color: #fff; }
+.pagina-cultura .cultura-patrimonio-grade {
+    display: grid;
+    grid-template-columns: 1.95fr 1fr;
+    align-items: stretch;
+    gap: 20px;
+}
+.pagina-cultura .cultura-patrimonio-foto {
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    min-height: 460px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #244b60;
+}
+.pagina-cultura .cultura-patrimonio-principal {
+    min-height: clamp(520px, 57vw, 760px);
+}
+.pagina-cultura .cultura-patrimonio-foto img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+.pagina-cultura .cultura-patrimonio-principal img { object-position: 56% center; }
+.pagina-cultura .cultura-patrimonio-foto::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, transparent 25%, rgb(10 34 48 / 94%));
+    content: "";
+}
+.pagina-cultura .cultura-patrimonio-foto figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 32px;
+}
+.pagina-cultura .cultura-patrimonio-foto .cultura-etiqueta {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+}
+.pagina-cultura .cultura-patrimonio-foto h3 { margin: 0 0 12px; font-size: 32px; }
+.pagina-cultura .cultura-patrimonio-foto figcaption > p:last-child {
+    max-width: 650px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.pagina-cultura .cultura-patrimonio-lateral {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+    min-width: 0;
+}
+.pagina-cultura .cultura-patrimonio-lateral h3 { font-size: 28px; }
+.pagina-cultura .cultura-patrimonio-lateral blockquote {
+    margin: 0;
+    padding: 28px;
+    border: 1px solid #416477;
+    border-radius: 18px;
+    color: #d8f1f3;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Experiências: fotografia vertical à esquerda e lista numerada à direita. */
+.pagina-cultura .cultura-experiencias {
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    align-items: center;
+    gap: 84px;
+    padding-block: 96px;
+}
+.pagina-cultura .cultura-experiencias-foto {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #d4e2e8;
+}
+.pagina-cultura .cultura-experiencias-foto img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 0.78;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: 55% center;
+}
+.pagina-cultura .cultura-experiencias-foto figcaption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgb(16 47 62 / 90%);
+    color: #fff;
+}
+.pagina-cultura .cultura-experiencias-foto .cultura-etiqueta {
+    display: block;
+    margin: 0 0 4px;
+    color: #a6eaf0;
+    font-size: 11px;
+}
+.pagina-cultura .cultura-experiencias-foto strong { font-size: 14px; }
+.pagina-cultura .cultura-experiencias .cultura-titulo-secao { margin-bottom: 32px; }
+.pagina-cultura .cultura-experiencias-lista {
+    list-style: none;
+    counter-reset: experiencia;
+}
+.pagina-cultura .cultura-experiencias-lista li {
+    position: relative;
+    padding: 22px 0 22px 60px;
+    border-bottom: 1px solid #e1e8eb;
+    counter-increment: experiencia;
+}
+.pagina-cultura .cultura-experiencias-lista li:first-child { padding-top: 0; }
+.pagina-cultura .cultura-experiencias-lista li:last-child { padding-bottom: 0; border-bottom: 0; }
+.pagina-cultura .cultura-experiencias-lista li::before {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--cultura-suave);
+    color: #007a85;
+    font-size: 12px;
+    font-weight: 700;
+    content: counter(experiencia, decimal-leading-zero);
+}
+.pagina-cultura .cultura-experiencias-lista li:first-child::before { top: 2px; }
+.pagina-cultura .cultura-experiencias-lista h3 { margin: 0 0 6px; font-size: 23px; }
+.pagina-cultura .cultura-experiencias-lista p { margin: 0; font-size: 14px; line-height: 1.8; }
+
+/* Navegação final e créditos das fotografias locais. */
+.pagina-cultura .cultura-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 40px 44px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-cultura .cultura-continuar .cultura-etiqueta { margin-bottom: 10px; }
+.pagina-cultura .cultura-continuar h2 { font-size: 30px; letter-spacing: -0.02em; }
+.pagina-cultura .cultura-acoes {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+}
+.pagina-cultura .cultura-acoes .cultura-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 48px;
+    margin: 0;
+    padding: 13px 20px;
+    border: 1px solid var(--cultura-turquesa);
+    border-radius: 8px;
+    background: var(--cultura-turquesa);
+    color: #092c3a;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.pagina-cultura .cultura-acoes .cultura-botao-contorno {
+    background: #fff;
+    color: #007a85;
+}
+.pagina-cultura .cultura-acoes .cultura-botao:hover {
+    border-color: var(--cultura-marinho);
+    background: var(--cultura-marinho);
+    color: #fff;
+}
+.pagina-cultura .cultura-creditos {
+    margin-block: 28px 48px;
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+.pagina-cultura .cultura-creditos summary {
+    width: fit-content;
+    padding: 8px 0;
+    color: var(--cultura-marinho);
+    font-weight: 700;
+    cursor: pointer;
+}
+.pagina-cultura .cultura-creditos p { margin: 8px 0; }
+.pagina-cultura .cultura-creditos ul { padding-left: 24px; }
+.pagina-cultura .cultura-creditos li { margin-block: 8px; }
+.pagina-cultura .cultura-creditos a { color: #007a85; }
+
+/* Reutiliza o ponto de mudança do menu existente, sem editar paises.css. */
+@media (max-width: 1100px) {
+    .pagina-cultura .cultura-apresentacao { gap: 28px; }
+    .pagina-cultura .cultura-experiencias { gap: 48px; }
+    .pagina-cultura .cultura-continuar { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 980px) {
+    .pagina-cultura.menu-pronto .botao-menu { display: block; }
+    .pagina-cultura .cultura-apresentacao {
+        grid-template-columns: 1fr 1fr;
+        padding-block: 72px;
+    }
+    .pagina-cultura .cultura-destaque {
+        display: flex;
+        grid-column: 1 / -1;
+        align-items: center;
+        gap: 24px;
+    }
+    .pagina-cultura .cultura-destaque strong { margin: 0; }
+    .pagina-cultura .cultura-destaque p { max-width: 360px; }
+    .pagina-cultura .cultura-tradicoes-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-cultura .cultura-patrimonio-foto { min-height: 440px; }
+    .pagina-cultura .cultura-patrimonio-lateral blockquote { padding: 22px; font-size: 18px; }
+    .pagina-cultura .cultura-patrimonio-foto figcaption { padding: 24px; }
+    .pagina-cultura .cultura-experiencias { grid-template-columns: 0.9fr 1.1fr; gap: 32px; }
+
+    /* Sem JavaScript, a navegação permanece legível no fluxo da página. */
+    .pagina-cultura:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
+    .pagina-paises.pagina-cultura:not(.menu-pronto) .cabecalho-principal .navegacao {
+        position: static;
+        display: flex;
+        order: 3;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+    }
+    .pagina-paises.pagina-cultura:not(.menu-pronto) .menu-dropdown {
+        position: static;
+        display: block;
+        box-shadow: none;
+    }
+    .pagina-cultura:not(.menu-pronto) .botao-dropdown { cursor: default; }
+}
+
+@media (max-width: 768px) {
+    .pagina-cultura .cultura-banner-conteudo { min-height: 470px; padding-block: 32px 76px; }
+    .pagina-cultura .cultura-banner-texto { margin-top: 64px; }
+    .pagina-cultura .cultura-banner-texto > p:last-child { font-size: 16px; }
+    .pagina-cultura .cultura-apresentacao { grid-template-columns: 1fr; gap: 28px; }
+    .pagina-cultura .cultura-quebra { display: none; }
+    .pagina-cultura .cultura-destaque { grid-column: auto; }
+    .pagina-cultura .cultura-tradicoes { padding-bottom: 64px; }
+    .pagina-cultura .cultura-titulo-secao { margin-bottom: 28px; }
+    .pagina-cultura .cultura-titulo-secao > p:last-child { font-size: 15px; }
+    .pagina-cultura .cultura-patrimonio { padding-block: 64px; }
+    .pagina-cultura .cultura-patrimonio-grade { grid-template-columns: 1fr; }
+    .pagina-cultura .cultura-patrimonio-principal { min-height: 520px; }
+    .pagina-cultura .cultura-patrimonio-lateral .cultura-patrimonio-foto { min-height: 500px; }
+    .pagina-cultura .cultura-patrimonio-lateral blockquote { padding: 28px; }
+    .pagina-cultura .cultura-experiencias { grid-template-columns: 1fr; gap: 40px; padding-block: 64px; }
+    .pagina-cultura .cultura-experiencias-foto img { max-height: 580px; aspect-ratio: 1.1; }
+    .pagina-cultura .cultura-continuar { gap: 28px; padding: 32px; }
+}
+
+@media (max-width: 600px) {
+    .pagina-cultura .cultura-container { width: calc(100% - 32px); }
+    .pagina-cultura .cultura-banner-conteudo { min-height: 440px; }
+    .pagina-cultura .cultura-banner h1 { font-size: clamp(40px, 10vw, 56px); }
+    .pagina-cultura .cultura-banner-credito { font-size: 11px; }
+    .pagina-cultura .cultura-apresentacao { padding-block: 56px; }
+    .pagina-cultura .cultura-apresentacao-texto p { font-size: 15px; }
+    .pagina-cultura .cultura-destaque { padding: 24px; }
+    .pagina-cultura .cultura-tradicoes-grade { grid-template-columns: 1fr; }
+    .pagina-cultura .cultura-tradicao-foto { aspect-ratio: 1.6; }
+    .pagina-cultura .cultura-tradicao-texto { padding: 24px; }
+    .pagina-cultura .cultura-patrimonio-principal { min-height: 460px; }
+    .pagina-cultura .cultura-patrimonio-lateral .cultura-patrimonio-foto { min-height: 460px; }
+    .pagina-cultura .cultura-patrimonio-foto h3 { font-size: 28px; }
+    .pagina-cultura .cultura-experiencias-foto img { aspect-ratio: 0.9; }
+    .pagina-cultura .cultura-continuar { padding: 28px 24px; }
+    .pagina-cultura .cultura-continuar h2 { font-size: 28px; }
+    .pagina-cultura .cultura-acoes { width: 100%; flex-direction: column; }
+    .pagina-cultura .cultura-creditos { margin-bottom: 32px; }
+}

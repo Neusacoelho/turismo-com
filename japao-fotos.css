@@ -1,0 +1,105 @@
+.tc-site.pais-japao.pagina-galeria .japao-fotos-banner {
+    padding-block: clamp(3rem, 7vw, 5.5rem);
+    background: linear-gradient(120deg, #163b50, #006b75 72%, #d34b57);
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-banner h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-banner p:not(.tc-etiqueta) {
+    max-width: 46rem;
+    color: #fff;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-banner .tc-etiqueta {
+    color: #ffccd0;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-galeria-conteudo {
+    padding-bottom: 3rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .tc-migalhas {
+    margin-top: 1.5rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-aviso-fotos {
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #d34b57;
+    border-radius: .25rem;
+    background: #fff4f4;
+    color: #60363a;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-galeria {
+    margin-top: 1.5rem;
+    align-items: stretch;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-foto-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--tc-borda);
+    border-radius: .85rem;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, .07);
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-foto-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--tc-suave);
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-foto-card figcaption {
+    display: grid;
+    gap: .4rem;
+    padding: 1rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-foto-card figcaption strong {
+    color: var(--tc-marinho);
+    font-size: 1.1rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-foto-card figcaption span {
+    color: var(--tc-texto);
+    font-size: .95rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-voltar {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-botao {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.8rem;
+    padding: .7rem 1rem;
+    border: 2px solid #00a7b5;
+    border-radius: .6rem;
+    background: #00a7b5;
+    color: #092b37;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-botao:hover {
+    background: #8de4e8;
+    border-color: #8de4e8;
+}
+
+.tc-site.pais-japao.pagina-galeria .japao-fotos-rodape {
+    padding-block: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .tc-site.pais-japao.pagina-galeria .japao-foto-card img {
+        aspect-ratio: 5 / 4;
+    }
+}

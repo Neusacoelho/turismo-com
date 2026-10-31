@@ -1,0 +1,740 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --azul-escuro: #142b3b;
+    --azul: #254e63;
+    --azul-claro: #e8f2f5;
+    --turquesa: #00a7b5;
+    --texto: #354b57;
+    --fundo: #ffffff;
+}
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    background: var(--fundo);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+/* ==================================================
+   CABEÇALHO — MODELO DA GRÉCIA
+================================================== */
+
+.cabecalho-principal {
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 82px;
+    margin: 0;
+    padding: 12px max(24px, calc((100% - 1280px) / 2));
+    background: #fff;
+    border-bottom: 1px solid #dce6e9;
+    color: #163b50;
+}
+
+/* Marca */
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #163b50;
+    text-decoration: none;
+}
+
+.marca-simbolo {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #00a7b5;
+    color: #fff;
+    font-size: 24px;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1.35;
+}
+
+.marca-texto strong {
+    color: #163b50;
+    font-size: 17px;
+}
+
+.marca-texto strong span {
+    color: #00a7b5;
+}
+
+.marca-texto small {
+    margin-top: 0;
+    color: #667d89;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* Navegação desktop */
+
+.cabecalho-principal .navegacao {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.cabecalho-principal .navegacao a {
+    margin: 0;
+}
+
+.cabecalho-principal .navegacao a,
+.cabecalho-principal .botao-dropdown {
+    box-sizing: border-box;
+    color: #163b50;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.cabecalho-principal .navegacao a:hover,
+.cabecalho-principal .botao-dropdown:hover {
+    color: #00a7b5;
+}
+
+.cabecalho-principal .navegacao a.ativo {
+    color: #00a7b5;
+}
+
+/* Dropdown de cidades */
+
+.grupo-dropdown {
+    position: relative;
+}
+
+.cabecalho-principal .botao-dropdown {
+    background: transparent;
+    border: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #dce6e9;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px #163b501a;
+}
+
+.cabecalho-principal .menu-dropdown a {
+    display: block;
+    margin: 0;
+    padding: 9px 12px;
+    min-height: 0;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.cabecalho-principal .menu-dropdown a:hover {
+    background: #e0f4f5;
+}
+
+.grupo-dropdown:hover .menu-dropdown,
+.grupo-dropdown.aberto .menu-dropdown {
+    display: block;
+}
+
+/* Botão mobile */
+
+.botao-menu {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    color: #163b50;
+}
+
+.botao-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: #163b50;
+}
+
+/* ===== MENU MOBILE E TABLET ===== */
+
+@media (max-width: 980px) {
+
+    .cabecalho-principal {
+        position: sticky;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .cabecalho-principal .navegacao {
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        width: auto;
+        height: auto;
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px #163b5020;
+    }
+
+    .cabecalho-principal .navegacao.aberta {
+        display: flex;
+    }
+
+    .cabecalho-principal .navegacao > a,
+    .cabecalho-principal .navegacao > .grupo-dropdown {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .cabecalho-principal .navegacao > a,
+    .cabecalho-principal .botao-dropdown {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 11px 14px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .menu-dropdown {
+        position: static;
+        min-width: 0;
+        margin: 0 0 4px;
+        padding: 4px;
+        box-shadow: none;
+    }
+
+    .cabecalho-principal .menu-dropdown a {
+        padding: 9px 14px;
+    }
+}
+
+/* ===== BANNER DA FRANÇA ===== */
+
+.banner-franca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: clamp(450px, 60vw, 690px);
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background: var(--azul-escuro);
+}
+
+.banner-franca::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+        90deg,
+        #102b3de8,
+        #102b3d7a 60%,
+        #102b3d20
+    );
+}
+
+.banner-franca > img {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-franca-texto {
+    width: min(100% - 48px, 1180px);
+    margin: auto;
+    padding: 70px 0;
+}
+
+.banner-etiqueta,
+.etiqueta {
+    display: block;
+    margin-bottom: 14px;
+    color: #008d99;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.banner-etiqueta {
+    color: #8df0f2;
+}
+
+.banner-franca h1 {
+    max-width: 800px;
+    margin: 0 0 20px;
+    font: 500 clamp(3rem, 7vw, 6rem)/1.08 "Playfair Display", Georgia, serif;
+}
+
+.banner-franca p {
+    max-width: 680px;
+    margin: 0 0 28px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.banner-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 7px;
+    background: var(--turquesa);
+    color: #082d37;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.banner-botao:hover {
+    background: #8de9ed;
+}
+
+/* ===== RESUMO DA FRANÇA ===== */
+
+.resumo-franca {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(100% - 48px, 1180px);
+    margin: -35px auto 0;
+    position: relative;
+    z-index: 2;
+    padding: 22px;
+    border: 1px solid #e4ecef;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 36px #142b3b12;
+}
+
+.resumo-franca article {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+}
+
+.resumo-franca article > span {
+    font-size: 1.6rem;
+}
+
+.resumo-franca small,
+.resumo-franca strong {
+    display: block;
+}
+
+.resumo-franca small {
+    color: #71818a;
+    font-size: .8rem;
+}
+
+.resumo-franca strong {
+    color: var(--azul-escuro);
+}
+
+/* ===== APRESENTAÇÃO ===== */
+
+.apresentacao-franca {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+    width: min(100% - 48px, 1180px);
+    margin: 90px auto;
+}
+
+.apresentacao-franca h2,
+.secao h2,
+.chamada-cultura h2 {
+    margin: 0 0 18px;
+    color: var(--azul-escuro);
+    font: 500 clamp(2rem, 4vw, 3.1rem)/1.2 "Playfair Display", Georgia, serif;
+}
+
+.apresentacao-franca p,
+.secao > p,
+.chamada-cultura p {
+    color: #526570;
+    line-height: 1.9;
+}
+
+.link-destaque {
+    display: inline-block;
+    margin-top: 12px;
+    color: #007d88;
+    font-weight: 800;
+    text-underline-offset: 4px;
+}
+
+/* ===== SEÇÕES ===== */
+
+.secao {
+    width: min(100% - 48px, 1180px);
+    margin: 80px auto;
+}
+
+.subtitulo {
+    max-width: 720px;
+    margin-bottom: 28px;
+}
+
+/* ===== CARTÕES DE CIDADES ===== */
+
+.explorar-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.explorar-cartao {
+    overflow: hidden;
+    border: 1px solid #e0e9ec;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 8px 28px #142b3b0c;
+}
+
+.explorar-cartao img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.cartao-corpo {
+    padding: 24px;
+}
+
+.cartao-corpo > span {
+    color: #008d99;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .09em;
+}
+
+.explorar-cartao h3 {
+    margin: 8px 0;
+    color: var(--azul-escuro);
+    font: 500 1.7rem "Playfair Display", Georgia, serif;
+}
+
+.explorar-cartao p {
+    color: #526570;
+    line-height: 1.8;
+}
+
+.explorar-cartao a {
+    color: #007d88;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.explorar-cartao a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CHAMADA CULTURAL ===== */
+
+.chamada-cultura {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 80px 0;
+    padding: 60px max(24px, calc((100% - 1180px) / 2));
+    background: var(--azul-claro);
+}
+
+.chamada-cultura > div {
+    max-width: 700px;
+}
+
+/* ===== RODAPÉ ===== */
+
+.rodape-principal {
+    padding: 48px max(24px, calc((100% - 1180px) / 2)) 0;
+    background: #102c3d;
+    color: #e8f2f5;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 38px;
+    padding-bottom: 36px;
+}
+
+.rodape-conteudo h2 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.rodape-conteudo h2 span {
+    color: #7ee5e9;
+}
+
+.rodape-conteudo h3 {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.rodape-conteudo p {
+    max-width: 380px;
+    color: #c4d6dc;
+}
+
+.rodape-conteudo a {
+    display: block;
+    width: fit-content;
+    margin: 8px 0;
+    color: #d9e8ed;
+    text-decoration: none;
+}
+
+.rodape-conteudo a:hover {
+    color: #7ee5e9;
+}
+
+.rodape-inferior {
+    margin: 0;
+    padding: 18px 0;
+    border-top: 1px solid #ffffff24;
+    color: #c4d6dc;
+    font-size: .85rem;
+    text-align: center;
+}
+
+/* ===== TABLETS ===== */
+
+@media (max-width: 900px) {
+
+    .resumo-franca {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .apresentacao-franca {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .explorar-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .chamada-cultura {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ===== CELULARES ===== */
+
+@media (max-width: 600px) {
+
+    .banner-franca {
+        min-height: 500px;
+    }
+
+    .banner-franca-texto {
+        width: calc(100% - 36px);
+        padding: 48px 0;
+    }
+
+    .resumo-franca {
+        width: calc(100% - 28px);
+        padding: 12px 6px;
+    }
+
+    .resumo-franca article {
+        padding: 10px 8px;
+        gap: 8px;
+    }
+
+    .resumo-franca article > span {
+        font-size: 1.3rem;
+    }
+
+    .resumo-franca strong {
+        font-size: .9rem;
+    }
+
+    .apresentacao-franca,
+    .secao {
+        width: calc(100% - 36px);
+        margin: 52px auto;
+    }
+
+    .explorar-cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .chamada-cultura {
+        margin: 50px 0;
+        padding: 42px 18px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ===== TELAS MUITO PEQUENAS ===== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-principal {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .marca-texto strong {
+        font-size: 15px;
+    }
+
+    .marca-texto small {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* Acessibilidade: pular para o conteúdo */
+
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 9999;
+    padding: 12px 18px;
+    background: #142b3b;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.pular-conteudo:focus {
+    top: 15px;
+}
+
+/* Créditos das fotografias */
+
+.credito-imagem {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    color: #687982;
+    line-height: 1.5;
+}
+
+.credito-imagem a {
+    color: #245b78;
+    text-decoration: underline;
+}
+
+.credito-imagem a:hover {
+    color: #142b3b;
+}
+
+/* Foco acessível */
+
+.foto-card:focus-within {
+    outline: 2px solid #245b78;
+    outline-offset: 3px;
+}
+
+/* Respeitar usuários que reduzem animações */
+
+@media (prefers-reduced-motion: reduce) {
+    .foto-card img {
+        transition: none;
+    }
+}

@@ -1,86 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japão — Pontos Turísticos</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galeria de imagens de lugares e paisagens do Japão.">
+    <title>Fotos do Japão — TURISMO.COM</title>
+
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+
+    <link rel="stylesheet" href="japao-fotos.css">
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="brasil-fotos.html">📸 Fotos do Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="franca-fotos.html">📸 Fotos da França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="japao-fotos.html" class="ativo">📸 Fotos do Japão</a>
-        <a href="china.html">China</a>
-        <a href="hospedagem.html">🏠 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛒 Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+<body class="tc-site pais-japao pagina-galeria" data-raiz="./" data-pais-nome="Japão" data-pais-url="japao.html"
+    data-galeria-url="japao-fotos.html">
 
-<main>
-    <h2>Japão — Pontos Turísticos</h2>
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <div class="galeria">
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/fuji/400/300" alt="Monte Fuji">
-            <h3>⛰️ Monte Fuji</h3>
-            <p>Montanha sagrada e símbolo do Japão! Forma perfeita coberta de neve.</p>
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <div class="tc-container tc-fallback-cabecalho">
+            <a class="tc-marca" href="index.html">
+                <span class="tc-marca-simbolo" aria-hidden="true">✈</span>
+                <span class="tc-marca-texto"><strong>TURISMO<span>.COM</span></strong><small>DESCUBRA O
+                        MUNDO</small></span>
+            </a>
+            <nav class="tc-navegacao-basica" aria-label="Navegação básica">
+                <a href="index.html">Início</a>
+                <a href="japao.html">Japão</a>
+                <a href="japao-fotos.html" aria-current="page">Fotos do Japão</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="tc-banner japao-fotos-banner" aria-labelledby="titulo-galeria">
+            <div class="tc-container">
+                <p class="tc-etiqueta">Galeria visual</p>
+                <h1 id="titulo-galeria">Japão em imagens</h1>
+                <p>Montanhas, santuários, ruas movimentadas e paisagens tradicionais: descubra alguns cenários
+                    conhecidos no Japão.</p>
+            </div>
+        </section>
+
+
+        <div class="tc-galeria japao-galeria">
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_fuji.jpg"
+                    alt="Vista do Monte Fuji no Japão" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Monte Fuji</strong>
+                    <span>Montanha sagrada e um dos grandes símbolos do Japão.</span>
+                    <small>
+                        Foto: Jennhui —
+                        <a href="https://commons.wikimedia.org/wiki/File:Mount_fuji.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sensoji%20Temple%20in%20Tokyo.jpg"
+                    alt="Templo budista Senso-ji em Tóquio" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Templo Senso-ji — Tóquio</strong>
+                    <span>Um dos templos budistas mais conhecidos de Tóquio,
+                        localizado na região de Asakusa.</span>
+                    <small>
+                        Foto: AugustGresh —
+                        <a href="https://commons.wikimedia.org/wiki/File:Sensoji_Temple_in_Tokyo.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Philosopher%27s%20Walk%20in%20Kyoto.jpg"
+                    alt="Caminho dos Filósofos em Quioto" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Caminho dos Filósofos — Quioto</strong>
+                    <span>Caminho tranquilo ao lado de um canal,
+                        famoso pelas cerejeiras na primavera.</span>
+                    <small>
+                        Foto: Sun jess —
+                        <a href="https://commons.wikimedia.org/wiki/File:The_Philosopher%27s_Walk_in_Kyoto.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            CC BY-SA 4.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nara%20Park%20from%20Nara%20prefectural%20government%20office%2020141002.jpg"
+                    alt="Vista panorâmica do Parque de Nara" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Parque de Nara</strong>
+                    <span>Parque conhecido pelos cervos que circulam
+                        livremente por sua área.</span>
+                    <small>
+                        Foto: Degueulasse —
+                        <a href="https://commons.wikimedia.org/wiki/File:Nara_Park_from_Nara_prefectural_government_office_20141002.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            CC BY 3.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Himeji%20castle.jpg"
+                    alt="Castelo de Himeji no Japão" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Castelo de Himeji</strong>
+                    <span>Conhecido como Castelo da Garça Branca,
+                        destaca-se por sua arquitetura histórica.</span>
+                    <small>
+                        Foto: Drivephotographer —
+                        <a href="https://commons.wikimedia.org/wiki/File:Himeji_castle.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            CC0 1.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
+            <figure class="japao-foto-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fushimiinari-taisha%2C%20honden-2.jpg"
+                    alt="Edificação principal do santuário Fushimi Inari" width="400" height="300" loading="lazy">
+                <figcaption>
+                    <strong>Santuário Fushimi Inari</strong>
+                    <span>Um dos santuários mais conhecidos de Quioto,
+                        famoso por seus portões torii vermelhos.</span>
+                    <small>
+                        Foto: Saigen Jiro —
+                        <a href="https://commons.wikimedia.org/wiki/File:Fushimiinari-taisha,_honden-2.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            CC0 1.0
+                        </a>.
+                    </small>
+                </figcaption>
+            </figure>
+
         </div>
 
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/templo/400/300" alt="Templo Senso-ji">
-            <h3>⛩️ Templo Senso-ji — Tóquio</h3>
-            <p>O templo budista mais antigo da capital. Portal vermelho gigante!</p>
+    </main>
+
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container japao-fotos-rodape">
+            <p>© 2026 TURISMO.COM — Galeria de fotos do Japão.</p>
+            <a href="japao.html">Voltar à página do Japão</a>
         </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/caminho/400/300" alt="Caminho dos Filósofos">
-            <h3>🌳 Caminho dos Filósofos — Quioto</h3>
-            <p>Canal cercado de cerejeiras. Beleza em cada estação do ano.</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/nara/400/300" alt="Parque de Nara">
-            <h3>🦌 Parque de Nara</h3>
-            <p>Cervos mansos e o maior Buda de bronze do mundo!</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/castelo/400/300" alt="Castelo de Himeji">
-            <h3>🏯 Castelo de Himeji</h3>
-            <p>Conhecido como "Castelo da Garça Branca". Arquitetura elegante!</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/inari/400/300" alt="Templo Fushimi Inari">
-            <h3>⛩️ Templo Fushimi Inari</h3>
-            <p>Milhares de portões vermelhos em trilha pela montanha!</p>
-        </div>
-    </div>
-
-    <p style="text-align: center; margin-top: 30px;">
-        ← Voltar para a <a href="japao.html">página do Japão</a>
-    </p>
-</main>
-
-<footer>
-    <p>&copy; 2026 Turismo.com — Fotos e Pontos Turísticos do Japão</p>
-</footer>
-
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,177 @@
+/* Somente Curiosidades. Cabeçalho, rodapé, menu e tokens vêm da base compartilhada. */
+.pagina-curiosidades main { font-family: Arial, sans-serif; line-height: 1.6; }
+.pagina-curiosidades main :is(h1, h2, h3) { font-family: Georgia, "Times New Roman", serif; font-weight: 500; overflow-wrap: anywhere; }
+.pagina-curiosidades main h2 { font-size: clamp(32px, 3.5vw, 52px); line-height: 1.12; letter-spacing: -0.025em; }
+.pagina-curiosidades main h3 { font-size: 25px; line-height: 1.2; }
+.pagina-curiosidades main .tc-etiqueta { margin-bottom: 18px; color: #007a85; font-size: 12px; line-height: 1.6; letter-spacing: 1.8px; }
+.pagina-curiosidades main :is(a, summary):focus-visible { outline: 3px solid var(--tc-link); outline-offset: 5px; border-radius: 4px; }
+.pagina-curiosidades .curio-secao { padding-block: 96px; }
+.pagina-curiosidades .curio-titulo { margin-bottom: 40px; }
+.pagina-curiosidades .curio-titulo > p:last-child { max-width: 850px; margin-top: 18px; font-size: 16px; line-height: 1.8; }
+
+/* Banner no padrão das internas, com espaço para o título e crédito legível. */
+.pagina-curiosidades .curio-banner { overflow: hidden; padding: 0; background: var(--tc-marinho); }
+.pagina-curiosidades .curio-banner::before { background: linear-gradient(90deg, rgb(10 34 48 / 85%), rgb(10 34 48 / 30%)); }
+.pagina-curiosidades .curio-banner .tc-banner-imagem { object-position: center 62%; }
+.pagina-curiosidades .curio-banner-conteudo { position: relative; display: flex; min-height: 560px; padding-block: 50px 100px; flex-direction: column; align-items: flex-start; }
+.pagina-curiosidades .curio-banner .tc-migalhas { margin: 0; font-size: 13px; }
+.pagina-curiosidades .curio-banner .tc-migalhas ol { align-items: center; gap: 10px; }
+.pagina-curiosidades .curio-banner .tc-migalhas li + li::before { margin-right: 10px; padding-right: 0; color: #bed5dd; }
+.pagina-curiosidades .curio-banner .tc-migalhas a { font-weight: 400; text-decoration: none; }
+.pagina-curiosidades .curio-banner .tc-migalhas a:hover { text-decoration: underline; }
+.pagina-curiosidades .curio-banner .tc-migalhas [aria-current] { color: #d4e2e8; }
+.pagina-curiosidades .curio-banner-texto { margin-top: 112px; }
+.pagina-curiosidades .curio-banner .tc-etiqueta { color: #67e8f0; }
+.pagina-curiosidades .curio-banner h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(44px, 5.5vw, 80px); line-height: 1.08; letter-spacing: -0.025em; }
+.pagina-curiosidades .curio-banner-texto > p:last-child { max-width: 650px; color: #eef5f7; font-size: 18px; line-height: 1.7; }
+.pagina-curiosidades .curio-banner .curio-banner-credito { position: absolute; right: 0; bottom: 12px; max-width: 100%; padding: 6px 10px; border-radius: 6px; background: rgb(10 34 48 / 90%); font-size: 12px; line-height: 1.4; }
+.pagina-curiosidades .curio-banner-credito a { color: var(--tc-branco); }
+.pagina-curiosidades .curio-banner :focus-visible { outline-color: #a1f6fa; }
+
+.pagina-curiosidades .curio-introducao { display: grid; grid-template-columns: 1.12fr 1.2fr 0.55fr; align-items: start; gap: 56px; padding-block: 96px 112px; }
+.pagina-curiosidades .curio-introducao > .tc-fluxo { font-size: 16px; line-height: 1.8; }
+.pagina-curiosidades .curio-introducao > .tc-fluxo > * + * { margin-top: 20px; }
+.pagina-curiosidades .curio-destaque { padding: 32px 28px; border-radius: 22px; background: var(--tc-suave); font-size: 14px; line-height: 1.7; }
+.pagina-curiosidades .curio-destaque strong { display: block; margin-bottom: 8px; color: #007a85; font-family: Georgia, serif; font-size: 48px; font-weight: 500; line-height: 1; }
+
+/* Os quatro cartões introdutórios são informativos, sem controles decorativos. */
+.pagina-curiosidades .curio-sabia { padding-top: 0; }
+.pagina-curiosidades .curio-grade-quatro { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.pagina-curiosidades .curio-cartao { min-width: 0; padding: 28px; border-radius: 18px; background: var(--tc-branco); box-shadow: 0 10px 28px rgb(22 59 80 / 6%); }
+.pagina-curiosidades .curio-simbolo { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 28px; border-radius: 50%; background: var(--tc-suave); color: var(--tc-link); font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
+.pagina-curiosidades .curio-cartao h3 { margin-bottom: 14px; }
+.pagina-curiosidades .curio-cartao > p { font-size: 14px; line-height: 1.8; }
+
+/* Galeria assimétrica do PDF: uma imagem alta, duas menores e uma horizontal. */
+.pagina-curiosidades .curio-tradicoes { background: var(--tc-marinho); color: #d4e2e8; }
+.pagina-curiosidades .curio-tradicoes :is(h2, h3) { color: var(--tc-branco); }
+.pagina-curiosidades .curio-tradicoes .tc-etiqueta { color: #67e8f0; }
+.pagina-curiosidades .curio-galeria { display: grid; grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: repeat(2, 270px); gap: 16px; }
+.pagina-curiosidades .curio-cena { position: relative; min-width: 0; overflow: hidden; isolation: isolate; border-radius: 18px; background: #102f40; }
+.pagina-curiosidades .curio-cena::after { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 10%, rgb(6 25 34 / 96%) 100%); content: ""; }
+.pagina-curiosidades .curio-cena-azulejos::after { background: linear-gradient(180deg, rgb(6 25 34 / 45%), rgb(6 25 34 / 96%)); }
+.pagina-curiosidades .curio-cena > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.pagina-curiosidades .curio-cena figcaption { display: flex; min-height: 100%; flex-direction: column; justify-content: flex-end; padding: 24px; color: var(--tc-branco); }
+.pagina-curiosidades .curio-ordem { display: block; margin-bottom: 14px; color: #607784; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+.pagina-curiosidades .curio-cena .curio-ordem { margin-bottom: 6px; color: #a1f6fa; }
+.pagina-curiosidades .curio-cena h3 { margin-bottom: 10px; font-size: 26px; }
+.pagina-curiosidades .curio-cena figcaption > p { margin: 0; font-size: 14px; line-height: 1.7; }
+.pagina-curiosidades .curio-cena-merengue { grid-row: 1 / 3; }
+.pagina-curiosidades .curio-cena-expressoes { grid-column: 2 / 4; }
+.pagina-curiosidades .curio-cena-expressoes > img { object-position: center 20%; }
+
+/* Datas e números acompanhados de contexto e fontes consultáveis no fim da página. */
+.pagina-curiosidades .curio-fatos { padding-bottom: 0; }
+.pagina-curiosidades .curio-fatos-grade { gap: 16px; }
+.pagina-curiosidades .curio-fato { min-width: 0; padding: 28px; border-left: 3px solid var(--tc-turquesa); background: var(--tc-branco); }
+.pagina-curiosidades .curio-fato .curio-valor { margin: 22px 0 8px; color: var(--tc-link); font-family: Georgia, serif; font-size: 36px; line-height: 1.1; }
+.pagina-curiosidades .curio-fato h3 { margin-bottom: 14px; font-size: 23px; }
+.pagina-curiosidades .curio-fato > p:not(.curio-valor) { font-size: 14px; line-height: 1.8; }
+.pagina-curiosidades .curio-fato .curio-fonte { margin-top: 12px; color: #526c79; font-size: 12px; }
+.pagina-curiosidades .curio-fotos-fatos { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin-top: 16px; }
+.pagina-curiosidades .curio-fotos-fatos img { width: 100%; height: 440px; min-width: 0; border-radius: 18px; object-fit: cover; }
+.pagina-curiosidades .curio-foto-ponte { object-position: 32% center; }
+.pagina-curiosidades .curio-foto-coimbra { object-position: 30% center; }
+.pagina-curiosidades .curio-foto-sobreiro { object-position: 28% center; }
+.pagina-curiosidades .curio-numeros { margin-top: 0; padding-block: 32px 52px; background: var(--tc-suave); }
+.pagina-curiosidades .curio-numeros-conteudo { display: grid; grid-template-columns: 1.5fr 2.3fr; gap: 32px; align-items: start; }
+.pagina-curiosidades .curio-numeros .tc-etiqueta { margin-bottom: 12px; }
+.pagina-curiosidades .curio-numeros h2 { font-size: 36px; }
+.pagina-curiosidades .curio-numeros-lista { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.pagina-curiosidades .curio-numeros-lista > div { display: flex; min-width: 0; flex-direction: column; }
+.pagina-curiosidades .curio-numeros-lista dd { order: -1; margin: 0 0 8px; color: var(--tc-link); font-family: Georgia, serif; font-size: 28px; line-height: 1.2; }
+.pagina-curiosidades .curio-numeros-lista dt { font-size: 13px; line-height: 1.7; }
+
+/* details/summary nativos: teclado e expansão funcionam mesmo sem JavaScript. */
+.pagina-curiosidades .curio-mitos { padding-bottom: 0; }
+.pagina-curiosidades .curio-perguntas { display: grid; max-width: 960px; gap: 16px; }
+.pagina-curiosidades .curio-perguntas details { border: 1px solid #e6edef; border-radius: 12px; background: var(--tc-branco); }
+.pagina-curiosidades .curio-perguntas summary { display: flex; align-items: center; gap: 20px; min-height: 64px; padding: 20px 24px; color: var(--tc-marinho); font-family: Georgia, serif; font-size: 18px; font-weight: 500; line-height: 1.4; list-style: none; cursor: pointer; }
+.pagina-curiosidades .curio-perguntas summary::-webkit-details-marker { display: none; }
+.pagina-curiosidades .curio-pergunta-numero { flex: 0 0 26px; color: var(--tc-link); font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; }
+.pagina-curiosidades .curio-perguntas summary > span:nth-child(2) { flex: 1; min-width: 0; }
+.pagina-curiosidades .curio-sinal { flex: 0 0 24px; color: var(--tc-link); font-family: Arial, sans-serif; font-size: 22px; text-align: center; }
+.pagina-curiosidades .curio-sinal::before { content: "+"; }
+.pagina-curiosidades .curio-perguntas details[open] .curio-sinal::before { content: "−"; }
+.pagina-curiosidades .curio-perguntas details[open] summary { border-bottom: 1px solid #e6edef; }
+.pagina-curiosidades .curio-resposta { padding: 20px 70px 24px; font-size: 15px; line-height: 1.8; }
+
+.pagina-curiosidades .curio-continuar { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-block: 96px 24px; padding: 44px; border-radius: 18px; background: var(--tc-branco); box-shadow: 0 10px 28px rgb(22 59 80 / 6%); }
+.pagina-curiosidades .curio-continuar > div { max-width: 550px; }
+.pagina-curiosidades .curio-continuar h2 { font-size: 32px; }
+.pagina-curiosidades .curio-continuar .tc-acoes { flex-shrink: 0; justify-content: flex-end; margin-top: 0; }
+.pagina-curiosidades .curio-continuar .tc-botao { font-size: 13px; }
+/* Fontes e atribuições reunidas em uma área discreta, alinhada à chamada final. */
+.pagina-curiosidades .curio-referencias { margin: 0; padding: 12px 44px; border: 1px solid var(--tc-borda); border-radius: 12px; background: var(--tc-branco); }
+.pagina-curiosidades .curio-creditos { margin: 0; font-size: 13px; line-height: 1.8; }
+.pagina-curiosidades .curio-creditos + .curio-creditos { border-top: 1px solid var(--tc-borda); }
+.pagina-curiosidades .curio-creditos summary { width: 100%; min-height: 44px; padding-block: 10px; color: var(--tc-marinho); font-weight: 700; cursor: pointer; }
+.pagina-curiosidades .curio-creditos p { margin-block: 12px; }
+.pagina-curiosidades .curio-creditos ul { padding-left: 24px; }
+.pagina-curiosidades .curio-creditos li { margin-block: 8px; }
+.pagina-curiosidades .tc-rodape[data-tc-rodape] { margin-top: 32px; }
+
+@media (max-width: 1100px) {
+    .pagina-curiosidades .curio-introducao { gap: 28px; }
+    .pagina-curiosidades .curio-cartao,
+    .pagina-curiosidades .curio-fato { padding: 24px; }
+    .pagina-curiosidades .curio-galeria { grid-template-rows: repeat(2, 310px); }
+    .pagina-curiosidades .curio-numeros-conteudo { grid-template-columns: 1fr; gap: 28px; }
+    .pagina-curiosidades .curio-continuar { align-items: flex-start; flex-direction: column; }
+    .pagina-curiosidades .curio-continuar .tc-acoes { justify-content: flex-start; }
+}
+@media (max-width: 980px) {
+    .pagina-curiosidades .curio-introducao { grid-template-columns: 1fr 1fr; padding-block: 72px; }
+    .pagina-curiosidades .curio-destaque { display: flex; grid-column: 1 / -1; align-items: center; gap: 24px; }
+    .pagina-curiosidades .curio-destaque strong { flex-shrink: 0; margin: 0; }
+    .pagina-curiosidades .curio-destaque p { max-width: 360px; }
+    .pagina-curiosidades .curio-grade-quatro { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-curiosidades .curio-galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 380px 300px 300px; }
+    .pagina-curiosidades .curio-cena-festas { grid-column: 1 / -1; grid-row: auto; }
+    .pagina-curiosidades .curio-cena-expressoes { grid-column: 1 / -1; }
+    .pagina-curiosidades .curio-fotos-fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-curiosidades .curio-fotos-fatos img { height: 320px; }
+    .pagina-curiosidades .curio-foto-ponte { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+    .pagina-curiosidades .curio-secao { padding-block: 64px; }
+    .pagina-curiosidades .curio-banner-conteudo { min-height: 470px; padding-block: 32px 90px; }
+    .pagina-curiosidades .curio-banner-texto { margin-top: 80px; }
+    .pagina-curiosidades .curio-banner-texto > p:last-child { font-size: 16px; }
+    .pagina-curiosidades .curio-introducao { grid-template-columns: 1fr; gap: 28px; }
+    .pagina-curiosidades .curio-destaque { grid-column: auto; }
+    .pagina-curiosidades .curio-titulo { margin-bottom: 28px; }
+    .pagina-curiosidades .curio-titulo > p:last-child { font-size: 15px; }
+    .pagina-curiosidades .curio-sabia { padding-top: 0; }
+    .pagina-curiosidades .curio-fatos,
+    .pagina-curiosidades .curio-mitos { padding-bottom: 0; }
+    .pagina-curiosidades .curio-continuar { gap: 28px; margin-top: 64px; padding: 32px; }
+    .pagina-curiosidades .curio-referencias { padding-inline: 32px; }
+}
+@media (max-width: 600px) {
+    .pagina-curiosidades .curio-banner::before { background: linear-gradient(90deg, rgb(10 34 48 / 85%), rgb(10 34 48 / 60%)); }
+    .pagina-curiosidades .curio-banner-conteudo { min-height: 440px; }
+    .pagina-curiosidades .curio-banner h1 { font-size: clamp(40px, 10vw, 56px); }
+    .pagina-curiosidades .curio-banner .curio-banner-credito { font-size: 11px; }
+    .pagina-curiosidades .curio-introducao { padding-block: 56px; }
+    .pagina-curiosidades .curio-destaque { padding: 24px; }
+    .pagina-curiosidades .curio-grade-quatro,
+    .pagina-curiosidades .curio-galeria,
+    .pagina-curiosidades .curio-fotos-fatos { grid-template-columns: 1fr; }
+    .pagina-curiosidades .curio-galeria { grid-template-rows: auto; }
+    .pagina-curiosidades .curio-cena { grid-column: auto; min-height: 320px; }
+    .pagina-curiosidades .curio-cena-festas { min-height: 400px; }
+    .pagina-curiosidades .curio-cena figcaption { min-height: 320px; }
+    .pagina-curiosidades .curio-cena-festas figcaption { min-height: 400px; }
+    .pagina-curiosidades .curio-fotos-fatos img { height: 340px; }
+    .pagina-curiosidades .curio-numeros-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+    .pagina-curiosidades .curio-numeros h2 { font-size: 32px; }
+    .pagina-curiosidades .curio-perguntas summary { gap: 12px; padding: 18px 16px; font-size: 17px; }
+    .pagina-curiosidades .curio-pergunta-numero { flex-basis: 20px; }
+    .pagina-curiosidades .curio-resposta { padding: 18px 20px 24px; }
+    .pagina-curiosidades .curio-continuar { padding: 28px 24px; }
+    .pagina-curiosidades .curio-continuar h2 { font-size: 28px; }
+    .pagina-curiosidades .curio-continuar .tc-acoes { width: 100%; flex-direction: column; align-items: stretch; }
+    .pagina-curiosidades .curio-referencias { padding: 8px 24px; }
+    .pagina-curiosidades .tc-rodape[data-tc-rodape] { margin-top: 24px; }
+}

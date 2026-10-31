@@ -1,0 +1,739 @@
+/* =====================================================
+   TURISMO.COM — ALIMENTAÇÃO
+   Mesmo visual da página inicial.
+   Paleta: azul-petróleo #163b50 | turquesa #0aa3b3 | claro #a4eaf0 | branco
+   Tudo restrito a .pagina-alimentacao para não afetar outras páginas.
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.pagina-alimentacao {
+    margin: 0;
+    background: #f0f5f5;
+    color: #163b50;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.pagina-alimentacao *,
+.pagina-alimentacao *::before,
+.pagina-alimentacao *::after {
+    box-sizing: border-box;
+}
+
+.pagina-alimentacao h1,
+.pagina-alimentacao h2,
+.pagina-alimentacao h3,
+.pagina-alimentacao p,
+.pagina-alimentacao ul {
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-alimentacao ul {
+    list-style: none;
+}
+
+/* Remove a caixa branca do estilo.css */
+.pagina-alimentacao main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.pagina-alimentacao main:focus {
+    outline: none;
+}
+
+.pagina-alimentacao .ali-container {
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .pagina-alimentacao .ali-container {
+        width: calc(100% - 32px);
+    }
+}
+
+.pagina-alimentacao :is(a, button):focus-visible {
+    outline: 3px solid #0aa3b3;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.pagina-alimentacao .ali-pular {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 18px;
+    transform: translateY(-180%);
+    border-radius: 8px;
+    background: #fff;
+    color: #163b50;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pagina-alimentacao .ali-pular:focus {
+    transform: translateY(0);
+}
+
+
+/* ===== CABEÇALHO ===== */
+.pagina-alimentacao .cabecalho-principal {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+    background: #fff;
+    color: #163b50;
+    border-bottom: 1px solid #e3ecef;
+    box-shadow: 0 2px 14px rgba(22, 59, 80, .06);
+    text-align: left;
+}
+
+.pagina-alimentacao .barra-cabecalho {
+    max-width: 1280px;
+    min-height: 78px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pagina-alimentacao .marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #163b50;
+    text-decoration: none;
+}
+
+.pagina-alimentacao .marca-simbolo {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 58% 42% 52% 48% / 48% 55% 45% 52%;
+    background: #0aa3b3;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pagina-alimentacao .marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pagina-alimentacao .marca-texto strong {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: #163b50;
+}
+
+.pagina-alimentacao .marca-texto strong span {
+    color: #0aa3b3;
+}
+
+.pagina-alimentacao .marca-texto small {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    color: #4f7388;
+}
+
+.pagina-alimentacao .cabecalho-principal .navegacao {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.pagina-alimentacao .cabecalho-principal .navegacao a,
+.pagina-alimentacao .cabecalho-principal .botao-dropdown {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #163b50;
+    font: 600 14px/1.4 inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.pagina-alimentacao .cabecalho-principal .navegacao > a:hover,
+.pagina-alimentacao .cabecalho-principal .botao-dropdown:hover {
+    color: #0aa3b3;
+}
+
+.pagina-alimentacao .cabecalho-principal .navegacao > a[aria-current="page"] {
+    padding: 9px 16px;
+    border-radius: 10px;
+    background: #e3f4f6;
+    color: #0b7f8c;
+    font-weight: 700;
+}
+
+.pagina-alimentacao .botao-dropdown .seta {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 13px;
+    transform: translateY(-2px);
+}
+
+.pagina-alimentacao .grupo-dropdown {
+    position: relative;
+}
+
+.pagina-alimentacao .botao-dropdown {
+    border: 0;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.pagina-alimentacao .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -12px;
+    min-width: 210px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #dce6e9;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(22, 59, 80, .15);
+}
+
+.pagina-alimentacao .cabecalho-principal .menu-dropdown a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.pagina-alimentacao .cabecalho-principal .menu-dropdown a:hover {
+    background: #e0f4f5;
+}
+
+.pagina-alimentacao .grupo-dropdown:hover .menu-dropdown,
+.pagina-alimentacao .grupo-dropdown.aberto .menu-dropdown {
+    display: block;
+}
+
+.pagina-alimentacao .botao-menu {
+    display: none;
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.pagina-alimentacao .botao-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: #163b50;
+}
+
+@media (max-width: 1060px) {
+    .pagina-alimentacao .botao-menu {
+        display: block;
+    }
+
+    .pagina-alimentacao .cabecalho-principal .navegacao {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 12px 28px rgba(22, 59, 80, .2);
+    }
+
+    .pagina-alimentacao .cabecalho-principal .navegacao.aberta {
+        display: flex;
+    }
+
+    .pagina-alimentacao .cabecalho-principal .navegacao > a,
+    .pagina-alimentacao .cabecalho-principal .botao-dropdown {
+        display: block;
+        width: 100%;
+        padding: 11px 14px;
+        text-align: left;
+    }
+
+    .pagina-alimentacao .menu-dropdown {
+        position: static;
+        min-width: 0;
+        margin: 0 0 4px;
+        padding: 4px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .pagina-alimentacao .barra-cabecalho {
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .pagina-alimentacao .marca-texto strong {
+        font-size: 15px;
+    }
+
+    .pagina-alimentacao .marca-texto small {
+        font-size: 9px;
+    }
+}
+
+
+/* ===== BANNER ===== */
+.pagina-alimentacao .ali-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 88px 0 130px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(10, 163, 179, .45), transparent 45%),
+        linear-gradient(135deg, #0c2a3b 0%, #163b50 48%, #1f5470 100%);
+}
+
+.pagina-alimentacao .ali-etiqueta {
+    display: block;
+    margin-bottom: 18px;
+    color: #1fc7d6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.pagina-alimentacao .ali-banner h1 {
+    max-width: 720px;
+    margin-bottom: 22px;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.5px;
+}
+
+.pagina-alimentacao .ali-banner h1 em {
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+    color: #a4eaf0;
+}
+
+.pagina-alimentacao .ali-banner p {
+    max-width: 540px;
+    color: #eaf6f9;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+    .pagina-alimentacao .ali-banner {
+        padding: 56px 0 120px;
+    }
+
+    .pagina-alimentacao .ali-banner p {
+        font-size: 16px;
+    }
+}
+
+
+/* ===== TIPOS DE HOSPEDAGEM (cartões sobre o banner) ===== */
+.pagina-alimentacao .ali-tipos {
+    position: relative;
+    z-index: 3;
+    margin-top: -64px;
+}
+
+.pagina-alimentacao .ali-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.pagina-alimentacao .secao {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: 32px 28px;
+    border: 1px solid #e6edef;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(22, 59, 80, .12);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.pagina-alimentacao .secao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(22, 59, 80, .22);
+}
+
+.pagina-alimentacao .secao-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background: #e0f4f5;
+    font-size: 30px;
+    transition: background .2s ease;
+}
+
+.pagina-alimentacao .secao:hover .secao-icone {
+    background: #0aa3b3;
+}
+
+.pagina-alimentacao .secao h3 {
+    margin-bottom: 12px;
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.pagina-alimentacao .secao p {
+    margin-bottom: 22px;
+    color: #465d69;
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+
+.pagina-alimentacao .secao-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.pagina-alimentacao .secao-tags li {
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: #f0f5f5;
+    color: #0b7f8c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+@media (max-width: 1100px) {
+    .pagina-alimentacao .ali-grade {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+        margin-inline: auto;
+    }
+}
+
+
+/* ===== CHAMADA FINAL ===== */
+.pagina-alimentacao .ali-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 72px 0 80px;
+    padding: 40px 44px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(22, 59, 80, .08);
+}
+
+.pagina-alimentacao .ali-continuar .ali-etiqueta {
+    margin-bottom: 10px;
+    color: #0aa3b3;
+    letter-spacing: 2px;
+}
+
+.pagina-alimentacao .ali-continuar h2 {
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pagina-alimentacao .ali-acoes {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pagina-alimentacao .ali-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 13px 22px;
+    border: 1px solid #0aa3b3;
+    border-radius: 10px;
+    background: #0aa3b3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.pagina-alimentacao .ali-botao:hover {
+    background: #08909e;
+    border-color: #08909e;
+    transform: translateY(-2px);
+}
+
+.pagina-alimentacao .ali-botao-contorno {
+    background: #fff;
+    color: #0b7f8c;
+}
+
+.pagina-alimentacao .ali-botao-contorno:hover {
+    background: #163b50;
+    border-color: #163b50;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .pagina-alimentacao .ali-continuar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 56px 0 64px;
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-alimentacao .ali-acoes {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+/* ===== RODAPÉ ===== */
+.pagina-alimentacao .rodape-principal {
+    margin: 0;
+    padding: 52px 24px 20px;
+    background: #163b50;
+    color: #fff;
+    border-top: 4px solid #0aa3b3;
+    text-align: left;
+}
+
+.pagina-alimentacao .rodape-conteudo {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 36px;
+}
+
+.pagina-alimentacao .rodape-sobre h2 {
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.pagina-alimentacao .rodape-sobre h2 span {
+    color: #1fc7d6;
+}
+
+.pagina-alimentacao .rodape-sobre p {
+    max-width: 280px;
+    color: #d4e2e8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pagina-alimentacao .rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.pagina-alimentacao .rodape-coluna h3 {
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.pagina-alimentacao .rodape-coluna a {
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.pagina-alimentacao .rodape-coluna a:hover {
+    color: #a4eaf0;
+    transform: translateX(4px);
+}
+
+.pagina-alimentacao .rodape-inferior {
+    max-width: 1180px;
+    margin: 36px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #456678;
+}
+
+.pagina-alimentacao .rodape-inferior p {
+    color: #d4e2e8;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .pagina-alimentacao .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .pagina-alimentacao .rodape-inferior {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-alimentacao .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* ===== GUIAS POR PAÍS ===== */
+.pagina-alimentacao .ali-paises {
+    margin: 72px 0 0;
+}
+
+.pagina-alimentacao .ali-paises .ali-etiqueta {
+    margin-bottom: 14px;
+    color: #0aa3b3;
+    letter-spacing: 2px;
+}
+
+.pagina-alimentacao .ali-paises h2 {
+    margin-bottom: 12px;
+    color: #163b50;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pagina-alimentacao .ali-paises-intro {
+    max-width: 640px;
+    margin-bottom: 32px;
+    color: #465d69;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.pagina-alimentacao .ali-paises-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.pagina-alimentacao .ali-pais {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    padding: 22px 22px 20px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    color: #163b50;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(22, 59, 80, .07);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.pagina-alimentacao .ali-pais:hover {
+    transform: translateY(-4px);
+    border-color: #0aa3b3;
+    box-shadow: 0 16px 32px rgba(22, 59, 80, .16);
+}
+
+.pagina-alimentacao .ali-pais-regiao {
+    color: #0b7f8c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.pagina-alimentacao .ali-pais strong {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.pagina-alimentacao .ali-pais-acao {
+    margin-top: auto;
+    padding-top: 10px;
+    color: #0b7f8c;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .pagina-alimentacao .ali-paises {
+        margin-top: 56px;
+    }
+
+    .pagina-alimentacao .ali-paises-grade {
+        grid-template-columns: 1fr;
+    }
+}

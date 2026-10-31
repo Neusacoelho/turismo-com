@@ -1,0 +1,322 @@
+/* Exclusivo de Gastronomia: medidas e acabamentos acompanham cultura.css.
+   Os componentes compartilhados e os arquivos de Cultura permanecem independentes. */
+.pagina-gastronomia main { font-family: Arial, sans-serif; line-height: 1.6; }
+/* .tc-container já coincide com Cultura: máximo 1280px e margens de 24/16px. */
+.pagina-gastronomia main :is(h1, h2, h3) {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.pagina-gastronomia main h2 { font-size: clamp(32px, 3.5vw, 52px); line-height: 1.12; letter-spacing: -0.025em; }
+.pagina-gastronomia main h3 { line-height: 1.2; }
+.pagina-gastronomia main .tc-etiqueta {
+    margin-bottom: 18px;
+    color: #007a85;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+}
+.pagina-gastronomia main :is(a, summary):focus-visible {
+    outline: 3px solid var(--tc-turquesa);
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+.pagina-gastronomia .gastronomia-secao { padding-block: 96px; }
+.pagina-gastronomia .gastronomia-titulo { margin-bottom: 40px; }
+.pagina-gastronomia .gastronomia-titulo h2 { max-width: 670px; }
+.pagina-gastronomia .gastronomia-titulo > p:last-child { margin-top: 18px; font-size: 16px; line-height: 1.8; }
+
+/* Banner: mesmas alturas, alinhamentos e escala tipográfica de Cultura. */
+.pagina-gastronomia .gastronomia-banner { overflow: hidden; padding: 0; background: var(--tc-marinho); color: var(--tc-branco); }
+.pagina-gastronomia .gastronomia-banner::before {
+    background: linear-gradient(90deg, rgb(10 34 48 / 76%), rgb(10 34 48 / 12%));
+}
+.pagina-gastronomia .gastronomia-banner .tc-banner-imagem { object-position: center 50%; }
+.pagina-gastronomia .gastronomia-banner-conteudo {
+    position: relative;
+    display: flex;
+    min-height: 560px;
+    padding-block: 50px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.pagina-gastronomia .gastronomia-banner .tc-migalhas { margin: 0; font-size: 13px; }
+.pagina-gastronomia .gastronomia-banner .tc-migalhas ol { align-items: center; gap: 10px; }
+.pagina-gastronomia .gastronomia-banner .tc-migalhas li + li::before { margin-right: 10px; padding-right: 0; color: #bed5dd; }
+.pagina-gastronomia .gastronomia-banner .tc-migalhas a { font-weight: 400; text-decoration: none; }
+.pagina-gastronomia .gastronomia-banner .tc-migalhas a:hover { text-decoration: underline; }
+.pagina-gastronomia .gastronomia-banner .tc-migalhas [aria-current] { color: #d4e2e8; }
+.pagina-gastronomia .gastronomia-banner-texto { margin-top: 88px; }
+.pagina-gastronomia .gastronomia-banner .tc-etiqueta { color: #67e8f0; }
+.pagina-gastronomia .gastronomia-banner h1 {
+    max-width: none;
+    margin-bottom: 20px;
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+.pagina-gastronomia .gastronomia-banner-texto > p:last-child { max-width: 650px; color: #eef5f7; font-size: 18px; line-height: 1.7; }
+.pagina-gastronomia .gastronomia-banner .gastronomia-banner-credito {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgb(10 34 48 / 80%);
+    font-size: 12px;
+    line-height: 1.4;
+}
+.pagina-gastronomia .gastronomia-banner-credito a { color: var(--tc-branco); text-decoration: underline; }
+
+/* Apresentação em três colunas. */
+.pagina-gastronomia .gastronomia-introducao {
+    display: grid;
+    grid-template-columns: 1.12fr 1.2fr 0.55fr;
+    align-items: start;
+    gap: 56px;
+    padding-block: 96px 112px;
+}
+.pagina-gastronomia .gastronomia-introducao > .tc-fluxo { font-size: 16px; line-height: 1.8; }
+.pagina-gastronomia .gastronomia-introducao > .tc-fluxo > * + * { margin-top: 20px; }
+.pagina-gastronomia .gastronomia-destaque { padding: 32px 28px; border-radius: 22px; background: var(--tc-suave); font-size: 14px; line-height: 1.7; }
+.pagina-gastronomia .gastronomia-destaque strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #007a85;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* Pratos: os mesmos cartões de quatro colunas das tradições culturais. */
+.pagina-gastronomia .gastronomia-pratos { padding-top: 0; }
+.pagina-gastronomia .gastronomia-pratos .gastronomia-titulo h2 { max-width: 560px; }
+.pagina-gastronomia .gastronomia-pratos-grade { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.pagina-gastronomia .gastronomia-prato {
+    overflow: hidden;
+    padding: 0;
+    border-color: #e6edef;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-gastronomia .gastronomia-prato-foto { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.pagina-gastronomia .gastronomia-prato-texto { padding: 24px; }
+.pagina-gastronomia .gastronomia-prato h3 { margin-bottom: 12px; font-size: 26px; }
+.pagina-gastronomia .gastronomia-prato p { font-size: 14px; line-height: 1.8; }
+
+/* Doçaria mantém uma imagem principal e duas laterais, com o acabamento
+   da seção escura de Cultura. As laterais reservam espaço para foto e legenda. */
+.pagina-gastronomia .gastronomia-doces { background: var(--tc-marinho); color: #d4e2e8; }
+.pagina-gastronomia .gastronomia-doces :is(h2, h3) { color: var(--tc-branco); }
+.pagina-gastronomia .gastronomia-doces .tc-etiqueta { color: #67e8f0; }
+.pagina-gastronomia .gastronomia-doces-grade {
+    display: grid;
+    grid-template-columns: 1.95fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+.pagina-gastronomia .gastronomia-doce {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    min-width: 0;
+    min-height: 460px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #244b60;
+}
+.pagina-gastronomia .gastronomia-doce-principal { grid-row: span 2; min-height: clamp(520px, 57vw, 760px); }
+.pagina-gastronomia .gastronomia-doce > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.pagina-gastronomia .gastronomia-doce::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, transparent 25%, rgb(10 34 48 / 94%));
+    content: "";
+}
+.pagina-gastronomia .gastronomia-doce figcaption { width: 100%; padding: 32px; }
+.pagina-gastronomia .gastronomia-doce .tc-etiqueta { margin-bottom: 12px; font-size: 11px; letter-spacing: 1.4px; }
+.pagina-gastronomia .gastronomia-doce h3 { margin-bottom: 12px; font-size: 28px; }
+.pagina-gastronomia .gastronomia-doce-principal h3 { font-size: 32px; }
+.pagina-gastronomia .gastronomia-doce figcaption > p:last-child { max-width: 650px; font-size: 14px; line-height: 1.8; }
+.pagina-gastronomia .gastronomia-travesseiros > img { object-position: 52% 50%; }
+
+/* Sabores regionais reaproveitam bordas, cores e ritmo dos cartões. */
+.pagina-gastronomia .gastronomia-regioes { padding-bottom: 0; }
+.pagina-gastronomia .gastronomia-regioes-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.pagina-gastronomia .gastronomia-regiao {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+    border-color: #e6edef;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-gastronomia .gastronomia-numero {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--tc-suave);
+    color: #007a85;
+    font-size: 12px;
+    font-weight: 700;
+}
+.pagina-gastronomia .gastronomia-regiao .tc-etiqueta { margin-bottom: 12px; font-size: 11px; }
+.pagina-gastronomia .gastronomia-regiao h3 { margin-bottom: 12px; font-size: 23px; }
+.pagina-gastronomia .gastronomia-regiao p:last-child { font-size: 14px; line-height: 1.8; }
+
+/* Experiências: proporção da fotografia, lista e legendas iguais a Cultura. */
+.pagina-gastronomia .gastronomia-experiencias { display: grid; grid-template-columns: 0.9fr 1.2fr; align-items: center; gap: 84px; }
+.pagina-gastronomia .gastronomia-mercado { position: relative; min-width: 0; overflow: hidden; border-radius: 18px; background: #d4e2e8; }
+.pagina-gastronomia .gastronomia-mercado > img { width: 100%; height: auto; aspect-ratio: 0.78; object-fit: cover; object-position: 58% 60%; }
+.pagina-gastronomia .gastronomia-mercado figcaption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgb(16 47 62 / 90%);
+    color: var(--tc-branco);
+}
+.pagina-gastronomia .gastronomia-mercado .tc-etiqueta { margin-bottom: 4px; color: #a6eaf0; font-size: 11px; }
+.pagina-gastronomia .gastronomia-mercado strong { font-size: 14px; }
+.pagina-gastronomia .gastronomia-experiencias .gastronomia-titulo { margin-bottom: 32px; }
+.pagina-gastronomia .gastronomia-experiencias-lista { padding: 0; list-style: none; }
+.pagina-gastronomia .gastronomia-experiencias-lista li { display: flex; gap: 24px; padding-block: 22px; border-bottom: 1px solid #e1e8eb; }
+.pagina-gastronomia .gastronomia-experiencias-lista li:first-child { padding-top: 0; }
+.pagina-gastronomia .gastronomia-experiencias-lista li:last-child { padding-bottom: 0; border-bottom: 0; }
+.pagina-gastronomia .gastronomia-experiencias-lista .gastronomia-numero { margin-top: 2px; }
+.pagina-gastronomia .gastronomia-experiencias-lista h3 { margin-bottom: 6px; font-size: 23px; }
+.pagina-gastronomia .gastronomia-experiencias-lista p { font-size: 14px; line-height: 1.8; }
+
+/* Faixa final: contorno antes do preenchido, preservando rótulos e destinos. */
+.pagina-gastronomia .gastronomia-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 40px 44px;
+    border-radius: 18px;
+    background: var(--tc-branco);
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-gastronomia .gastronomia-continuar .tc-etiqueta { margin-bottom: 10px; }
+.pagina-gastronomia .gastronomia-continuar h2 { font-size: 30px; letter-spacing: -0.02em; }
+.pagina-gastronomia .gastronomia-continuar .tc-acoes { flex-shrink: 0; gap: 12px; margin: 0; }
+.pagina-gastronomia .gastronomia-continuar .tc-botao {
+    gap: 14px;
+    min-height: 48px;
+    padding: 13px 20px;
+    border: 1px solid var(--tc-turquesa);
+    border-radius: 8px;
+    background: var(--tc-turquesa);
+    color: #092c3a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.pagina-gastronomia .gastronomia-continuar .tc-botao-contorno { background: var(--tc-branco); color: #007a85; }
+.pagina-gastronomia .gastronomia-continuar .tc-botao:hover { border-color: var(--tc-marinho); background: var(--tc-marinho); color: var(--tc-branco); }
+.pagina-gastronomia .gastronomia-creditos { margin-block: 24px 32px; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.pagina-gastronomia .gastronomia-creditos summary { width: fit-content; padding-block: 8px; color: var(--tc-marinho); font-weight: 700; cursor: pointer; }
+.pagina-gastronomia .gastronomia-creditos ul { padding-left: 24px; }
+.pagina-gastronomia .gastronomia-creditos li { margin-block: 6px; }
+.pagina-gastronomia .gastronomia-creditos a { color: #007a85; }
+.pagina-gastronomia .gastronomia-doces :focus-visible,
+.pagina-gastronomia .gastronomia-banner :focus-visible { outline-color: #a1f6fa; }
+
+/* Rodapé local com a mesma estrutura, medidas e agrupamentos de Cultura. */
+.pagina-gastronomia .tc-rodape {
+    margin-top: 40px;
+    padding-block: 48px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.pagina-gastronomia .tc-rodape > .tc-container { width: calc(100% - 48px); max-width: 1180px; }
+.pagina-gastronomia .tc-rodape-grade { grid-template-columns: 2fr repeat(3, 1fr); gap: 36px; }
+.pagina-gastronomia .tc-rodape h2 { margin-bottom: 14px; font-size: 22px; line-height: 1.6; }
+.pagina-gastronomia .tc-rodape h2 span { color: #00c2cf; }
+.pagina-gastronomia .tc-rodape h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.6; }
+.pagina-gastronomia .tc-rodape-grade > .tc-fluxo > p { max-width: 280px; margin: 0; line-height: 1.7; }
+.pagina-gastronomia .tc-rodape-coluna { gap: 12px; }
+.pagina-gastronomia .tc-rodape-coluna a { font-size: 14px; font-weight: 400; text-decoration: none; }
+.pagina-gastronomia .tc-rodape-coluna a:hover { text-decoration: underline; }
+.pagina-gastronomia .tc-rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-color: #456678;
+    font-size: 12px;
+}
+
+/* Mesmos pontos de reorganização de Cultura, somente no conteúdo da página. */
+@media (max-width: 1100px) {
+    .pagina-gastronomia .gastronomia-introducao { gap: 28px; }
+    .pagina-gastronomia .gastronomia-experiencias { gap: 48px; }
+    .pagina-gastronomia .gastronomia-continuar { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 980px) {
+    .pagina-gastronomia .gastronomia-introducao { grid-template-columns: 1fr 1fr; padding-block: 72px; }
+    .pagina-gastronomia .gastronomia-destaque { display: flex; grid-column: 1 / -1; align-items: center; gap: 24px; }
+    .pagina-gastronomia .gastronomia-destaque strong { flex-shrink: 0; margin: 0; white-space: nowrap; }
+    .pagina-gastronomia .gastronomia-destaque p { max-width: 360px; }
+    .pagina-gastronomia .gastronomia-pratos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-gastronomia .gastronomia-doce { min-height: 440px; }
+    .pagina-gastronomia .gastronomia-doce figcaption { padding: 24px; }
+    .pagina-gastronomia .gastronomia-experiencias { grid-template-columns: 0.9fr 1.1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+    .pagina-gastronomia .gastronomia-secao { padding-block: 64px; }
+    .pagina-gastronomia .gastronomia-banner-conteudo { min-height: 470px; padding-block: 32px 76px; }
+    .pagina-gastronomia .gastronomia-banner-texto { margin-top: 64px; }
+    .pagina-gastronomia .gastronomia-banner-texto > p:last-child { font-size: 16px; }
+    .pagina-gastronomia .gastronomia-introducao { grid-template-columns: 1fr; gap: 28px; padding-block: 72px; }
+    .pagina-gastronomia .gastronomia-quebra { display: none; }
+    .pagina-gastronomia .gastronomia-destaque { grid-column: auto; }
+    .pagina-gastronomia .gastronomia-pratos { padding-top: 0; }
+    .pagina-gastronomia .gastronomia-titulo { margin-bottom: 28px; }
+    .pagina-gastronomia .gastronomia-titulo > p:last-child { font-size: 15px; }
+    .pagina-gastronomia .gastronomia-doces-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+    .pagina-gastronomia .gastronomia-doce { min-height: 500px; }
+    .pagina-gastronomia .gastronomia-doce-principal { grid-column: 1 / -1; grid-row: auto; min-height: 520px; }
+    .pagina-gastronomia .gastronomia-regioes { padding-bottom: 0; }
+    .pagina-gastronomia .gastronomia-experiencias { grid-template-columns: 1fr; gap: 40px; }
+    .pagina-gastronomia .gastronomia-mercado > img { max-height: 580px; aspect-ratio: 1.1; }
+    .pagina-gastronomia .gastronomia-continuar { gap: 28px; padding: 32px; }
+    .pagina-gastronomia .tc-rodape-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .pagina-gastronomia .tc-rodape-inferior { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+    .pagina-gastronomia .gastronomia-banner-conteudo { min-height: 440px; }
+    .pagina-gastronomia .gastronomia-banner h1 { font-size: clamp(40px, 10vw, 56px); }
+    .pagina-gastronomia .gastronomia-banner .gastronomia-banner-credito { font-size: 11px; }
+    .pagina-gastronomia .gastronomia-introducao { padding-block: 56px; }
+    .pagina-gastronomia .gastronomia-introducao > .tc-fluxo { font-size: 15px; }
+    .pagina-gastronomia .gastronomia-destaque { padding: 24px; }
+    .pagina-gastronomia .gastronomia-pratos-grade,
+    .pagina-gastronomia .gastronomia-regioes-grade,
+    .pagina-gastronomia .gastronomia-doces-grade { grid-template-columns: 1fr; }
+    /* A proporção 4:3 mantém a foto de sardinhas inteira, como informam os créditos. */
+    .pagina-gastronomia .gastronomia-doce { min-height: 460px; }
+    .pagina-gastronomia .gastronomia-doce h3 { font-size: 28px; }
+    .pagina-gastronomia .gastronomia-mercado > img { aspect-ratio: 0.9; }
+    .pagina-gastronomia .gastronomia-continuar { padding: 28px 24px; }
+    .pagina-gastronomia .gastronomia-continuar h2 { font-size: 28px; }
+    .pagina-gastronomia .gastronomia-continuar .tc-acoes { width: 100%; flex-direction: column; }
+    .pagina-gastronomia .gastronomia-creditos { margin-bottom: 32px; }
+}
+
+@media (max-width: 480px) {
+    .pagina-gastronomia .tc-rodape { padding-top: 36px; }
+    .pagina-gastronomia .tc-rodape-grade { grid-template-columns: 1fr; gap: 28px; }
+}

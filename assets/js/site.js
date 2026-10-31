@@ -25,13 +25,28 @@
         ["Espanha", "espanha.html"],
         ["Itália", "italia.html"],
         ["Japão", "japao.html"],
-        ["China", "china.html"]
+        ["China", "china.html"],
+          ["República Dominicana", "republica-dominicana.html"],
+        
+    ];
+    const paisesPortugal = [
+        ["Brasil", "brasil.html"],
+        ["Portugal", "portugal.html"],
+        ["Grécia", "grecia.html"],
+        ["França", "franca.html"],
+        ["Espanha", "espanha.html"],
+        ["Itália", "italia.html"],
+        ["Japão", "japao.html"],
+        ["México", "mexico.html"],
+        ["China", "china.html"],
+        ["Estados Unidos", "estados-unidos.html"],
+        ["República Dominicana", "republica-dominicana.html"]
     ];
     const servicos = [
-        ["Hospedagem", "hospedagem.html"],
-        ["Alimentação", "alimentacao.html"],
-        ["Compras", "compras.html"],
-        ["Contato", "contato.html"]
+        ["Hospedagem", pagina.classList.contains("pais-portugal") ? "paises/portugal/hospedagem.html" : "hospedagem.html"],
+        ["Alimentação", pagina.classList.contains("pais-portugal") ? "paises/portugal/alimentacao.html" : "alimentacao.html"],
+        ["Compras", pagina.classList.contains("pais-portugal") ? "paises/portugal/compras.html" : "compras.html"],
+        ["Contato", pagina.classList.contains("pais-portugal") ? "paises/portugal/contato.html" : "contato.html"]
     ];
 
     function criarLink(texto, caminho) {
@@ -87,7 +102,7 @@
         conteudo.querySelector("[data-tc-marca]").href = new URL("index.html", raiz).href;
         const navegacao = conteudo.querySelector(".tc-navegacao");
         navegacao.prepend(criarLink("Início", "index.html"));
-        preencherLinks(conteudo.querySelector(".tc-lista-paises"), paises);
+        preencherLinks(conteudo.querySelector(".tc-lista-paises"), pagina.classList.contains("pais-portugal") ? paisesPortugal : paises);
         preencherLinks(navegacao, servicos);
         cabecalho.replaceChildren(conteudo);
     }
@@ -124,9 +139,9 @@
         }
         // Separa os grupos só no rodapé. A lista do cabeçalho mantém Contato.
         preencherLinks(conteudo.querySelector('[aria-label="Serviços no rodapé"]'),
-            servicos.filter(([, caminho]) => caminho !== "contato.html"));
+            servicos.filter(([, caminho]) => !caminho.endsWith("contato.html")));
         preencherLinks(conteudo.querySelector('[aria-label="Informações no rodapé"]'),
-            servicos.filter(([, caminho]) => caminho === "contato.html"));
+            servicos.filter(([, caminho]) => caminho.endsWith("contato.html")));
         conteudo.querySelector(".tc-rodape-inferior p").textContent =
             `© ${new Date().getFullYear()} Turismo.com`;
         rodape.replaceChildren(conteudo);

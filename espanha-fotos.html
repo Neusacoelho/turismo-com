@@ -3,77 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espanha — Pontos Turísticos</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Galeria de fotos da Espanha: Sagrada Família, Alhambra de Granada, Parque Güell, Museu do Prado, Praça de Espanha em Sevilha e Ilhas Baleares.">
+    <title>Galeria de fotos da Espanha | TURISMO.COM</title>
+    <!-- Folhas de estilo compartilhadas e folha exclusiva da galeria -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+    <link rel="stylesheet" href="espanha-fotos.css">
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
+<body class="tc-site pais-espanha pagina-galeria-espanha" data-raiz="./"
+      data-pais-nome="Espanha" data-pais-url="espanha.html" data-galeria-url="espanha-fotos.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="brasil-fotos.html">📸 Fotos do Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="franca-fotos.html">📸 Fotos da França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html" class="ativo">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="japao-fotos.html">📸 Fotos do Japão</a>
-        <a href="china.html">China</a>
-        <a href="china-fotos.html">📸 Fotos da China</a>
-        <a href="hospedagem.html">🏠 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛒 Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <!-- Cabeçalho compartilhado gerado dinamicamente por site.js.
+         A navegação básica abaixo assegura suporte completo sem JavaScript. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="index.html">TURISMO.COM — Início</a>
+            <a href="espanha.html">Espanha</a>
+            <a href="espanha-fotos.html" aria-current="page">Galeria da Espanha</a>
+            <a href="hospedagem.html">Hospedagem</a>
+            <a href="alimentacao.html">Alimentação</a>
+            <a href="compras.html">Compras</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
 
-<main>
-    <h2>Espanha — Pontos Turísticos</h2>
-    <div class="galeria">
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Sagrada_Fam%C3%ADlia_Barcelona.jpg" alt="Sagrada Família">
-            <h3>⛪ Sagrada Família — Barcelona</h3>
-            <p>Igreja monumental! Obras de Gaudí em construção há mais de 100 anos.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Alhambra_Granada.jpg" alt="Alhambra">
-            <h3>🏯 Alhambra — Granada</h3>
-            <p>Palácio mouro! Azulejos, fontes e jardins no topo da colina.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Parc_G%C3%BCell_Barcelona.jpg" alt="Parque Güell">
-            <h3>🦎 Parque Güell — Barcelona</h3>
-            <p>Cores e mosaicos! Vista incrível da cidade do alto.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Museo_del_Prado_Madrid.jpg" alt="Museu do Prado">
-            <h3>🎨 Museu do Prado — Madri</h3>
-            <p>Uma das melhores pinacotecas do mundo! Obras de Velázquez e Goya.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Plaza_de_Espa%C3%B1a_Sevilla.jpg" alt="Praça de Espanha">
-            <h3>💃 Praça de Espanha — Sevilha</h3>
-            <p>Arquitetura espetacular! Canais, azulejos e toda a paixão da Andaluzia.</p>
-        </div>
-        <div class="foto-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Mallorca_Spain.jpg" alt="Ilhas Baleares">
-            <h3>🏝️ Ilhas Baleares</h3>
-            <p>Praias de água turquesa! Sol, mar e noites animadas no Mediterrâneo.</p>
-        </div>
-    </div>
-    <p style="text-align: center; margin-top: 30px;">
-        ← Voltar para a <a href="espanha.html">página da Espanha</a>
-    </p>
-</main>
+    <main id="conteudo" tabindex="-1">
+        <div class="tc-container">
+            <header class="pg-apresentacao">
+                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+                    <ol>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="espanha.html">Espanha</a></li>
+                        <li><span aria-current="page">Galeria</span></li>
+                    </ol>
+                </nav>
+                <p class="tc-etiqueta">Espanha — Pontos Turísticos</p>
+                <h1>Galeria de fotos da Espanha</h1>
+                <p class="pg-introducao">
+                    Seis olhares sobre a arquitetura secular, o patrimônio artístico e as paisagens luminosas do território espanhol.
+                </p>
+            </header>
 
-<footer>
-    <p>&copy; 2026 Turismo.com — Fotos e Pontos Turísticos da Espanha</p>
-</footer>
+            <section class="tc-galeria pg-grade" aria-label="Fotografias de pontos turísticos da Espanha">
+                <!-- Foto 1: Sagrada Família -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=1200&q=80"
+                             alt="Fachada e torres ornamentadas da Basílica da Sagrada Família em Barcelona"
+                             width="1200" height="750" fetchpriority="high" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Barcelona · Catalunha</span>
+                        <h2>Sagrada Família</h2>
+                        <p>
+                            A monumental basílica de Antoni Gaudí é o ápice do modernismo catalão, com formas orgânicas inspiradas na natureza e torres esculpidas que desafiam o horizonte.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 2: Alhambra -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Patio_de_los_Leones.jpg"
+                             alt="Interior do Palácio de Leões na Alhambra, com colunatas de mármore e arcos mouriscos minuciosamente trabalhados em estuque"
+                             width="1200" height="750" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Granada · Andaluzia</span>
+                        <h2>Alhambra (Pátio dos Leões)</h2>
+                        <p>
+                            O coração dos palácios nasridas: pátio monumental cercado por 124 colunas de mármore branco, arcos mouriscos com estuques arabescos e a lendária fonte central com doze leões esculpidos.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 3: Parque Güell -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?auto=format&fit=crop&w=1200&q=80"
+                             alt="Bancos ondulados revestidos com mosaicos coloridos de cerâmica no Parque Güell com vista para a cidade"
+                             width="1200" height="750" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Barcelona · Catalunha</span>
+                        <h2>Parque Güell</h2>
+                        <p>
+                            Jardim público encantador onde a imaginação de Gaudí ganha vida em colunatas de pedra rústica, fontes alegóricas e bancos curvilíneos em trencadís multicolorido.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 4: Museu do Prado -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Fachada_principal_del_Museo_del_Prado_de_Madrid.jpg"
+                             alt="Fachada principal neoclássica do Museu do Prado em Madri, com colunata de Juan de Villanueva e estátua de Velázquez"
+                             width="1200" height="750" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Madri · Comunidade de Madri</span>
+                        <h2>Museu do Prado</h2>
+                        <p>
+                            A imponente fachada neoclássica do arquiteto Juan de Villanueva, guardada pela estátua de Diego Velázquez. Uma das pinacotecas mais celebradas do planeta, com obras-primas da pintura universal.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 5: Praça de Espanha -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://cdn.pixabay.com/photo/2020/05/12/18/29/city-5164368_1280.jpg"
+                             alt="Galerias semicirculares, pontes com azulejos e canal navegável na Praça de Espanha em Sevilha"
+                             width="1280" height="720" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Sevilha · Andaluzia</span>
+                        <h2>Praça de Espanha</h2>
+                        <p>
+                            Obra monumental construída para a Exposição Ibero-Americana de 1929, destacando arcos renascentistas e mouriscos, canais com barcos a remo e mosaicos dedicados a cada província.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 6: Ilhas Baleares -->
+                <figure class="pg-cartao">
+                    <div class="pg-cartao-figura">
+                        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+                             alt="Enseada paradisíaca com água turquesa translúcida e falésias em Mallorca"
+                             width="1200" height="750" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption>
+                        <span class="pg-localizacao">Mallorca · Ilhas Baleares</span>
+                        <h2>Ilhas Baleares</h2>
+                        <p>
+                            Refúgio no coração do Mediterrâneo, famoso por enseadas de água transparente, vilarejos históricos de pedra e um litoral de preservação ambiental invejável.
+                        </p>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <div class="tc-acoes pg-retorno">
+                <a class="tc-botao" href="espanha.html">← Voltar para a página da Espanha</a>
+            </div>
+
+            <!-- Seção de Créditos Fotográficos -->
+            <aside class="pg-creditos" aria-label="Autoria e licenças das fotografias">
+                <details class="creditos-fotos" id="creditos-fotografias">
+                    <summary>Créditos das fotografias</summary>
+                    <p class="pg-nota-creditos">
+                        As fotografias são exibidas em alta definição, redimensionadas de forma responsiva para navegação leve e fluida. Origens e licenças de divulgação aberta:
+                    </p>
+                    <ul>
+                        <li><strong>Sagrada Família (Barcelona):</strong> Fotografia editorial via Unsplash.</li>
+                        <li><strong>Alhambra — Pátio dos Leões (Granada):</strong> Fotografia do interior dos palácios nasridas via Wikimedia Commons. Licença: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                        <li><strong>Parque Güell (Barcelona):</strong> Fotografia arquitetônica via Unsplash.</li>
+                        <li><strong>Museu do Prado — Fachada Principal (Madri):</strong> Fotografia do edifício neoclássico de Villanueva via Wikimedia Commons. Licença: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                        <li><strong>Praça de Espanha (Sevilha):</strong> Fotografia panorâmica via Pixabay (licença de uso livre).</li>
+                        <li><strong>Ilhas Baleares (Mallorca):</strong> Fotografia de paisagem via Unsplash.</li>
+                    </ul>
+                </details>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé compartilhado com quatro colunas e links disponíveis sem JavaScript. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container">
+            <div class="tc-rodape-grade">
+                <div class="tc-fluxo">
+                    <h2>✈ TURISMO<span>.COM</span></h2>
+                    <p>Descubra destinos, culturas e experiências ao redor do mundo.</p>
+                </div>
+                <nav class="tc-rodape-coluna" aria-label="Explorar no rodapé">
+                    <h3>Explorar</h3>
+                    <a href="index.html">Início</a>
+                    <a href="espanha.html">Espanha</a>
+                    <a href="espanha-fotos.html" aria-current="page">Galeria do país</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Serviços no rodapé">
+                    <h3>Serviços</h3>
+                    <a href="hospedagem.html">Hospedagem</a>
+                    <a href="alimentacao.html">Alimentação</a>
+                    <a href="compras.html">Compras</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Informações no rodapé">
+                    <h3>Informações</h3>
+                    <a href="contato.html">Contato</a>
+                </nav>
+            </div>
+            <div class="tc-rodape-inferior">
+                <p>© 2026 Turismo.com</p>
+                <p>Projeto acadêmico desenvolvido em equipe.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,45 @@
+/* Estruturas usadas pela Galeria de Portugal: etiqueta, migalhas, fluxo, ações e grade.
+   Extraído de assets/css/pais.css. O escopo com :where preserva a especificidade. */
+.tc-site:where(.pais-portugal) .tc-etiqueta {
+    margin-bottom: 0.75rem; color: var(--tc-link); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+.tc-site:where(.pais-portugal) .tc-fluxo > * + * {
+    margin-top: 1rem;
+}
+
+.tc-site:where(.pais-portugal) .tc-migalhas {
+    margin-bottom: 2rem;
+}
+
+.tc-site:where(.pais-portugal) .tc-migalhas ol {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none;
+}
+
+.tc-site:where(.pais-portugal) .tc-migalhas li + li::before {
+    content: "/"; padding-right: 0.5rem;
+}
+
+.tc-site:where(.pais-portugal) .tc-acoes {
+    display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;
+}
+
+.tc-site:where(.pais-portugal) .tc-galeria {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem;
+}
+
+.tc-site:where(.pais-portugal) .tc-galeria img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .tc-site:where(.pais-portugal) .tc-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .tc-site:where(.pais-portugal) .tc-galeria {
+        grid-template-columns: 1fr;
+    }
+}
