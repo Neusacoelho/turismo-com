@@ -221,6 +221,11 @@
   transform: rotate(-8deg);
 }
 
+.pessoa-card:nth-child(14) .pessoa-foto::before {
+  border-radius: 46% 54% 60% 40% / 42% 58% 42% 58%;
+  transform: rotate(-10deg);
+}
+
 .pessoa-foto img {
   position: absolute;
   z-index: 1;
