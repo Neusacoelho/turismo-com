@@ -3,294 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página demonstrativa de Gastronomia do Nome do País, com conteúdo fictício para copiar e adaptar no projeto TURISMO.COM.">
-    <title>Gastronomia do Nome do País — Template TURISMO.COM</title>
-    <!-- Ordem: estilos compartilhados, base local e, nas internas, CSS da página. -->
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/componentes.css">
-    <link rel="stylesheet" href="../assets/css/pais.css">
-    <link rel="stylesheet" href="template.css">
+    <meta name="description" content="Conheça a gastronomia do Brasil: pratos típicos de cada região, sobremesas e bebidas que fazem parte da cultura brasileira.">
+    <title>Gastronomia do Brasil — Turismo.com</title>
+    <link rel="stylesheet" href="../../estilo.css">
+    <link rel="stylesheet" href="../../brasil.css">
+    <link rel="stylesheet" href="cultura.css">
     <link rel="stylesheet" href="gastronomia.css">
-    <script src="../assets/js/site.js" defer></script>
 </head>
-<!-- data-raiz mede a distância até a raiz. data-pais-url parte da raiz, não desta pasta.
-     Ao copiar, mantenha pais-modelo e a classe pagina-gastronomia; consulte LEIA-ME.md. -->
-<body class="tc-site pais-modelo pagina-gastronomia" data-raiz="../"
-      data-pais-nome="Nome do País" data-pais-url="template-modelo/index.html">
-    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<body class="pagina-brasil pagina-cultura pagina-gastronomia">
+    <a class="cultura-pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <!-- INÍCIO: cabeçalho compartilhado. site.js substitui apenas este componente.
-         Os links abaixo continuam disponíveis se o JavaScript estiver desativado. -->
-    <header class="tc-cabecalho" data-tc-cabecalho>
-        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
-            <a href="../index.html">TURISMO.COM — Início</a>
-            <a href="index.html">Nome do País</a>
-            <a href="cultura.html">Cultura</a>
-            <a href="gastronomia.html">Gastronomia</a>
+<header class="cabecalho-principal">
+    <div class="barra-cabecalho">
+
+
+        <a href="../../index.html" class="marca">
+            <span class="marca-simbolo" aria-hidden="true">✈</span>
+
+            <span class="marca-texto">
+                <strong>TURISMO<span>.COM</span></strong>
+                <small>DESCUBRA O MUNDO</small>
+            </span>
+        </a>
+
+        <nav class="navegacao" id="navegacao-principal" aria-label="Menu principal">
+            <a href="../../index.html">Início</a>
+
+            
+            <div class="grupo-dropdown">
+                <button class="botao-dropdown" type="button" aria-controls="lista-paises" aria-expanded="false">
+                    Países <span>⌄</span>
+                </button>
+
+                <div class="menu-dropdown" id="lista-paises">
+                    <a href="../../brasil.html">Brasil</a>
+                    <a href="../../portugal.html">Portugal</a>
+                    <a href="../../franca.html">França</a>
+                    <a href="../../espanha.html">Espanha</a>
+                    <a href="../../italia.html">Itália</a>
+                    <a href="../../japao.html">Japão</a>
+                    <a href="../../china.html">China</a>
+                </div>
+            </div>
+
+            <a href="../../hospedagem.html">Hospedagem</a>
+            <a href="../../alimentacao.html">Alimentação</a>
+            <a href="../../compras.html">Compras</a>
+            <a href="../../contato.html">Contato</a>
         </nav>
-    </header>
-    <!-- FIM: cabeçalho compartilhado. -->
+
+        <button class="botao-menu" type="button" aria-controls="navegacao-principal" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
 
     <main id="conteudo" tabindex="-1">
-        <!-- INÍCIO: assunto. Copie o bloco completo até o comentário FIM. -->
-        <section class="tc-banner gastronomia-banner" aria-labelledby="titulo-assunto">
-            <img class="tc-banner-imagem" src="imagens/gastronomia-modelo.svg" alt="Ilustração fictícia de uma mesa com pratos e alimentos geométricos." width="1200" height="900" fetchpriority="high">
-            <div class="tc-container gastronomia-banner-conteudo">
-                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+
+        <section class="cultura-banner" aria-labelledby="titulo-gastronomia">
+            <div class="cultura-banner-foto" role="img"
+                 aria-label="Tacacá, prato brasileiro."></div>
+            <div class="cultura-container cultura-banner-conteudo">
+                <nav class="cultura-migalhas" aria-label="Caminho de navegação">
                     <ol>
-                        <li>
-                            <a href="../index.html">Início</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Nome do País</a>
-                        </li>
-                        <li>
-                            <span aria-current="page">Gastronomia</span>
-                        </li>
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="../../brasil.html">Brasil</a></li>
+                        <li><span aria-current="page">Gastronomia</span></li>
                     </ol>
                 </nav>
-                <div class="gastronomia-banner-texto">
-                    <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                    <h1 id="titulo-assunto">Gastronomia do Nome do País</h1>
-                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
+                <div class="cultura-banner-texto">
+                    <p class="cultura-etiqueta">Gastronomia brasileira</p>
+                    <h1 id="titulo-gastronomia">Sabores do Brasil</h1>
+                    <p>Da feijoada ao acarajé, cada região tem ingredientes, receitas e jeitos de comer que contam a sua história.</p>
                 </div>
-                <p class="gastronomia-banner-credito">Ilustração demonstrativa · <a href="#creditos-ilustracoes">Sobre as ilustrações</a></p>
+                <p class="cultura-banner-credito">
+                    Foto: <a href="https://commons.wikimedia.org/wiki/File:Tacaca.jpg">ProjetoTransite</a> ·
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/">LICENÇA: CC BY-SA 4.0</a>.<br>
+                    Exibição com sobreposição escura.
+                </p>
             </div>
         </section>
-        <!-- FIM: assunto. -->
-        <!-- INÍCIO: introducao. Copie o bloco completo até o comentário FIM. -->
-        <section class="tc-container gastronomia-secao gastronomia-introducao" aria-labelledby="titulo-introducao">
-            <div>
-                <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                <h2 id="titulo-introducao">Sabores de exemplo<br class="gastronomia-quebra"> e histórias à mesa.</h2>
-            </div>
-            <div class="tc-fluxo">
-                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-            </div>
-            <aside class="gastronomia-destaque" aria-label="Quatro exemplos demonstrativos nesta página">
-                <strong>4</strong>
-                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-            </aside>
-        </section>
-        <!-- FIM: introducao. -->
-        <!-- INÍCIO: pratos. Copie o bloco completo até o comentário FIM. -->
-        <section class="tc-container gastronomia-secao gastronomia-pratos" aria-labelledby="titulo-pratos">
-            <div class="gastronomia-titulo">
-                <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                <h2 id="titulo-pratos">Pratos tradicionais</h2>
-                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
-            </div>
-            <div class="tc-cartoes gastronomia-pratos-grade">
-                <article class="tc-cartao gastronomia-prato" aria-labelledby="titulo-cartao-01">
-                    <img class="gastronomia-prato-foto" src="imagens/gastronomia-modelo.svg" alt="Ilustração fictícia de uma mesa com pratos e alimentos geométricos." width="1200" height="900" loading="lazy" decoding="async">
-                    <div class="gastronomia-prato-texto">
-                        <h3 id="titulo-cartao-01">Prato de exemplo 01</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-prato" aria-labelledby="titulo-cartao-02">
-                    <img class="gastronomia-prato-foto" src="imagens/cultura-modelo.svg" alt="Ilustração demonstrativa de padrões geométricos em azul e dourado." width="1200" height="900" loading="lazy" decoding="async">
-                    <div class="gastronomia-prato-texto">
-                        <h3 id="titulo-cartao-02">Prato de exemplo 02</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-prato" aria-labelledby="titulo-cartao-03">
-                    <img class="gastronomia-prato-foto" src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
-                    <div class="gastronomia-prato-texto">
-                        <h3 id="titulo-cartao-03">Prato de exemplo 03</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-prato" aria-labelledby="titulo-cartao-04">
-                    <img class="gastronomia-prato-foto" src="imagens/paisagem-modelo.svg" alt="Ilustração fictícia de montanhas, rio e sol em formas geométricas." width="1600" height="900" loading="lazy" decoding="async">
-                    <div class="gastronomia-prato-texto">
-                        <h3 id="titulo-cartao-04">Prato de exemplo 04</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <!-- FIM: pratos. -->
-        <!-- INÍCIO: doces. Copie o bloco completo até o comentário FIM. -->
-        <section class="gastronomia-secao gastronomia-doces" aria-labelledby="titulo-doces">
-            <div class="tc-container">
-                <div class="gastronomia-titulo">
-                    <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                    <h2 id="titulo-doces">Doces e sobremesas</h2>
-                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
+
+        <div class="cultura-container">
+
+            <section class="gastronomia-intro" aria-labelledby="titulo-intro">
+                <p class="cultura-etiqueta">Sabores do Brasil</p>
+                <h2 id="titulo-intro">Uma cozinha feita de muitas origens.</h2>
+                <p>A gastronomia brasileira nasceu do encontro entre ingredientes e saberes indígenas, africanos, portugueses e de imigrantes de várias partes do mundo. Mandioca, milho e frutas nativas se misturaram ao dendê, ao feijão e ao trigo, criando pratos que mudam de uma região para outra.</p>
+                <p>Por isso, comer no Brasil é também uma forma de conhecer a história e a diversidade de cada lugar.</p>
+            </section>
+
+            <section class="cultura-origens" aria-labelledby="titulo-pratos">
+                <div class="cultura-titulo-secao">
+                    <p class="cultura-etiqueta">Pratos típicos</p>
+                    <h2 id="titulo-pratos">Um prato para cada região.</h2>
+                    <p>Cinco pratos para conhecer o Brasil de região em região.</p>
                 </div>
-                <div class="gastronomia-doces-grade">
-                    <figure class="gastronomia-doce gastronomia-doce-principal">
-                        <img src="imagens/gastronomia-modelo.svg" alt="Ilustração fictícia de uma mesa com pratos e alimentos geométricos." width="1200" height="900" loading="lazy" decoding="async">
-                        <figcaption>
-                            <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                            <h3>Doce de exemplo 01</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                        </figcaption>
+
+
+               
+                <section class="cultura-origem" aria-labelledby="titulo-prato-sul">
+                    <figure class="cultura-origem-foto">
+                        <img src="../../imagens-brasil/Brazilian-churrasco.jpg" alt="churrasco com carnes e batata" width="1280" height="960" loading="lazy" decoding="async">
                     </figure>
-                    <figure class="gastronomia-doce">
-                        <img src="imagens/cultura-modelo.svg" alt="Ilustração demonstrativa de padrões geométricos em azul e dourado." width="1200" height="900" loading="lazy" decoding="async">
-                        <figcaption>
-                            <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                            <h3>Doce de exemplo 02</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                        </figcaption>
+                    <div class="cultura-origem-texto">
+                        <p class="cultura-etiqueta">Região Sul</p>
+                        <h3 id="titulo-prato-sul">Churrasco gaúcho</h3>
+                        <p>O churrasco é o prato mais associado ao Rio Grande do Sul. Cortes de carne bovina, como costela, picanha e fraldinha, são salgados com sal grosso e assados lentamente na brasa, em espetos longos. A tradição vem do modo de vida dos gaúchos e dos tropeiros nos campos da região. Costuma ser servido com arroz, farofa, salada de batata com maionese e pão de alho.</p>
+                    </div>
+                </section>
+
+                
+                <section class="cultura-origem cultura-origem-invertida" aria-labelledby="titulo-prato-sudeste">
+                    <figure class="cultura-origem-foto">
+                        <img src="../../imagens-brasil/Feijoada-à-brasileira.jpg" alt="Feijoada brasileira em uma panela de ferro preta" width="1280" height="960" loading="lazy" decoding="async">
                     </figure>
-                    <figure class="gastronomia-doce gastronomia-travesseiros">
-                        <img src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
-                        <figcaption>
-                            <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                            <h3>Doce de exemplo 03</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                        </figcaption>
+                    <div class="cultura-origem-texto">
+                        <p class="cultura-etiqueta">Região Sudeste</p>
+                        <h3 id="titulo-prato-sudeste">Feijoada</h3>
+                        <p>A feijoada é feita com feijão preto cozido lentamente com carnes de porco e embutidos, como linguiça, bacon e costelinha. É servida com arroz, couve refogada, farofa e laranja em fatias, e é presença marcante nos almoços de fim de semana no Rio de Janeiro. No Sudeste, Minas Gerais também se destaca com o pão de queijo, o tutu de feijão e o feijão-tropeiro.</p>
+                    </div>
+                </section>
+
+                
+                <section class="cultura-origem" aria-labelledby="titulo-prato-centro-oeste">
+                   <figure class="cultura-origem-foto">
+                        <img src="../../imagens-brasil/Galinhada-com-pequi.jpg" alt="Galinhada com pequi em uma panela de alumínio" width="1280" height="960" loading="lazy" decoding="async">
                     </figure>
+                    <div class="cultura-origem-texto">
+                        <p class="cultura-etiqueta">Região Centro-Oeste</p>
+                        <h3 id="titulo-prato-centro-oeste">Galinhada com pequi</h3>
+                        <p>Típica de Goiás, a galinhada é um arroz cozido com pedaços de frango e temperado com açafrão-da-terra. Muitas vezes é servida com pequi, fruto do Cerrado de aroma forte e sabor marcante. O pequi aparece também em outros pratos da região, e o empadão goiano é outra receita muito conhecida.</p>
+                    </div>
+                </section>
+
+               
+                <section class="cultura-origem cultura-origem-invertida" aria-labelledby="titulo-prato-nordeste">
+                    <figure class="cultura-origem-foto">
+                        <img src="../../imagens-brasil/Bahia-acaraje.jpg" alt="Acarajé servido numa louça azul" width="1280" height="960" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="cultura-origem-texto">
+                        <p class="cultura-etiqueta">Região Nordeste</p>
+                        <h3 id="titulo-prato-nordeste">Acarajé</h3>
+                        <p>Bolinho de massa de feijão-fradinho frito no azeite de dendê, o acarajé é um dos símbolos da culinária baiana. É aberto ao meio e recheado com vatapá, caruru, salada e camarão seco. De herança africana, é vendido pelas baianas nas ruas de Salvador, e o ofício das baianas de acarajé é reconhecido pelo IPHAN como patrimônio cultural imaterial.</p>
+                    </div>
+                </section>
+
+                
+                <section class="cultura-origem" aria-labelledby="titulo-prato-norte">
+                    <figure class="cultura-origem-foto">
+                        <img src="../../imagens-brasil/pato-no-tucupi.jpg" alt="Pato no Tucupi servido de forma elegante em um prato branco" width="1280" height="960" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="cultura-origem-texto">
+                        <p class="cultura-etiqueta">Região Norte</p>
+                        <h3 id="titulo-prato-norte">Pato no tucupi</h3>
+                        <p>Prato típico do Pará, leva pato cozido no tucupi, um caldo amarelo extraído da mandioca-brava, e folhas de jambu, que deixam a boca levemente dormente. É servido com arroz e farinha de mandioca e aparece com destaque no Círio de Nazaré, em Belém. A receita mostra a forte influência da culinária indígena.</p>
+                    </div>
+                </section>
+            </section>
+
+            
+            <section class="gastronomia-secao" aria-labelledby="titulo-sobremesas">
+                <div class="cultura-titulo-secao">
+                    <p class="cultura-etiqueta">Sobremesas</p>
+                    <h2 id="titulo-sobremesas">Doces que não podem faltar.</h2>
+                    <p>Três sobremesas que fazem parte das mesas brasileiras.</p>
                 </div>
-            </div>
-        </section>
-        <!-- FIM: doces. -->
-        <!-- INÍCIO: regioes. Copie o bloco completo até o comentário FIM. -->
-        <section class="tc-container gastronomia-secao gastronomia-regioes" aria-labelledby="titulo-regioes">
-            <div class="gastronomia-titulo">
-                <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                <h2 id="titulo-regioes">Sabores regionais</h2>
-                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-            </div>
-            <div class="tc-cartoes gastronomia-regioes-grade">
-                <article class="tc-cartao gastronomia-regiao" aria-labelledby="titulo-cartao-08">
-                    <span class="gastronomia-numero" aria-hidden="true">01</span>
-                    <div>
-                        <p class="tc-etiqueta">Região de exemplo 01</p>
-                        <h3 id="titulo-cartao-08">Tradição regional 01</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-regiao" aria-labelledby="titulo-cartao-09">
-                    <span class="gastronomia-numero" aria-hidden="true">02</span>
-                    <div>
-                        <p class="tc-etiqueta">Região de exemplo 02</p>
-                        <h3 id="titulo-cartao-09">Tradição regional 02</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-regiao" aria-labelledby="titulo-cartao-10">
-                    <span class="gastronomia-numero" aria-hidden="true">03</span>
-                    <div>
-                        <p class="tc-etiqueta">Região de exemplo 03</p>
-                        <h3 id="titulo-cartao-10">Tradição regional 03</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                    </div>
-                </article>
-                <article class="tc-cartao gastronomia-regiao" aria-labelledby="titulo-cartao-11">
-                    <span class="gastronomia-numero" aria-hidden="true">04</span>
-                    <div>
-                        <p class="tc-etiqueta">Região de exemplo 04</p>
-                        <h3 id="titulo-cartao-11">Tradição regional 04</h3>
-                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <!-- FIM: regioes. -->
-        <!-- INÍCIO: experiencias. Copie o bloco completo até o comentário FIM. -->
-        <section class="tc-container gastronomia-secao gastronomia-experiencias" aria-labelledby="titulo-experiencias">
-            <figure class="gastronomia-mercado">
-                <img src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
-                <figcaption>
-                    <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                    <strong>Lugar de exemplo</strong>
-                </figcaption>
-            </figure>
-            <div>
-                <div class="gastronomia-titulo">
-                    <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                    <h2 id="titulo-experiencias">Experiências gastronômicas</h2>
-                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                <div class="gastronomia-cards">
+                    <article class="gastronomia-card">
+                        <h3>Brigadeiro</h3>
+                        <p>Docinho de leite condensado, chocolate em pó e manteiga, enrolado em bolinhas e coberto com granulado. É presença certa em festas de aniversário e comemorações.</p>
+                    </article>
+                    <article class="gastronomia-card">
+                        <h3>Pudim de leite</h3>
+                        <p>Sobremesa cremosa feita com leite condensado, leite e ovos, assada em banho-maria e coberta com calda de caramelo. Está nos almoços de família e nos restaurantes de todo o país.</p>
+                    </article>
+                    <article class="gastronomia-card">
+                        <h3>Quindim</h3>
+                        <p>De cor amarela e brilhante, é feito com gemas, açúcar e coco ralado. A receita lembra os doces portugueses à base de ovos e é muito popular na Bahia e em todo o Brasil.</p>
+                    </article>
                 </div>
-                <ol class="gastronomia-experiencias-lista" role="list">
-                    <li>
-                        <span class="gastronomia-numero" aria-hidden="true">01</span>
-                        <div>
-                            <h3>Experiência de exemplo 01</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="gastronomia-numero" aria-hidden="true">02</span>
-                        <div>
-                            <h3>Experiência de exemplo 02</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="gastronomia-numero" aria-hidden="true">03</span>
-                        <div>
-                            <h3>Experiência de exemplo 03</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="gastronomia-numero" aria-hidden="true">04</span>
-                        <div>
-                            <h3>Experiência de exemplo 04</h3>
-                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-        </section>
-        <!-- FIM: experiencias. -->
-        <div class="tc-container">
-            <!-- INÍCIO: continuar. Copie o bloco completo até o comentário FIM. -->
+            </section>
+
+            
+            <section class="gastronomia-secao gastronomia-secao-bebidas" aria-labelledby="titulo-bebidas">
+                <div class="cultura-titulo-secao">
+                    <p class="cultura-etiqueta">Bebidas</p>
+                    <h2 id="titulo-bebidas">Para brindar e para o dia a dia.</h2>
+                    <p>Três bebidas que o visitante encontra em qualquer região.</p>
+                </div>
+                <div class="gastronomia-cards">
+                    <article class="gastronomia-card">
+                        <h3>Caipirinha</h3>
+                        <p>A bebida alcoólica mais famosa do país, feita com cachaça, limão, açúcar e gelo. A cachaça é destilada da cana-de-açúcar, e a caipirinha é servida em bares, quiosques de praia e festas.</p>
+                    </article>
+                    <article class="gastronomia-card">
+                        <h3>Café</h3>
+                        <p>O Brasil é o maior produtor de café do mundo. O cafezinho, servido forte em xícaras pequenas, é um gesto de hospitalidade em casas, padarias e escritórios.</p>
+                    </article>
+                    <article class="gastronomia-card">
+                        <h3>Guaraná</h3>
+                        <p>Refrigerante feito com extrato de guaraná, fruta de origem amazônica cultivada há séculos por povos indígenas, como os Sateré-Mawé. Tem sabor adocicado e é muito consumido no país.</p>
+                    </article>
+                </div>
+            </section>
+
+           
             <section class="gastronomia-continuar" aria-labelledby="titulo-continuar">
-                <div>
-                    <p class="tc-etiqueta">Conteúdo de exemplo</p>
-                    <h2 id="titulo-continuar">Um destino para descobrir à mesa.</h2>
-                </div>
-                <nav class="tc-acoes" aria-label="Continue explorando o país de exemplo">
-                    <a class="tc-botao tc-botao-contorno" href="index.html#galeria">Explorar o destino</a>
-                    <a class="tc-botao" href="index.html">Voltar ao País</a>
+                <p class="cultura-etiqueta">Continue explorando</p>
+                <h2 id="titulo-continuar">Mais sobre o Brasil.</h2>
+                <nav class="gastronomia-links" aria-label="Explore mais sobre o Brasil">
+                    <a class="gastronomia-link" href="cultura.html">
+                        <strong>Cultura</strong>
+                        <span>Tradições, artes e festivais</span>
+                    </a>
+                    <a class="gastronomia-link" href="pontos-turisticos.html">
+                        <strong>Pontos turísticos</strong>
+                        <span>Lugares que valem a viagem</span>
+                    </a>
+                    <a class="gastronomia-link" href="curiosidades.html">
+                        <strong>Curiosidades</strong>
+                        <span>Detalhes que poucos sabem</span>
+                    </a>
+                    <a class="gastronomia-link gastronomia-link-voltar" href="../../brasil.html">
+                        <strong>Voltar ao Brasil</strong>
+                        <span>Página principal</span>
+                    </a>
                 </nav>
             </section>
-            <!-- FIM: continuar. -->
-            <!-- INÍCIO: gastronomia creditos. Copie o bloco completo até o comentário FIM. -->
-            <details class="gastronomia-creditos" id="creditos-ilustracoes">
-                <summary>Sobre as ilustrações demonstrativas</summary>
-                <p>As quatro ilustrações SVG locais são exemplos fictícios do template. Não representam um país real. Os arquivos originais foram preservados; o CSS pode recortar sua exibição sem distorção.</p>
+
+            <details class="cultura-creditos">
+                <summary>Créditos das fotografias</summary>
                 <ul>
-                    <li>
-                        <a href="imagens/paisagem-modelo.svg">Paisagem demonstrativa</a>
-                    </li>
-                    <li>
-                        <a href="imagens/cidade-modelo.svg">Cidade demonstrativa</a>
-                    </li>
-                    <li>
-                        <a href="imagens/cultura-modelo.svg">Composição cultural demonstrativa</a>
-                    </li>
-                    <li>
-                        <a href="imagens/gastronomia-modelo.svg">Mesa gastronômica demonstrativa</a>
-                    </li>
+                    <li>Banner — “Tacaca.jpg”, de ProjetoTransite. <a href="https://commons.wikimedia.org/wiki/File:Tacaca.jpg">Fonte</a>. LICENÇA:
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0</a>.</li>
+                    <li>Churrasco gaúcho — “Brazilian churrasco.jpg”, de Lucas Pescador Barcelos. <a href="https://commons.wikimedia.org/wiki/File:Brazilian_churrasco.jpg">Fonte</a>. LICENÇA:
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0</a>.</li>
+                    <li>Feijoada — “Feijoada à brasileira 1.jpg”, de Melsj. <a href="https://commons.wikimedia.org/wiki/File:Feijoada_à_brasileira_1.jpg">Fonte</a>. LICENÇA:
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0</a>.</li>
+                    <li>Galinhada com pequi — “Galinhada com pequi.jpg”, de iurikothe. <a href="https://commons.wikimedia.org/wiki/File:Galinhada_com_pequi.jpg">Fonte</a>. . LICENÇA:
+                    <a href="https://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a>.</li>
+                    <li>Acarajé — “Bahia acaraje.jpg”, de José Oliveira. <a href="https://commons.wikimedia.org/wiki/File:Bahia_acaraje.jpg">Fonte</a>. LICENÇA:
+                    <a href="https://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a>.</li>
+                    <li>Pato no tucupi — “BrunaBrandao Pato no Tucupi Belem PA (26185651117).jpg”, de MTur Destinos. <a href="https://commons.wikimedia.org/wiki/File:BrunaBrandao_Pato_no_Tucupi_Belem_PA_(26185651117).jpg">Fonte</a>. LICENÇA:
+                    <a href="https://creativecommons.org/publicdomain/mark/1.0/"> PDM 1.0</a>.</li>
                 </ul>
-                <p>Ao substituir as ilustrações por fotografias, registre autor, fonte, licença e adaptações. Consulte o <a href="LEIA-ME.md">LEIA-ME do template</a>.</p>
             </details>
-            <!-- FIM: gastronomia creditos. -->
         </div>
     </main>
 
-    <!-- INÍCIO: rodapé compartilhado de quatro colunas, gerado por site.js.
-         Não copie o HTML que o navegador gera: mantenha data-tc-rodape e os links básicos. -->
-    <footer class="tc-rodape" data-tc-rodape>
-        <div class="tc-container tc-fluxo">
-            <p>© 2026 TURISMO.COM — Exemplo acadêmico com conteúdo fictício.</p>
-            <nav class="tc-navegacao-basica" aria-label="Navegação básica do rodapé">
-                <a href="index.html">Nome do País</a>
-                <a href="cultura.html">Cultura</a>
-                <a href="gastronomia.html">Gastronomia</a>
-                <a href="../index.html">Início do projeto</a>
-            </nav>
+<footer class="rodape-principal">
+    <div class="rodape-conteudo">
+
+       
+        <div class="rodape-sobre">
+            <h2>✈ TURISMO<span>.COM</span></h2>
+            <p>
+                Descubra destinos, culturas e experiências
+                incríveis ao redor do mundo.
+            </p>
         </div>
-    </footer>
-    <!-- FIM: rodapé compartilhado. -->
+
+        
+        <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+            <h3>Explorar</h3>
+            <a href="../../index.html">Início</a>
+            <a href="../../brasil.html">Brasil</a>
+            <a href="../../brasil-fotos.html">Galeria do Brasil</a>
+        </nav>
+
+        
+        <nav class="rodape-coluna" aria-label="Serviços">
+            <h3>Serviços</h3>
+            <a href="../../hospedagem.html">Hospedagem</a>
+            <a href="../../alimentacao.html">Alimentação</a>
+            <a href="../../compras.html">Compras</a>
+        </nav>
+
+        
+        <nav class="rodape-coluna" aria-label="Informações">
+            <h3>Informações</h3>
+            <a href="../../contato.html">Contato</a>
+        </nav>
+
+    </div>
+
+    <div class="rodape-inferior">
+        <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+        <p>Projeto acadêmico desenvolvido em equipe.</p>
+    </div>
+</footer>
+
+    <script>
+        const botaoMenu = document.querySelector(".botao-menu");
+        const navegacao = document.querySelector(".navegacao");
+        const botaoPaises = document.querySelector(".botao-dropdown");
+        const grupoPaises = document.querySelector(".grupo-dropdown");
+        const telaCompacta = window.matchMedia("(max-width: 980px)");
+
+        function definirPaises(aberto) {
+            grupoPaises.classList.toggle("aberto", aberto);
+            botaoPaises.setAttribute("aria-expanded", String(aberto));
+        }
+
+        function definirMenu(aberto) {
+            navegacao.classList.toggle("aberta", aberto);
+            botaoMenu.setAttribute("aria-expanded", String(aberto));
+            botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+            if (!aberto) definirPaises(false);
+        }
+
+        botaoMenu.addEventListener("click", () => {
+            const abrir = !navegacao.classList.contains("aberta");
+            definirMenu(abrir);
+            if (abrir) navegacao.querySelector("a").focus();
+        });
+
+        botaoPaises.addEventListener("click", () => {
+            definirPaises(!grupoPaises.classList.contains("aberto"));
+        });
+
+        document.addEventListener("keydown", (evento) => {
+            if (evento.key !== "Escape") return;
+            if (grupoPaises.classList.contains("aberto")) {
+                definirPaises(false);
+                botaoPaises.focus();
+            } else if (navegacao.classList.contains("aberta")) {
+                definirMenu(false);
+                botaoMenu.focus();
+            }
+        });
+
+        document.addEventListener("click", (evento) => {
+            if (!grupoPaises.contains(evento.target)) definirPaises(false);
+            if (!navegacao.contains(evento.target) && !botaoMenu.contains(evento.target)) {
+                definirMenu(false);
+            }
+        });
+
+        grupoPaises.addEventListener("focusout", (evento) => {
+            if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
+        });
+
+        navegacao.addEventListener("focusout", (evento) => {
+            if (telaCompacta.matches && !navegacao.contains(evento.relatedTarget)) {
+                definirMenu(false);
+            }
+        });
+
+        navegacao.addEventListener("click", (evento) => {
+            if (evento.target.closest("a")) definirMenu(false);
+        });
+
+        telaCompacta.addEventListener("change", () => {
+            const focoFicaraOculto = telaCompacta.matches && navegacao.contains(document.activeElement);
+            const focoNoBotao = !telaCompacta.matches && document.activeElement === botaoMenu;
+            definirMenu(false);
+            if (focoFicaraOculto) botaoMenu.focus();
+            if (focoNoBotao) navegacao.querySelector("a").focus();
+        });
+
+        document.body.classList.add("menu-pronto");
+    </script>
 </body>
 </html>
