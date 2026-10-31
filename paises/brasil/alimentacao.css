@@ -1,0 +1,73 @@
+
+.pagina-alimentacao .cultura-banner-foto {
+    background-image: url("../../imagens-brasil/Restaurante-Padre-Rosa.jpg");
+}
+
+.pagina-alimentacao .alimentacao-restaurantes {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-alimentacao .alimentacao-restaurante {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    min-width: 0;
+    padding: 32px 28px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-alimentacao .alimentacao-restaurante:nth-child(n+4) { grid-column: span 3; }
+
+.pagina-alimentacao .alimentacao-restaurante .cultura-etiqueta { margin-bottom: 14px; }
+.pagina-alimentacao .alimentacao-restaurante h3 { margin: 0 0 6px; font-size: 26px; }
+
+.pagina-alimentacao .alimentacao-local {
+    margin: 0 0 16px;
+    color: #007a85;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pagina-alimentacao .alimentacao-texto { margin: 0; font-size: 14px; line-height: 1.8; }
+
+.pagina-alimentacao .alimentacao-cta { margin: auto 0 0; padding-top: 24px; }
+.pagina-alimentacao .alimentacao-cta a {
+    display: inline-block;
+    border-bottom: 1px solid currentcolor;
+    color: #007a85;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.pagina-alimentacao .alimentacao-cta a:hover { color: var(--cultura-marinho); }
+
+.pagina-alimentacao .gastronomia-cards.alimentacao-como {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+    .pagina-alimentacao .gastronomia-cards.alimentacao-como {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .pagina-alimentacao .alimentacao-restaurantes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-alimentacao .alimentacao-restaurante,
+    .pagina-alimentacao .alimentacao-restaurante:nth-child(n+4) { grid-column: auto; }
+    
+    .pagina-alimentacao .alimentacao-restaurante:last-child { grid-column: 1 / -1; }
+    .pagina-alimentacao .alimentacao-restaurante { padding: 28px 24px; }
+}
+
+@media (max-width: 768px) {
+    .pagina-alimentacao .alimentacao-restaurantes { grid-template-columns: 1fr; }
+    .pagina-alimentacao .gastronomia-cards.alimentacao-como { grid-template-columns: 1fr; }
+}
