@@ -111,35 +111,155 @@
     </main>
 
     
-    <footer class="tc-rodape" data-tc-rodape>
-        <div class="tc-container">
-            <div class="tc-rodape-grade">
-                <div class="tc-fluxo">
-                    <h2>✈ TURISMO<span>.COM</span></h2>
-                    <p>Descubra destinos, culturas e experiências ao redor do mundo.</p>
-                </div>
-                <nav class="tc-rodape-coluna" aria-label="Explorar no rodapé">
-                    <h3>Explorar</h3>
-                    <a href="index.html">Início</a>
-                    <a href="brasil.html">Brasil</a>
-                    <a href="brasil-fotos.css">Galeria do país</a>
-                </nav>
-                <nav class="tc-rodape-coluna" aria-label="Serviços no rodapé">
-                    <h3>Serviços</h3>
-                    <a href="hospedagem.html">Hospedagem</a>
-                    <a href="alimentacao.html">Alimentação</a>
-                    <a href="compras.html">Compras</a>
-                </nav>
-                <nav class="tc-rodape-coluna" aria-label="Informações no rodapé">
-                    <h3>Informações</h3>
-                    <a href="contato.html">Contato</a>
-                </nav>
+        <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+
+            
+            <div class="rodape-sobre">
+                <h2>✈ TURISMO<span>.COM</span></h2>
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
             </div>
-            <div class="tc-rodape-inferior">
-                <p>© 2026 Turismo.com</p>
-                <p>Projeto acadêmico desenvolvido em equipe.</p>
-            </div>
+
+            
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="brasil.html">Brasil</a>
+                <a href="brasil-fotos.html">Galeria de Brasil</a>
+            </nav>
+
+            
+            <nav class="rodape-coluna" aria-label="Serviços">
+                <h3>Serviços</h3>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="./paises/brasil/alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+
+            
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+            <p>Projeto acadêmico desenvolvido em equipe.</p>
         </div>
     </footer>
-</body>
-</html>
+
+
+
+    <script>
+        (() => {
+            const pagina = document.body;
+            const cabecalho = pagina.querySelector(".cabecalho-principal");
+            const botaoMenu = cabecalho.querySelector(".botao-menu");
+            const navegacao = cabecalho.querySelector(".navegacao");
+            const botaoPaises = cabecalho.querySelector(".botao-dropdown");
+            const grupoPaises = cabecalho.querySelector(".grupo-dropdown");
+            const listaPaises = cabecalho.querySelector(".menu-dropdown");
+            const telaCompacta = window.matchMedia("(max-width: 980px)");
+            const permiteHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+            let modoAnterior = telaCompacta.matches;
+            let focoAntesDaMudanca = null;
+            let paisesPorHover = false;
+
+            // Clique, hover e teclado compartilham o mesmo estado visual e ARIA.
+            function definirPaises(aberto, porHover = false) {
+                paisesPorHover = aberto && porHover;
+                grupoPaises.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
+
+            function definirMenu(aberto) {
+                const expandido = aberto && telaCompacta.matches;
+                navegacao.classList.toggle("aberta", expandido);
+                botaoMenu.setAttribute("aria-expanded", String(expandido));
+                botaoMenu.setAttribute("aria-label", expandido ? "Fechar menu" : "Abrir menu");
+                if (!expandido) definirPaises(false);
+            }
+
+            botaoMenu.addEventListener("click", () => {
+                definirMenu(botaoMenu.getAttribute("aria-expanded") !== "true");
+            });
+            botaoPaises.addEventListener("click", () => {
+                // O primeiro clique confirma a abertura por hover; o próximo fecha.
+                definirPaises(paisesPorHover || botaoPaises.getAttribute("aria-expanded") !== "true");
+            });
+            grupoPaises.addEventListener("pointerenter", (evento) => {
+                if (permiteHover.matches && evento.pointerType === "mouse" &&
+                    botaoPaises.getAttribute("aria-expanded") !== "true") definirPaises(true, true);
+            });
+            grupoPaises.addEventListener("pointerleave", () => {
+                if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", (evento) => {
+                if (evento.key !== "Escape") return;
+                if (grupoPaises.classList.contains("aberto")) {
+                    const devolverFoco = grupoPaises.contains(document.activeElement);
+                    definirPaises(false);
+                    if (devolverFoco) botaoPaises.focus();
+                } else if (telaCompacta.matches && navegacao.classList.contains("aberta")) {
+                    const devolverFoco = cabecalho.contains(document.activeElement);
+                    definirMenu(false);
+                    if (devolverFoco) botaoMenu.focus();
+                } else {
+                    return;
+                }
+                evento.preventDefault();
+            });
+
+            document.addEventListener("click", (evento) => {
+                if (!cabecalho.contains(evento.target)) {
+                    const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                    const focoNosPaises = listaPaises.contains(document.activeElement);
+                    definirMenu(false);
+                    if (focoNoMenu) botaoMenu.focus();
+                    else if (focoNosPaises) botaoPaises.focus();
+                } else if (!grupoPaises.contains(evento.target)) {
+                    definirPaises(false);
+                }
+            });
+            grupoPaises.addEventListener("focusout", (evento) => {
+                if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
+            });
+            cabecalho.addEventListener("focusout", (evento) => {
+                // O CSS pode ocultar o foco antes de o navegador avisar a mudança de largura.
+                if (telaCompacta.matches !== modoAnterior && evento.relatedTarget === null) {
+                    focoAntesDaMudanca = evento.target;
+                }
+                if (!cabecalho.contains(evento.relatedTarget)) definirMenu(false);
+            });
+            navegacao.addEventListener("click", (evento) => {
+                if (!evento.target.closest("a")) return;
+                const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                const focoNosPaises = listaPaises.contains(document.activeElement);
+                definirMenu(false);
+                if (focoNoMenu) botaoMenu.focus();
+                else if (focoNosPaises) botaoPaises.focus();
+            });
+            telaCompacta.addEventListener("change", () => {
+                const foco = focoAntesDaMudanca || document.activeElement;
+                focoAntesDaMudanca = null;
+                modoAnterior = telaCompacta.matches;
+                definirMenu(false);
+                if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
+                else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) {
+                    navegacao.querySelector("a").focus();
+                }
+            });
+
+            // Só recolhe a navegação depois de os controles estarem funcionais.
+            botaoMenu.disabled = false;
+            botaoPaises.disabled = false;
+            definirMenu(false);
+            pagina.classList.add("menu-pronto");
+        })();
+    </script>

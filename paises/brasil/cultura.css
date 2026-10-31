@@ -1,4 +1,4 @@
-/* Estilos exclusivos de Cultura. As folhas compartilhadas são carregadas antes desta. */
+
 .pagina-brasil.pagina-cultura {
     --cultura-turquesa: #00a7b5;
     --cultura-marinho: #163b50;
@@ -67,7 +67,6 @@
 
 .pagina-cultura .cultura-pular:focus { transform: translateY(0); }
 
-/* Nesta página, o estado visual acompanha o botão e seu aria-expanded. */
 .pagina-cultura .grupo-dropdown:hover .menu-dropdown { display: none; }
 .pagina-cultura .grupo-dropdown.aberto .menu-dropdown { display: block; }
 .pagina-cultura:not(.menu-pronto) .grupo-dropdown:is(:hover, :focus-within) .menu-dropdown { display: block; }
@@ -93,7 +92,6 @@
     line-height: 1.8;
 }
 
-/* Os espaços sem fotografia não carregam URLs externas nem arquivos inexistentes. */
 .pagina-cultura .cultura-imagem-pendente {
     display: grid;
     place-items: center;
@@ -108,7 +106,6 @@
     font-size: 12px;
 }
 
-/* Banner de largura total, seguindo a disposição do PDF. */
 .pagina-cultura .cultura-banner {
     position: relative;
     isolation: isolate;
@@ -207,7 +204,6 @@
 
 .pagina-cultura .cultura-banner-credito a { color: #fff; text-decoration: underline; }
 
-/* Apresentação em três colunas e tradições em quatro cartões. */
 .pagina-cultura .cultura-apresentacao {
     display: grid;
     grid-template-columns: 1.12fr 1.2fr 0.55fr;
@@ -267,7 +263,6 @@
 .pagina-cultura .cultura-tradicao h3 { margin: 0 0 12px; font-size: 26px; }
 .pagina-cultura .cultura-tradicao p { margin: 0; font-size: 14px; line-height: 1.8; }
 
-/* Patrimônio: uma fotografia maior, outra vertical e uma citação. */
 .pagina-cultura .cultura-patrimonio {
     padding-block: 96px;
     background: var(--cultura-marinho);
@@ -352,7 +347,6 @@
     text-align: center;
 }
 
-/* Experiências: fotografia vertical à esquerda e lista numerada à direita. */
 .pagina-cultura .cultura-experiencias {
     display: grid;
     grid-template-columns: 0.9fr 1.2fr;
@@ -491,7 +485,6 @@
 .pagina-cultura .cultura-creditos li { margin-block: 8px; }
 .pagina-cultura .cultura-creditos a { color: #007a85; }
 
-/* Reutiliza o ponto de mudança do menu existente, sem editar brasil.css. */
 @media (max-width: 1100px) {
     .pagina-cultura .cultura-apresentacao { gap: 28px; }
     .pagina-cultura .cultura-experiencias { gap: 48px; }
@@ -518,7 +511,6 @@
     .pagina-cultura .cultura-patrimonio-foto figcaption { padding: 24px; }
     .pagina-cultura .cultura-experiencias { grid-template-columns: 0.9fr 1.1fr; gap: 32px; }
 
-    /* Sem JavaScript, a navegação permanece legível no fluxo da página. */
     .pagina-cultura:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
     .pagina-brasil.pagina-cultura:not(.menu-pronto) .cabecalho-principal .navegacao {
         position: static;
@@ -589,7 +581,6 @@
     padding-block: 40px;
 }
  
-/* Cartão da imagem: mesmo raio, borda e sombra dos cartões de tradições. */
 .pagina-cultura .cultura-origem-foto {
     min-width: 0;
     margin: 0;
@@ -624,10 +615,8 @@
     line-height: 1.8;
 }
  
-/* Alterna os lados (foto à direita) nas seções pares. */
 .pagina-cultura .cultura-origem-invertida .cultura-origem-foto { order: 2; }
  
-/* ---------- Responsivo ---------- */
 @media (max-width: 980px) {
     .pagina-cultura .cultura-origem { gap: 36px; }
 }
@@ -639,7 +628,7 @@
         gap: 24px;
         padding-block: 28px;
     }
-    /* No celular, a foto vem sempre antes do texto. */
+
     .pagina-cultura .cultura-origem-invertida .cultura-origem-foto { order: 0; }
     .pagina-cultura .cultura-origem-texto > p:not(.cultura-etiqueta) { font-size: 15px; }
 }
