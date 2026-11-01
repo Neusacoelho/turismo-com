@@ -1,0 +1,57 @@
+/* Base exclusiva das páginas que usam <body class="tc-site">. */
+.tc-site {
+    --tc-turquesa: #00a7b5;
+    --tc-marinho: #163b50;
+    --tc-branco: #ffffff;
+    --tc-fundo: #f4f7f8;
+    --tc-texto: #465d69;
+    --tc-link: #006b75;
+    --tc-borda: #dce6e9;
+    --tc-suave: #e0f4f5;
+    margin: 0;
+    background: var(--tc-fundo);
+    color: var(--tc-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.tc-site,
+.tc-site *,
+.tc-site *::before,
+.tc-site *::after {
+    box-sizing: border-box;
+}
+
+.tc-site :where(h1, h2, h3, p, figure, ul, ol, dl) { margin: 0; }
+.tc-site :where(h1, h2, h3) { color: var(--tc-marinho); line-height: 1.2; }
+.tc-site h1 { font-size: clamp(2.25rem, 5vw, 4rem); }
+.tc-site h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.tc-site h3 { font-size: 1.25rem; }
+.tc-site a { color: var(--tc-link); text-underline-offset: 0.2em; }
+.tc-site a:hover { text-decoration-thickness: 0.15em; }
+.tc-site img { display: block; max-width: 100%; height: auto; }
+.tc-site :where(button, input, textarea, select) { font: inherit; }
+.tc-site button { cursor: pointer; }
+.tc-site [hidden] { display: none !important; }
+
+/* O anel branco mantém o foco perceptível também sobre fundos escuros. */
+.tc-site :focus-visible {
+    outline: 3px solid var(--tc-link);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--tc-branco);
+}
+
+.tc-site .tc-container {
+    width: calc(100% - 3rem);
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+/* Compensa o cabeçalho fixado ao navegar até um título ou até o main. */
+.tc-site :where([id]) { scroll-margin-top: 7rem; }
+
+@media (max-width: 600px) {
+    .tc-site .tc-container { width: calc(100% - 2rem); }
+}

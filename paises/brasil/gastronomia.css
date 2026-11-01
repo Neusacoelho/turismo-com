@@ -1,0 +1,119 @@
+
+.pagina-gastronomia .cultura-banner-foto {
+    background-image: url("../../imagens-brasil/Tacaca.jpg");
+}
+
+
+.pagina-gastronomia .gastronomia-intro { padding-block: 96px 56px; }
+.pagina-gastronomia .gastronomia-intro h2 { max-width: 760px; }
+.pagina-gastronomia .gastronomia-intro p:not(.cultura-etiqueta) {
+    max-width: 760px;
+    margin: 24px 0 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.pagina-gastronomia .gastronomia-intro p:not(.cultura-etiqueta) + p { margin-top: 16px; }
+
+
+.pagina-gastronomia .gastronomia-secao { padding-bottom: 96px; }
+.pagina-gastronomia .gastronomia-secao .cultura-titulo-secao h2 { max-width: 640px; }
+
+.pagina-gastronomia .gastronomia-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-gastronomia .gastronomia-card {
+    min-width: 0;
+    padding: 32px 28px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-gastronomia .gastronomia-card h3 { margin: 0 0 12px; font-size: 26px; }
+.pagina-gastronomia .gastronomia-card p { margin: 0; font-size: 14px; line-height: 1.8; }
+
+
+.pagina-gastronomia .gastronomia-secao-bebidas .gastronomia-card {
+    border-color: transparent;
+    background: var(--cultura-suave);
+    box-shadow: none;
+}
+
+
+.pagina-gastronomia .gastronomia-continuar { padding-bottom: 24px; }
+.pagina-gastronomia .gastronomia-continuar h2 { margin-bottom: 32px; }
+
+.pagina-gastronomia .gastronomia-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-gastronomia .gastronomia-link {
+    display: block;
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+    color: var(--cultura-texto);
+    text-decoration: none;
+}
+.pagina-gastronomia .gastronomia-link strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--cultura-marinho);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.pagina-gastronomia .gastronomia-link span { font-size: 14px; line-height: 1.6; }
+
+.pagina-gastronomia .gastronomia-link {
+    transition: transform 0.2s ease, border-color 0.2s ease,
+                background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.pagina-gastronomia .gastronomia-link:is(:hover, :focus-visible) {
+    border-color: var(--cultura-turquesa);
+    box-shadow: 0 14px 32px rgb(22 59 80 / 12%);
+    transform: translateY(-4px);
+}
+
+
+.pagina-gastronomia .gastronomia-link-voltar {
+    border-color: var(--cultura-turquesa);
+    background: var(--cultura-turquesa);
+}
+.pagina-gastronomia .gastronomia-link-voltar strong,
+.pagina-gastronomia .gastronomia-link-voltar span { color: #092c3a; }
+.pagina-gastronomia .gastronomia-link-voltar:hover {
+    border-color: var(--cultura-marinho);
+    background: var(--cultura-marinho);
+}
+.pagina-gastronomia .gastronomia-link-voltar:hover strong,
+.pagina-gastronomia .gastronomia-link-voltar:hover span { color: #fff; }
+
+@media (max-width: 980px) {
+    .pagina-gastronomia .gastronomia-intro { padding-block: 72px 40px; }
+    .pagina-gastronomia .gastronomia-card { padding: 24px 20px; }
+    .pagina-gastronomia .gastronomia-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+    .pagina-gastronomia .gastronomia-secao { padding-bottom: 64px; }
+    .pagina-gastronomia .gastronomia-cards { grid-template-columns: 1fr; }
+    .pagina-gastronomia .gastronomia-card { padding: 28px 24px; }
+}
+
+@media (max-width: 600px) {
+    .pagina-gastronomia .gastronomia-intro { padding-block: 56px 32px; }
+    .pagina-gastronomia .gastronomia-intro p:not(.cultura-etiqueta) { font-size: 15px; }
+    .pagina-gastronomia .gastronomia-links { grid-template-columns: 1fr; }
+}
