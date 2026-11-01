@@ -1,0 +1,224 @@
+/* Componentes compartilhados. Não carregar estilo.css ou portugal.css nos modelos. */
+.tc-site .tc-pular-conteudo {
+    position: fixed;
+    top: 0.75rem;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.75rem 1rem;
+    transform: translateY(-200%);
+    background: var(--tc-branco);
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+.tc-site .tc-pular-conteudo:focus { transform: translateY(0); }
+
+.tc-site .tc-cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--tc-branco);
+    border-bottom: 1px solid var(--tc-borda);
+}
+.tc-site .tc-barra-cabecalho {
+    min-height: 5.25rem;
+    padding-block: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+.tc-site .tc-marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    color: var(--tc-marinho);
+    text-decoration: none;
+}
+.tc-site .tc-marca-simbolo {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.75rem;
+    background: var(--tc-turquesa);
+    color: #001018;
+    font-size: 1.5rem;
+}
+.tc-site .tc-marca-texto { display: flex; flex-direction: column; }
+.tc-site .tc-marca-texto strong { font-size: 1.05rem; }
+.tc-site .tc-marca-texto strong span { color: var(--tc-link); }
+.tc-site .tc-marca-texto small { font-size: 0.65rem; letter-spacing: 0.12em; }
+
+/* Os links básicos do HTML permanecem utilizáveis se o script não carregar. */
+.tc-site .tc-navegacao-basica {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+}
+.tc-site .tc-cabecalho > .tc-navegacao-basica { padding-block: 1rem; }
+.tc-site .tc-navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1rem;
+}
+.tc-site .tc-navegacao a,
+.tc-site .tc-botao-paises {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.25rem;
+    color: var(--tc-marinho);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.tc-site .tc-navegacao a:hover,
+.tc-site .tc-botao-paises:hover { color: var(--tc-link); text-decoration: underline; }
+.tc-site a[aria-current="page"] { text-decoration: underline; font-weight: 700; }
+.tc-site .tc-botao-paises { background: transparent; border: 0; gap: 0.4rem; }
+.tc-site .tc-grupo-paises { position: relative; }
+.tc-site .tc-lista-paises {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: var(--tc-branco);
+    border: 1px solid var(--tc-borda);
+    border-radius: 0.75rem;
+}
+.tc-site .tc-lista-paises a { padding-inline: 0.75rem; border-radius: 0.35rem; }
+.tc-site .tc-lista-paises a:hover { background: var(--tc-suave); }
+.tc-site .tc-botao-menu {
+    display: none;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--tc-borda);
+    border-radius: 0.5rem;
+    background: var(--tc-branco);
+    color: var(--tc-marinho);
+    font-weight: 700;
+}
+
+/* Só recolhe os links depois de todos os controles estarem inicializados. */
+.tc-site .tc-cabecalho[data-tc-menu-pronto] .tc-lista-paises { display: none; }
+.tc-site .tc-cabecalho[data-tc-menu-pronto][data-paises-aberto="true"] .tc-lista-paises { display: grid; }
+
+@media (min-width: 981px) {
+    .tc-site .tc-cabecalho[data-tc-menu-pronto] .tc-lista-paises {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 11rem;
+        max-height: calc(100dvh - 7rem);
+        overflow-y: auto;
+        box-shadow: 0 0.5rem 1.5rem #163b5020;
+    }
+}
+
+@media (max-width: 980px) {
+    .tc-site .tc-barra-cabecalho { flex-wrap: wrap; gap: 0.75rem; }
+    .tc-site .tc-cabecalho[data-tc-menu-pronto] .tc-botao-menu { display: block; }
+    .tc-site .tc-navegacao {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+    }
+    /* Mantém uma coluna de altura natural; o excesso rola dentro do menu. */
+    .tc-site .tc-navegacao > a,
+    .tc-site .tc-navegacao > .tc-grupo-paises {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+    .tc-site .tc-navegacao a,
+    .tc-site .tc-botao-paises { width: 100%; padding: 0.65rem 0.75rem; }
+    .tc-site .tc-cabecalho[data-tc-menu-pronto] .tc-navegacao {
+        max-height: calc(100dvh - 8rem);
+        overflow-y: auto;
+        padding: 0.25rem;
+    }
+    .tc-site .tc-cabecalho[data-tc-menu-pronto][data-menu-aberto="false"] .tc-navegacao { display: none; }
+}
+
+.tc-site .tc-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    background: var(--tc-turquesa);
+    color: #001018;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+.tc-site .tc-botao:hover { background: #008b98; text-decoration: none; }
+.tc-site .tc-botao-contorno { border-color: var(--tc-link); background: var(--tc-branco); color: var(--tc-link); }
+.tc-site .tc-botao-contorno:hover { background: var(--tc-suave); }
+
+.tc-site .tc-rodape { margin-top: 4rem; padding-block: 3rem 1.5rem; background: var(--tc-marinho); color: #d4e2e8; }
+.tc-site .tc-rodape-grade { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
+.tc-site .tc-rodape h2 { color: var(--tc-branco); font-size: 1.4rem; margin-bottom: 1rem; }
+.tc-site .tc-rodape h3 { color: var(--tc-branco); font-size: 1rem; margin-bottom: 0.75rem; }
+.tc-site .tc-rodape a { color: #d4e2e8; }
+.tc-site .tc-rodape a:hover { color: #67e8f0; }
+.tc-site .tc-rodape-coluna { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.tc-site .tc-rodape-inferior { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #63808e; font-size: 0.875rem; }
+
+@media (max-width: 600px) {
+    .tc-site .tc-rodape-grade { grid-template-columns: 1fr; }
+    .tc-site .tc-marca { gap: 0.5rem; }
+    .tc-site .tc-marca-texto strong { font-size: 0.95rem; }
+    .tc-site .tc-marca-texto small { font-size: 0.6rem; letter-spacing: 0.07em; }
+}
+
+/* Quatro colunas no padrão de Cultura, apenas para o rodapé gerado.
+   Rodapés próprios sem data-tc-rodape continuam usando suas regras atuais. */
+.tc-site .tc-rodape[data-tc-rodape] {
+    margin-top: 40px;
+    padding-block: 48px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.tc-site .tc-rodape[data-tc-rodape] > .tc-container { width: calc(100% - 48px); max-width: 1180px; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: 2fr repeat(3, 1fr); gap: 36px; }
+.tc-site .tc-rodape[data-tc-rodape] h2 { margin-bottom: 14px; font-size: 22px; line-height: 1.6; }
+.tc-site .tc-rodape[data-tc-rodape] h2 span { color: #00c2cf; }
+.tc-site .tc-rodape[data-tc-rodape] h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.6; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade > .tc-fluxo > p {
+    max-width: 280px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna { gap: 12px; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna a { font-size: 14px; font-weight: 400; text-decoration: none; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna a:hover { color: #00c2cf; text-decoration: underline; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-color: #456678;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-inferior { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .tc-site .tc-rodape[data-tc-rodape] { padding-top: 36px; }
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: 1fr; gap: 28px; }
+}

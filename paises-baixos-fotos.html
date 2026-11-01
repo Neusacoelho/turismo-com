@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países Baixos — Pontos Turísticos</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #1f2933;
+            line-height: 1.5;
+        }
+
+        /* CABEÇALHO AZUL */
+        header {
+            background: #0b4f9c;
+            color: #ffffff;
+            padding: 20px 24px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 14px;
+            font-size: 1.8rem;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 14px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+        nav a:hover { background: rgba(255, 255, 255, 0.2); }
+        nav a.ativo {
+            background: #ffffff;
+            color: #0b4f9c;
+            font-weight: bold;
+        }
+
+        /* CONTEÚDO BRANCO */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        main h2 {
+            text-align: center;
+            color: #0b4f9c;
+            margin-top: 0;
+        }
+
+        /* GALERIA: 2 FOTOS POR LINHA */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .foto-card {
+            background: #ffffff;
+            border: 1px solid #dce3ec;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* FOTOS QUADRADAS */
+        .foto-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+        .foto-card h3 {
+            margin: 14px 16px 6px;
+            font-size: 1.05rem;
+            color: #0b4f9c;
+        }
+        .foto-card p {
+            margin: 0 16px 16px;
+            font-size: 0.92rem;
+        }
+
+        .voltar {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .voltar a, .creditos-fotos a { color: #0b4f9c; }
+
+        .creditos-fotos {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5b6b7b;
+            margin-top: 20px;
+        }
+
+        /* RODAPÉ AZUL */
+        footer {
+            background: #0b4f9c;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p { margin: 0; }
+
+        @media (max-width: 480px) {
+            .galeria { gap: 12px; }
+            .foto-card h3 { font-size: 0.9rem; margin: 10px 10px 4px; }
+            .foto-card p { font-size: 0.8rem; margin: 0 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
+    <nav>
+        <a href="index.html">🏠 Início</a>
+        <a href="brasil.html">Brasil</a>
+        <a href="brasil-fotos.html">📸 Fotos do Brasil</a>
+        <a href="paises-baixos.html">Países Baixos</a>
+        <a href="paises-baixos-fotos.html" class="ativo">📸 Fotos dos Países Baixos</a>
+        <a href="portugal.html">Portugal</a>
+        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
+        <a href="franca.html">França</a>
+        <a href="franca-fotos.html">📸 Fotos da França</a>
+        <a href="espanha.html">Espanha</a>
+        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
+        <a href="italia.html">Itália</a>
+        <a href="italia-fotos.html">📸 Fotos da Itália</a>
+        <a href="japao.html">Japão</a>
+        <a href="japao-fotos.html">📸 Fotos do Japão</a>
+        <a href="china.html">China</a>
+        <a href="hospedagem.html">🏠 Hospedagem</a>
+        <a href="alimentacao.html">🍽️ Alimentação</a>
+        <a href="compras.html">🛒 Compras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Países Baixos — Pontos Turísticos</h2>
+
+    <div class="galeria">
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Canals_-_July_2006.jpg?width=800"
+                 alt="Canais de Amsterdã" loading="lazy">
+            <h3>🚲 Canais de Amsterdã</h3>
+            <p>Canais encantadores, pontes históricas e casas tradicionais que tornam a capital única!</p>
+        </div>
+
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dutch_windmill_at_Kinderdijk_pic24.JPG?width=800"
+                 alt="Moinhos de vento de Kinderdijk" loading="lazy">
+            <h3>🌬️ Moinhos de Kinderdijk</h3>
+            <p>Conjunto de moinhos históricos que representa a tradição neerlandesa de controlar as águas.</p>
+        </div>
+
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_Power_in_the_Netherlands.jpeg?width=800"
+                 alt="Jardins de tulipas de Keukenhof" loading="lazy">
+            <h3>🌷 Jardins de Keukenhof</h3>
+            <p>Jardins famosos por seus milhões de flores coloridas, especialmente durante a primavera.</p>
+        </div>
+
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kubuswoningen_in_rotterdam.jpg?width=800"
+                 alt="Casas cubo de Roterdã" loading="lazy">
+            <h3>🏙️ Roterdã</h3>
+            <p>Cidade conhecida por sua arquitetura moderna, suas casas cubo e seu importante porto.</p>
+        </div>
+
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oudegracht_in_Utrecht.JPG?width=800"
+                 alt="Canal Oudegracht, no centro histórico de Utrecht" loading="lazy">
+            <h3>🏘️ Centro histórico de Utrecht</h3>
+            <p>Ruas charmosas, canais com terraços e a famosa torre Dom, um dos símbolos da cidade.</p>
+        </div>
+
+        <div class="foto-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Windmills_of_Zaanse_Schans,_Netherlands.jpg?width=800"
+                 alt="Moinhos de vento de Zaanse Schans" loading="lazy">
+            <h3>🏡 Zaanse Schans</h3>
+            <p>Vila tradicional com moinhos de vento, casas históricas e demonstrações de artesanato local.</p>
+        </div>
+    </div>
+
+    <p class="voltar">
+        ← Voltar para a <a href="paises-baixos.html">página dos Países Baixos</a>
+    </p>
+
+    <p class="creditos-fotos">
+        Fotos: Wikimedia Commons —
+        <a href="https://commons.wikimedia.org/wiki/File:Amsterdam_Canals_-_July_2006.jpg" target="_blank" rel="noopener">canais</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Dutch_windmill_at_Kinderdijk_pic24.JPG" target="_blank" rel="noopener">Kinderdijk</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Flower_Power_in_the_Netherlands.jpeg" target="_blank" rel="noopener">Keukenhof</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Kubuswoningen_in_rotterdam.jpg" target="_blank" rel="noopener">Roterdã</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Oudegracht_in_Utrecht.JPG" target="_blank" rel="noopener">Utrecht</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:The_Windmills_of_Zaanse_Schans,_Netherlands.jpg" target="_blank" rel="noopener">Zaanse Schans</a>.
+    </p>
+</main>
+
+<footer>
+    <p>&copy; 2026 Turismo.com — Fotos e Pontos Turísticos dos Países Baixos</p>
+</footer>
+
+</body>
+</html>
