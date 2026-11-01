@@ -1,0 +1,518 @@
+/* Estruturas de conteúdo reutilizáveis; personalizações ficam no CSS do país. */
+.tc-site .tc-aviso-modelo { padding: 0.75rem 1rem; background: var(--tc-suave); color: var(--tc-marinho); font-size: 0.9rem; }
+.tc-site .tc-banner {
+    position: relative;
+    isolation: isolate;
+    padding-block: 5rem;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(8, 45, 58, 0.82),
+            rgba(0, 107, 117, 0.68)
+        ),
+        url("https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+.tc-site .tc-banner-imagem { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.tc-site .tc-banner::before { position: absolute; inset: 0; z-index: -1; content: ""; background: #163b5080; }
+.tc-site .tc-banner h1 { max-width: 20ch; color: var(--tc-branco); }
+.tc-site .tc-banner p { max-width: 42rem; color: var(--tc-branco); }
+.tc-site .tc-banner .tc-etiqueta { color: #a1f6fa; }
+.tc-site .tc-banner .tc-botao { margin-top: 1.5rem; }
+.tc-site .tc-etiqueta { margin-bottom: 0.75rem; color: var(--tc-link); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.tc-site .tc-fluxo > * + * { margin-top: 1rem; }
+.tc-site .tc-secao { padding-block: 3rem; }
+.tc-site .tc-secao + .tc-secao { border-top: 1px solid var(--tc-borda); }
+.tc-site .tc-apresentacao { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; }
+.tc-site .tc-resumo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding-block: 2rem; }
+.tc-site .tc-resumo > div { padding: 1rem; background: var(--tc-branco); border: 1px solid var(--tc-borda); border-radius: 0.75rem; }
+.tc-site .tc-resumo dt { color: var(--tc-link); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.tc-site .tc-resumo dd { margin: 0.25rem 0 0; color: var(--tc-marinho); font-weight: 700; }
+.tc-site .tc-cartoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.tc-site .tc-cartao { min-width: 0; padding: 1.5rem; border: 1px solid var(--tc-borda); border-radius: 0.75rem; background: var(--tc-branco); }
+.tc-site .tc-cartao-numero { color: var(--tc-link); font-weight: 700; }
+.tc-site .tc-imagem-pendente { display: grid; place-items: center; gap: 0.75rem; min-height: 12rem; padding: 2rem; border: 2px dashed #63808e; border-radius: 0.75rem; background: var(--tc-suave); text-align: center; }
+.tc-site .tc-legenda { margin-top: 0.75rem; font-size: 0.875rem; }
+.tc-site .tc-migalhas { margin-bottom: 2rem; }
+.tc-site .tc-migalhas ol { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
+.tc-site .tc-migalhas li + li::before { content: "/"; padding-right: 0.5rem; }
+.tc-site .tc-banner .tc-migalhas,
+.tc-site .tc-banner .tc-migalhas a { color: var(--tc-branco); }
+.tc-site .tc-artigo { max-width: 52rem; margin-inline: auto; }
+.tc-site .tc-artigo ul { padding-left: 1.5rem; }
+.tc-site .tc-acoes { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+/* Para galerias futuras: não altera .galeria ou .foto-card das páginas antigas. */
+.tc-site .tc-galeria { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.tc-site .tc-galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0.5rem; }
+
+@media (max-width: 768px) {
+    .tc-site .tc-apresentacao { grid-template-columns: 1fr; }
+    .tc-site .tc-cartoes,
+    .tc-site .tc-galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .tc-site .tc-banner { padding-block: 3rem; }
+    .tc-site .tc-secao { padding-block: 2rem; }
+    .tc-site .tc-resumo,
+    .tc-site .tc-cartoes,
+    .tc-site .tc-galeria { grid-template-columns: 1fr; }
+}
+
+
+/* =========================================
+   PAÍSES BAIXOS — ESTILIZAÇÃO DA PÁGINA
+   ========================================= */
+
+/* Cartões da seção "Explore os Países Baixos" */
+.paises-baixos .tc-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+/* Padronização dos três cartões */
+.paises-baixos .tc-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--tc-borda);
+    border-radius: 0.75rem;
+    background: var(--tc-branco);
+    box-sizing: border-box;
+}
+
+/* Numeração dos cartões */
+.paises-baixos .tc-cartao-numero {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--tc-link);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Todas as imagens dos cartões com o mesmo tamanho */
+.paises-baixos .tc-cartao-imagem {
+    display: block;
+    width: 100%;
+    height: 180px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 0 1rem;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Títulos padronizados */
+.paises-baixos .tc-cartao h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Textos dos cartões */
+.paises-baixos .tc-cartao p {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Links alinhados na parte inferior */
+.paises-baixos .tc-cartao a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+/* Figuras das seções de conteúdo */
+.paises-baixos .tc-figura {
+    width: 100%;
+    margin: 1.5rem 0 0;
+}
+
+.paises-baixos .tc-imagem-conteudo {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.75rem;
+}
+
+.paises-baixos .tc-figura figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .paises-baixos .tc-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .paises-baixos .tc-cartao-imagem {
+        height: 170px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .paises-baixos .tc-cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .paises-baixos .tc-cartao {
+        height: auto;
+    }
+
+    .paises-baixos .tc-cartao-imagem {
+        height: 210px;
+    }
+
+    .paises-baixos .tc-cartao h3 {
+        font-size: 1.05rem;
+    }
+}
+
+/* Fundo neutro para a apresentação dos Países Baixos */
+.paises-baixos .tc-apresentacao {
+    background-color: #eaf1f2;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ========================================
+   ORGANIZAÇÃO E DIVISÃO DAS SEÇÕES
+   ======================================== */
+
+/* Espaçamento geral entre as partes */
+.paises-baixos main > .tc-container > .tc-secao {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Divisória entre as seções */
+.paises-baixos main > .tc-container > .tc-secao + .tc-secao {
+    border-top: 1px solid #d5e0e3;
+}
+
+/* Fundo neutro da apresentação */
+.paises-baixos .tc-apresentacao {
+    background-color: #eaf1f2;
+    padding: 2rem;
+    border: 1px solid #d5e0e3;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Espaço entre os títulos e os conteúdos */
+.paises-baixos .tc-secao h2 {
+    margin-bottom: 1.25rem;
+}
+
+/* Separação dos cartões */
+.paises-baixos .tc-cartoes {
+    gap: 1.5rem;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .paises-baixos main > .tc-container > .tc-secao {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .paises-baixos .tc-apresentacao {
+        padding: 1.25rem;
+    }
+}
+
+
+/* Apresentação inicial dos Países Baixos */
+.paises-baixos .tc-apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 3.5rem 2rem;
+    margin-block: 2rem;
+    background-color: #f2f4f5;
+    border-radius: 12px;
+}
+
+.paises-baixos .tc-apresentacao-titulo h2 {
+    max-width: 16ch;
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    color: var(--tc-marinho);
+}
+
+.paises-baixos .tc-apresentacao-texto p {
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #465c68;
+}
+
+.paises-baixos .tc-apresentacao-texto p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .paises-baixos .tc-apresentacao {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .paises-baixos .tc-apresentacao-titulo h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ==========================================
+   PÁGINA DE PONTOS TURÍSTICOS — PAÍSES BAIXOS
+   ========================================== */
+
+/* Banner principal */
+.pagina-pontos-turisticos .tc-banner {
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    padding-block: 3.5rem;
+    background-position: center;
+}
+
+.pagina-pontos-turisticos .tc-banner .tc-container {
+    position: relative;
+    z-index: 1;
+}
+
+.pagina-pontos-turisticos .tc-banner h1 {
+    max-width: 16ch;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.12;
+}
+
+.pagina-pontos-turisticos .tc-banner > .tc-container > p:not(.tc-etiqueta) {
+    margin-top: 1rem;
+    max-width: 38rem;
+    font-size: 1rem;
+}
+
+/* Apresentação semelhante à página principal */
+.pagina-pontos-turisticos .tc-apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    align-items: center;
+    gap: 2.5rem;
+    margin-block: 2rem;
+    padding: 2rem;
+    border: 1px solid #e0e7e9;
+    border-radius: 12px;
+    background: #f0f3f4;
+}
+
+.pagina-pontos-turisticos .tc-apresentacao .tc-etiqueta {
+    margin-bottom: 0.5rem;
+}
+
+.pagina-pontos-turisticos .tc-apresentacao-titulo h2 {
+    max-width: 18ch;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    line-height: 1.25;
+}
+
+.pagina-pontos-turisticos .tc-apresentacao-texto p {
+    margin: 0 0 0.75rem;
+    color: #465d69;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.pagina-pontos-turisticos .tc-apresentacao-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Libera a largura para os cartões */
+.pagina-pontos-turisticos .tc-artigo {
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+}
+
+.pagina-pontos-turisticos .tc-artigo > .tc-secao {
+    padding-block: 2.5rem;
+}
+
+.pagina-pontos-turisticos .tc-secao h2 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+}
+
+.pagina-pontos-turisticos .tc-secao > p:not(.tc-etiqueta) {
+    max-width: 55rem;
+}
+
+/* Galeria em três colunas */
+.pagina-pontos-turisticos .tc-galeria-turistica {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.pagina-pontos-turisticos .tc-cartao {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e0e7e9;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(22, 59, 80, 0.06);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pagina-pontos-turisticos .tc-cartao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(22, 59, 80, 0.12);
+}
+
+/* Imagens alinhadas no topo dos cartões */
+.pagina-pontos-turisticos .tc-cartao-imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    margin: 0;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+/* Conteúdo interno */
+.pagina-pontos-turisticos .tc-cartao-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+}
+
+.pagina-pontos-turisticos .tc-cartao-numero {
+    margin: 0;
+    color: #087f8c;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+.pagina-pontos-turisticos .tc-cartao h3 {
+    margin: 0;
+    color: #244453;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.pagina-pontos-turisticos .tc-cartao p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.pagina-pontos-turisticos .tc-cartao .tc-destaque-local {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    color: #526a73;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Botões finais */
+.pagina-pontos-turisticos .tc-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .pagina-pontos-turisticos .tc-galeria-turistica {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-pontos-turisticos .tc-apresentacao {
+        gap: 1.5rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .pagina-pontos-turisticos .tc-banner {
+        min-height: 300px;
+        padding-block: 2.5rem;
+    }
+
+    .pagina-pontos-turisticos .tc-apresentacao {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-block: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .pagina-pontos-turisticos .tc-galeria-turistica {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .pagina-pontos-turisticos .tc-cartao-imagem {
+        aspect-ratio: 16 / 9;
+    }
+
+    .pagina-pontos-turisticos .tc-artigo > .tc-secao {
+        padding-block: 1.75rem;
+    }
+
+    .pagina-pontos-turisticos .tc-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-pontos-turisticos .tc-cartao {
+        transition: none;
+    }
+
+    .pagina-pontos-turisticos .tc-cartao:hover {
+        transform: none;
+    }
+}

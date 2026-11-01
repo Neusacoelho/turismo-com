@@ -1,0 +1,665 @@
+
+/* =========================================
+   TURISMO.COM
+   PONTOS TURÍSTICOS DOS PAÍSES BAIXOS
+   ========================================= */
+
+.tc-site.paises-baixos.pagina-pontos-turisticos {
+    --pt-azul: #176b87;
+    --pt-azul-escuro: #163b50;
+    --pt-azul-claro: #eaf5f8;
+    --pt-branco: #ffffff;
+    --pt-cinza: #f2f5f7;
+    --pt-texto: #465d69;
+    --pt-borda: #dce6e9;
+}
+
+/* =========================================
+   CABEÇALHO E MARCA
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--pt-branco);
+    border-bottom: 1px solid var(--pt-borda);
+}
+
+.tc-site.pagina-pontos-turisticos .tc-barra-cabecalho {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: .75rem;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-marca {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    flex-shrink: 0;
+    color: var(--pt-azul-escuro);
+    text-decoration: none;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-marca-simbolo {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border-radius: .7rem;
+    background: var(--pt-azul-claro);
+    font-size: 1.4rem;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-marca-texto strong {
+    font-size: 1.05rem;
+    letter-spacing: .02em;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-marca-texto strong span {
+    color: var(--pt-azul);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-marca-texto small {
+    color: #71838c;
+    font-size: .62rem;
+    letter-spacing: .12em;
+}
+
+/* Navegação */
+
+.tc-site.pagina-pontos-turisticos .tc-navegacao-basica {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .5rem 1.3rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-navegacao-basica a {
+    padding-block: .5rem;
+    color: var(--pt-azul-escuro);
+    font-size: .88rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-navegacao-basica a:hover {
+    color: var(--pt-azul);
+    text-decoration: underline;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-navegacao-basica a[aria-current="page"] {
+    color: var(--pt-azul);
+}
+
+/* =========================================
+   BANNER PRINCIPAL
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-banner {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    min-height: 400px;
+    align-items: center;
+    padding-block: 3rem;
+    overflow: hidden;
+    background-color: var(--pt-azul-escuro);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 37, 54, .88) 0%,
+            rgba(12, 37, 54, .63) 48%,
+            rgba(12, 37, 54, .20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=2000&q=85");
+    background-position: center 52%;
+    background-size: cover;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-banner h1 {
+    max-width: 850px;
+    margin-bottom: 1rem;
+    color: var(--pt-branco);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-banner p {
+    max-width: 700px;
+    margin-bottom: 1.25rem;
+    color: #f4f8fa;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-banner .tc-etiqueta {
+    margin-bottom: .75rem;
+    color: #bdebf1;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+/* Caminho de navegação */
+
+.tc-site.pagina-pontos-turisticos .tc-migalhas ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+    font-size: .85rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-migalhas li + li::before {
+    content: "/";
+    margin-right: .5rem;
+    color: #c5d8df;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-migalhas a {
+    color: var(--pt-branco);
+    text-decoration: none;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-migalhas a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-botao {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.25rem;
+    border: 2px solid var(--pt-azul);
+    border-radius: 5px;
+    background: var(--pt-azul);
+    color: var(--pt-branco);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-botao:hover {
+    border-color: var(--pt-azul-escuro);
+    background: var(--pt-azul-escuro);
+    transform: translateY(-2px);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-botao-contorno {
+    border-color: var(--pt-azul);
+    background: transparent;
+    color: var(--pt-azul-escuro);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-botao-contorno:hover {
+    border-color: var(--pt-azul);
+    background: var(--pt-azul-claro);
+    color: var(--pt-azul-escuro);
+}
+
+/* =========================================
+   APRESENTAÇÃO
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-apresentacao {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 3rem;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-apresentacao-titulo h2 {
+    max-width: 480px;
+    margin-top: .5rem;
+    color: var(--pt-azul-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.9rem, 3vw, 2.65rem);
+    line-height: 1.2;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-apresentacao-texto {
+    display: grid;
+    gap: 1rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-apresentacao-texto p {
+    color: var(--pt-texto);
+    line-height: 1.8;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-etiqueta {
+    color: var(--pt-azul);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+/* =========================================
+   SEÇÕES DO CONTEÚDO
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-secao {
+    padding-block: 3rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-artigo > .tc-secao + .tc-secao {
+    border-top: 1px solid var(--pt-borda);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao > .tc-etiqueta {
+    margin-bottom: .6rem;
+}
+
+.tc-site.pagina-pontos-turisticos .tc-secao h2 {
+    margin-bottom: .8rem;
+    color: var(--pt-azul-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao > p:not(.tc-etiqueta) {
+    max-width: 850px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   GALERIA TURÍSTICA
+   Quatro colunas em telas grandes
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos
+.tc-galeria-turistica {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+    margin-top: 1.75rem;
+}
+
+/* Cartão */
+
+.tc-site.pagina-pontos-turisticos
+.tc-galeria-turistica .tc-cartao {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid #e1e9ec;
+    border-radius: 10px;
+    background: var(--pt-branco);
+    box-shadow: 0 4px 15px rgba(22, 59, 80, .07);
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-galeria-turistica .tc-cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 24px rgba(22, 59, 80, .14);
+}
+
+/* Imagens */
+
+.tc-site.pagina-pontos-turisticos
+.tc-galeria-turistica .tc-cartao-imagem {
+    display: block;
+    width: 100%;
+    height: 185px;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: var(--pt-cinza);
+}
+
+/* Conteúdo do cartão */
+
+.tc-site.pagina-pontos-turisticos
+.tc-cartao-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+    padding: 1.1rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-cartao-numero {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--pt-azul-claro);
+    color: var(--pt-azul-escuro);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-cartao h3 {
+    margin: 0;
+    color: var(--pt-azul-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    line-height: 1.4;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-cartao p {
+    margin: 0;
+    color: var(--pt-texto);
+    font-size: .9rem;
+    line-height: 1.7;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-cartao .tc-destaque-local {
+    margin-top: auto;
+    padding-top: .5rem;
+    color: var(--pt-azul);
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+/* =========================================
+   PATRIMÔNIO HISTÓRICO
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio {
+    margin-top: 1rem;
+    padding: 2.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: var(--pt-azul-escuro);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio h2 {
+    color: var(--pt-branco);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio > p:not(.tc-etiqueta) {
+    color: #e1edf2;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio .tc-etiqueta {
+    color: #bdebf1;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio .tc-cartao {
+    border-color: rgba(255, 255, 255, .2);
+    background: var(--pt-branco);
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-secao-patrimonio .tc-cartao h3 {
+    color: var(--pt-azul-escuro);
+}
+
+/* =========================================
+   AÇÕES E NAVEGAÇÃO FINAL
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos .tc-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos
+.tc-rodape[data-tc-rodape] {
+    margin-top: 2rem;
+    padding-block: 2.5rem;
+    background: var(--pt-azul-escuro);
+    color: #d4e2e8;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-rodape[data-tc-rodape] .tc-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-rodape[data-tc-rodape] p {
+    margin: 0;
+    font-size: .85rem;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-rodape[data-tc-rodape] a {
+    color: #d4e2e8;
+    font-size: .88rem;
+    text-decoration: none;
+}
+
+.tc-site.pagina-pontos-turisticos
+.tc-rodape[data-tc-rodape] a:hover {
+    color: #67e8f0;
+    text-decoration: underline;
+}
+
+/* =========================================
+   ACESSIBILIDADE
+   ========================================= */
+
+.tc-site.pagina-pontos-turisticos
+a:focus-visible {
+    outline: 3px solid #f0bd4f;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 1050px) {
+    .tc-site.pagina-pontos-turisticos
+    .tc-galeria-turistica {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-galeria-turistica .tc-cartao-imagem {
+        height: 220px;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-apresentacao {
+        gap: 2rem;
+    }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 700px) {
+    .tc-site.pagina-pontos-turisticos
+    .tc-barra-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-navegacao-basica {
+        width: 100%;
+        justify-content: flex-start;
+        gap: .25rem 1rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-navegacao-basica a {
+        font-size: .82rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-banner {
+        min-height: 360px;
+        padding-block: 2.5rem;
+        background-position: center;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-banner h1 {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-apresentacao {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding-block: 2.5rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-secao {
+        padding-block: 2rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-galeria-turistica {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-galeria-turistica .tc-cartao-imagem {
+        height: 230px;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-cartao-conteudo {
+        padding: 1.15rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-secao-patrimonio {
+        padding: 1.25rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-acoes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-acoes .tc-botao {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-rodape[data-tc-rodape] .tc-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+   TELAS MUITO PEQUENAS
+   ========================================= */
+
+@media (max-width: 380px) {
+    .tc-site.pagina-pontos-turisticos
+    .tc-navegacao-basica {
+        gap: .2rem .65rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-marca-texto strong {
+        font-size: .95rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-banner h1 {
+        font-size: 2rem;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-secao-patrimonio {
+        padding: 1rem;
+    }
+}
+
+/* =========================================
+   PREFERÊNCIA POR MENOS ANIMAÇÕES
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .tc-site.pagina-pontos-turisticos *,
+    .tc-site.pagina-pontos-turisticos *::before,
+    .tc-site.pagina-pontos-turisticos *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .tc-site.pagina-pontos-turisticos
+    .tc-galeria-turistica .tc-cartao:hover,
+    .tc-site.pagina-pontos-turisticos .tc-botao:hover {
+        transform: none;
+    }
+}

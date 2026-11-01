@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubra os principais pontos turísticos dos Países Baixos, incluindo os canais de Amsterdã, os moinhos de Kinderdijk e os jardins de Keukenhof.">
+
+    <title>Pontos Turísticos dos Países Baixos — Turismo.com</title>
+
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="gastronomia.css">
+
+    <style>
+        /* Ajustes visuais exclusivos desta página */
+        .pagina-pontos-turisticos {
+            background: #f3f7f8;
+            color: #465d69;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .pagina-pontos-turisticos .tc-container {
+            width: calc(100% - 40px);
+            max-width: 1180px;
+            margin-inline: auto;
+        }
+
+        /* Cabeçalho fixo no topo ao rolar a página */
+        .pagina-pontos-turisticos .cabecalho {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .pagina-pontos-turisticos .tc-banner {
+            min-height: 440px;
+            display: flex;
+            align-items: center;
+            padding: 55px 0;
+            color: #fff;
+            background-color: #163b50;
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(12, 43, 57, .88),
+                    rgba(12, 43, 57, .48)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg?width=2000");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .pagina-pontos-turisticos .tc-banner .tc-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .pagina-pontos-turisticos .tc-etiqueta {
+            color: #008ba0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .pagina-pontos-turisticos .tc-banner .tc-etiqueta {
+            color: #bdebf1;
+        }
+
+        .pagina-pontos-turisticos .tc-banner h1 {
+            max-width: 760px;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.12;
+        }
+
+        .pagina-pontos-turisticos .tc-banner p {
+            max-width: 650px;
+            color: #f1f7f9;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .pagina-pontos-turisticos .tc-botao {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 12px 22px;
+            border: 2px solid #00a7b5;
+            border-radius: 6px;
+            background: #00a7b5;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background .2s, transform .2s;
+        }
+
+        .pagina-pontos-turisticos .tc-botao:hover {
+            background: #087f90;
+            transform: translateY(-2px);
+        }
+
+        .pagina-pontos-turisticos .tc-apresentacao {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            align-items: center;
+            gap: 50px;
+            padding-block: 65px;
+        }
+
+        .pagina-pontos-turisticos .tc-apresentacao h2,
+        .pagina-pontos-turisticos .tc-secao h2 {
+            color: #163b50;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(28px, 3vw, 38px);
+            line-height: 1.25;
+        }
+
+        .pagina-pontos-turisticos .tc-apresentacao-texto {
+            display: grid;
+            gap: 14px;
+        }
+
+        .pagina-pontos-turisticos p {
+            line-height: 1.8;
+        }
+
+        .pagina-pontos-turisticos .tc-secao {
+            padding-block: 45px;
+        }
+
+        .pagina-pontos-turisticos .tc-secao > h2 {
+            margin: 10px 0 14px;
+        }
+
+        .pagina-pontos-turisticos .tc-secao > p:not(.tc-etiqueta) {
+            max-width: 800px;
+        }
+
+        .pagina-pontos-turisticos .tc-galeria-turistica {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e0e8eb;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(22, 59, 80, .06);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(22, 59, 80, .13);
+        }
+
+        .pagina-pontos-turisticos .tc-cartao-imagem {
+            display: block;
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            background: #e0e8eb;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao-conteudo {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 22px;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao-numero {
+            color: #008ba0;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao h3 {
+            color: #163b50;
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .pagina-pontos-turisticos .tc-cartao .tc-destaque-local {
+            margin-top: auto;
+            padding-top: 8px;
+            color: #007b8b;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .pagina-pontos-turisticos .tc-secao + .tc-secao {
+            border-top: 1px solid #dce6e9;
+        }
+
+        .pagina-pontos-turisticos .tc-acoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .pagina-pontos-turisticos .tc-rodape {
+            margin-top: 45px;
+            padding-block: 35px;
+            background: #163b50;
+            color: #e0eaf0;
+        }
+
+        .pagina-pontos-turisticos .tc-rodape .tc-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px 25px;
+        }
+
+        .pagina-pontos-turisticos .tc-rodape p {
+            font-size: 13px;
+        }
+
+        .pagina-pontos-turisticos .tc-rodape a {
+            color: #e0eaf0;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .pagina-pontos-turisticos .tc-rodape a:hover {
+            color: #67e8f0;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .pagina-pontos-turisticos .tc-galeria-turistica {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .pagina-pontos-turisticos .tc-apresentacao {
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .pagina-pontos-turisticos .tc-container {
+                width: calc(100% - 32px);
+            }
+
+            .pagina-pontos-turisticos .tc-banner {
+                min-height: 400px;
+            }
+
+            .pagina-pontos-turisticos .tc-banner h1 {
+                font-size: 38px;
+            }
+
+            .pagina-pontos-turisticos .tc-apresentacao {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding-block: 42px;
+            }
+
+            .pagina-pontos-turisticos .tc-galeria-turistica {
+                grid-template-columns: 1fr;
+            }
+
+            .pagina-pontos-turisticos .tc-cartao-imagem {
+                height: 230px;
+            }
+
+            .pagina-pontos-turisticos .tc-acoes {
+                flex-direction: column;
+            }
+
+            .pagina-pontos-turisticos .tc-acoes .tc-botao {
+                width: 100%;
+            }
+
+            .pagina-pontos-turisticos .tc-rodape .tc-container {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pagina-pontos-turisticos *,
+            .pagina-pontos-turisticos *::before,
+            .pagina-pontos-turisticos *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+
+    <script src="../assets/js/site.js" defer></script>
+</head>
+
+<body class="tc-site paises-baixos pagina-pontos-turisticos"
+      data-raiz="../"
+      data-pais-nome="Países Baixos"
+      data-pais-url="modelos/pais-principal.html">
+
+    <a class="tc-pular-conteudo" href="#conteudo">
+        Pular para o conteúdo
+    </a>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+
+            <a href="index.html" class="logo">Países Baixos</a>
+
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="pontos-turisticos.html" class="ativo">Pontos turísticos</a>
+                <a href="cultura.html">Cultura</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="curiosidades.html">Curiosidades</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+
+        <section class="tc-banner" aria-labelledby="titulo-assunto">
+            <div class="tc-container">
+
+                <p class="tc-etiqueta">🌍 Descubra a Europa</p>
+
+                <h1 id="titulo-assunto">
+                    Explore os Pontos Turísticos dos Países Baixos
+                </h1>
+
+                <p>
+                    Canais encantadores, cidades históricas, moinhos de vento
+                    e campos de tulipas esperam por você.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="tc-container" aria-labelledby="titulo-artigo">
+            <div class="tc-apresentacao">
+
+                <div class="tc-apresentacao-titulo">
+                    <p class="tc-etiqueta">Lugares inesquecíveis</p>
+
+                    <h2 id="titulo-artigo">
+                        Descubra o charme dos Países Baixos
+                    </h2>
+                </div>
+
+                <div class="tc-apresentacao-texto">
+                    <p>
+                        Localizados na Europa Ocidental, os Países Baixos
+                        são conhecidos por seus canais, bicicletas,
+                        arquitetura histórica e paisagens floridas.
+                    </p>
+
+                    <p>
+                        O país oferece experiências variadas, desde os museus
+                        e as ruas de Amsterdã até os tradicionais moinhos
+                        de vento, os mercados de queijo e os famosos
+                        campos de tulipas.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="tc-container">
+            <article class="tc-artigo">
+
+                <section class="tc-secao"
+                         id="atracoes"
+                         aria-labelledby="titulo-atracoes">
+
+                    <p class="tc-etiqueta">📍 Destinos imperdíveis</p>
+
+                    <h2 id="titulo-atracoes">
+                        Lugares que você precisa conhecer
+                    </h2>
+
+                    <p>
+                        Veja algumas das atrações mais marcantes dos
+                        Países Baixos e descubra o que torna cada uma
+                        delas especial.
+                    </p>
+
+                    <div class="tc-galeria-turistica">
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Water_reflection_of_canal_houses_at_blue_hour_in_Damrak_Amsterdam_the_Netherlands.jpg?width=1000"
+                                alt="Casas históricas à beira de um canal de Amsterdã refletidas na água"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">01</span>
+
+                                <h3>🚲 Canais de Amsterdã</h3>
+
+                                <p>
+                                    Os canais históricos, as pontes e as
+                                    casas estreitas formam uma das paisagens
+                                    mais conhecidas da capital. Explore a
+                                    região a pé, de bicicleta ou de barco.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Amsterdã
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/KinderdijkMolens02.jpg?width=1000"
+                                alt="Moinhos de vento históricos de Kinderdijk"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">02</span>
+
+                                <h3>🌬️ Moinhos de Kinderdijk</h3>
+
+                                <p>
+                                    Patrimônio Mundial da UNESCO, Kinderdijk
+                                    reúne moinhos históricos que mostram
+                                    como os neerlandeses administraram a
+                                    água para proteger suas terras.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Kinderdijk, Holanda do Sul
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Keukenhof_May2006.JPG?width=1000"
+                                alt="Canteiros de tulipas coloridas nos jardins de Keukenhof"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">03</span>
+
+                                <h3>🌷 Jardins de Keukenhof</h3>
+
+                                <p>
+                                    Famoso por suas tulipas e flores
+                                    primaveris, Keukenhof apresenta jardins
+                                    coloridos e paisagens que atraem
+                                    visitantes do mundo inteiro.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Lisse
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kubuswoningen_in_rotterdam.jpg?width=1000"
+                                alt="Casas Cúbicas de Roterdã, edifícios inclinados em formato de cubo"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">04</span>
+
+                                <h3>🏙️ Casas Cúbicas de Roterdã</h3>
+
+                                <p>
+                                    As famosas casas inclinadas em formato
+                                    de cubo chamam a atenção pela arquitetura
+                                    original e representam o estilo moderno
+                                    e criativo da cidade.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Roterdã
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Dam_Square%2C_Amsterdam_Netherlands.jpg?width=1000"
+                                alt="Praça Dam, no centro de Amsterdã, com edifícios históricos ao redor"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">05</span>
+
+                                <h3>🏛️ Praça Dam</h3>
+
+                                <p>
+                                    Localizada no centro de Amsterdã,
+                                    a Praça Dam é um espaço histórico
+                                    importante. Nas proximidades ficam
+                                    o Palácio Real e outros edifícios
+                                    de grande valor cultural.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Centro de Amsterdã
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tc-cartao">
+                            <img
+                                class="tc-cartao-imagem"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Markthal_Rotterdam_interior_1.JPG?width=1000"
+                                alt="Interior do Markthal de Roterdã, com o mercado sob o grande teto em arco"
+                                loading="lazy"
+                            >
+
+                            <div class="tc-cartao-conteudo">
+                                <span class="tc-cartao-numero">06</span>
+
+                                <h3>🌉 Markthal de Roterdã</h3>
+
+                                <p>
+                                    O Markthal combina mercado, restaurantes
+                                    e arquitetura contemporânea em um
+                                    edifício marcante. É um ótimo lugar
+                                    para conhecer a gastronomia e a vida
+                                    urbana de Roterdã.
+                                </p>
+
+                                <p class="tc-destaque-local">
+                                    📍 Roterdã
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section class="tc-secao" aria-labelledby="experiencias">
+
+                    <p class="tc-etiqueta">✨ Viva essa experiência</p>
+
+                    <h2 id="experiencias">
+                        Muito além das fotografias
+                    </h2>
+
+                    <p>
+                        Nos Países Baixos, você pode percorrer canais de barco,
+                        visitar museus, pedalar por cidades históricas,
+                        conhecer mercados tradicionais e apreciar as paisagens
+                        floridas da primavera.
+                    </p>
+
+                    <p>
+                        Para aproveitar melhor cada destino, verifique os
+                        horários de funcionamento, a necessidade de ingressos
+                        e a época ideal para a visita. Os jardins de Keukenhof,
+                        por exemplo, são atrações sazonais.
+                    </p>
+
+                </section>
+
+                <section class="tc-secao" aria-labelledby="fontes">
+
+                    <p class="tc-etiqueta">🧭 Continue explorando</p>
+
+                    <h2 id="fontes">
+                        Planeje sua próxima visita
+                    </h2>
+
+                    <p>
+                        Consulte as informações atualizadas sobre os destinos
+                        antes de viajar e organize seu roteiro.
+                    </p>
+
+                    <div class="tc-acoes">
+                        <a class="tc-botao" href="paises-baixos.html">
+                            ← Voltar aos Países Baixos
+                        </a>
+                    </div>
+
+                </section>
+
+            </article>
+        </div>
+
+    </main>
+
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container">
+
+            <p>
+                © 2026 Turismo.com — Projeto acadêmico desenvolvido em equipe.
+            </p>
+
+            <a href="paises-baixos.html">Voltar aos Países Baixos</a>
+
+            <a href="../index.html">Voltar ao início</a>
+
+        </div>
+    </footer>
+
+</body>
+</html>

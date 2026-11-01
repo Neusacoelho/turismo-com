@@ -226,6 +226,11 @@
   transform: rotate(-10deg);
 }
 
+.pessoa-card:nth-child(15) .pessoa-foto::before {
+  border-radius: 40% 60% 52% 48% / 56% 42% 58% 44%;
+  transform: rotate(-12deg);
+}
+
 .pessoa-foto img {
   position: absolute;
   z-index: 1;
@@ -286,13 +291,15 @@
   position: absolute;
   right: 0;
   bottom: 100%;
-  left: 0;
+  left: auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   margin: 0;
   padding: 0 12px;
+  width: max-content;
   max-height: 0;
   overflow: hidden;
   background: var(--cor-card);
@@ -305,7 +312,7 @@
 
 .pessoa-card:hover .pessoa-redes,
 .pessoa-card:focus-within .pessoa-redes {
-  max-height: 40px;
+  max-height: 80px;
   padding: 8px 12px;
   opacity: 1;
   transform: translateY(0);

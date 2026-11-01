@@ -1,0 +1,182 @@
+
+.pagina-galeria-brasil { background: var(--tc-branco); }
+
+.pagina-galeria-brasil main :is(h1, h2) {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+.pagina-galeria-brasil .pg-apresentacao { padding-block: 36px 48px; }
+.pagina-galeria-brasil .tc-migalhas { margin-bottom: 40px; font-size: 14px; }
+.pagina-galeria-brasil .tc-migalhas a { text-decoration: none; }
+.pagina-galeria-brasil .tc-migalhas a:hover { text-decoration: underline; }
+.pagina-galeria-brasil .pg-apresentacao .tc-etiqueta { margin-bottom: 18px; }
+.pagina-galeria-brasil h1 {
+    max-width: 22ch;
+    font-size: clamp(36px, 4.3vw, 60px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+.pagina-galeria-brasil .pg-introducao {
+    max-width: 640px;
+    margin-top: 22px;
+    font-size: 17px;
+}
+
+.pagina-galeria-brasil .pg-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
+}
+.pagina-galeria-brasil .pg-cartao {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--tc-borda);
+    border-radius: 12px;
+    background: var(--tc-branco);
+}
+.pagina-galeria-brasil .pg-cartao img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0;
+}
+.pagina-galeria-brasil .pg-cartao figcaption { padding: 26px 28px 30px; }
+.pagina-galeria-brasil .pg-cartao h2 { font-size: clamp(23px, 2vw, 29px); line-height: 1.25; }
+.pagina-galeria-brasil .pg-icone { font-size: 0.72em; vertical-align: 0.06em; }
+.pagina-galeria-brasil .pg-cartao p { margin-top: 12px; line-height: 1.7; }
+
+.pagina-galeria-brasil .pg-retorno { justify-content: center; margin-top: 44px; }
+.pagina-galeria-brasil .pg-creditos {
+    margin-top: 36px;
+    padding-block: 24px;
+    border-top: 1px solid var(--tc-borda);
+    font-size: 14px;
+}
+.pagina-galeria-brasil .creditos-fotos summary {
+    width: fit-content;
+    max-width: 100%;
+    padding-block: 8px;
+    color: var(--tc-marinho);
+    font-weight: 700;
+    cursor: pointer;
+}
+.pagina-galeria-brasil .pg-nota-creditos { max-width: 80ch; margin-block: 12px 16px; }
+.pagina-galeria-brasil .creditos-fotos ul { padding-left: 22px; }
+.pagina-galeria-brasil .creditos-fotos li + li { margin-top: 12px; }
+.pagina-galeria-brasil .tc-rodape[data-tc-rodape] { margin-top: 24px; }
+
+@media (max-width: 900px) {
+    .pagina-galeria-brasil .pg-grade { gap: 24px 20px; }
+    .pagina-galeria-brasil .pg-cartao figcaption { padding: 22px 20px 24px; }
+}
+
+@media (max-width: 600px) {
+    .pagina-galeria-brasil .pg-apresentacao { padding-block: 24px 32px; }
+    .pagina-galeria-brasil .tc-migalhas { margin-bottom: 28px; }
+    .pagina-galeria-brasil .pg-introducao { margin-top: 18px; font-size: 16px; }
+    .pagina-galeria-brasil .pg-grade { grid-template-columns: 1fr; }
+    .pagina-galeria-brasil .pg-retorno { margin-top: 32px; }
+    .pagina-galeria-brasil .pg-creditos { margin-top: 28px; padding-block: 20px; }
+}
+
+body .rodape-principal {
+    background-color: #163b50;
+    color: #ffffff;
+    padding: 48px 24px 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+body .rodape-conteudo {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 36px;
+}
+
+/* Apresentação do site */
+body .rodape-sobre h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+body .rodape-sobre h2 span {
+    color: #00c2cf;
+}
+
+body .rodape-sobre p {
+    max-width: 280px;
+    color: #d4e2e8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Colunas de links */
+body .rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+}
+
+body .rodape-coluna h3 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+body .rodape-coluna a {
+    color: #d4e2e8;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+}
+
+body .rodape-coluna a:hover {
+    color: #00c2cf;
+    text-decoration: underline;
+}
+
+/* Direitos autorais */
+body .rodape-inferior {
+    max-width: 1180px;
+    margin: 36px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #456678;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+body .rodape-inferior p {
+    color: #d4e2e8;
+    font-size: 12px;
+}
+
+/* Rodapé responsivo */
+@media (max-width: 768px) {
+    body .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    body .rodape-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    body .rodape-principal {
+        padding: 36px 24px 20px;
+    }
+}

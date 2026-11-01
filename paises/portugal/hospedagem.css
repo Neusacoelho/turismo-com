@@ -32,6 +32,7 @@
 }
 .pagina-hospedagem .hospedagem-banner::before { background: transparent; }
 .pagina-hospedagem .hospedagem-banner .tc-migalhas { margin-bottom: 3.5rem; }
+.pagina-hospedagem .hospedagem-banner .tc-etiqueta { color: #d5fbff; }
 .pagina-hospedagem .hospedagem-banner h1 {
     max-width: none;
     margin-bottom: 1rem;
@@ -150,4 +151,115 @@
     .pagina-hospedagem .hospedagem-cartao { padding: 1.5rem; }
     .pagina-hospedagem .hospedagem-dica { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
     .pagina-hospedagem .hospedagem-continuar { padding-block: 3rem; }
+}
+
+/* Cartões com fotos reais — escopo exclusivo da página Hospedagem de Portugal. */
+.pagina-hospedagem .hospedagem-apresentacao-cards {
+    max-width: 58rem;
+    margin: -0.5rem 0 2rem;
+    color: #465d69;
+    line-height: 1.7;
+}
+
+.pagina-hospedagem .hospedagem-cartao-local {
+    gap: 0;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgb(22 59 80 / 9%);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.pagina-hospedagem .hospedagem-cartao-local:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgb(22 59 80 / 13%);
+}
+.pagina-hospedagem .hospedagem-card-foto {
+    margin: 0;
+    background: #e8f0f2;
+}
+.pagina-hospedagem .hospedagem-card-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center 43%;
+}
+.pagina-hospedagem .hospedagem-card-foto figcaption {
+    padding: 0.55rem 1.25rem;
+    color: #536d79;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    background: #f5f9fa;
+}
+.pagina-hospedagem .hospedagem-card-foto figcaption a { color: #006b75; }
+.pagina-hospedagem .hospedagem-card-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.5rem 1.6rem 1.7rem;
+}
+.pagina-hospedagem .hospedagem-card-conteudo .hospedagem-tipo {
+    color: #008d9b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.pagina-hospedagem .hospedagem-card-conteudo h3 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2vw, 1.7rem);
+}
+.pagina-hospedagem .hospedagem-card-conteudo .hospedagem-localizacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin: 0;
+    color: #54707d;
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+.pagina-hospedagem .hospedagem-localizacao::before {
+    content: "⌖";
+    color: #008d9b;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.pagina-hospedagem .hospedagem-card-conteudo p:not(.hospedagem-localizacao) {
+    margin: 0;
+    color: #465d69;
+    font-size: 0.96rem;
+    line-height: 1.65;
+}
+.pagina-hospedagem .hospedagem-card-conteudo .hospedagem-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 0.7rem;
+    color: #006b75;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+}
+.pagina-hospedagem .hospedagem-card-conteudo .hospedagem-link:hover { color: #163b50; }
+.pagina-hospedagem .hospedagem-fontes {
+    margin-top: 1.6rem;
+    color: #536d79;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+.pagina-hospedagem .hospedagem-fontes a { color: #006b75; }
+
+@media (max-width: 900px) {
+    .pagina-hospedagem .hospedagem-cartao-local:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+    .pagina-hospedagem .hospedagem-cartao-local { padding: 0; }
+    .pagina-hospedagem .hospedagem-cartao-local:last-child { grid-column: auto; }
+    .pagina-hospedagem .hospedagem-card-conteudo { padding: 1.3rem; }
+    .pagina-hospedagem .hospedagem-card-foto figcaption { font-size: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .pagina-hospedagem .hospedagem-cartao-local { transition: none; }
+    .pagina-hospedagem .hospedagem-cartao-local:hover { transform: none; }
 }
