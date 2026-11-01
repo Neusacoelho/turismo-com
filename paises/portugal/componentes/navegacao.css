@@ -1,0 +1,106 @@
+/* Navegação exclusiva de Portugal. Carregar após as folhas existentes.
+   O atributo do cabeçalho impede atingir países que reutilizam portugal.css. */
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao, .tc-navegacao-basica) a,
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises) {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 2.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao, .tc-navegacao-basica) a:is(:hover, :focus-visible, [aria-current="page"], [data-portugal-contexto]),
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises):is(:hover, :focus-visible, [data-portugal-contexto]) {
+    background: #e0f4f5;
+    color: #006b75;
+    text-decoration: none;
+}
+
+/* O contorno identifica o país de contexto, sem anunciar uma página atual. */
+body header[data-portugal-navegacao] [data-portugal-contexto] {
+    box-shadow: inset 0 0 0 1px #93cfd4;
+}
+body header[data-portugal-navegacao] :is(a, button):focus-visible {
+    outline: 3px solid #006b75;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao) {
+    gap: 0.25rem 0.5rem;
+}
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.menu-dropdown, .tc-lista-paises) {
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
+    min-width: 0;
+    width: min(28rem, calc(100vw - 3rem));
+    padding: 0.5rem;
+    max-height: min(24rem, calc(100dvh - 7rem));
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-padding-block: 0.5rem;
+}
+body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.menu-dropdown, .tc-lista-paises) a {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.65rem 0.5rem;
+    text-align: left;
+}
+
+/* Nos cabeçalhos locais, o controlador exclusivo sincroniza hover e ARIA. */
+body header[data-portugal-navegacao][data-portugal-menu-pronto] .grupo-dropdown .menu-dropdown {
+    display: none;
+}
+body header[data-portugal-navegacao][data-portugal-menu-pronto] .grupo-dropdown.aberto .menu-dropdown {
+    display: grid;
+}
+
+/* Mantém os links locais disponíveis se o JavaScript não carregar. */
+body:not(.menu-pronto) header.cabecalho-principal[data-portugal-navegacao] .grupo-dropdown .menu-dropdown {
+    position: static;
+    display: grid;
+    max-width: 100%;
+}
+
+@media (max-width: 980px) {
+    body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.menu-dropdown, .tc-lista-paises) {
+        width: 100%;
+        max-height: min(16rem, 35dvh);
+    }
+    body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao) a,
+    body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises) {
+        padding: 0.65rem 0.5rem;
+    }
+}
+/* Alinhamento uniforme do menu de Portugal no computador */
+@media (min-width: 981px) {
+    body header.cabecalho-principal[data-portugal-navegacao]
+    .navegacao > a,
+
+    body header.cabecalho-principal[data-portugal-navegacao]
+    .navegacao > .grupo-dropdown > .botao-dropdown {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 44px;
+        min-height: 44px;
+        margin: 0;
+        padding: 0 8px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        vertical-align: middle;
+    }
+
+    body header.cabecalho-principal[data-portugal-navegacao]
+    .navegacao > .grupo-dropdown {
+        display: flex;
+        align-items: center;
+        height: 44px;
+    }
+}

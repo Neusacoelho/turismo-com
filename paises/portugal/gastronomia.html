@@ -15,17 +15,19 @@
     <link rel="stylesheet" href="componentes/redes-sociais.css">
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <script src="componentes/redes-sociais.js" defer></script>
+    <link rel="stylesheet" href="componentes/navegacao.css">
+    <script src="componentes/navegacao.js" defer></script>
 </head>
 
 <body class="tc-site pais-portugal pagina-gastronomia" data-raiz="../../" data-pais-nome="Portugal"
     data-pais-url="portugal.html">
     <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="tc-cabecalho" data-tc-cabecalho>
+<header data-portugal-navegacao class="tc-cabecalho" data-tc-cabecalho>
         <!-- Estes links continuam disponíveis sem JavaScript. -->
         <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
             <a href="../../index.html">TURISMO.COM — Início</a>
-            <a href="../../portugal.html">Portugal</a>
+            <a href="../../portugal.html" data-portugal-contexto>Portugal</a>
             <a href="gastronomia.html" aria-current="page">Gastronomia</a>
         </nav>
     </header>

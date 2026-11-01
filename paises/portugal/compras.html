@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia de compras em Portugal: artesanato, produtos típicos, feiras e mercados com fontes reais para planejar sua visita.">
+    <meta name="description"
+        content="Guia de compras em Portugal: artesanato, produtos típicos, feiras e mercados com fontes reais para planejar sua visita.">
     <title>Compras em Portugal | TURISMO.COM</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/componentes.css">
@@ -16,12 +18,16 @@
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <script src="componentes/redes-sociais.js" defer></script>
 
+    <link rel="stylesheet" href="componentes/navegacao.css">
+    <script src="componentes/navegacao.js" defer></script>
 </head>
-<body class="tc-site pais-portugal pagina-compras" data-raiz="../../" data-pais-nome="Portugal" data-pais-url="portugal.html">
+
+<body class="tc-site pais-portugal pagina-compras" data-raiz="../../" data-pais-nome="Portugal"
+    data-pais-url="portugal.html">
     <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- Cabeçalho igual ao da página principal de Portugal. -->
-    <header class="cabecalho-principal">
+    <header data-portugal-navegacao class="cabecalho-principal">
         <div class="barra-cabecalho">
             <a href="../../index.html" class="marca">
                 <span class="marca-simbolo" aria-hidden="true">✈</span>
@@ -31,18 +37,19 @@
                 </span>
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="true"
-                    aria-controls="navegacao-principal" disabled>
+                aria-controls="navegacao-principal" disabled>
                 <span></span><span></span><span></span>
             </button>
             <nav class="navegacao" id="navegacao-principal" aria-label="Menu principal">
                 <a href="../../index.html">Início</a>
                 <div class="grupo-dropdown">
-                    <button class="botao-dropdown" type="button" aria-expanded="true" aria-controls="lista-paises" disabled>
+                    <button class="botao-dropdown" type="button" aria-expanded="true" aria-controls="lista-paises"
+                        disabled>
                         Países <span aria-hidden="true">⌄</span>
                     </button>
                     <div class="menu-dropdown" id="lista-paises">
                         <a href="../../brasil.html">Brasil</a>
-                        <a href="../../portugal.html">Portugal</a>
+                        <a href="../../portugal.html" data-portugal-contexto>Portugal</a>
                         <a href="../../grecia.html">Grécia</a>
                         <a href="../../franca.html">França</a>
                         <a href="../../espanha.html">Espanha</a>
@@ -57,6 +64,7 @@
                 <a href="hospedagem.html">Hospedagem</a>
                 <a href="alimentacao.html">Alimentação</a>
                 <a href="compras.html">Compras</a>
+                <a href="../../sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </div>
@@ -89,44 +97,89 @@
         <section class="tc-container tc-secao compras-opcoes" aria-labelledby="titulo-opcoes">
             <p class="tc-etiqueta">Guia prático</p>
             <h2 id="titulo-opcoes">Três maneiras de descobrir o comércio português</h2>
+            <p class="compras-apresentacao-cards">Selecionamos três lugares reais em Portugal para conhecer
+                o artesanato, os produtos tradicionais e as feiras. Confira os detalhes nos sites indicados
+                antes de planejar sua visita.</p>
+
             <div class="tc-cartoes compras-grade">
-                <article class="tc-cartao compras-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">01</span>
-                    <h3>Artesanato português</h3>
-                    <p>Azulejos, cerâmicas e peças feitas à mão representam saberes transmitidos por diferentes gerações.
-                       Ao escolher uma peça artesanal, procure conhecer seu produtor e sua origem.</p>
-                    <p>Em Azeitão, a oficina Azulejos de Azeitão trabalha com técnicas tradicionais de pintura de azulejos.
-                       O portal Visit Lisboa apresenta informações sobre a oficina.</p>
-                    <a href="https://www.visitlisboa.com/pt-pt/locais/leiveira-azulejos-de-azeitao"
-                       target="_blank" rel="noopener noreferrer">Conhecer os Azulejos de Azeitão no Visit Lisboa <span aria-hidden="true">↗</span></a>
+                <article class="tc-cartao compras-cartao compras-cartao-local">
+                    <figure class="compras-card-foto">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Azulejos_de_padr%C3%A3o_cam%C3%A9lia_azul_e_brancos_%281%29.jpg"
+                            alt="Painel histórico de quatro azulejos portugueses azuis e brancos, com flores e arabescos; imagem ilustrativa do artesanato"
+                            width="850" height="842" loading="lazy" decoding="async">
+                        <figcaption>Azulejos históricos (imagem ilustrativa, não da oficina):
+                            <a href="https://commons.wikimedia.org/wiki/File:Azulejos_de_padr%C3%A3o_cam%C3%A9lia_azul_e_brancos_(1).jpg"
+                            target="_blank" rel="noopener noreferrer">Oficina de Lisboa / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank"
+                            rel="noopener noreferrer">domínio público</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="compras-card-conteudo">
+                        <span class="compras-tipo">Artesanato português</span>
+                        <h3>Azulejos de Azeitão</h3>
+                        <p class="compras-localizacao">Rua dos Trabalhadores da Empresa Setubalense, 15 · Vila Fresca de Azeitão</p>
+                        <p>Oficina de azulejos fabricados e pintados à mão, com padrões tradicionais
+                            e peças produzidas por encomenda. Consulte as condições de visita e os trabalhos disponíveis.</p>
+                        <a class="compras-link" href="https://www.azulejosdeazeitao.com/"
+                            target="_blank" rel="noopener noreferrer">Conhecer a oficina <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
-                <article class="tc-cartao compras-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">02</span>
-                    <h3>Produtos típicos</h3>
-                    <p>Conservas de peixe, produtos de cortiça e especialidades regionais são algumas das lembranças
-                       que você pode encontrar em lojas portuguesas.</p>
-                    <p>A Conserveira de Lisboa é uma loja histórica dedicada às conservas portuguesas.
-                       Ela integra a rota de lojas tradicionais apresentada pelo Visit Lisboa.</p>
-                    <a href="https://www.visitlisboa.com/pt-pt/lisbon-stories/21-percorso-negozi-storici/pois"
-                       target="_blank" rel="noopener noreferrer">Conhecer lojas com história no Visit Lisboa <span aria-hidden="true">↗</span></a>
+
+                <article class="tc-cartao compras-cartao compras-cartao-local">
+                    <figure class="compras-card-foto">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Conservera_de_Lisboa.jpg/960px-Conservera_de_Lisboa.jpg"
+                            alt="Interior da loja Conserveira de Lisboa, com prateleiras e produtos tradicionais"
+                            width="960" height="720" loading="lazy" decoding="async">
+                        <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Conservera_de_Lisboa.jpg"
+                            target="_blank" rel="noopener noreferrer">Yelkrokoyade / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"
+                            rel="noopener noreferrer">CC BY-SA 3.0</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="compras-card-conteudo">
+                        <span class="compras-tipo">Produtos típicos</span>
+                        <h3>Conserveira de Lisboa</h3>
+                        <p class="compras-localizacao">Rua dos Bacalhoeiros, 34 · Lisboa</p>
+                        <p>Uma loja tradicional fundada em 1930, conhecida pelas conservas de peixe
+                            e pelas embalagens características. Uma lembrança ligada aos sabores portugueses.</p>
+                        <a class="compras-link" href="https://www.lojascomhistoria.pt/lojas/conserveira-de-lisboa"
+                            target="_blank" rel="noopener noreferrer">Conhecer a loja <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
-                <article class="tc-cartao compras-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">03</span>
-                    <h3>Feiras e mercados</h3>
-                    <p>Feiras são ótimas oportunidades para explorar objetos antigos, peças de artesanato,
-                       livros e diferentes lembranças, além de conhecer o cotidiano local.</p>
-                    <p>A Feira da Ladra acontece no Campo de Santa Clara, em Lisboa, tradicionalmente às terças-feiras
-                       e aos sábados. Confirme os horários antes da visita.</p>
-                    <a href="https://www.visitlisboa.com/pt-pt/locais/feira-da-ladra"
-                       target="_blank" rel="noopener noreferrer">Conhecer a Feira da Ladra no Visit Lisboa <span aria-hidden="true">↗</span></a>
+
+                <article class="tc-cartao compras-cartao compras-cartao-local">
+                    <figure class="compras-card-foto">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Feira_da_ladra.jpg/960px-Feira_da_ladra.jpg"
+                            alt="Feira da Ladra, em Lisboa, com barracas e visitantes numa rua arborizada"
+                            width="960" height="596" loading="lazy" decoding="async">
+                        <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Feira_da_ladra.jpg"
+                            target="_blank" rel="noopener noreferrer">Carlos Luis M. C. da Cruz / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank"
+                            rel="noopener noreferrer">domínio público</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="compras-card-conteudo">
+                        <span class="compras-tipo">Feiras e mercados</span>
+                        <h3>Feira da Ladra</h3>
+                        <p class="compras-localizacao">Campo de Santa Clara · Lisboa</p>
+                        <p>Feira de rua com antiguidades, livros, objetos usados e artesanato, realizada
+                            tradicionalmente às terças-feiras e aos sábados. Confirme os horários antes de ir.</p>
+                        <a class="compras-link" href="https://www.visitlisboa.com/pt-pt/locais/feira-da-ladra"
+                            target="_blank" rel="noopener noreferrer">Conhecer a feira <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
             </div>
+
+            <p class="compras-fontes">Informações: <a href="https://www.visitlisboa.com/pt-pt/locais/leiveira-azulejos-de-azeitao"
+                target="_blank" rel="noopener noreferrer">Visit Lisboa — Azulejos de Azeitão</a>,
+                <a href="https://www.lojascomhistoria.pt/lojas/conserveira-de-lisboa" target="_blank"
+                rel="noopener noreferrer">Lojas com História — Conserveira de Lisboa</a> e
+                <a href="https://www.visitlisboa.com/pt-pt/locais/feira-da-ladra" target="_blank"
+                rel="noopener noreferrer">Visit Lisboa — Feira da Ladra</a>. Seleção informativa, sem patrocínio
+                ou garantia de preços, horários ou disponibilidade. Verifique os dados atualizados antes da visita.
         </section>
 
         <aside class="tc-container compras-dica" aria-label="Dica de viajante">
             <h2>Dica de viajante</h2>
             <p>Valorize produtores locais, peça informações sobre a origem das peças e confira regras de bagagem.
-               Nunca compre azulejos retirados de edifícios históricos ou outros objetos de origem duvidosa.</p>
+                Nunca compre azulejos retirados de edifícios históricos ou outros objetos de origem duvidosa.</p>
         </aside>
 
         <section class="tc-container tc-secao compras-continuar" aria-labelledby="titulo-continuar">
@@ -170,91 +223,6 @@
         </div>
     </footer>
 
-    <script>
-    (() => {
-      const pagina = document.body;
-      const cabecalho = pagina.querySelector('.cabecalho-principal');
-      const botaoMenu = cabecalho.querySelector('.botao-menu');
-      const navegacao = cabecalho.querySelector('.navegacao');
-      const botaoPaises = cabecalho.querySelector('.botao-dropdown');
-      const grupoPaises = cabecalho.querySelector('.grupo-dropdown');
-      const listaPaises = cabecalho.querySelector('.menu-dropdown');
-      const telaCompacta = matchMedia('(max-width: 980px)');
-      const permiteHover = matchMedia('(hover: hover) and (pointer: fine)');
-      let modoAnterior = telaCompacta.matches;
-      let focoAntesDaMudanca = null;
-      let paisesPorHover = false;
-
-      function definirPaises(aberto, porHover = false) {
-        paisesPorHover = aberto && porHover;
-        grupoPaises.classList.toggle('aberto', aberto);
-        botaoPaises.setAttribute('aria-expanded', String(aberto));
-      }
-      function definirMenu(aberto) {
-        const expandido = aberto && telaCompacta.matches;
-        navegacao.classList.toggle('aberta', expandido);
-        botaoMenu.setAttribute('aria-expanded', String(expandido));
-        botaoMenu.setAttribute('aria-label', expandido ? 'Fechar menu' : 'Abrir menu');
-        if (!expandido) definirPaises(false);
-      }
-      botaoMenu.addEventListener('click', () => definirMenu(botaoMenu.getAttribute('aria-expanded') !== 'true'));
-      botaoPaises.addEventListener('click', () => definirPaises(paisesPorHover || botaoPaises.getAttribute('aria-expanded') !== 'true'));
-      grupoPaises.addEventListener('pointerenter', e => {
-        if (permiteHover.matches && e.pointerType === 'mouse' && botaoPaises.getAttribute('aria-expanded') !== 'true') definirPaises(true, true);
-      });
-      grupoPaises.addEventListener('pointerleave', () => {
-        if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
-      });
-      document.addEventListener('keydown', e => {
-        if (e.key !== 'Escape') return;
-        if (grupoPaises.classList.contains('aberto')) {
-          const devolverFoco = grupoPaises.contains(document.activeElement);
-          definirPaises(false);
-          if (devolverFoco) botaoPaises.focus();
-        } else if (telaCompacta.matches && navegacao.classList.contains('aberta')) {
-          const devolverFoco = cabecalho.contains(document.activeElement);
-          definirMenu(false);
-          if (devolverFoco) botaoMenu.focus();
-        } else return;
-        e.preventDefault();
-      });
-      document.addEventListener('click', e => {
-        if (!cabecalho.contains(e.target)) {
-          const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-          const focoNosPaises = listaPaises.contains(document.activeElement);
-          definirMenu(false);
-          if (focoNoMenu) botaoMenu.focus();
-          else if (focoNosPaises) botaoPaises.focus();
-        } else if (!grupoPaises.contains(e.target)) definirPaises(false);
-      });
-      grupoPaises.addEventListener('focusout', e => {
-        if (!grupoPaises.contains(e.relatedTarget)) definirPaises(false);
-      });
-      cabecalho.addEventListener('focusout', e => {
-        if (telaCompacta.matches !== modoAnterior && e.relatedTarget === null) focoAntesDaMudanca = e.target;
-        if (!cabecalho.contains(e.relatedTarget)) definirMenu(false);
-      });
-      navegacao.addEventListener('click', e => {
-        if (!e.target.closest('a')) return;
-        const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-        const focoNosPaises = listaPaises.contains(document.activeElement);
-        definirMenu(false);
-        if (focoNoMenu) botaoMenu.focus();
-        else if (focoNosPaises) botaoPaises.focus();
-      });
-      telaCompacta.addEventListener('change', () => {
-        const foco = focoAntesDaMudanca || document.activeElement;
-        focoAntesDaMudanca = null;
-        modoAnterior = telaCompacta.matches;
-        definirMenu(false);
-        if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
-        else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) navegacao.querySelector('a').focus();
-      });
-      botaoMenu.disabled = false;
-      botaoPaises.disabled = false;
-      definirMenu(false);
-      pagina.classList.add('menu-pronto');
-    })();
-    </script>
 </body>
+
 </html>
