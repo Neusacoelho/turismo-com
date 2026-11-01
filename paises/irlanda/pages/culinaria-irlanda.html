@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinária Irlandesa | Turismo.com</title>
+    <link rel="stylesheet" href="../styles/irlanda.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="irlanda.html" class="logo">TURISMO<span>.COM</span></a>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav">
+            <a href="../../../index.html">Início</a>
+            <a href="irlanda.html">Irlanda</a>
+            <a href="cultura-irlanda.html">Cultura</a>
+            <a href="culinaria-irlanda.html">Culinária</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Cidades ▾</button>
+                <div class="dropdown-content">
+                    <a href="dublin.html">Dublin</a>
+                    <a href="galway.html">Galway</a>
+                    <a href="cork.html">Cork</a>
+                    <a href="killarney.html">Killarney</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <span>GASTRONOMIA • SABORES • TRADIÇÃO</span>
+        <h1>Culinária da Irlanda</h1>
+        <p>Conheça os sabores que fazem parte da gastronomia irlandesa.</p>
+    </section>
+
+    <main class="section">
+
+        <section class="content-block">
+            <h2>Uma gastronomia ligada à tradição</h2>
+            <p>
+                A culinária irlandesa possui forte relação com a
+                agricultura, a pecuária e os produtos locais.
+                Batatas, carnes, peixes, leite e derivados aparecem
+                em diversas receitas tradicionais.
+            </p>
+        </section>
+
+        <div class="food-grid">
+
+            <article class="food-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Irish_stew.jpg?width=800"
+                    alt="Irish Stew">
+                <small>Foto: Charles Haynes · CC BY-SA 2.0 ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Irish_stew.jpg">Fonte</a>
+                </small>
+                <div>
+                    <h2>Irish Stew</h2>
+                    <p>
+                        Ensopado tradicional preparado geralmente com
+                        cordeiro ou carneiro, batatas, cebolas e cenouras.
+                    </p>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coddle_and_Irish_Soda_bread.jpg?width=800"
+                    alt="Coddle e pão irlandês">
+                <small>Foto: Kari Haley · CC BY-SA 2.0 ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Coddle_and_Irish_Soda_bread.jpg">Fonte</a>
+                </small>
+                <div>
+                    <h2>Irish Soda Bread</h2>
+                    <p>
+                        Pão tradicional feito com bicarbonato de sódio
+                        como agente de fermentação, em vez de fermento biológico.
+                    </p>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Irish-stew.jpg?width=800"
+                    alt="Comida tradicional irlandesa">
+                <small>Foto: Abbeyvet · CC BY 2.5 ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Irish-stew.jpg">Fonte</a>
+                </small>
+                <div>
+                    <h2>Colcannon</h2>
+                    <p>
+                        Preparação tradicional de purê de batatas
+                        misturado com couve ou repolho e manteiga.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <section class="content-block">
+            <h2>Outros pratos tradicionais</h2>
+            <ul>
+                <li><strong>Boxty:</strong> panqueca ou preparação de batata ralada.</li>
+                <li><strong>Coddle:</strong> ensopado associado à cidade de Dublin.</li>
+                <li><strong>Seafood Chowder:</strong> sopa cremosa de frutos do mar.</li>
+                <li><strong>Full Irish Breakfast:</strong> café da manhã tradicional com diferentes acompanhamentos.
+                </li>
+            </ul>
+        </section>
+
+        <a href="irlanda.html" class="text-link">← Voltar à Irlanda</a>
+
+    </main>
+
+    <footer class="footer">
+        <h2>TURISMO<span>.COM</span></h2>
+        <p>© 2026 Turismo.com</p>
+    </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+            document.querySelector(".nav").classList.toggle("active");
+        });
+
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("open");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

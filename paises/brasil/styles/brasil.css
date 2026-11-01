@@ -1,0 +1,783 @@
+:root {
+    --azul: #163b50;
+    --turquesa: #00a7b5;
+    --azul-claro: #a4eaf0;
+    --fundo: #f0f5f5;
+    --branco: #ffffff;
+    --texto: #263943;
+    --cinza: #64747b;
+    --sombra: 0 12px 35px rgba(22, 59, 80, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    min-height: 88px;
+    padding: 14px 7%;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--turquesa);
+    color: var(--branco);
+    display: grid;
+    place-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    color: var(--azul);
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+.logo-text small {
+    color: var(--cinza);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--turquesa);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px;
+    background: var(--azul);
+    border-radius: 5px;
+}
+
+/* HERO PRINCIPAL */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(8, 35, 48, 0.82), rgba(8, 35, 48, 0.22)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Praia_de_Copacabana_-_Rio_de_Janeiro%2C_Brasil.jpg?width=1800") center 48% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: var(--branco);
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--turquesa);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.hero .eyebrow,
+.gallery-hero .eyebrow,
+.city-hero .eyebrow {
+    color: var(--azul-claro);
+}
+
+.hero h1,
+.gallery-hero h1,
+.city-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--azul-claro);
+}
+
+.hero p,
+.gallery-hero p,
+.city-hero p {
+    max-width: 580px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: var(--turquesa);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.btn-primary:hover {
+    background: var(--azul);
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+.section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2,
+.gallery-callout h2,
+.license-note h2 {
+    color: var(--azul);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.section-heading p {
+    color: var(--cinza);
+}
+
+.about {
+    background: var(--branco);
+}
+
+.about-text {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--cinza);
+    font-size: 16px;
+}
+
+/* CARDS DE DESTINOS */
+
+.destinations {
+    background: var(--fundo);
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.city-card {
+    overflow: hidden;
+    background: var(--branco);
+    border-radius: 17px;
+    box-shadow: var(--sombra);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.city-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(22, 59, 80, 0.16);
+}
+
+.city-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.city-card-content {
+    padding: 23px;
+}
+
+.city-card-content span {
+    color: var(--turquesa);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.city-card h3 {
+    margin: 7px 0;
+    color: var(--azul);
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.city-card p {
+    color: var(--cinza);
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.city-card strong {
+    color: var(--turquesa);
+    font-size: 13px;
+}
+
+/* CHAMADA PARA GALERIA */
+
+.gallery-callout {
+    padding: 65px 8%;
+    background: #e1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.gallery-callout h2 {
+    margin-bottom: 10px;
+}
+
+.gallery-callout p {
+    color: var(--cinza);
+}
+
+/* HERO DAS CIDADES E GALERIA */
+
+.city-hero,
+.gallery-hero {
+    min-height: 350px;
+    padding: 85px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--branco);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.city-hero h1,
+.gallery-hero h1 {
+    font-size: clamp(42px, 6vw, 65px);
+}
+
+.city-hero p,
+.gallery-hero p {
+    margin-bottom: 0;
+}
+
+.brasilia-hero {
+    background-image:
+        linear-gradient(rgba(10, 43, 57, .78), rgba(10, 43, 57, .78)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/CATEDRAL_METROPOLITANA_DE_BRAS%C3%8DLIA.jpg?width=1800");
+}
+
+.rio-hero {
+    background-image:
+        linear-gradient(rgba(10, 43, 57, .65), rgba(10, 43, 57, .65)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Praia_de_Copacabana_-_Rio_de_Janeiro%2C_Brasil.jpg?width=1800");
+}
+
+.poa-hero {
+    background-image:
+        linear-gradient(rgba(10, 43, 57, .65), rgba(10, 43, 57, .65)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Porto_Alegre_RS_-_Usina_do_gas%C3%B4metro.jpg?width=1800");
+}
+
+.maceio-hero {
+    background-image:
+        linear-gradient(rgba(10, 43, 57, .55), rgba(10, 43, 57, .55)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Praia_da_Paju%C3%A7ara.jpg?width=1800");
+}
+
+.goiania-hero {
+    background-image:
+        linear-gradient(rgba(10, 43, 57, .65), rgba(10, 43, 57, .65)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Parque_Flamboyant%2C_Goi%C3%A2nia%2C_dezembro_de_2022_%281%29.jpg?width=1800");
+}
+
+/* CONTEÚDO DAS CIDADES */
+
+.city-page-content {
+    background: var(--branco);
+}
+
+.city-feature {
+    max-width: 1150px;
+    margin: 0 auto 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.city-feature > img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.city-feature h2 {
+    color: var(--azul);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 43px);
+    margin-bottom: 15px;
+}
+
+.city-feature p {
+    color: var(--cinza);
+    margin-bottom: 15px;
+}
+
+.image-credit {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.image-credit a {
+    color: #087f91;
+    text-decoration: underline;
+}
+
+/* RESTAURANTES E HOTÉIS */
+
+.recommendations {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.recommendations article {
+    padding: 25px;
+    background: var(--fundo);
+    border-radius: 14px;
+}
+
+.recommendations h3 {
+    color: var(--turquesa);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.recommendations p {
+    color: var(--texto);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.recommendations a {
+    color: #087f91;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    max-width: 1150px;
+    margin: 40px auto 0;
+    color: var(--turquesa);
+    font-weight: 700;
+}
+
+/* ========================================
+   GALERIA DE FOTOGRAFIAS DO BRASIL
+======================================== */
+
+.gallery-hero {
+    min-height: 390px;
+    padding: 90px 8%;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(8, 35, 48, 0.88),
+            rgba(8, 35, 48, 0.45)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Praia_de_Copacabana_-_Rio_de_Janeiro%2C_Brasil.jpg?width=1800")
+        center 48% / cover no-repeat;
+}
+
+.gallery-hero .eyebrow {
+    color: #a4eaf0;
+}
+
+.gallery-hero h1 {
+    margin-bottom: 16px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-hero p {
+    max-width: 550px;
+    font-size: 17px;
+}
+
+/* SEÇÃO PRINCIPAL */
+
+.photo-section {
+    padding: 90px 8%;
+    background: #f0f5f5;
+}
+
+.photo-section .section-heading {
+    max-width: 750px;
+    margin-bottom: 55px;
+}
+
+.photo-section .section-heading .eyebrow {
+    color: #00a7b5;
+}
+
+.photo-section .section-heading h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    margin-bottom: 15px;
+}
+
+.photo-section .section-heading p {
+    font-size: 15px;
+}
+
+/* GRADE DE IMAGENS */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* CARDS */
+
+.photo-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--branco);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(22, 59, 80, 0.08);
+    border: 1px solid rgba(22, 59, 80, 0.06);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(22, 59, 80, 0.16);
+}
+
+/* FOTOGRAFIAS */
+
+.photo-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+/* LEGENDAS */
+
+.photo-card figcaption {
+    padding: 23px;
+}
+
+.photo-card h3 {
+    color: var(--azul);
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.photo-card figcaption p {
+    color: #008e9c;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.photo-card figcaption small {
+    display: block;
+    padding-top: 14px;
+    border-top: 1px solid #e5eeee;
+    color: var(--cinza);
+    font-size: 11px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.photo-card figcaption a {
+    color: #087f91;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.photo-card figcaption a:hover {
+    color: var(--azul);
+}
+
+/* CRÉDITOS E LICENÇAS */
+
+.license-note {
+    padding: 65px 8%;
+    background: #e1f3f4;
+    text-align: center;
+}
+
+.license-note h2 {
+    color: var(--azul);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(27px, 4vw, 36px);
+    margin-bottom: 18px;
+}
+
+.license-note p {
+    max-width: 850px;
+    margin: 12px auto;
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RODAPÉ */
+
+.footer {
+    padding: 45px 8%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    background: var(--azul);
+}
+
+.footer-logo {
+    color: var(--branco);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer p {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .city-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        min-height: 75px;
+        padding: 12px 5%;
+    }
+
+    .logo-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .logo-text strong {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px 7%;
+        background: var(--branco);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 75px 7%;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .city-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .city-feature {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .city-feature > img {
+        height: 280px;
+    }
+
+    .recommendations {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-callout {
+        padding: 55px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gallery-hero {
+        min-height: 320px;
+        padding: 65px 7%;
+    }
+
+    .photo-section {
+        padding: 65px 6%;
+    }
+
+    .photo-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .photo-card img {
+        height: 250px;
+    }
+
+    .photo-card figcaption {
+        padding: 20px;
+    }
+
+    .license-note {
+        padding: 50px 7%;
+    }
+
+    .city-hero {
+        min-height: 300px;
+        padding: 65px 7%;
+    }
+}
+
+/* ACESSIBILIDADE: REDUÇÃO DE MOVIMENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .photo-card,
+    .photo-card img {
+        transition: none;
+    }
+
+    .photo-card:hover {
+        transform: none;
+    }
+
+    .photo-card:hover img {
+        transform: none;
+    }
+}

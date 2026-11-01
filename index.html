@@ -1,756 +1,846 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turismo.com — Descubra o Mundo</title>
-    <meta
-      name="description"
-      content="Guias, fotos, hospedagem e dicas para 11 destinos incríveis: Brasil, Portugal, Grécia, França, Espanha, Itália, Japão, México, China, Estados Unidos e República Dominicana."
-    />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="turismo-inicio.css" />
-  </head>
 
-  <body class="pagina-inicio">
-    <!-- ===== CABEÇALHO ===== -->
-    <header class="cabecalho-principal" id="topo">
-      <div class="barra-cabecalho">
-        <a
-          class="marca"
-          href="index.html"
-          aria-label="Turismo.com — página inicial"
-        >
-          <span class="marca-simbolo" aria-hidden="true">T</span>
-          <span class="marca-texto">
-            <strong>TURISMO<span>.COM</span></strong>
-            <small>DESCUBRA O MUNDO</small>
-          </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turismo.com — Descubra o Mundo</title>
+  <meta name="description"
+    content="Guias, fotos, hospedagem e dicas para 12 destinos incríveis: Brasil, Portugal, Grécia, Irlanda, França, Espanha, Itália, Japão, México, China, Estados Unidos e República Dominicana." />
+
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="./paises/brasil/styles/brasil.css" />
+</head>
+
+<body class="pagina-inicio">
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="cabecalho-principal" id="topo">
+    <div class="barra-cabecalho">
+
+      <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
+        <span class="marca-simbolo" aria-hidden="true">T</span>
+
+        <span class="marca-texto">
+          <strong>TURISMO<span>.COM</span></strong>
+          <small>DESCUBRA O MUNDO</small>
+        </span>
+      </a>
+
+      <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+
+        <a href="index.html">Início</a>
+
+        <div class="grupo-dropdown">
+          <button class="botao-dropdown" type="button" aria-expanded="false">
+            Países <span class="seta" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="menu-dropdown">
+            <a href="brasil.html">Brasil</a>
+            <a href="portugal.html">Portugal</a>
+            <a href="grecia.html">Grécia</a>
+            <a href="franca.html">França</a>
+            <a href="paises/irlanda/irlanda.html">Irlanda</a>
+            <a href="espanha.html">Espanha</a>
+            <a href="italia.html">Itália</a>
+            <a href="japao.html">Japão</a>
+            <a href="mexico.html">México</a>
+            <a href="china.html">China</a>
+            <a href="estados-unidos.html">Estados Unidos</a>
+            <a href="republica-dominicana.html">República Dominicana</a>
+          </div>
+        </div>
+
+        <a href="hospedagem.html">Hospedagem</a>
+        <a href="alimentacao.html">Alimentação</a>
+        <a href="compras.html">Compras</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+
+        <div class="grupo-dropdown nav-guia">
+          <button class="botao-dropdown botao-guia" type="button" aria-expanded="false">
+            Guia visual
+          </button>
+
+          <div class="menu-dropdown menu-direita">
+            <a href="brasil-fotos.html">Fotos do Brasil</a>
+            <a href="portugal-fotos.html">Fotos de Portugal</a>
+            <a href="grecia-fotos.html">Fotos da Grécia</a>
+            <a href="paises/franca/pages/franca-fotos.html">Fotos da França</a>
+            <a href="espanha-fotos.html">Fotos da Espanha</a>
+            <a href="italia-fotos.html">Fotos da Itália</a>
+            <a href="japao-fotos.html">Fotos do Japão</a>
+            <a href="mexico-fotos.html">Fotos do México</a>
+            <a href="china-fotos.html">Fotos da China</a>
+            <a href="estados-unidos/galeria.html">Fotos dos Estados Unidos</a>
+            <a href="paises/republica-dominicana/republica-dominicana-fotos.html">
+              Fotos da República Dominicana
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-conteudo">
+
+        <span class="hero-etiqueta">GUIA EDUCATIVO DE TURISMO</span>
+
+        <h1>O mundo está <em>esperando por você.</em></h1>
+
+        <p>
+          Conheça novos lugares, culturas e sabores. Sua próxima descoberta
+          começa aqui.
+        </p>
+
+        <div class="hero-botoes">
+          <a class="botao botao-principal" href="#destinos">
+            Explorar destinos <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="botao botao-vidro" href="hospedagem.html">
+            Ver hospedagem
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ATALHOS ===== -->
+    <section class="inicio-atalhos" aria-label="Atalhos">
+      <div class="inicio-atalhos-conteudo">
+
+        <a class="atalho-item" href="#destinos">
+          <span class="atalho-icone" aria-hidden="true">🧭</span>
+          <div>
+            <span class="atalho-label">Explore</span>
+            <strong>Destinos</strong>
+          </div>
         </a>
 
-        <button
-          class="botao-menu"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          <span></span><span></span><span></span>
-        </button>
-
-        <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
-          <a href="index.html">Início</a>
-
-          <div class="grupo-dropdown">
-            <button class="botao-dropdown" type="button" aria-expanded="false">
-              Países <span class="seta" aria-hidden="true">⌄</span>
-            </button>
-            <div class="menu-dropdown">
-              <a href="brasil.html">Brasil</a>
-              <a href="portugal.html">Portugal</a>
-              <a href="grecia.html">Grécia</a>
-              <a href="franca.html">França</a>
-              <a href="espanha.html">Espanha</a>
-              <a href="italia.html">Itália</a>
-              <a href="japao.html">Japão</a>
-              <a href="mexico.html">México</a>
-              <a href="china.html">China</a>
-              <a href="estados-unidos.html">Estados Unidos</a>
-              <a href="republica-dominicana.html">República Dominicana</a>
-            </div>
+        <a class="atalho-item" href="hospedagem.html">
+          <span class="atalho-icone" aria-hidden="true">🏠</span>
+          <div>
+            <span class="atalho-label">Descanse</span>
+            <strong>Hospedagem</strong>
           </div>
+        </a>
 
-          <a href="hospedagem.html">Hospedagem</a>
-          <a href="alimentacao.html">Alimentação</a>
-          <a href="compras.html">Compras</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Contato</a>
-
-          <div class="grupo-dropdown nav-guia">
-            <button
-              class="botao-dropdown botao-guia"
-              type="button"
-              aria-expanded="false"
-            >
-              Guia visual
-            </button>
-            <div class="menu-dropdown menu-direita">
-              <a href="brasil-fotos.html">Fotos do Brasil</a>
-              <a href="portugal-fotos.html">Fotos de Portugal</a>
-              <a href="grecia-fotos.html">Fotos da Grécia</a>
-              <a href="paises/franca/pages/franca-fotos.html"
-                >Fotos da França</a
-              >
-              <a href="espanha-fotos.html">Fotos da Espanha</a>
-              <a href="italia-fotos.html">Fotos da Itália</a>
-              <a href="japao-fotos.html">Fotos do Japão</a>
-              <a href="mexico-fotos.html">Fotos do México</a>
-              <a href="china-fotos.html">Fotos da China</a>
-              <a href="estados-unidos/galeria.html">Fotos dos Estados Unidos</a>
-              <a
-                href="paises/republica-dominicana/republica-dominicana-fotos.html"
-                >Fotos da República Dominicana</a
-              >
-            </div>
+        <a class="atalho-item" href="alimentacao.html">
+          <span class="atalho-icone" aria-hidden="true">🍽️</span>
+          <div>
+            <span class="atalho-label">Saboreie</span>
+            <strong>Alimentação</strong>
           </div>
-        </nav>
+        </a>
+
+        <a class="atalho-item" href="compras.html">
+          <span class="atalho-icone" aria-hidden="true">🛒</span>
+          <div>
+            <span class="atalho-label">Aproveite</span>
+            <strong>Compras</strong>
+          </div>
+        </a>
+
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- ===== HERO ===== -->
-      <section class="hero">
-        <div class="hero-conteudo">
-          <span class="hero-etiqueta">GUIA EDUCATIVO DE TURISMO</span>
-          <h1>O mundo está <em>esperando por você.</em></h1>
-          <p>
-            Conheça novos lugares, culturas e sabores. Sua próxima descoberta
-            começa aqui.
-          </p>
+    <!-- ===== DESTINOS ===== -->
+    <section class="inicio-secao revelar" id="destinos">
+      <div class="inicio-conteudo">
 
-          <div class="hero-botoes">
-            <a class="botao botao-principal" href="#destinos"
-              >Explorar destinos <span aria-hidden="true">→</span></a
-            >
-            <a class="botao botao-vidro" href="hospedagem.html"
-              >Ver hospedagem</a
-            >
-          </div>
-        </div>
-      </section>
+        <span class="secao-etiqueta">DESTINOS</span>
 
-      <!-- ===== ATALHOS ===== -->
-      <section class="inicio-atalhos" aria-label="Atalhos">
-        <div class="inicio-atalhos-conteudo">
-          <a class="atalho-item" href="#destinos">
-            <span class="atalho-icone" aria-hidden="true">🧭</span>
-            <div>
-              <span class="atalho-label">Explore</span><strong>Destinos</strong>
-            </div>
-          </a>
-          <a class="atalho-item" href="hospedagem.html">
-            <span class="atalho-icone" aria-hidden="true">🏠</span>
-            <div>
-              <span class="atalho-label">Descanse</span
-              ><strong>Hospedagem</strong>
-            </div>
-          </a>
-          <a class="atalho-item" href="alimentacao.html">
-            <span class="atalho-icone" aria-hidden="true">🍽️</span>
-            <div>
-              <span class="atalho-label">Saboreie</span
-              ><strong>Alimentação</strong>
-            </div>
-          </a>
-          <a class="atalho-item" href="compras.html">
-            <span class="atalho-icone" aria-hidden="true">🛒</span>
-            <div>
-              <span class="atalho-label">Aproveite</span
-              ><strong>Compras</strong>
-            </div>
-          </a>
-        </div>
-      </section>
+        <h2 class="secao-titulo">Escolha um país para explorar</h2>
 
-      <!-- ===== DESTINOS ===== -->
-      <section class="inicio-secao revelar" id="destinos">
-        <div class="inicio-conteudo">
-          <span class="secao-etiqueta">DESTINOS</span>
-          <h2 class="secao-titulo">Escolha um país para explorar</h2>
-          <p class="secao-intro">
-            Cada país tem um guia com os principais lugares e uma galeria de
-            fotos para você se inspirar.
-          </p>
-
-          <div class="destinos-grade">
-            <article class="destino-cartao">
-              <span class="destino-tag">América do Sul</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/brasil.jpg"
-              >
-                <img
-                  src="https://cdn.pixabay.com/photo/2017/01/08/19/30/rio-de-janeiro-1963744_1280.jpg"
-                  alt="Brasil"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Brasil</h3>
-                <p>Praias, florestas e cidades cheias de cultura e alegria.</p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="brasil.html">Explorar</a>
-                  <a class="destino-botao" href="brasil-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Europa</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/portugal.jpg"
-              >
-                <img
-                  src="https://deih43ym53wif.cloudfront.net/aveiro-portugal-shutterstock_1581251188.jpg_df3ad75825.jpg"
-                  alt="Portugal"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Portugal</h3>
-                <p>Ruas de azulejo, vinho do Porto e o mar do Atlântico.</p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="portugal.html">Explorar</a>
-                  <a class="destino-botao" href="portugal-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Europa</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/grecia.jpg"
-              >
-                <img
-                  src="https://wallpapers.com/images/featured/imagens-da-europa-slc1lrieuo6hgysg.jpg"
-                  alt="Grécia"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Grécia</h3>
-                <p>
-                  Ilhas de casas brancas, ruínas antigas e mar azul-turquesa.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="grecia.html">Explorar</a>
-                  <a class="destino-botao" href="grecia-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Europa</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/franca.jpg"
-              >
-                <img
-                  src="https://etiasvisa.com.br/wp-content/uploads/2019/02/1549550929_image5.jpg"
-                  alt="França"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>França</h3>
-                <p>Paris, castelos, vinhedos e uma gastronomia de primeira.</p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="franca.html">Explorar</a>
-                  <a
-                    class="destino-botao"
-                    href="paises/franca/pages/franca-fotos.html"
-                    >Fotos</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Europa</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/espanha.jpg"
-              >
-                <img
-                  src="https://cdn.pixabay.com/photo/2020/05/12/18/29/city-5164368_1280.jpg"
-                  alt="Espanha"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Espanha</h3>
-                <p>
-                  Arquitetura de Gaudí, tapas, flamenco e praias ensolaradas.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="espanha.html">Explorar</a>
-                  <a class="destino-botao" href="espanha-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Europa</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/italia.jpg"
-              >
-                <img
-                  src="https://tse3.mm.bing.net/th/id/OIP.xkUvidRzsnIO6APuoQIdQgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                  alt="Itália"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Itália</h3>
-                <p>Roma, Veneza, Toscana e massas que valem a viagem.</p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="italia.html">Explorar</a>
-                  <a class="destino-botao" href="italia-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Ásia</span>
-              <figure class="foto-slot" data-arquivo="imagens/inicio/japao.jpg">
-                <img
-                  src="https://tse1.mm.bing.net/th/id/OIP.48_4o0AQbbSktAcjv8oU6gHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3g"
-                  alt="Japão"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Japão</h3>
-                <p>
-                  Templos, cerejeiras, tecnologia e a hospitalidade japonesa.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="japao.html">Explorar</a>
-                  <a class="destino-botao" href="japao-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">América do Norte</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/mexico.jpg"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1000&q=80"
-                  alt="México"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>México</h3>
-                <p>
-                  Pirâmides maias, praias do Caribe, cores vivas e uma culinária
-                  inesquecível.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="mexico.html">Explorar</a>
-                  <a class="destino-botao" href="mexico-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Ásia</span>
-              <figure class="foto-slot" data-arquivo="imagens/inicio/china.jpg">
-                <img
-                  src="https://img.freepik.com/fotos-premium/bela-paisagem-de-arquitetura-chinesa-antiga-em-um-lago-em-pequim-palacio-imperial-de-verao-em-pequim-china-ai-gerado_585735-30253.jpg?w=1060"
-                  alt="China"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>China</h3>
-                <p>
-                  A Grande Muralha, cidades gigantes e mais de 5 mil anos de
-                  história.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="china.html">Explorar</a>
-                  <a class="destino-botao" href="china-fotos.html">Fotos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">América do Norte</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/estados-unidos.jpg"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1000&q=80"
-                  alt="Estados Unidos"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>Estados Unidos</h3>
-                <p>
-                  Arranha-céus, parques nacionais, música, cinema e muita
-                  variedade.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="estados-unidos.html"
-                    >Explorar</a
-                  >
-                  <a class="destino-botao" href="estados-unidos/galeria.html"
-                    >Fotos</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="destino-cartao">
-              <span class="destino-tag">Caribe</span>
-              <figure
-                class="foto-slot"
-                data-arquivo="imagens/inicio/republica-dominicana.jpg"
-              >
-                <img
-                  src="paises/republica-dominicana/imagens/Punta_Cana_Beach_Cabeza_De_Toro_1.jpg"
-                  alt="República Dominicana"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="destino-corpo">
-                <h3>República Dominicana</h3>
-                <p>
-                  Praias paradisíacas, cidade colonial e a alegria do Caribe.
-                </p>
-                <div class="destino-acoes">
-                  <a class="destino-botao" href="republica-dominicana.html"
-                    >Explorar</a
-                  >
-                  <a
-                    class="destino-botao"
-                    href="paises/republica-dominicana/republica-dominicana-fotos.html"
-                    >Fotos</a
-                  >
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===== RODAPÉ ===== -->
-    <footer class="rodape-principal">
-      <div class="rodape-conteudo">
-        <div class="rodape-sobre">
-          <h2>Turismo<span>.com</span></h2>
-          <p>
-            Seu guia completo para explorar os destinos mais incríveis do mundo.
-          </p>
-        </div>
-        <div class="rodape-coluna">
-          <h3>Destinos</h3>
-          <a href="brasil.html">Brasil</a>
-          <a href="portugal.html">Portugal</a>
-          <a href="grecia.html">Grécia</a>
-          <a href="franca.html">França</a>
-        </div>
-        <div class="rodape-coluna">
-          <h3>Mais destinos</h3>
-          <a href="espanha.html">Espanha</a>
-          <a href="italia.html">Itália</a>
-          <a href="japao.html">Japão</a>
-          <a href="mexico.html">México</a>
-          <a href="china.html">China</a>
-          <a href="estados-unidos.html">Estados Unidos</a>
-          <a href="republica-dominicana.html">República Dominicana</a>
-        </div>
-      </div>
-      <div class="rodape-inferior">
-        <p>&copy; 2026 Turismo.com — Todos os direitos reservados</p>
-      </div>
-    </footer>
-
-    <a class="voltar-topo" href="#topo" aria-label="Voltar ao topo">↑</a>
-    <!-- AVISO DE COOKIES -->
-    <div id="aviso-cookies" class="aviso-cookies" hidden>
-      <div class="cookies-conteudo">
-        <h2>Sua privacidade importa</h2>
-
-        <p>
-          O TURISMO.COM utiliza recursos necessários para o funcionamento do
-          site. Com sua autorização, poderá utilizar cookies opcionais de
-          estatística e publicidade, caso esses recursos sejam implementados.
+        <p class="secao-intro">
+          Cada país tem um guia com os principais lugares e uma galeria de
+          fotos para você se inspirar.
         </p>
 
-        <p>
-          Consulte nossa
-          <a href="privacidade.html">Política de Privacidade</a>.
-        </p>
+        <div class="destinos-grade">
 
-        <div class="cookies-botoes">
-          <button type="button" id="rejeitar-cookies">
-            Rejeitar não essenciais
-          </button>
+          <!-- BRASIL -->
+          <article class="destino-cartao">
+            <span class="destino-tag">América do Sul</span>
 
-          <button type="button" id="configurar-cookies">Configurar</button>
+            <figure class="foto-slot" data-arquivo="imagens/inicio/brasil.jpg">
+              <img src="https://cdn.pixabay.com/photo/2017/01/08/19/30/rio-de-janeiro-1963744_1280.jpg" alt="Brasil"
+                loading="lazy" />
+            </figure>
 
-          <button type="button" id="aceitar-cookies">Aceitar todos</button>
-        </div>
+            <div class="destino-corpo">
+              <h3>Brasil</h3>
+              <p>Praias, florestas e cidades cheias de cultura e alegria.</p>
 
-        <div id="configuracoes-cookies" hidden>
-          <h3>Preferências</h3>
+              <div class="destino-acoes">
+                <a class="destino-botao" href="brasil.html">Explorar</a>
+                <a class="destino-botao" href="./paises/brasil/pages/brasil-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
 
-          <label>
-            <input type="checkbox" checked disabled />
-            Cookies necessários (sempre ativos)
-          </label>
+          <!-- PORTUGAL -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
 
-          <label>
-            <input type="checkbox" id="cookies-estatistica" />
-            Cookies de estatística
-          </label>
+            <figure class="foto-slot" data-arquivo="imagens/inicio/portugal.jpg">
+              <img src="https://deih43ym53wif.cloudfront.net/aveiro-portugal-shutterstock_1581251188.jpg_df3ad75825.jpg"
+                alt="Portugal" loading="lazy" />
+            </figure>
 
-          <label>
-            <input type="checkbox" id="cookies-publicidade" />
-            Cookies de publicidade
-          </label>
+            <div class="destino-corpo">
+              <h3>Portugal</h3>
+              <p>Ruas de azulejo, vinho do Porto e o mar do Atlântico.</p>
 
-          <button type="button" id="salvar-preferencias">
-            Salvar preferências
-          </button>
+              <div class="destino-acoes">
+                <a class="destino-botao" href="portugal.html">Explorar</a>
+                <a class="destino-botao" href="portugal-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- IRLANDA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
+
+            <figure class="foto-slot">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cliffs_of_Moher%2CIreland.jpg?width=1000"
+                alt="Falésias de Moher, na Irlanda" loading="lazy" />
+
+              <figcaption class="credito-imagem" style="font-size: 0.72rem; padding: 6px 8px; line-height: 1.4;">
+                Foto: eebAMDG · CC BY-SA 4.0 ·
+                <a href="https://commons.wikimedia.org/wiki/File:Cliffs_of_Moher,Ireland.jpg" target="_blank"
+                  rel="noopener noreferrer">
+                  Wikimedia Commons
+                </a>
+              </figcaption>
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Irlanda</h3>
+
+              <p>
+                Falésias impressionantes, castelos, cidades históricas e uma
+                cultura rica em música e tradição.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="paises/irlanda/pages/irlanda.html">
+                  Explorar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GRÉCIA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/grecia.jpg">
+              <img src="https://wallpapers.com/images/featured/imagens-da-europa-slc1lrieuo6hgysg.jpg" alt="Grécia"
+                loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Grécia</h3>
+
+              <p>
+                Ilhas de casas brancas, ruínas antigas e mar azul-turquesa.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="grecia.html">Explorar</a>
+                <a class="destino-botao" href="grecia-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FRANÇA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/franca.jpg">
+              <img src="https://etiasvisa.com.br/wp-content/uploads/2019/02/1549550929_image5.jpg" alt="França"
+                loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>França</h3>
+              <p>Paris, castelos, vinhedos e uma gastronomia de primeira.</p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="franca.html">Explorar</a>
+                <a class="destino-botao" href="paises/franca/pages/franca-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESPANHA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/espanha.jpg">
+              <img src="https://cdn.pixabay.com/photo/2020/05/12/18/29/city-5164368_1280.jpg" alt="Espanha"
+                loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Espanha</h3>
+
+              <p>
+                Arquitetura de Gaudí, tapas, flamenco e praias ensolaradas.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="espanha.html">Explorar</a>
+                <a class="destino-botao" href="espanha-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ITÁLIA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Europa</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/italia.jpg">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.xkUvidRzsnIO6APuoQIdQgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Itália" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Itália</h3>
+              <p>Roma, Veneza, Toscana e massas que valem a viagem.</p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="italia.html">Explorar</a>
+                <a class="destino-botao" href="italia-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- JAPÃO -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Ásia</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/japao.jpg">
+              <img src="https://tse1.mm.bing.net/th/id/OIP.48_4o0AQbbSktAcjv8oU6gHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3g"
+                alt="Japão" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Japão</h3>
+
+              <p>
+                Templos, cerejeiras, tecnologia e a hospitalidade japonesa.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="japao.html">Explorar</a>
+                <a class="destino-botao" href="japao-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MÉXICO -->
+          <article class="destino-cartao">
+            <span class="destino-tag">América do Norte</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/mexico.jpg">
+              <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1000&q=80"
+                alt="México" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>México</h3>
+
+              <p>
+                Pirâmides maias, praias do Caribe, cores vivas e uma culinária
+                inesquecível.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="mexico.html">Explorar</a>
+                <a class="destino-botao" href="mexico-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHINA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Ásia</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/china.jpg">
+              <img
+                src="https://img.freepik.com/fotos-premium/bela-paisagem-de-arquitetura-chinesa-antiga-em-um-lago-em-pequim-palacio-imperial-de-verao-em-pequim-china-ai-gerado_585735-30253.jpg?w=1060"
+                alt="China" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>China</h3>
+
+              <p>
+                A Grande Muralha, cidades gigantes e mais de 5 mil anos de
+                história.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="china.html">Explorar</a>
+                <a class="destino-botao" href="china-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTADOS UNIDOS -->
+          <article class="destino-cartao">
+            <span class="destino-tag">América do Norte</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/estados-unidos.jpg">
+              <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1000&q=80"
+                alt="Estados Unidos" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>Estados Unidos</h3>
+
+              <p>
+                Arranha-céus, parques nacionais, música, cinema e muita
+                variedade.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="estados-unidos.html">Explorar</a>
+                <a class="destino-botao" href="estados-unidos/galeria.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- REPÚBLICA DOMINICANA -->
+          <article class="destino-cartao">
+            <span class="destino-tag">Caribe</span>
+
+            <figure class="foto-slot" data-arquivo="imagens/inicio/republica-dominicana.jpg">
+              <img src="paises/republica-dominicana/imagens/Punta_Cana_Beach_Cabeza_De_Toro_1.jpg"
+                alt="República Dominicana" loading="lazy" />
+            </figure>
+
+            <div class="destino-corpo">
+              <h3>República Dominicana</h3>
+
+              <p>
+                Praias paradisíacas, cidade colonial e a alegria do Caribe.
+              </p>
+
+              <div class="destino-acoes">
+                <a class="destino-botao" href="republica-dominicana.html">Explorar</a>
+                <a class="destino-botao" href="paises/republica-dominicana/republica-dominicana-fotos.html">Fotos</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape-principal">
+    <div class="rodape-conteudo">
+
+      <div class="rodape-sobre">
+        <h2>Turismo<span>.com</span></h2>
+
+        <p>
+          Seu guia completo para explorar os destinos mais incríveis do mundo.
+        </p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Destinos</h3>
+        <a href="brasil.html">Brasil</a>
+        <a href="portugal.html">Portugal</a>
+        <a href="grecia.html">Grécia</a>
+        <a href="franca.html">França</a>
+        <a href="paises/irlanda/irlanda.html">Irlanda</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Mais destinos</h3>
+        <a href="espanha.html">Espanha</a>
+        <a href="italia.html">Itália</a>
+        <a href="japao.html">Japão</a>
+        <a href="mexico.html">México</a>
+        <a href="china.html">China</a>
+        <a href="estados-unidos.html">Estados Unidos</a>
+        <a href="republica-dominicana.html">República Dominicana</a>
+      </div>
+
     </div>
 
-    <script>
-      (function () {
-        /* Menu no celular */
-        var botaoMenu = document.querySelector(".botao-menu");
-        var menu = document.getElementById("menu-principal");
+    <div class="rodape-inferior">
+      <p> 2026 Turismo.com — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <a class="voltar-topo" href="#topo" aria-label="Voltar ao topo">↑</a>
+
+  <!-- ===== AVISO DE COOKIES ===== -->
+  <div id="aviso-cookies" class="aviso-cookies" hidden>
+    <div class="cookies-conteudo">
+
+      <h2>Sua privacidade importa</h2>
+
+      <p>
+        O TURISMO.COM utiliza recursos necessários para o funcionamento do
+        site. Com sua autorização, poderá utilizar cookies opcionais de
+        estatística e publicidade, caso esses recursos sejam implementados.
+      </p>
+
+      <p>
+        Consulte nossa
+        <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
+
+      <div class="cookies-botoes">
+        <button type="button" id="rejeitar-cookies">
+          Rejeitar não essenciais
+        </button>
+
+        <button type="button" id="configurar-cookies">
+          Configurar
+        </button>
+
+        <button type="button" id="aceitar-cookies">
+          Aceitar todos
+        </button>
+      </div>
+
+      <div id="configuracoes-cookies" hidden>
+        <h3>Preferências</h3>
+
+        <label>
+          <input type="checkbox" checked disabled />
+          Cookies necessários (sempre ativos)
+        </label>
+
+        <label>
+          <input type="checkbox" id="cookies-estatistica" />
+          Cookies de estatística
+        </label>
+
+        <label>
+          <input type="checkbox" id="cookies-publicidade" />
+          Cookies de publicidade
+        </label>
+
+        <button type="button" id="salvar-preferencias">
+          Salvar preferências
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function () {
+
+      /* Menu no celular */
+      var botaoMenu = document.querySelector(".botao-menu");
+      var menu = document.getElementById("menu-principal");
+
+      if (botaoMenu && menu) {
         botaoMenu.addEventListener("click", function () {
           var aberto = menu.classList.toggle("aberta");
           botaoMenu.setAttribute("aria-expanded", aberto);
         });
+      }
 
-        /* Dropdowns: abrem por clique (teclado e celular) */
-        var grupos = document.querySelectorAll(".grupo-dropdown");
-        grupos.forEach(function (grupo) {
-          var botao = grupo.querySelector(".botao-dropdown");
-          botao.addEventListener("click", function (e) {
-            e.stopPropagation();
-            var aberto = grupo.classList.toggle("aberto");
-            botao.setAttribute("aria-expanded", aberto);
-            grupos.forEach(function (outro) {
-              if (outro !== grupo) {
-                outro.classList.remove("aberto");
-                outro
-                  .querySelector(".botao-dropdown")
-                  .setAttribute("aria-expanded", "false");
+      /* Dropdowns */
+      var grupos = document.querySelectorAll(".grupo-dropdown");
+
+      grupos.forEach(function (grupo) {
+        var botao = grupo.querySelector(".botao-dropdown");
+
+        if (!botao) return;
+
+        botao.addEventListener("click", function (e) {
+          e.stopPropagation();
+
+          var aberto = grupo.classList.toggle("aberto");
+          botao.setAttribute("aria-expanded", aberto);
+
+          grupos.forEach(function (outro) {
+            if (outro !== grupo) {
+              outro.classList.remove("aberto");
+
+              var outroBotao = outro.querySelector(".botao-dropdown");
+
+              if (outroBotao) {
+                outroBotao.setAttribute("aria-expanded", "false");
               }
-            });
+            }
           });
         });
-        document.addEventListener("click", function () {
-          grupos.forEach(function (g) {
-            g.classList.remove("aberto");
-          });
-        });
+      });
 
-        /* Foto ausente: mostra o nome do arquivo esperado */
-        document.querySelectorAll(".foto-slot img").forEach(function (img) {
-          function semFoto() {
-            img.parentElement.classList.add("sem-foto");
+      document.addEventListener("click", function () {
+        grupos.forEach(function (grupo) {
+          grupo.classList.remove("aberto");
+
+          var botao = grupo.querySelector(".botao-dropdown");
+
+          if (botao) {
+            botao.setAttribute("aria-expanded", "false");
           }
-          img.addEventListener("error", semFoto);
-          if (img.complete && img.naturalWidth === 0) semFoto();
         });
+      });
 
-        /* Revelar seções ao rolar */
-        var itens = document.querySelectorAll(".revelar");
-        if ("IntersectionObserver" in window) {
-          var obs = new IntersectionObserver(
-            function (entradas) {
-              entradas.forEach(function (en) {
-                if (en.isIntersecting) {
-                  en.target.classList.add("revelada");
-                  obs.unobserve(en.target);
-                }
-              });
-            },
-            { threshold: 0.12 },
-          );
-          itens.forEach(function (el) {
-            obs.observe(el);
-          });
-        } else {
-          itens.forEach(function (el) {
-            el.classList.add("revelada");
-          });
+      /* Foto ausente */
+      document.querySelectorAll(".foto-slot img").forEach(function (img) {
+
+        function semFoto() {
+          img.parentElement.classList.add("sem-foto");
         }
 
-        /* Botão voltar ao topo */
-        var topo = document.querySelector(".voltar-topo");
+        img.addEventListener("error", semFoto);
+
+        if (img.complete && img.naturalWidth === 0) {
+          semFoto();
+        }
+      });
+
+      /* Revelar seções ao rolar */
+      var itens = document.querySelectorAll(".revelar");
+
+      if ("IntersectionObserver" in window) {
+
+        var obs = new IntersectionObserver(
+          function (entradas) {
+            entradas.forEach(function (entrada) {
+
+              if (entrada.isIntersecting) {
+                entrada.target.classList.add("revelada");
+                obs.unobserve(entrada.target);
+              }
+
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        itens.forEach(function (el) {
+          obs.observe(el);
+        });
+
+      } else {
+
+        itens.forEach(function (el) {
+          el.classList.add("revelada");
+        });
+
+      }
+
+      /* Botão voltar ao topo */
+      var topo = document.querySelector(".voltar-topo");
+
+      if (topo) {
         window.addEventListener(
           "scroll",
           function () {
             topo.classList.toggle("visivel", window.scrollY > 500);
           },
-          { passive: true },
+          { passive: true }
         );
-      })();
-
-      const avisoCookies = document.getElementById("aviso-cookies");
-
-      const configuracoesCookies = document.getElementById(
-        "configuracoes-cookies",
-      );
-
-      const estatistica = document.getElementById("cookies-estatistica");
-
-      const publicidade = document.getElementById("cookies-publicidade");
-
-      function lerCookie(nome) {
-        const cookies = document.cookie.split(";");
-
-        for (let item of cookies) {
-          item = item.trim();
-
-          if (item.startsWith(nome + "=")) {
-            return decodeURIComponent(item.substring(nome.length + 1));
-          }
-        }
-
-        return null;
       }
 
-      function salvarCookie(nome, valor, dias) {
-        const data = new Date();
+    })();
 
-        data.setTime(data.getTime() + dias * 24 * 60 * 60 * 1000);
+    /* ===== COOKIES ===== */
 
-        let cookie =
-          nome +
-          "=" +
-          encodeURIComponent(valor) +
-          "; expires=" +
-          data.toUTCString() +
-          "; path=/; SameSite=Lax";
+    const avisoCookies = document.getElementById("aviso-cookies");
 
-        if (location.protocol === "https:") {
-          cookie += "; Secure";
+    const configuracoesCookies = document.getElementById(
+      "configuracoes-cookies"
+    );
+
+    const estatistica = document.getElementById("cookies-estatistica");
+
+    const publicidade = document.getElementById("cookies-publicidade");
+
+    function lerCookie(nome) {
+      const cookies = document.cookie.split(";");
+
+      for (let item of cookies) {
+        item = item.trim();
+
+        if (item.startsWith(nome + "=")) {
+          return decodeURIComponent(item.substring(nome.length + 1));
         }
-
-        document.cookie = cookie;
       }
 
-      function obterPreferencias() {
-        const dados = lerCookie("turismo_consentimento");
+      return null;
+    }
 
-        if (!dados) return null;
+    function salvarCookie(nome, valor, dias) {
+      const data = new Date();
 
-        try {
-          const preferencias = JSON.parse(dados);
+      data.setTime(data.getTime() + dias * 24 * 60 * 60 * 1000);
 
-          if (
-            typeof preferencias.estatistica !== "boolean" ||
-            typeof preferencias.publicidade !== "boolean"
-          ) {
-            return null;
-          }
+      let cookie =
+        nome +
+        "=" +
+        encodeURIComponent(valor) +
+        "; expires=" +
+        data.toUTCString() +
+        "; path=/; SameSite=Lax";
 
-          return preferencias;
-        } catch {
+      if (location.protocol === "https:") {
+        cookie += "; Secure";
+      }
+
+      document.cookie = cookie;
+    }
+
+    function obterPreferencias() {
+      const dados = lerCookie("turismo_consentimento");
+
+      if (!dados) return null;
+
+      try {
+        const preferencias = JSON.parse(dados);
+
+        if (
+          typeof preferencias.estatistica !== "boolean" ||
+          typeof preferencias.publicidade !== "boolean"
+        ) {
           return null;
         }
+
+        return preferencias;
+
+      } catch {
+        return null;
       }
+    }
 
-      function registrarPreferencias(
-        estatisticaPermitida,
-        publicidadePermitida,
-      ) {
-        const preferencias = {
-          necessario: true,
-          estatistica: estatisticaPermitida,
-          publicidade: publicidadePermitida,
-          data: new Date().toISOString(),
-        };
+    function registrarPreferencias(
+      estatisticaPermitida,
+      publicidadePermitida
+    ) {
 
-        salvarCookie(
-          "turismo_consentimento",
-          JSON.stringify(preferencias),
-          180,
-        );
+      const preferencias = {
+        necessario: true,
+        estatistica: estatisticaPermitida,
+        publicidade: publicidadePermitida,
+        data: new Date().toISOString()
+      };
 
-        avisoCookies.hidden = true;
-      }
-
-      document
-        .getElementById("aceitar-cookies")
-        .addEventListener("click", function () {
-          registrarPreferencias(true, true);
-        });
-
-      document
-        .getElementById("rejeitar-cookies")
-        .addEventListener("click", function () {
-          registrarPreferencias(false, false);
-        });
-
-      document
-        .getElementById("configurar-cookies")
-        .addEventListener("click", function () {
-          configuracoesCookies.hidden = false;
-        });
-
-      document
-        .getElementById("salvar-preferencias")
-        .addEventListener("click", function () {
-          registrarPreferencias(estatistica.checked, publicidade.checked);
-        });
-
-      /* Permite alterar a escolha posteriormente */
-
-      let botaoPreferencias = document.getElementById(
-        "abrir-preferencias-cookies",
+      salvarCookie(
+        "turismo_consentimento",
+        JSON.stringify(preferencias),
+        180
       );
 
-      if (!botaoPreferencias) {
-        botaoPreferencias = document.createElement("button");
+      avisoCookies.hidden = true;
+    }
 
-        botaoPreferencias.id = "abrir-preferencias-cookies";
-        botaoPreferencias.type = "button";
-        botaoPreferencias.textContent = "Preferências de cookies";
-
-        botaoPreferencias.className = "botao-preferencias-cookies";
-
-        document.body.appendChild(botaoPreferencias);
-      }
-
-      botaoPreferencias.addEventListener("click", function () {
-        const preferencias = obterPreferencias();
-
-        estatistica.checked = preferencias ? preferencias.estatistica : false;
-
-        publicidade.checked = preferencias ? preferencias.publicidade : false;
-
-        configuracoesCookies.hidden = false;
-        avisoCookies.hidden = false;
+    document
+      .getElementById("aceitar-cookies")
+      .addEventListener("click", function () {
+        registrarPreferencias(true, true);
       });
 
-      /* Inicialização */
+    document
+      .getElementById("rejeitar-cookies")
+      .addEventListener("click", function () {
+        registrarPreferencias(false, false);
+      });
 
-      const preferenciasSalvas = obterPreferencias();
+    document
+      .getElementById("configurar-cookies")
+      .addEventListener("click", function () {
+        configuracoesCookies.hidden = false;
+      });
 
-      if (preferenciasSalvas) {
-        avisoCookies.hidden = true;
-      } else {
-        avisoCookies.hidden = false;
-      }
-    </script>
-  </body>
+    document
+      .getElementById("salvar-preferencias")
+      .addEventListener("click", function () {
+        registrarPreferencias(
+          estatistica.checked,
+          publicidade.checked
+        );
+      });
+
+    /* Permite alterar a escolha posteriormente */
+    let botaoPreferencias = document.getElementById(
+      "abrir-preferencias-cookies"
+    );
+
+    if (!botaoPreferencias) {
+
+      botaoPreferencias = document.createElement("button");
+
+      botaoPreferencias.id = "abrir-preferencias-cookies";
+      botaoPreferencias.type = "button";
+      botaoPreferencias.textContent = "Preferências de cookies";
+      botaoPreferencias.className = "botao-preferencias-cookies";
+
+      document.body.appendChild(botaoPreferencias);
+    }
+
+    botaoPreferencias.addEventListener("click", function () {
+
+      const preferencias = obterPreferencias();
+
+      estatistica.checked = preferencias
+        ? preferencias.estatistica
+        : false;
+
+      publicidade.checked = preferencias
+        ? preferencias.publicidade
+        : false;
+
+      configuracoesCookies.hidden = false;
+      avisoCookies.hidden = false;
+    });
+
+    /* Inicialização */
+    const preferenciasSalvas = obterPreferencias();
+
+    if (preferenciasSalvas) {
+      avisoCookies.hidden = true;
+    } else {
+      avisoCookies.hidden = false;
+    }
+
+  </script>
+
+</body>
+
 </html>

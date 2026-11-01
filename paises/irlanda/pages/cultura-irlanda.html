@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Irlandesa | Turismo.com</title>
+    <link rel="stylesheet" href="../styles/irlanda.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="irlanda.html" class="logo">TURISMO<span>.COM</span></a>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav">
+            <a href="../../../index.html">Início</a>
+            <a href="irlanda.html">Irlanda</a>
+            <a href="cultura-irlanda.html">Cultura</a>
+            <a href="culinaria-irlanda.html">Culinária</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Cidades ▾</button>
+                <div class="dropdown-content">
+                    <a href="dublin.html">Dublin</a>
+                    <a href="galway.html">Galway</a>
+                    <a href="cork.html">Cork</a>
+                    <a href="killarney.html">Killarney</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <span>CULTURA • HISTÓRIA • TRADIÇÃO</span>
+        <h1>A cultura irlandesa</h1>
+        <p>Uma identidade construída através de séculos de histórias e tradições.</p>
+    </section>
+
+    <main class="section">
+
+        <section class="content-block">
+            <span class="eyebrow">HISTÓRIA</span>
+            <h2>As raízes celtas</h2>
+            <p>
+                A história cultural da Irlanda possui fortes influências
+                dos povos celtas, que contribuíram para tradições,
+                narrativas, símbolos e expressões artísticas.
+            </p>
+            <p>
+                Ao longo dos séculos, a cultura irlandesa também foi
+                influenciada pelo cristianismo e por diferentes
+                acontecimentos históricos europeus.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <span class="eyebrow">IDIOMAS</span>
+            <h2>Irlandês e inglês</h2>
+            <p>
+                A Irlanda possui dois idiomas oficiais: o irlandês,
+                também chamado de Gaeilge, e o inglês.
+            </p>
+            <p>
+                O irlandês permanece especialmente presente nas regiões
+                Gaeltacht, onde a língua é utilizada no cotidiano.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <span class="eyebrow">MÚSICA E DANÇA</span>
+            <h2>O ritmo da Irlanda</h2>
+            <p>
+                A música tradicional irlandesa utiliza instrumentos
+                como violino, flauta, concertina, harpa e bodhrán,
+                um tambor tradicional.
+            </p>
+            <p>
+                A dança irlandesa é conhecida por seus movimentos
+                ritmados e apresentações coletivas.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <span class="eyebrow">CELEBRAÇÕES</span>
+            <h2>St. Patrick's Day</h2>
+            <p>
+                Celebrado em 17 de março, o Dia de São Patrício
+                homenageia o padroeiro da Irlanda.
+            </p>
+            <p>
+                A data é marcada por desfiles, apresentações musicais,
+                roupas verdes e eventos culturais.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <span class="eyebrow">LITERATURA</span>
+            <h2>Uma tradição literária reconhecida</h2>
+            <p>
+                A Irlanda possui uma importante tradição literária.
+                Entre seus escritores mais conhecidos estão James Joyce,
+                Oscar Wilde, W. B. Yeats e Samuel Beckett.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <span class="eyebrow">SÍMBOLOS</span>
+            <h2>O trevo e a harpa</h2>
+            <p>
+                O trevo de três folhas, conhecido como shamrock,
+                está associado à identidade irlandesa.
+            </p>
+            <p>
+                A harpa é um dos principais símbolos nacionais
+                e aparece, inclusive, em moedas e documentos oficiais.
+            </p>
+        </section>
+
+        <a href="irlanda.html" class="text-link">← Voltar à Irlanda</a>
+
+    </main>
+
+    <footer class="footer">
+        <h2>TURISMO<span>.COM</span></h2>
+        <p>© 2026 Turismo.com</p>
+    </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+            document.querySelector(".nav").classList.toggle("active");
+        });
+
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("open");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
