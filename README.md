@@ -6,19 +6,19 @@
 
 Projeto acadêmico e colaborativo de turismo, desenvolvido com HTML, CSS e JavaScript.
 
-[🌐 Acessar o site](https://turismo-com.vercel.app/) · [📖 Orientações da equipe](documentacao/ORIENTACOES.md) · [🧭 Explorar Portugal](https://turismo-com.vercel.app/portugal.html)
+[🌐 Acessar o site](https://turismo-com.vercel.app/)
 
-![Prévia animada das telas do protótipo Figma](/turismo-preview.gif)
+![Prévia animada das páginas do site Turismo.com](/turismo-preview.gif)
 
-<sub>Prévia das telas de referência do Figma. O site publicado e as páginas em desenvolvimento podem apresentar diferenças.</sub>
+<sub>Prévia animada das páginas atuais do Turismo.com. O conteúdo pode continuar em desenvolvimento e receber novas melhorias.</sub>
 
 </div>
 
 ## 🌍 Sobre o projeto
 
-O **Turismo.com** é um guia educativo de viagens, criado em equipe para apresentar países, culturas, gastronomia, pontos turísticos e informações práticas. O projeto também conta com páginas de hospedagem, alimentação, compras, contato e galerias fotográficas.
+O **Turismo.com** é um guia educativo de viagens, criado em equipe para apresentar países, culturas, gastronomia, pontos turísticos e informações práticas para quem deseja explorar o mundo.
 
-A proposta é construir as páginas progressivamente, com uma identidade visual compartilhada e espaço para as contribuições de cada integrante.
+A proposta do projeto é reunir páginas dedicadas a diferentes destinos, com conteúdo visual e informativo, além de galerias de fotos, seções temáticas e páginas complementares de hospedagem, alimentação, compras, contato e apresentação da equipe.
 
 ## Comece por aqui
 
@@ -30,23 +30,23 @@ Se você vai criar ou adaptar a página de um país, comece pelo [guia principal
 | [Exemplo visual completo — template-modelo/](template-modelo/) | Principal, Cultura e Gastronomia para copiar integralmente ou reaproveitar por seções e cartões. Siga as [instruções do exemplo visual — LEIA-ME.md](template-modelo/LEIA-ME.md). |
 | [Demonstração — teste-modelo/](teste-modelo/) | Página para observar os componentes compartilhados funcionando. O país e os dados são fictícios e não devem ser publicados como conteúdo real. |
 
-Os modelos são opcionais e permitem personalização. Portugal é uma referência de implementação; seu layout não é obrigatório para os demais países.
+Os modelos são opcionais e permitem personalização. Cada integrante pode adaptar sua página conforme a proposta do país e as necessidades do projeto.
 
 ## ✨ O que você encontra
 
-- **Destinos:** páginas dedicadas a países e suas características culturais.
-- **Portugal:** informações gerais, cartões temáticos e acesso à galeria de imagens.
-- **Galerias:** fotografias de destinos com identificação e créditos.
-- **Guias práticos:** hospedagem, alimentação e compras.
-- **Contato:** espaço de comunicação com a equipe.
+- **Página inicial:** vitrine dos destinos disponíveis no projeto.
+- **Destinos:** páginas dedicadas a países, com informações culturais, históricas e turísticas.
+- **Galerias:** seleções de fotografias para complementar a experiência visual.
+- **Guias práticos:** hospedagem, alimentação, compras e contato.
+- **Página Sobre:** apresentação da equipe e dos colaboradores do Turismo.com.
 
-> 🚧 **Em desenvolvimento:** o conteúdo e as páginas estão sendo revisados e ampliados. Alguns links e recursos ainda podem estar em construção.
+> 🚧 **Em desenvolvimento:** o conteúdo e as páginas seguem em atualização contínua. Novas melhorias visuais, correções e expansões podem ser adicionadas pela equipe.
 
 ## 🗺️ Destinos
 
-As páginas existentes no projeto incluem **Brasil, Portugal, França, Espanha, Itália, Japão e China**.
+As páginas existentes no projeto incluem **Brasil, Portugal, Grécia, França, Espanha, Itália, Japão, México, China, Estados Unidos e República Dominicana**.
 
-Também foram preparadas pastas para o trabalho futuro com **África do Sul, Alemanha, Egito, Grécia, Reino Unido e Taiwan**. A criação dessas pastas não significa que suas páginas estejam prontas.
+A pasta de **Países Baixos** também já contém páginas e uma galeria, mas o destino ainda não aparece na vitrine da página inicial. Outros conteúdos seguem em desenvolvimento.
 
 ## 🧰 Tecnologias
 
@@ -57,60 +57,127 @@ Também foram preparadas pastas para o trabalho futuro com **África do Sul, Ale
 ![GitHub](https://img.shields.io/badge/GitHub-colabora%C3%A7%C3%A3o-181717?logo=github&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-publica%C3%A7%C3%A3o-000000?logo=vercel&logoColor=white)
 
-O projeto utiliza também arquivos JSON para organização de alguns dados.
+O projeto utiliza também arquivos auxiliares e recursos visuais para organização do conteúdo e apresentação das páginas.
 
 ## 📁 Organização do repositório
 
+A estrutura abaixo destaca os arquivos principais e agrupa as páginas internas por país. Os espaços entre os grupos ajudam a visualizar cada parte do projeto.
+
 ```text
 turismo-com/
-├── index.html                     # Página inicial
-├── estilo.css                     # Estilos das páginas antigas
-├── portugal.html                  # Página de Portugal
-├── portugal.css                   # Estilos específicos de Portugal
-├── portugal-fotos.html            # Galeria de Portugal
-├── portugal-fotos.css             # Estilos exclusivos da galeria
-├── hospedagem.html                # Guia de hospedagem
-├── alimentacao.html               # Guia de alimentação
-├── compras.html                   # Guia de compras
-├── contato.html                   # Contato
-├── imagens-portugal/              # Fotografias e créditos de Portugal
-├── assets/                       # Componentes compartilhados dos modelos
+│
+├── index.html                       # Página inicial
+├── turismo-inicio.css               # Visual da página inicial
+├── estilo.css                       # Estilos usados por várias páginas
+├── sobre.html                       # Apresentação da equipe
+├── sobre.css                        # Estilos da página Sobre
+├── turismo-preview.gif              # Animação do README
+│
+├── brasil.html                      # Página principal do Brasil
+├── brasil.css
+├── brasil-fotos.html                # Galeria do Brasil
+├── brasil-fotos.css
+│
+├── portugal.html                    # Página principal de Portugal
+├── portugal.css
+├── portugal-fotos.html              # Galeria de Portugal
+├── portugal-fotos.css
+│
+├── republica-dominicana.html        # Página principal da R. Dominicana
+├── paises-baixos-fotos.html         # Galeria dos Países Baixos
+│
+├── grecia.html                      # Outras páginas principais
+├── franca.html
+├── espanha.html
+├── italia.html
+├── japao.html
+├── mexico.html
+├── china.html
+├── estados-unidos.html
+│
+├── hospedagem.html                  # Guias e serviços gerais
+├── hospedagem.css
+├── alimentacao.html
+├── alimentacao.css
+├── compras.html
+├── compras.css
+├── contato.html
+├── contato.css
+│
+├── equipe/                          # Imagens dos colaboradores
+├── imagens-brasil/                  # Fotografias do Brasil
+├── imagens-portugal/                # Fotografias de Portugal
+│
+├── assets/                          # Recursos compartilhados
 │   ├── css/
 │   │   ├── base.css
 │   │   ├── componentes.css
 │   │   └── pais.css
 │   └── js/
 │       └── site.js
-├── paises/                       # Páginas internas e pastas preparadas por país
-│   └── portugal/
+│
+├── paises/                          # Conteúdos organizados por país
+│   │
+│   ├── brasil/
+│   │   ├── cultura.html / cultura.css
+│   │   ├── gastronomia.html / gastronomia.css
+│   │   ├── alimentacao.html / alimentacao.css
+│   │   ├── pontos-turisticos.html / pontos-turisticos.css
+│   │   └── curiosidades.html / curiosidades.css
+│   │
+│   ├── portugal/
+│   │   ├── cultura.html / cultura.css
+│   │   ├── gastronomia.html / gastronomia.css
+│   │   ├── pontos-turisticos.html / pontos-turisticos.css
+│   │   ├── curiosidades.html / curiosidades.css
+│   │   ├── hospedagem.html / hospedagem.css
+│   │   ├── alimentacao.html / alimentacao.css
+│   │   ├── compras.html / compras.css
+│   │   └── contato.html / contato.css
+│   │
+│   ├── republica-dominicana/
+│   │   ├── cultura.html
+│   │   ├── gastronomia.html
+│   │   ├── pontos-turisticos.html
+│   │   ├── curiosidades.html
+│   │   ├── republica-dominicana-fotos.html
+│   │   └── republica-dominicana.css
+│   │
+│   └── paises-baixos/
+│       ├── paises-baixos.html / paises-baixos.css
 │       ├── cultura.html / cultura.css
 │       ├── gastronomia.html / gastronomia.css
 │       ├── pontos-turisticos.html / pontos-turisticos.css
 │       └── curiosidades.html / curiosidades.css
-├── modelos/                      # Estruturas básicas reutilizáveis
+│
+├── modelos/                         # Modelos básicos
 │   ├── pais-principal.html
 │   └── pais-interna.html
-├── template-modelo/              # Exemplo visual completo
+│
+├── template-modelo/                 # Exemplo visual de páginas
 │   ├── index.html / template.css
 │   ├── cultura.html / cultura.css
 │   ├── gastronomia.html / gastronomia.css
 │   ├── imagens/
 │   └── LEIA-ME.md
-├── teste-modelo/                 # Demonstração com dados fictícios
+│
+├── teste-modelo/                    # Demonstração com dados fictícios
 │   ├── index.html
 │   └── teste-modelo.css
-├── documentacao/                 # Guias da equipe e registros de conferência
-│   ├── ESTRUTURA.md              # Guia principal dos componentes e modelos
+│
+├── documentacao/                    # Guias e registros do projeto
+│   ├── ESTRUTURA.md
 │   ├── REGRESSAO.md
 │   ├── ORIENTACOES.md
 │   ├── HEADER.md
 │   └── FOOTER.md
+│
 └── README.md
 ```
 
-Esta árvore é um resumo. As barras entre um HTML e um CSS indicam dois arquivos na mesma pasta; outras páginas de países e galerias também permanecem na raiz.
+**Observações:** a árvore apresenta os arquivos de referência e algumas das pastas de países; outros arquivos e diretórios também existem no repositório. As barras entre HTML e CSS indicam **dois arquivos separados na mesma pasta**, como no modelo anterior. Em `paises/brasil/`, os arquivos de Pontos Turísticos e Curiosidades ainda estão vazios e aguardam conteúdo.
 
-**Compatibilidade:** `portugal.html` e `portugal-fotos.html` permanecem na raiz para preservar os links publicados e as integrações existentes. As páginas internas de Portugal estão em `paises/portugal/`, com seus CSS locais. Novos países podem organizar suas páginas em `paises/<nome-do-pais>/`, mediante coordenação com a equipe. Não é necessário mover as páginas existentes dos colegas.
+As páginas principais de vários países continuam na raiz, enquanto seus conteúdos internos ficam em `paises/`. Os Países Baixos já possuem páginas na pasta própria, mas ainda não constam na lista de destinos da página inicial.
 
 ## 💻 Como executar localmente
 
@@ -121,17 +188,15 @@ Esta árvore é um resumo. As barras entre um HTML e um CSS indicam dois arquivo
 2. Abra a pasta do projeto no VS Code.
 3. Abra `index.html` com a extensão **Live Server** ou diretamente no navegador.
 
-Não é necessário instalar React ou executar um processo de compilação.
+Não é necessário instalar React nem executar processo de compilação.
 
 ## 🤝 Padrão visual e colaboração
 
-Cada colega é responsável pelas páginas do seu país, conforme a divisão de trabalho combinada com a equipe. Antes de copiar arquivos, confira se a pasta já existe e preserve o conteúdo e as alterações de outros integrantes.
+Cada colega é responsável pelas páginas do seu país ou pelas seções que desenvolve, conforme a divisão combinada pela equipe.
 
-O projeto reúne páginas com implementações diferentes. Os modelos utilizam os componentes compartilhados de `assets/`; páginas existentes podem manter cabeçalhos, menus e rodapés próprios. Personalize sua cópia sem transformar a referência de Portugal em uma obrigação para todo o site.
+Antes de alterar arquivos compartilhados, é importante verificar se já existem mudanças feitas por outros integrantes e trabalhar com branches para evitar conflitos.
 
-**Adicionar países ao menu compartilhado, alterar o `index.html` da raiz ou modificar os CSS e o JavaScript compartilhados exige coordenação com a equipe.** Não altere páginas de outros países ou os exemplos originais para fazer sua página funcionar. Criar a pasta de um país não o inclui automaticamente no menu.
-
-Para implementar páginas com os modelos, siga o guia principal e o LEIA-ME da seção **Comece por aqui**. Também permanecem disponíveis materiais de etapas anteriores: [HEADER.md](documentacao/HEADER.md), [FOOTER.md](documentacao/FOOTER.md) e [ORIENTACOES.md](documentacao/ORIENTACOES.md). Eles não são arquivos incluídos automaticamente no site nem substituem o fluxo atual do guia principal.
+O projeto reúne páginas com estilos e estruturas diferentes, mas mantém a mesma proposta colaborativa de construção. Os modelos disponíveis em `modelos/`, `template-modelo/` e `teste-modelo/` podem servir de apoio durante o desenvolvimento.
 
 ## 👥 Equipe e créditos
 
@@ -149,13 +214,15 @@ Projeto acadêmico desenvolvido no curso de **Desenvolvimento Full Stack — +Pr
 
 | Integrante | Integrante |
 | :--- | :--- |
-| Silvia Reis | Julia Alves |
-| Emylli da Rosa | Regina Lucia Matos Lima |
-| Wesley David | Stanley |
-| Leo Matias | Matheus Alan |
-| Lucas Morales | — |
+| Valdir Leandro | Lucas Freitas |
+| Weslley | Emylli da Rosa |
+| Lucas Lima | Silvia Reis |
+| Julia | Mozer Luis |
+| Regina Lima | Wallace Limeira |
+| Léo Matias | Joana Leal |
 
 **Contato:** [contato.neusa.turismo@gmail.com](mailto:contato.neusa.turismo@gmail.com)
+
 **Localidade informada no projeto:** Sapucaia do Sul — RS
 
 ---
