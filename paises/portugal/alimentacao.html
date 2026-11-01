@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia de alimentação em Portugal: cozinha tradicional, mercados e confeitarias, com informações e links para fontes reais.">
+    <meta name="description"
+        content="Guia de alimentação em Portugal: cozinha tradicional, mercados e confeitarias, com informações e links para fontes reais.">
     <title>Alimentação em Portugal | TURISMO.COM</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/componentes.css">
@@ -16,12 +18,16 @@
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <script src="componentes/redes-sociais.js" defer></script>
 
+    <link rel="stylesheet" href="componentes/navegacao.css">
+    <script src="componentes/navegacao.js" defer></script>
 </head>
-<body class="tc-site pais-portugal pagina-alimentacao" data-raiz="../../" data-pais-nome="Portugal" data-pais-url="portugal.html">
+
+<body class="tc-site pais-portugal pagina-alimentacao" data-raiz="../../" data-pais-nome="Portugal"
+    data-pais-url="portugal.html">
     <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- Cabeçalho igual ao da página principal de Portugal. -->
-    <header class="cabecalho-principal">
+    <header data-portugal-navegacao class="cabecalho-principal">
         <div class="barra-cabecalho">
             <a href="../../index.html" class="marca">
                 <span class="marca-simbolo" aria-hidden="true">✈</span>
@@ -31,18 +37,19 @@
                 </span>
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="true"
-                    aria-controls="navegacao-principal" disabled>
+                aria-controls="navegacao-principal" disabled>
                 <span></span><span></span><span></span>
             </button>
             <nav class="navegacao" id="navegacao-principal" aria-label="Menu principal">
                 <a href="../../index.html">Início</a>
                 <div class="grupo-dropdown">
-                    <button class="botao-dropdown" type="button" aria-expanded="true" aria-controls="lista-paises" disabled>
+                    <button class="botao-dropdown" type="button" aria-expanded="true" aria-controls="lista-paises"
+                        disabled>
                         Países <span aria-hidden="true">⌄</span>
                     </button>
                     <div class="menu-dropdown" id="lista-paises">
                         <a href="../../brasil.html">Brasil</a>
-                        <a href="../../portugal.html">Portugal</a>
+                        <a href="../../portugal.html" data-portugal-contexto>Portugal</a>
                         <a href="../../grecia.html">Grécia</a>
                         <a href="../../franca.html">França</a>
                         <a href="../../espanha.html">Espanha</a>
@@ -57,6 +64,7 @@
                 <a href="hospedagem.html">Hospedagem</a>
                 <a href="alimentacao.html">Alimentação</a>
                 <a href="compras.html">Compras</a>
+                <a href="../../sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </div>
@@ -90,40 +98,82 @@
             <p class="tc-etiqueta">Guia prático</p>
             <h2 id="titulo-opcoes">Três maneiras de conhecer os sabores portugueses</h2>
 
+            <p class="alimentacao-apresentacao-cards">Selecionamos três lugares reais em Lisboa para diferentes
+                experiências gastronômicas. Conheça as características de cada um e consulte os sites indicados
+                antes da visita.</p>
+
             <div class="tc-cartoes alimentacao-grade">
-                <article class="tc-cartao alimentacao-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">01</span>
-                    <h3>Cozinha tradicional</h3>
-                    <p>Bacalhau, caldo verde e receitas regionais fazem parte da culinária portuguesa.
-                        Pequenos restaurantes e casas especializadas ajudam a conhecer esses sabores.</p>
-                    <p>Em Lisboa, o restaurante Pap'Açorda é apresentado pelo portal Visit Lisboa como
-                        um espaço de cozinha de inspiração tradicional portuguesa.</p>
-                    <a href="https://www.visitlisboa.com/pt-pt/locais/restaurante-pap-acorda"
-                       target="_blank" rel="noopener noreferrer">Conhecer o Pap'Açorda no Visit Lisboa <span aria-hidden="true">↗</span></a>
+                <article class="tc-cartao alimentacao-cartao alimentacao-cartao-local">
+                    <figure class="alimentacao-card-foto">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Restaurant_Cervejaria_Trindade_%2839916271621%29.jpg/960px-Restaurant_Cervejaria_Trindade_%2839916271621%29.jpg"
+                            alt="Mariscos fotografados na Cervejaria Trindade, em Lisboa"
+                            width="960" height="640" loading="lazy" decoding="async">
+                        <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Restaurant_Cervejaria_Trindade_(39916271621).jpg"
+                            target="_blank" rel="noopener noreferrer">Maria Eklind / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank"
+                            rel="noopener noreferrer">CC BY-SA 2.0</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="alimentacao-card-conteudo">
+                        <span class="alimentacao-tipo">Cozinha tradicional</span>
+                        <h3>Cervejaria Trindade</h3>
+                        <p class="alimentacao-localizacao">Rua Nova da Trindade, 20 C · Lisboa</p>
+                        <p>Uma cervejaria histórica no Chiado, conhecida pelo ambiente decorado com azulejos,
+                            pelos pratos de cozinha portuguesa, bifes, mariscos e petiscos.</p>
+                        <a class="alimentacao-link" href="https://www.cervejariatrindade.pt/"
+                            target="_blank" rel="noopener noreferrer">Conhecer o restaurante <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
 
-                <article class="tc-cartao alimentacao-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">02</span>
-                    <h3>Mercados locais</h3>
-                    <p>Mercados são uma oportunidade de descobrir ingredientes, observar hábitos locais
-                        e experimentar diferentes pratos e petiscos.</p>
-                    <p>O Mercado da Ribeira, em Lisboa, reúne a atividade tradicional do mercado
-                        e espaços de gastronomia. É uma opção para quem deseja explorar sabores variados.</p>
-                    <a href="https://www.visitlisboa.com/pt-pt/lisbon-stories/1-fado-route/pois"
-                       target="_blank" rel="noopener noreferrer">Conhecer o Mercado da Ribeira no Visit Lisboa <span aria-hidden="true">↗</span></a>
+                <article class="tc-cartao alimentacao-cartao alimentacao-cartao-local">
+                    <figure class="alimentacao-card-foto">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercado_da_Ribeira%2C_Time_Out_Market%2C_Lisbon.jpg/960px-Mercado_da_Ribeira%2C_Time_Out_Market%2C_Lisbon.jpg"
+                            alt="Interior do Mercado da Ribeira, com bancas de comida e mesas sob o teto de ferro"
+                            width="960" height="720" loading="lazy" decoding="async">
+                        <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Mercado_da_Ribeira,_Time_Out_Market,_Lisbon.jpg"
+                            target="_blank" rel="noopener noreferrer">Sonse / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank"
+                            rel="noopener noreferrer">CC BY 2.0</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="alimentacao-card-conteudo">
+                        <span class="alimentacao-tipo">Mercado gastronômico</span>
+                        <h3>Mercado da Ribeira</h3>
+                        <p class="alimentacao-localizacao">Avenida 24 de Julho · Cais do Sodré, Lisboa</p>
+                        <p>Um mercado histórico que reúne espaços gastronômicos, bancas e mesas coletivas.
+                            Uma parada interessante para experimentar diferentes sabores na mesma visita.</p>
+                        <a class="alimentacao-link" href="https://www.timeout.pt/time-out-market-lisboa/pt/como-chegar"
+                            target="_blank" rel="noopener noreferrer">Conhecer o mercado <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
 
-                <article class="tc-cartao alimentacao-cartao">
-                    <span class="tc-cartao-numero" aria-hidden="true">03</span>
-                    <h3>Cafés e confeitarias</h3>
-                    <p>As pastelarias portuguesas são famosas pelos doces e pela tradição de fazer
-                        uma pausa para um café. Pastéis de nata são uma das especialidades mais conhecidas.</p>
-                    <p>A casa Pastéis de Belém, em Lisboa, produz seus doces tradicionais desde 1837
-                        e apresenta sua história e especialidades no site oficial.</p>
-                    <a href="https://pasteisdebelem.pt/"
-                       target="_blank" rel="noopener noreferrer">Visitar o site oficial Pastéis de Belém <span aria-hidden="true">↗</span></a>
+                <article class="tc-cartao alimentacao-cartao alimentacao-cartao-local">
+                    <figure class="alimentacao-card-foto">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Past%C3%A9is_de_Bel%C3%A9m_-_Lisbon.jpg/960px-Past%C3%A9is_de_Bel%C3%A9m_-_Lisbon.jpg"
+                            alt="Fachada da tradicional pastelaria Pastéis de Belém, com letreiro e toldo azul"
+                            width="960" height="720" loading="lazy" decoding="async">
+                        <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Past%C3%A9is_de_Bel%C3%A9m_-_Lisbon.jpg"
+                            target="_blank" rel="noopener noreferrer">Ø11 / Wikimedia Commons</a> ·
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                            rel="noopener noreferrer">CC BY-SA 4.0</a> · recorte visual</figcaption>
+                    </figure>
+                    <div class="alimentacao-card-conteudo">
+                        <span class="alimentacao-tipo">Pastelaria histórica</span>
+                        <h3>Pastéis de Belém</h3>
+                        <p class="alimentacao-localizacao">Rua de Belém, 84–92 · Lisboa</p>
+                        <p>Fundada em 1837, é conhecida pelos seus pastéis de receita tradicional, feitos
+                            diariamente. Uma referência da doçaria portuguesa próxima ao Mosteiro dos Jerónimos.</p>
+                        <a class="alimentacao-link" href="https://pasteisdebelem.pt/"
+                            target="_blank" rel="noopener noreferrer">Conhecer a pastelaria <span aria-hidden="true">↗</span></a>
+                    </div>
                 </article>
             </div>
+
+            <p class="alimentacao-fontes">Informações: <a href="https://www.visitlisboa.com/pt-pt/locais/cervejaria-trindade"
+                target="_blank" rel="noopener noreferrer">Visit Lisboa — Cervejaria Trindade</a>,
+                <a href="https://www.timeout.pt/time-out-market-lisboa/pt/como-chegar" target="_blank"
+                rel="noopener noreferrer">Time Out Market Lisboa</a> e
+                <a href="https://pasteisdebelem.pt/contactos/" target="_blank"
+                rel="noopener noreferrer">Pastéis de Belém</a>. Seleção informativa, sem patrocínio ou garantia
+                de preço, horário ou disponibilidade. Confira os dados atualizados antes da visita.
         </section>
 
         <aside class="tc-container alimentacao-dica" aria-label="Dica de viajante">
@@ -173,91 +223,6 @@
         </div>
     </footer>
 
-    <script>
-    (() => {
-      const pagina = document.body;
-      const cabecalho = pagina.querySelector('.cabecalho-principal');
-      const botaoMenu = cabecalho.querySelector('.botao-menu');
-      const navegacao = cabecalho.querySelector('.navegacao');
-      const botaoPaises = cabecalho.querySelector('.botao-dropdown');
-      const grupoPaises = cabecalho.querySelector('.grupo-dropdown');
-      const listaPaises = cabecalho.querySelector('.menu-dropdown');
-      const telaCompacta = matchMedia('(max-width: 980px)');
-      const permiteHover = matchMedia('(hover: hover) and (pointer: fine)');
-      let modoAnterior = telaCompacta.matches;
-      let focoAntesDaMudanca = null;
-      let paisesPorHover = false;
-
-      function definirPaises(aberto, porHover = false) {
-        paisesPorHover = aberto && porHover;
-        grupoPaises.classList.toggle('aberto', aberto);
-        botaoPaises.setAttribute('aria-expanded', String(aberto));
-      }
-      function definirMenu(aberto) {
-        const expandido = aberto && telaCompacta.matches;
-        navegacao.classList.toggle('aberta', expandido);
-        botaoMenu.setAttribute('aria-expanded', String(expandido));
-        botaoMenu.setAttribute('aria-label', expandido ? 'Fechar menu' : 'Abrir menu');
-        if (!expandido) definirPaises(false);
-      }
-      botaoMenu.addEventListener('click', () => definirMenu(botaoMenu.getAttribute('aria-expanded') !== 'true'));
-      botaoPaises.addEventListener('click', () => definirPaises(paisesPorHover || botaoPaises.getAttribute('aria-expanded') !== 'true'));
-      grupoPaises.addEventListener('pointerenter', e => {
-        if (permiteHover.matches && e.pointerType === 'mouse' && botaoPaises.getAttribute('aria-expanded') !== 'true') definirPaises(true, true);
-      });
-      grupoPaises.addEventListener('pointerleave', () => {
-        if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
-      });
-      document.addEventListener('keydown', e => {
-        if (e.key !== 'Escape') return;
-        if (grupoPaises.classList.contains('aberto')) {
-          const devolverFoco = grupoPaises.contains(document.activeElement);
-          definirPaises(false);
-          if (devolverFoco) botaoPaises.focus();
-        } else if (telaCompacta.matches && navegacao.classList.contains('aberta')) {
-          const devolverFoco = cabecalho.contains(document.activeElement);
-          definirMenu(false);
-          if (devolverFoco) botaoMenu.focus();
-        } else return;
-        e.preventDefault();
-      });
-      document.addEventListener('click', e => {
-        if (!cabecalho.contains(e.target)) {
-          const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-          const focoNosPaises = listaPaises.contains(document.activeElement);
-          definirMenu(false);
-          if (focoNoMenu) botaoMenu.focus();
-          else if (focoNosPaises) botaoPaises.focus();
-        } else if (!grupoPaises.contains(e.target)) definirPaises(false);
-      });
-      grupoPaises.addEventListener('focusout', e => {
-        if (!grupoPaises.contains(e.relatedTarget)) definirPaises(false);
-      });
-      cabecalho.addEventListener('focusout', e => {
-        if (telaCompacta.matches !== modoAnterior && e.relatedTarget === null) focoAntesDaMudanca = e.target;
-        if (!cabecalho.contains(e.relatedTarget)) definirMenu(false);
-      });
-      navegacao.addEventListener('click', e => {
-        if (!e.target.closest('a')) return;
-        const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-        const focoNosPaises = listaPaises.contains(document.activeElement);
-        definirMenu(false);
-        if (focoNoMenu) botaoMenu.focus();
-        else if (focoNosPaises) botaoPaises.focus();
-      });
-      telaCompacta.addEventListener('change', () => {
-        const foco = focoAntesDaMudanca || document.activeElement;
-        focoAntesDaMudanca = null;
-        modoAnterior = telaCompacta.matches;
-        definirMenu(false);
-        if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
-        else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) navegacao.querySelector('a').focus();
-      });
-      botaoMenu.disabled = false;
-      botaoPaises.disabled = false;
-      definirMenu(false);
-      pagina.classList.add('menu-pronto');
-    })();
-    </script>
 </body>
+
 </html>

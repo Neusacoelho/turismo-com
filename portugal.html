@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="paises/portugal/componentes/redes-sociais.css">
     <script src="paises/portugal/componentes/voltar-ao-topo.js" defer></script>
     <script src="paises/portugal/componentes/redes-sociais.js" defer></script>
+    <link rel="stylesheet" href="paises/portugal/componentes/navegacao.css">
+    <script src="paises/portugal/componentes/navegacao.js" defer></script>
 </head>
 
 <body class="pagina-portugal pagina-portugal-inicio">
     <a class="portugal-pular" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- Cabeçalho principal do Turismo.com -->
-    <header class="cabecalho-principal">
+<header data-portugal-navegacao class="cabecalho-principal">
         <div class="barra-cabecalho">
 
             <!-- Identidade do site -->
@@ -51,7 +53,7 @@
 
                     <div class="menu-dropdown" id="lista-paises">
                         <a href="brasil.html">Brasil</a>
-                        <a href="portugal.html">Portugal</a>
+                        <a href="portugal.html" aria-current="page">Portugal</a>
                         <a href="grecia.html">Grécia</a>
                         <a href="franca.html">França</a>
                         <a href="espanha.html">Espanha</a>
@@ -352,114 +354,6 @@
 
 
 
-    <script>
-        (() => {
-            const pagina = document.body;
-            const cabecalho = pagina.querySelector(".cabecalho-principal");
-            const botaoMenu = cabecalho.querySelector(".botao-menu");
-            const navegacao = cabecalho.querySelector(".navegacao");
-            const botaoPaises = cabecalho.querySelector(".botao-dropdown");
-            const grupoPaises = cabecalho.querySelector(".grupo-dropdown");
-            const listaPaises = cabecalho.querySelector(".menu-dropdown");
-            const telaCompacta = window.matchMedia("(max-width: 980px)");
-            const permiteHover = window.matchMedia("(hover: hover) and (pointer: fine)");
-            let modoAnterior = telaCompacta.matches;
-            let focoAntesDaMudanca = null;
-            let paisesPorHover = false;
-
-            // Clique, hover e teclado compartilham o mesmo estado visual e ARIA.
-            function definirPaises(aberto, porHover = false) {
-                paisesPorHover = aberto && porHover;
-                grupoPaises.classList.toggle("aberto", aberto);
-                botaoPaises.setAttribute("aria-expanded", String(aberto));
-            }
-
-            function definirMenu(aberto) {
-                const expandido = aberto && telaCompacta.matches;
-                navegacao.classList.toggle("aberta", expandido);
-                botaoMenu.setAttribute("aria-expanded", String(expandido));
-                botaoMenu.setAttribute("aria-label", expandido ? "Fechar menu" : "Abrir menu");
-                if (!expandido) definirPaises(false);
-            }
-
-            botaoMenu.addEventListener("click", () => {
-                definirMenu(botaoMenu.getAttribute("aria-expanded") !== "true");
-            });
-            botaoPaises.addEventListener("click", () => {
-                // O primeiro clique confirma a abertura por hover; o próximo fecha.
-                definirPaises(paisesPorHover || botaoPaises.getAttribute("aria-expanded") !== "true");
-            });
-            grupoPaises.addEventListener("pointerenter", (evento) => {
-                if (permiteHover.matches && evento.pointerType === "mouse" &&
-                    botaoPaises.getAttribute("aria-expanded") !== "true") definirPaises(true, true);
-            });
-            grupoPaises.addEventListener("pointerleave", () => {
-                if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
-            });
-
-            document.addEventListener("keydown", (evento) => {
-                if (evento.key !== "Escape") return;
-                if (grupoPaises.classList.contains("aberto")) {
-                    const devolverFoco = grupoPaises.contains(document.activeElement);
-                    definirPaises(false);
-                    if (devolverFoco) botaoPaises.focus();
-                } else if (telaCompacta.matches && navegacao.classList.contains("aberta")) {
-                    const devolverFoco = cabecalho.contains(document.activeElement);
-                    definirMenu(false);
-                    if (devolverFoco) botaoMenu.focus();
-                } else {
-                    return;
-                }
-                evento.preventDefault();
-            });
-
-            document.addEventListener("click", (evento) => {
-                if (!cabecalho.contains(evento.target)) {
-                    const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-                    const focoNosPaises = listaPaises.contains(document.activeElement);
-                    definirMenu(false);
-                    if (focoNoMenu) botaoMenu.focus();
-                    else if (focoNosPaises) botaoPaises.focus();
-                } else if (!grupoPaises.contains(evento.target)) {
-                    definirPaises(false);
-                }
-            });
-            grupoPaises.addEventListener("focusout", (evento) => {
-                if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
-            });
-            cabecalho.addEventListener("focusout", (evento) => {
-                // O CSS pode ocultar o foco antes de o navegador avisar a mudança de largura.
-                if (telaCompacta.matches !== modoAnterior && evento.relatedTarget === null) {
-                    focoAntesDaMudanca = evento.target;
-                }
-                if (!cabecalho.contains(evento.relatedTarget)) definirMenu(false);
-            });
-            navegacao.addEventListener("click", (evento) => {
-                if (!evento.target.closest("a")) return;
-                const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
-                const focoNosPaises = listaPaises.contains(document.activeElement);
-                definirMenu(false);
-                if (focoNoMenu) botaoMenu.focus();
-                else if (focoNosPaises) botaoPaises.focus();
-            });
-            telaCompacta.addEventListener("change", () => {
-                const foco = focoAntesDaMudanca || document.activeElement;
-                focoAntesDaMudanca = null;
-                modoAnterior = telaCompacta.matches;
-                definirMenu(false);
-                if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
-                else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) {
-                    navegacao.querySelector("a").focus();
-                }
-            });
-
-            // Só recolhe a navegação depois de os controles estarem funcionais.
-            botaoMenu.disabled = false;
-            botaoPaises.disabled = false;
-            definirMenu(false);
-            pagina.classList.add("menu-pronto");
-        })();
-    </script>
 
 </body>
 

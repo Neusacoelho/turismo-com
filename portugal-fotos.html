@@ -14,16 +14,18 @@
     <script src="assets/js/site.js" defer></script>
     <script src="paises/portugal/componentes/voltar-ao-topo.js" defer></script>
     <script src="paises/portugal/componentes/redes-sociais.js" defer></script>
+    <link rel="stylesheet" href="paises/portugal/componentes/navegacao.css">
+    <script src="paises/portugal/componentes/navegacao.js" defer></script>
 </head>
 <body class="tc-site pais-portugal pagina-galeria-portugal" data-raiz="./"
       data-pais-nome="Portugal" data-pais-url="portugal.html" data-galeria-url="portugal-fotos.html">
     <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="tc-cabecalho" data-tc-cabecalho>
+<header data-portugal-navegacao class="tc-cabecalho" data-tc-cabecalho>
         <!-- Navegação básica preservada quando o JavaScript não está disponível. -->
         <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
             <a href="index.html">TURISMO.COM — Início</a>
-            <a href="portugal.html">Portugal</a>
+            <a href="portugal.html" data-portugal-contexto>Portugal</a>
             <a href="portugal-fotos.html" aria-current="page">Galeria de Portugal</a>
         </nav>
     </header>

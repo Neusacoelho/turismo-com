@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="componentes/redes-sociais.css">
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <script src="componentes/redes-sociais.js" defer></script>
+    <link rel="stylesheet" href="componentes/navegacao.css">
+    <script src="componentes/navegacao.js" defer></script>
 </head>
 <body class="pagina-portugal pagina-cultura">
     <a class="cultura-pular" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- Estrutura reaproveitada de portugal.html, com caminhos para a raiz. -->
-<header class="cabecalho-principal">
+<header data-portugal-navegacao class="cabecalho-principal">
     <div class="barra-cabecalho">
 
         <!-- Identidade do site -->
@@ -42,7 +44,7 @@
 
                 <div class="menu-dropdown" id="lista-paises">
                     <a href="../../brasil.html">Brasil</a>
-                    <a href="../../portugal.html">Portugal</a>
+                    <a href="../../portugal.html" data-portugal-contexto>Portugal</a>
                     <a href="../../grecia.html">Grécia</a>
                     <a href="../../franca.html">França</a>
                     <a href="../../espanha.html">Espanha</a>
@@ -332,79 +334,5 @@
     </div>
 </footer>
 
-    <script>
-        // Mantém as classes de estado do menu de Portugal e acrescenta suporte a teclado.
-        const botaoMenu = document.querySelector(".botao-menu");
-        const navegacao = document.querySelector(".navegacao");
-        const botaoPaises = document.querySelector(".botao-dropdown");
-        const grupoPaises = document.querySelector(".grupo-dropdown");
-        const telaCompacta = window.matchMedia("(max-width: 980px)");
-
-        function definirPaises(aberto) {
-            grupoPaises.classList.toggle("aberto", aberto);
-            botaoPaises.setAttribute("aria-expanded", String(aberto));
-        }
-
-        function definirMenu(aberto) {
-            navegacao.classList.toggle("aberta", aberto);
-            botaoMenu.setAttribute("aria-expanded", String(aberto));
-            botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
-            if (!aberto) definirPaises(false);
-        }
-
-        botaoMenu.addEventListener("click", () => {
-            const abrir = !navegacao.classList.contains("aberta");
-            definirMenu(abrir);
-            // A navegação precede o botão no HTML; leva o foco ao primeiro link ao abrir.
-            if (abrir) navegacao.querySelector("a").focus();
-        });
-
-        botaoPaises.addEventListener("click", () => {
-            definirPaises(!grupoPaises.classList.contains("aberto"));
-        });
-
-        document.addEventListener("keydown", (evento) => {
-            if (evento.key !== "Escape") return;
-            if (grupoPaises.classList.contains("aberto")) {
-                definirPaises(false);
-                botaoPaises.focus();
-            } else if (navegacao.classList.contains("aberta")) {
-                definirMenu(false);
-                botaoMenu.focus();
-            }
-        });
-
-        document.addEventListener("click", (evento) => {
-            if (!grupoPaises.contains(evento.target)) definirPaises(false);
-            if (!navegacao.contains(evento.target) && !botaoMenu.contains(evento.target)) {
-                definirMenu(false);
-            }
-        });
-
-        grupoPaises.addEventListener("focusout", (evento) => {
-            if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
-        });
-
-        navegacao.addEventListener("focusout", (evento) => {
-            if (telaCompacta.matches && !navegacao.contains(evento.relatedTarget)) {
-                definirMenu(false);
-            }
-        });
-
-        navegacao.addEventListener("click", (evento) => {
-            if (evento.target.closest("a")) definirMenu(false);
-        });
-
-        telaCompacta.addEventListener("change", () => {
-            const focoFicaraOculto = telaCompacta.matches && navegacao.contains(document.activeElement);
-            const focoNoBotao = !telaCompacta.matches && document.activeElement === botaoMenu;
-            definirMenu(false);
-            if (focoFicaraOculto) botaoMenu.focus();
-            if (focoNoBotao) navegacao.querySelector("a").focus();
-        });
-
-        // Sem JavaScript, os links permanecem visíveis e o botão de menu fica oculto.
-        document.body.classList.add("menu-pronto");
-    </script>
 </body>
 </html>

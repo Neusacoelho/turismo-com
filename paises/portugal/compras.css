@@ -52,7 +52,7 @@
 }
 .pagina-compras .compras-opcoes h2 { margin-bottom: 2rem; }
 
-/* Três cartões informativos: nenhuma página adicional é necessária. */
+/* Layout dos três cartões de compras. */
 .pagina-compras .compras-grade {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -144,3 +144,140 @@
 .pagina-compras .tc-banner .tc-migalhas a { color: #fff; }
 .pagina-compras .tc-banner .tc-migalhas a { text-decoration: none; }
 .pagina-compras .tc-banner .tc-migalhas a:hover { text-decoration: underline; }
+
+/* Cartões com fotografias reais — exclusivos de Compras em Portugal.
+   Mantêm o padrão de apresentação da página Hospedagem. */
+.pagina-compras .compras-apresentacao-cards {
+    max-width: 58rem;
+    margin: -0.5rem 0 2rem;
+    color: #465d69;
+    line-height: 1.7;
+}
+
+.pagina-compras .compras-cartao-local {
+    gap: 0;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgb(22 59 80 / 9%);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pagina-compras .compras-cartao-local:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgb(22 59 80 / 13%);
+}
+
+.pagina-compras .compras-card-foto {
+    margin: 0;
+    background: #e8f0f2;
+}
+
+.pagina-compras .compras-card-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pagina-compras .compras-card-foto figcaption {
+    padding: 0.55rem 1.25rem;
+    color: #536d79;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    background: #f5f9fa;
+}
+
+.pagina-compras .compras-card-foto figcaption a {
+    color: #006b75;
+}
+
+.pagina-compras .compras-card-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.5rem 1.6rem 1.7rem;
+}
+
+.pagina-compras .compras-card-conteudo .compras-tipo {
+    color: #008d9b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pagina-compras .compras-card-conteudo h3 {
+    margin: 0;
+    color: #163b50;
+    font-size: clamp(1.35rem, 2vw, 1.7rem);
+    line-height: 1.25;
+}
+
+.pagina-compras .compras-card-conteudo .compras-localizacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin: 0;
+    color: #54707d;
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+.pagina-compras .compras-localizacao::before {
+    content: "⌖";
+    color: #008d9b;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.pagina-compras .compras-card-conteudo p:not(.compras-localizacao) {
+    margin: 0;
+    color: #465d69;
+    font-size: 0.96rem;
+    line-height: 1.65;
+}
+
+.pagina-compras .compras-card-conteudo .compras-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 0.7rem;
+    color: #006b75;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+}
+
+.pagina-compras .compras-card-conteudo .compras-link:hover {
+    color: #163b50;
+}
+
+.pagina-compras .compras-fontes {
+    margin-top: 1.6rem;
+    color: #536d79;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+.pagina-compras .compras-fontes a { color: #006b75; }
+
+@media (max-width: 900px) {
+    .pagina-compras .compras-cartao-local:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-compras .compras-cartao-local { padding: 0; }
+    .pagina-compras .compras-cartao-local:last-child { grid-column: auto; }
+    .pagina-compras .compras-card-conteudo { padding: 1.3rem; }
+    .pagina-compras .compras-card-foto figcaption { font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-compras .compras-cartao-local { transition: none; }
+    .pagina-compras .compras-cartao-local:hover { transform: none; }
+}
