@@ -1297,3 +1297,10 @@ html {
     border-radius: 6px;
     cursor: pointer;
 }
+.foto-slot.sem-foto[data-arquivo*="paises-baixos"] {
+    background: linear-gradient(160deg, #f59e0b 0%, #163b50 100%);
+}
+
+.foto-slot.sem-foto[data-arquivo*="paises-baixos"]::before {
+    content: "🌷";
+}

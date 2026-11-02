@@ -1,38 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Conheça os Países Baixos: descubra Amsterdã, os canais, os moinhos de vento, os campos de tulipas, a cultura e a gastronomia neerlandesa.">
+    <meta name="description"
+        content="Conheça os Países Baixos: descubra Amsterdã, os canais, os moinhos de vento, os campos de tulipas, a cultura e a gastronomia neerlandesa.">
 
     <title>Países Baixos — Turismo.com</title>
 
     <!-- Ordem: base, componentes, estrutura de país e CSS local. -->
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="paises/paises-baixos/base.css">
+    <link rel="stylesheet" href="paises/paises-baixos/componentes.css">
     <link rel="stylesheet" href="paises-baixos.css">
 
-    <script src="../assets/js/site.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
 </head>
 
-<body class="tc-site paises-baixos" data-raiz="../../"
-      data-pais-nome="Países Baixos"
-      data-pais-url="modelos/pais-principal.html">
+<body class="tc-site paises-baixos" data-raiz="./" data-pais-nome="Países Baixos"
+    data-pais-url="modelos/pais-principal.html">
 
     <a class="tc-pular-conteudo" href="#conteudo">
         ⬆️ Pular para o conteúdo
     </a>
 
     <header class="tc-cabecalho" data-tc-cabecalho>
-<nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="pontos-turisticos.html">Pontos turísticos</a>
-    <a href="cultura.html" class="ativo">Cultura</a>
-    <a href="gastronomia.html">Gastronomia</a>
-    <a href="curiosidades.html">Curiosidades</a>
-</nav>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+
+            <!-- Lista de países dentro do menu -->
+            <div class="grupo-dropdown">
+                <button class="botao-dropdown" type="button" aria-expanded="false">
+                    Países <span aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="menu-dropdown">
+                    <a href="brasil.html">Brasil</a>
+                    <a href="portugal.html">Portugal</a>
+                    <a href="grecia.html">Grécia</a>
+                    <a href="grecia.html">Grécia</a>
+                    <a href="franca.html">França</a>
+                    <a href="espanha.html">Espanha</a>
+                    <a href="italia.html">Itália</a>
+                    <a href="japao.html">Japão</a>
+                    <a href="china.html">China</a>
+                    <a href="republica-dominicana.html">República Dominicana</a>
+                  
+                </div>
+            </div>
+
+            <a href="paises-baixos.html" class="ativo">Países Baixos</a>
+            <a href="paises/paises-baixos/pontos-turisticos.html">Pontos turísticos</a>
+            <a href="paises/paises-baixos/cultura.html">Cultura</a>
+            <a href="paises/paises-baixos/gastronomia.html">Gastronomia</a>
+            <a href="paises/paises-baixos/curiosidades.html">Curiosidades</a>
+        </nav>
     </header>
 
     <main id="conteudo" tabindex="-1">
@@ -136,7 +159,7 @@
                             histórica do país.
                         </p>
 
-                        <a href="cultura.html">
+                        <a href="paises/paises-baixos/cultura.html">
                             Saiba Mais
                         </a>
 
@@ -162,7 +185,7 @@
                             poffertjes e outras delícias da culinária local.
                         </p>
 
-                        <a href="#gastronomia">
+                        <a href="paises/paises-baixos/gastronomia.html">
                             Saiba Mais
                         </a>
 
@@ -188,21 +211,13 @@
                             os jardins de Keukenhof e a moderna Roterdã.
                         </p>
 
-                        <a href="#paisagens">
+                        <a href="paises/paises-baixos/pontos-turisticos.html">
                             Saiba Mais
                         </a>
 
                     </article>
 
                 </div>
-            </section>
-
-            <!-- GASTRONOMIA -->
-            <section class="tc-secao tc-fluxo"
-                     aria-labelledby="gastronomia">
-
-                <h2 id="gastronomia">
-
             </section>
 
         </div>
@@ -216,12 +231,26 @@
                 © 2026 Turismo.com — Projeto acadêmico desenvolvido em equipe.
             </p>
 
-            <a href="../index.html">🏠 Voltar ao início</a>
+            <a href="index.html">🏠 Voltar ao início</a>
 
         </div>
     </footer>
 
+    <!-- Abre e fecha o menu "Países" com clique ou toque -->
+    <script>
+        document.querySelectorAll('.grupo-dropdown').forEach(function (grupo) {
+            var botao = grupo.querySelector('.botao-dropdown');
+            botao.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var aberto = grupo.classList.toggle('aberto');
+                botao.setAttribute('aria-expanded', aberto);
+            });
+            document.addEventListener('click', function () {
+                grupo.classList.remove('aberto');
+                botao.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
 </body>
 </html>
-
-
