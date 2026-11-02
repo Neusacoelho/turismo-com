@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Roma, Florença, Veneza e outras cidades, com sugestão de tempo e dicas para se deslocar.">
-    <title>Cidades italianas — Turismo.com</title>
+    <meta name="description" content="Fatos sobre história, cidades, cultura e tradições para conhecer melhor o país antes da viagem.">
+    <title>Curiosidades da Itália — Turismo.com</title>
 
     <!-- CSS compartilhados -->
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/componentes.css">
-    <link rel="stylesheet" href="./assets/css/pais.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/componentes.css">
+    <link rel="stylesheet" href="../../assets/css/pais.css">
 
     <!-- CSS específico da Itália -->
-    <link rel="stylesheet" href="./italia.css">
+    <link rel="stylesheet" href="../../italia.css">
 
     <script>
         document.documentElement.classList.add("js");
     </script>
 </head>
 
-<body class="tc-site pais-italia pagina-italia pagina-italia-cidades">
+<body class="tc-site pais-italia pagina-italia pagina-italia-curiosidades">
 
     <!-- CABEÇALHO -->
     <header class="cabecalho-principal tc-cabecalho"
@@ -31,7 +31,7 @@
 
         <div class="barra-cabecalho tc-barra-cabecalho tc-container">
 
-            <a href="index.html" class="marca tc-marca">
+            <a href="../../index.html" class="marca tc-marca">
                 <span class="marca-simbolo tc-marca-simbolo">✈</span>
 
                 <span class="marca-texto tc-marca-texto">
@@ -42,7 +42,7 @@
 
             <nav class="navegacao tc-navegacao" aria-label="Menu principal">
 
-                <a href="index.html">Início</a>
+                <a href="../../index.html">Início</a>
 
                 <div class="grupo-dropdown tc-grupo-paises">
 
@@ -55,22 +55,22 @@
 
                     <div class="menu-dropdown tc-lista-paises">
 
-                        <a href="brasil.html">Brasil</a>
-                        <a href="portugal.html">Portugal</a>
-                        <a href="grecia.html">Grécia</a>
-                        <a href="franca.html">França</a>
-                        <a href="espanha.html">Espanha</a>
-                        <a href="italia.html" aria-current="page">Itália</a>
-                        <a href="japao.html">Japão</a>
-                        <a href="china.html">China</a>
-                        <a href="republica-dominicana.html">República Dominicana</a>
+                        <a href="../../brasil.html">Brasil</a>
+                        <a href="../../portugal.html">Portugal</a>
+                        <a href="../../grecia.html">Grécia</a>
+                        <a href="../../franca.html">França</a>
+                        <a href="../../espanha.html">Espanha</a>
+                        <a href="../../italia.html" aria-current="page">Itália</a>
+                        <a href="../../japao.html">Japão</a>
+                        <a href="../../china.html">China</a>
+                        <a href="../../republica-dominicana.html">República Dominicana</a>
 
                     </div>
                 </div>
 
-                <a href="italia.html#conteudo-pontos-turisticos">Pontos turísticos</a>
-                <a href="italia.html#conteudo-roteiro">Roteiro</a>
-                <a href="italia.html#conteudo-dicas">Dicas</a>
+                <a href="../../italia.html#conteudo-pontos-turisticos">Pontos turísticos</a>
+                <a href="../../italia.html#conteudo-roteiro">Roteiro</a>
+                <a href="../../italia.html#conteudo-dicas">Dicas</a>
 
             </nav>
 
@@ -95,41 +95,58 @@
             <div class="banner-italia-conteudo tc-container">
                 <div class="banner-italia-texto">
                     <nav class="migalhas" aria-label="Você está em">
-                        <a href="index.html">Início</a> / <a href="italia.html">Itália</a> / <span>Cidades italianas</span>
+                        <a href="../../index.html">Início</a> / <a href="../../italia.html">Itália</a> / <span>Curiosidades</span>
                     </nav>
-                    <span class="banner-etiqueta tc-etiqueta">CIDADES</span>
-                    <h1 id="titulo-banner-italia">Cidades italianas: por onde começar</h1>
-                    <p>Roma, Florença, Veneza e outras cidades, com sugestão de tempo e dicas para se deslocar.</p>
+                    <span class="banner-etiqueta tc-etiqueta">CURIOSIDADES</span>
+                    <h1 id="titulo-banner-italia">Curiosidades sobre a Itália que você talvez não conheça</h1>
+                    <p>Fatos sobre história, cidades, cultura e tradições para conhecer melhor o país antes da viagem.</p>
                 </div>
             </div>
         </section>
 
         <div class="conteudo-italia tc-container">
 
-            <section class="italia-pontos revelar tc-secao" id="principais" aria-labelledby="t-principais">
+            <section class="italia-curiosidades revelar tc-secao" aria-label="Você sabia?">
+                <div class="voce-sabia">
+                    <span class="voce-sabia-etiqueta">VOCÊ SABIA?</span>
+                    <p id="voce-sabia-texto">A Itália possui duas cidades-estado independentes completamente cercadas por seu território: Vaticano e San Marino.</p>
+                    <button class="voce-sabia-botao" id="voce-sabia-botao" type="button">Outra curiosidade</button>
+                </div>
+            </section>
+
+            <section class="italia-pontos revelar tc-secao" id="historia" aria-labelledby="t-historia">
+                <span class="secao-etiqueta tc-etiqueta">HISTÓRIA</span>
+                <h2 class="secao-titulo" id="t-historia">História e geografia</h2>
+                
+                <div class="curiosidades-grade">
+                    <article class="curiosidade-cartao"><h3>Um país jovem</h3><p>A Itália só foi unificada em 1861, e Roma se tornou capital em 1871.</p></article><article class="curiosidade-cartao"><h3>Vulcões ativos</h3><p>O país tem vulcões como Etna, Vesúvio e Stromboli.</p></article><article class="curiosidade-cartao"><h3>Vinte regiões</h3><p>Cada região tem dialetos, pratos e tradições próprias.</p></article><article class="curiosidade-cartao"><h3>Cidades dentro do país</h3><p>Vaticano e San Marino são estados independentes cercados pelo território italiano.</p></article>
+                </div>
+            </section>
+
+            <section class="explorar-italia revelar tc-secao" id="cidades" aria-labelledby="t-cidades">
                 <span class="secao-etiqueta tc-etiqueta">CIDADES</span>
-                <h2 class="secao-titulo" id="t-principais">Cidades para conhecer</h2>
-                <p class="secao-intro">O tempo sugerido é para ver o essencial, sem pressa.</p>
-                <div class="pontos-grade">
-                    <article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🏛️</span><span class="ponto-tag">Lácio</span><h3>Roma</h3><p>História antiga, Vaticano, museus e praças. Sugestão: 3 a 4 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🎨</span><span class="ponto-tag">Toscana</span><h3>Florença</h3><p>Arte renascentista e boa base para passeios na Toscana. Sugestão: 2 a 3 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🚤</span><span class="ponto-tag">Vêneto</span><h3>Veneza</h3><p>Canais, pontes e ilhas. Sugestão: 2 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🏙️</span><span class="ponto-tag">Lombardia</span><h3>Milão</h3><p>Moda, Duomo, a Última Ceia e vida urbana. Sugestão: 2 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍕</span><span class="ponto-tag">Campânia</span><h3>Nápoles</h3><p>Berço da pizza, perto de Pompeia, Capri e da Costa Amalfitana. Sugestão: 2 a 3 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍝</span><span class="ponto-tag">Emília-Romanha</span><h3>Bolonha</h3><p>Cidade universitária, com pórticos e uma das melhores cozinhas do país. Sugestão: 1 a 2 dias.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🏟️</span><span class="ponto-tag">Vêneto</span><h3>Verona</h3><p>Arena romana e a Casa de Julieta. Sugestão: 1 dia.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🏰</span><span class="ponto-tag">Toscana</span><h3>Siena</h3><p>Centro medieval e a Piazza del Campo. Sugestão: 1 dia.</p></article>
+                <h2 class="secao-titulo" id="t-cidades">Cidades e monumentos</h2>
+                
+                <div class="curiosidades-grade">
+                    <article class="curiosidade-cartao"><h3>Veneza</h3><p>Foi construída sobre ilhas e tem mais de 400 pontes.</p></article><article class="curiosidade-cartao"><h3>Torre de Pisa</h3><p>Levou quase 200 anos para ficar pronta e começou a inclinar durante a obra.</p></article><article class="curiosidade-cartao"><h3>Fontana di Trevi</h3><p>As moedas jogadas na fonte são recolhidas regularmente e doadas a uma instituição de caridade.</p></article><article class="curiosidade-cartao"><h3>Universidade de Bolonha</h3><p>Fundada em 1088, é considerada a universidade mais antiga do mundo ocidental em funcionamento contínuo.</p></article>
                 </div>
             </section>
 
-            <section class="explorar-italia revelar tc-secao" id="deslocamento" aria-labelledby="t-deslocamento">
-                <span class="secao-etiqueta tc-etiqueta">TRANSPORTE</span>
-                <h2 class="secao-titulo" id="t-deslocamento">Como se deslocar</h2>
-                <p class="secao-intro">As principais cidades ficam ligadas por trem.</p>
-                <div class="dicas-grade">
-                    <div class="dica-item"><span class="dica-icone" aria-hidden="true">🚄</span><div><h3>Trens de alta velocidade</h3><p>Frecciarossa e Italo ligam Roma, Florença, Bolonha, Milão, Veneza e Nápoles.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">🎫</span><div><h3>Valide o bilhete</h3><p>Em trens regionais, bilhetes de papel precisam ser validados na máquina antes do embarque.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">🚗</span><div><h3>ZTL</h3><p>Centros históricos têm zonas de tráfego limitado. Entrar de carro sem autorização gera multa.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">📅</span><div><h3>Reserve antes</h3><p>Coliseu, Última Ceia, Uffizi e Museus Vaticanos costumam esgotar. Compre os ingressos com antecedência.</p></div></div>
+            <section class="italia-pontos revelar tc-secao" id="cultura" aria-labelledby="t-cultura">
+                <span class="secao-etiqueta tc-etiqueta">CULTURA E MESA</span>
+                <h2 class="secao-titulo" id="t-cultura">Cultura e mesa</h2>
+                
+                <div class="curiosidades-grade">
+                    <article class="curiosidade-cartao"><h3>Pizza Margherita</h3><p>Segundo a tradição, foi criada em 1889 em homenagem à rainha Margarida de Sabóia.</p></article><article class="curiosidade-cartao"><h3>Piano</h3><p>Foi inventado por volta de 1700 pelo italiano Bartolomeo Cristofori.</p></article><article class="curiosidade-cartao"><h3>Café em pé</h3><p>Tomar o espresso no balcão é um hábito diário e costuma custar menos do que sentar.</p></article><article class="curiosidade-cartao"><h3>Ligação com o Brasil</h3><p>O Brasil tem uma das maiores populações de descendentes de italianos do mundo.</p></article>
                 </div>
             </section>
 
-            <section class="italia-pontos revelar tc-secao" id="continue-explorando" aria-labelledby="t-continue-explorando">
+            <section class="explorar-italia revelar tc-secao" id="continue-explorando" aria-labelledby="t-continue-explorando">
                 <span class="secao-etiqueta tc-etiqueta">CONTINUE EXPLORANDO</span>
                 <h2 class="secao-titulo" id="t-continue-explorando">Mais para descobrir na Itália</h2>
                 
                 <div class="explorar-cartoes">
-                    <article class="explorar-cartao tc-cartao"><h3>🎭 Cultura</h3><p>Arte, arquitetura, música, literatura e festas que fazem parte da identidade italiana.</p><a href="italia-cultura.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🍝 Gastronomia</h3><p>Pratos regionais, doces, queijos, bebidas e costumes à mesa.</p><a href="italia-culinaria.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🏛️ Pontos turísticos</h3><p>Monumentos, museus e paisagens para incluir no roteiro.</p><a href="italia-pontos-turisticos.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>💡 Curiosidades</h3><p>Fatos curiosos sobre história, cidades e tradições da Itália.</p><a href="italia-curiosidades.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🇮🇹 Página da Itália</h3><p>Volte ao resumo do país, roteiro e dicas de viagem.</p><a href="italia.html" class="cartao-link">Voltar →</a></article>
+                    <article class="explorar-cartao tc-cartao"><h3>🎭 Cultura</h3><p>Arte, arquitetura, música, literatura e festas que fazem parte da identidade italiana.</p><a href="italia-cultura.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🍝 Gastronomia</h3><p>Pratos regionais, doces, queijos, bebidas e costumes à mesa.</p><a href="italia-culinaria.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🏛️ Pontos turísticos</h3><p>Monumentos, museus e paisagens para incluir no roteiro.</p><a href="italia-pontos-turisticos.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🏙️ Cidades italianas</h3><p>Roma, Florença, Veneza e outras cidades, com dicas de quando ir e quanto tempo ficar.</p><a href="italia-cidades.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🇮🇹 Página da Itália</h3><p>Volte ao resumo do país, roteiro e dicas de viagem.</p><a href="../../italia.html" class="cartao-link">Voltar →</a></article>
                 </div>
             </section>
 
@@ -168,8 +185,8 @@
 
                 <h3>Explorar</h3>
 
-                <a href="index.html">Início</a>
-                <a href="italia.html">Itália</a>
+                <a href="../../index.html">Início</a>
+                <a href="../../italia.html">Itália</a>
                 <a href="italia-cidades.html">Cidades italianas</a>
 
             </nav>
@@ -191,9 +208,9 @@
 
                 <h3>Informações</h3>
 
-                <a href="brasil.html">Brasil</a>
-                <a href="franca.html">França</a>
-                <a href="grecia.html">Grécia</a>
+                <a href="../../brasil.html">Brasil</a>
+                <a href="../../franca.html">França</a>
+                <a href="../../grecia.html">Grécia</a>
 
             </nav>
 
@@ -318,7 +335,7 @@
     </script>
 
     <!-- JavaScript compartilhado -->
-    <script src="./assets/js/site.js"></script>
+    <script src="../../assets/js/site.js"></script>
 
     <!-- MENU (hambúrguer + países). Fica depois do site.js para não duplicar o clique -->
     <script>
