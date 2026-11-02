@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria da Grécia — Turismo.com</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="grecia.css">
+    <link rel="stylesheet" href="grecia-fotos.css">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    <style>
+        .credito-imagem,
+        .credito-banner {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        .credito-imagem a,
+        .credito-banner a {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="pagina-grecia pagina-grecia-sub pagina-grecia-fotos">
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-principal">
+        <div class="barra-cabecalho">
+
+            <a href="index.html" class="marca">
+                <span class="marca-simbolo">✈</span>
+
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
+
+            <nav class="navegacao" aria-label="Menu principal">
+
+                <a href="index.html">Início</a>
+
+                <div class="grupo-dropdown">
+
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+                    </div>
+
+                </div>
+
+                <a href="paises/grecia/hospedagem.html">Hospedagem</a>
+                <a href="paises/grecia/alimentacao.html">Alimentação</a>
+                <a href="paises/grecia/compras.html">Compras</a>
+                <a href="paises/grecia/contato.html">Contato</a>
+
+            </nav>
+
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- BANNER -->
+        <section class="sub-banner" aria-labelledby="titulo-galeria">
+
+            <div class="foto-slot larga"
+                data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon_from_west.jpg?width=1400">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon_from_west.jpg?width=1400"
+                    alt="Acrópole de Atenas, na Grécia">
+
+            </div>
+
+            <div class="sub-banner-conteudo">
+
+                <div class="sub-banner-texto">
+
+                    <nav class="migalhas" aria-label="Você está em">
+                        <a href="index.html">Início</a>
+                        <span>/</span>
+                        <a href="grecia.html">Grécia</a>
+                        <span>/</span>
+                        <span>Galeria</span>
+                    </nav>
+
+                    <span class="banner-etiqueta">
+                        OLHARES SOBRE A GRÉCIA
+                    </span>
+
+                    <h1 id="titulo-galeria">
+                        Galeria de fotos da Grécia
+                    </h1>
+
+                    <p>
+                        Ruínas milenares, vilas brancas sobre o mar e mosteiros
+                        no alto das rochas: uma seleção de imagens para sonhar
+                        com a viagem.
+                    </p>
+
+                    <small class="credito-banner">
+                        Foto: Mountain ·
+
+                        <a href="https://commons.wikimedia.org/wiki/File:Parthenon_from_west.jpg" target="_blank"
+                            rel="noopener noreferrer">
+                            Fonte
+                        </a>
+
+                        ·
+
+                        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"
+                            rel="noopener noreferrer">
+                            Domínio público
+                        </a>
+                    </small>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="conteudo-galeria">
+
+            <!-- FILTROS -->
+            <section class="galeria-filtros revelar" aria-labelledby="titulo-filtros">
+
+                <span class="secao-etiqueta">
+                    EXPLORE POR DESTINO
+                </span>
+
+                <h2 id="titulo-filtros" class="secao-titulo">
+                    Escolha um lugar para ver de perto.
+                </h2>
+
+                <div class="filtros" role="group" aria-label="Filtrar fotos por destino">
+
+                    <button type="button" class="filtro ativo" data-filtro="todas" aria-pressed="true">
+                        Todas
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Atenas" aria-pressed="false">
+                        Atenas
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Santorini" aria-pressed="false">
+                        Santorini
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Delfos" aria-pressed="false">
+                        Delfos
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Meteora" aria-pressed="false">
+                        Meteora
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Creta" aria-pressed="false">
+                        Creta
+                    </button>
+
+                    <button type="button" class="filtro" data-filtro="Rodes" aria-pressed="false">
+                        Rodes
+                    </button>
+
+                </div>
+
+                <p class="galeria-contagem" id="galeria-contagem" aria-live="polite">
+                </p>
+
+            </section>
+
+
+            <!-- GALERIA DE FOTOGRAFIAS -->
+            <section class="galeria revelar" aria-label="Fotografias da Grécia">
+
+                <div class="galeria-grade" id="galeria-grade">
+
+
+                    <!-- ATENAS: PARTENON -->
+                    <figure class="galeria-item" data-categoria="Atenas">
+
+                        <div class="foto-slot larga"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon_from_west.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon_from_west.jpg?width=1400"
+                                alt="Acrópole e Partenon, Atenas, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Atenas</span>
+
+                            <strong>Acrópole e Partenon</strong>
+
+                            <span class="galeria-desc">
+                                O Partenon visto do lado oeste, no alto da colina.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Mountain ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Parthenon_from_west.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Domínio público
+                                </a>
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- ATENAS: PLAKA -->
+                    <figure class="galeria-item" data-categoria="Atenas">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Plaka.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaka.jpg?width=1400"
+                                alt="Bairro de Plaka, Atenas, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Atenas</span>
+
+                            <strong>Bairro de Plaka</strong>
+
+                            <span class="galeria-desc">
+                                Ruas de pedra, tavernas e casas coloridas aos pés da Acrópole.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Odd ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Plaka.jpg" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Fonte e licença
+                                </a>
+
+                                · Atribuição: consultar a página de origem.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- SANTORINI: OIA -->
+                    <figure class="galeria-item" data-categoria="Santorini">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Village_of_Oia_on_the_Greek_Island_of_Santorini.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Village_of_Oia_on_the_Greek_Island_of_Santorini.jpg?width=1400"
+                                alt="Vila de Oia, Santorini, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Santorini</span>
+
+                            <strong>Vila de Oia</strong>
+
+                            <span class="galeria-desc">
+                                Casas brancas e cúpulas azuis sobre a caldeira.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: L. Richard Martin, Jr. ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Village_of_Oia_on_the_Greek_Island_of_Santorini.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY 2.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- SANTORINI: CALDEIRA -->
+                    <figure class="galeria-item" data-categoria="Santorini">
+
+                        <div class="foto-slot larga"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Santorini_Caldera_Oia.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Santorini_Caldera_Oia.jpg?width=1400"
+                                alt="Caldeira de Santorini, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Santorini</span>
+
+                            <strong>Caldeira de Santorini</strong>
+
+                            <span class="galeria-desc">
+                                O azul do Egeu cercado pelas falésias do antigo vulcão.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Nubifer ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Santorini_Caldera_Oia.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- DELFOS: TEMPLO DE APOLO -->
+                    <figure class="galeria-item" data-categoria="Delfos">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Temple.apollo.delphi.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple.apollo.delphi.jpg?width=1400"
+                                alt="Templo de Apolo, Delfos, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Delfos</span>
+
+                            <strong>Templo de Apolo</strong>
+
+                            <span class="galeria-desc">
+                                Colunas do santuário que os antigos gregos consideravam o centro do mundo.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: KtrnDrta ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Temple.apollo.delphi.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- DELFOS: TEATRO -->
+                    <figure class="galeria-item" data-categoria="Delfos">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Theatre_and_the_Temple_of_Apollo_in_Delphi%2C_201257.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Theatre_and_the_Temple_of_Apollo_in_Delphi%2C_201257.jpg?width=1400"
+                                alt="Teatro de Delfos, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Delfos</span>
+
+                            <strong>Teatro de Delfos</strong>
+
+                            <span class="galeria-desc">
+                                Vista do teatro antigo com o vale ao fundo.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Zde ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Theatre_and_the_Temple_of_Apollo_in_Delphi,_201257.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- METEORA: MOSTEIROS -->
+                    <figure class="galeria-item" data-categoria="Meteora">
+
+                        <div class="foto-slot larga"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Meteora_-_Greece.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Meteora_-_Greece.jpg?width=1400"
+                                alt="Mosteiros de Meteora, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Meteora</span>
+
+                            <strong>Mosteiros de Meteora</strong>
+
+                            <span class="galeria-desc">
+                                Mosteiros no topo de gigantescas colunas de rocha.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Marios Ioannides ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Meteora_-_Greece.jpg" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- METEORA: FORMAÇÕES ROCHOSAS -->
+                    <figure class="galeria-item" data-categoria="Meteora">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Meteora_Monasteries%2C_Thessaly%2C_Greece.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Meteora_Monasteries%2C_Thessaly%2C_Greece.jpg?width=1400"
+                                alt="Mosteiros e formações rochosas de Meteora" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Meteora</span>
+
+                            <strong>Vista de Meteora</strong>
+
+                            <span class="galeria-desc">
+                                A paisagem da manhã sobre as formações rochosas.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: XeresNelro ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Meteora_Monasteries,_Thessaly,_Greece.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- CRETA: CNOSSOS -->
+                    <figure class="galeria-item" data-categoria="Creta">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_Palace_Crete.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_Palace_Crete.jpg?width=1400"
+                                alt="Palácio de Cnossos, Creta, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Creta</span>
+
+                            <strong>Palácio de Cnossos</strong>
+
+                            <span class="galeria-desc">
+                                Ruínas da capital da civilização minoica.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Przemek Pietrak ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Knossos_Palace_Crete.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 3.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- CRETA: CHANIA -->
+                    <figure class="galeria-item" data-categoria="Creta">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Chania_venetian_port.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chania_venetian_port.jpg?width=1400"
+                                alt="Porto de Chania, Creta, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Creta</span>
+
+                            <strong>Porto de Chania</strong>
+
+                            <span class="galeria-desc">
+                                O porto veneziano e o farol ao entardecer.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Fotinisamioti ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Chania_venetian_port.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- RODES: CIDADE MEDIEVAL -->
+                    <figure class="galeria-item" data-categoria="Rodes">
+
+                        <div class="foto-slot"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Rhodes_medieval_streets_1.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rhodes_medieval_streets_1.jpg?width=1400"
+                                alt="Cidade medieval de Rodes, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Rodes</span>
+
+                            <strong>Cidade medieval</strong>
+
+                            <span class="galeria-desc">
+                                Muralhas e ruas de pedra bem preservadas.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: Jwslubbock ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Rhodes_medieval_streets_1.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY-SA 4.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <!-- RODES: PALÁCIO -->
+                    <figure class="galeria-item" data-categoria="Rodes">
+
+                        <div class="foto-slot larga"
+                            data-arquivo="https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Grand_Masters%2C_Rhodes.jpg?width=1400">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Grand_Masters%2C_Rhodes.jpg?width=1400"
+                                alt="Palácio do Grão-Mestre, Rodes, Grécia" loading="lazy">
+
+                        </div>
+
+                        <figcaption>
+
+                            <span class="galeria-tag">Rodes</span>
+
+                            <strong>Palácio do Grão-Mestre</strong>
+
+                            <span class="galeria-desc">
+                                Fortaleza que domina o centro histórico de Rodes.
+                            </span>
+
+                            <small class="credito-imagem">
+                                Foto: David Spender ·
+
+                                <a href="https://commons.wikimedia.org/wiki/File:Palace_of_the_Grand_Masters,_Rhodes.jpg"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Fonte
+                                </a>
+
+                                ·
+
+                                <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    CC BY 2.0
+                                </a>
+
+                                · Alterações: redimensionamento.
+                            </small>
+
+                        </figcaption>
+                    </figure>
+
+
+                </div>
+            </section>
+
+
+            <!-- CONTINUE EXPLORANDO -->
+            <section class="continuar revelar" aria-labelledby="titulo-continuar">
+
+                <span class="secao-etiqueta">
+                    CONTINUE EXPLORANDO
+                </span>
+
+                <h2 id="titulo-continuar" class="secao-titulo">
+                    Gostou do que viu?
+                </h2>
+
+                <div class="continuar-grade">
+
+                    <a href="grecia.html">
+                        Voltar à Grécia
+                        <small>Visão geral e roteiro</small>
+                    </a>
+
+                    <a href="paises/grecia/pontos-turisticos.html">
+                        Pontos turísticos
+                        <small>Onde ir</small>
+                    </a>
+
+                    <a href="paises/grecia/gastronomia.html">
+                        Gastronomia
+                        <small>O que provar</small>
+                    </a>
+
+                    <a href="paises/grecia/cultura.html">
+                        Cultura
+                        <small>Mitos e tradições</small>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- VISUALIZAÇÃO AMPLIADA -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+
+        <button type="button" class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">
+            ✕
+        </button>
+
+        <button type="button" class="lightbox-nav anterior" id="lightbox-anterior" aria-label="Foto anterior">
+            ‹
+        </button>
+
+        <figure class="lightbox-figura">
+
+            <img id="lightbox-img" src="" alt="">
+
+            <figcaption id="lightbox-legenda"></figcaption>
+
+        </figure>
+
+        <button type="button" class="lightbox-nav proxima" id="lightbox-proxima" aria-label="Próxima foto">
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </a>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-sobre">
+
+                <h2>✈ TURISMO<span>.COM</span></h2>
+
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+
+            </div>
+
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+
+                <h3>Explorar</h3>
+
+                <a href="index.html">Início</a>
+                <a href="grecia.html">Grécia</a>
+                <a href="grecia-fotos.html">Galeria da Grécia</a>
+
+            </nav>
+
+
+            <nav class="rodape-coluna" aria-label="Serviços">
+
+                <h3>Serviços</h3>
+
+                <a href="paises/grecia/hospedagem.html">Hospedagem</a>
+                <a href="paises/grecia/alimentacao.html">Alimentação</a>
+                <a href="paises/grecia/compras.html">Compras</a>
+
+            </nav>
+
+
+            <nav class="rodape-coluna" aria-label="Informações">
+
+                <h3>Informações</h3>
+
+                <a href="paises/grecia/contato.html">Contato</a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="rodape-inferior">
+
+            <p>
+                © 2026 Turismo.com — Todos os direitos reservados.
+            </p>
+
+            <p>
+                Projeto acadêmico desenvolvido em equipe.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="grecia-paginas.js"></script>
+    <script src="grecia-foto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubra pratos regionais, doces, queijos, bebidas e costumes à mesa na Itália.">
+    <title>Gastronomia da Itália — Turismo.com</title>
+
+    <!-- CSS compartilhados -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/componentes.css">
+    <link rel="stylesheet" href="./assets/css/pais.css">
+
+    <!-- CSS específico da Itália -->
+    <link rel="stylesheet" href="./italia.css">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+</head>
+
+<body class="tc-site pais-italia pagina-italia pagina-italia-culinaria">
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-principal tc-cabecalho"
+        data-tc-menu-pronto
+        data-menu-aberto="false"
+        data-paises-aberto="false">
+
+        <div class="barra-cabecalho tc-barra-cabecalho tc-container">
+
+            <a href="index.html" class="marca tc-marca">
+                <span class="marca-simbolo tc-marca-simbolo">✈</span>
+
+                <span class="marca-texto tc-marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
+
+            <nav class="navegacao tc-navegacao" aria-label="Menu principal">
+
+                <a href="index.html">Início</a>
+
+                <div class="grupo-dropdown tc-grupo-paises">
+
+                    <button
+                        class="botao-dropdown tc-botao-paises"
+                        type="button"
+                        aria-expanded="false">
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown tc-lista-paises">
+
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html" aria-current="page">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+
+                    </div>
+                </div>
+
+                <a href="italia.html#conteudo-pontos-turisticos">Pontos turísticos</a>
+                <a href="italia.html#conteudo-roteiro">Roteiro</a>
+                <a href="italia.html#conteudo-dicas">Dicas</a>
+
+            </nav>
+
+            <button
+                class="botao-menu tc-botao-menu"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="banner-italia banner-interno tc-banner" aria-labelledby="titulo-banner-italia">
+            <div class="banner-italia-conteudo tc-container">
+                <div class="banner-italia-texto">
+                    <nav class="migalhas" aria-label="Você está em">
+                        <a href="index.html">Início</a> / <a href="italia.html">Itália</a> / <span>Gastronomia</span>
+                    </nav>
+                    <span class="banner-etiqueta tc-etiqueta">SABORES DA ITÁLIA</span>
+                    <h1 id="titulo-banner-italia">Gastronomia italiana: cada região, um sabor</h1>
+                    <p>Descubra pratos regionais, doces, queijos, bebidas e costumes à mesa na Itália.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="conteudo-italia tc-container">
+
+            <section class="italia-pontos revelar tc-secao" id="regioes" aria-labelledby="t-regioes">
+                <span class="secao-etiqueta tc-etiqueta">REGIÕES</span>
+                <h2 class="secao-titulo" id="t-regioes">Uma cozinha, muitas regiões</h2>
+                <p class="secao-intro">Não existe uma única cozinha italiana: cada região tem ingredientes, massas e pratos próprios.</p>
+                <div class="explorar-cartoes">
+                    <article class="explorar-cartao tc-cartao"><h3>Norte</h3><ul class="lista-simples"><li>Risoto alla milanese, com açafrão</li><li>Polenta e carnes de panela</li><li>Pesto genovês, na Ligúria</li><li>Trufas brancas do Piemonte</li></ul></article><article class="explorar-cartao tc-cartao"><h3>Centro</h3><ul class="lista-simples"><li>Carbonara, cacio e pepe e amatriciana, em Roma</li><li>Tagliatelle ao ragù, em Bolonha</li><li>Bistecca alla fiorentina, na Toscana</li><li>Ribollita, sopa toscana de pão e legumes</li></ul></article><article class="explorar-cartao tc-cartao"><h3>Sul e ilhas</h3><ul class="lista-simples"><li>Pizza napolitana, em Nápoles</li><li>Arancini, cannoli e caponata, na Sicília</li><li>Massas com frutos do mar na costa</li><li>Limões da Costa Amalfitana</li></ul></article>
+                </div>
+            </section>
+
+            <section class="explorar-italia revelar tc-secao" id="pratos" aria-labelledby="t-pratos">
+                <span class="secao-etiqueta tc-etiqueta">PRATOS</span>
+                <h2 class="secao-titulo" id="t-pratos">Pratos para provar</h2>
+                <p class="secao-intro">Uma seleção para quem quer começar pelos clássicos.</p>
+                <div class="pontos-grade">
+                    <article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍕</span><span class="ponto-tag">Nápoles</span><h3>Pizza napolitana</h3><p>Massa macia e borda alta, assada em forno a lenha. A Margherita é a versão mais tradicional.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍝</span><span class="ponto-tag">Roma</span><h3>Carbonara</h3><p>Feita com ovos, guanciale, pecorino romano e pimenta-do-reino, sem creme de leite.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍚</span><span class="ponto-tag">Milão</span><h3>Risoto alla milanese</h3><p>Arroz cremoso com açafrão, que dá a cor amarela.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍲</span><span class="ponto-tag">Bolonha</span><h3>Tagliatelle ao ragù</h3><p>Massa fresca com molho de carne cozido lentamente.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🌿</span><span class="ponto-tag">Ligúria</span><h3>Pesto genovês</h3><p>Manjericão, pinoli, queijo, alho e azeite, geralmente servido com trofie.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🥩</span><span class="ponto-tag">Florença</span><h3>Bistecca alla fiorentina</h3><p>Corte grosso de carne bovina grelhado, servido malpassado.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🍙</span><span class="ponto-tag">Sicília</span><h3>Arancini</h3><p>Bolinhos de arroz empanados e fritos, recheados com ragù, queijo ou legumes.</p></article><article class="ponto-cartao"><span class="ponto-icone" aria-hidden="true">🥐</span><span class="ponto-tag">Sicília</span><h3>Cannoli</h3><p>Massa crocante frita, recheada com ricota doce.</p></article>
+                </div>
+            </section>
+
+            <section class="italia-pontos revelar tc-secao" id="doces" aria-labelledby="t-doces">
+                <span class="secao-etiqueta tc-etiqueta">DOCES, QUEIJOS E BEBIDAS</span>
+                <h2 class="secao-titulo" id="t-doces">Para fechar a refeição</h2>
+                <p class="secao-intro">Sobremesas, queijos e bebidas que aparecem em quase todo roteiro gastronômico.</p>
+                <div class="explorar-cartoes">
+                    <article class="explorar-cartao tc-cartao"><h3>Doces</h3><ul class="lista-simples"><li>Tiramisù</li><li>Panna cotta</li><li>Gelato artesanal</li><li>Cannoli e cassata, na Sicília</li></ul></article><article class="explorar-cartao tc-cartao"><h3>Queijos</h3><ul class="lista-simples"><li>Parmigiano Reggiano</li><li>Mozzarella di bufala, da Campânia</li><li>Gorgonzola</li><li>Pecorino romano</li></ul></article><article class="explorar-cartao tc-cartao"><h3>Bebidas</h3><ul class="lista-simples"><li>Espresso e cappuccino</li><li>Chianti, Barolo e Prosecco</li><li>Aperol Spritz</li><li>Limoncello</li></ul></article>
+                </div>
+            </section>
+
+            <section class="explorar-italia revelar tc-secao" id="etiqueta" aria-labelledby="t-etiqueta">
+                <span class="secao-etiqueta tc-etiqueta">NA MESA</span>
+                <h2 class="secao-titulo" id="t-etiqueta">Como comer à italiana</h2>
+                <p class="secao-intro">Alguns costumes ajudam a evitar surpresas.</p>
+                <div class="dicas-grade">
+                    <div class="dica-item"><span class="dica-icone" aria-hidden="true">🕐</span><div><h3>Horários</h3><p>O almoço costuma ser entre 12h30 e 14h30, e o jantar começa por volta das 19h30 ou 20h.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">☕</span><div><h3>Café</h3><p>Cappuccino é uma bebida de manhã. Depois das refeições, o comum é pedir espresso. No balcão, o café costuma custar menos do que na mesa.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">💶</span><div><h3>Coperto</h3><p>Alguns restaurantes cobram uma taxa de couvert por pessoa. Ela aparece no cardápio ou na conta.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">🍕</span><div><h3>Pizza</h3><p>Em geral, é uma pizza por pessoa, e não para dividir.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">💧</span><div><h3>Água</h3><p>Peça "naturale" para água sem gás ou "frizzante" para com gás.</p></div></div><div class="dica-item"><span class="dica-icone" aria-hidden="true">🍝</span><div><h3>Massa</h3><p>O comum é enrolar a massa no garfo. Cortar com a faca costuma ser considerado estranho.</p></div></div>
+                </div>
+            </section>
+
+            <section class="italia-pontos revelar tc-secao" id="continue-explorando" aria-labelledby="t-continue-explorando">
+                <span class="secao-etiqueta tc-etiqueta">CONTINUE EXPLORANDO</span>
+                <h2 class="secao-titulo" id="t-continue-explorando">Mais para descobrir na Itália</h2>
+                
+                <div class="explorar-cartoes">
+                    <article class="explorar-cartao tc-cartao"><h3>🎭 Cultura</h3><p>Arte, arquitetura, música, literatura e festas que fazem parte da identidade italiana.</p><a href="italia-cultura.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🏛️ Pontos turísticos</h3><p>Monumentos, museus e paisagens para incluir no roteiro.</p><a href="italia-pontos-turisticos.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>💡 Curiosidades</h3><p>Fatos curiosos sobre história, cidades e tradições da Itália.</p><a href="italia-curiosidades.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🏙️ Cidades italianas</h3><p>Roma, Florença, Veneza e outras cidades, com dicas de quando ir e quanto tempo ficar.</p><a href="italia-cidades.html" class="cartao-link">Ver página →</a></article><article class="explorar-cartao tc-cartao"><h3>🇮🇹 Página da Itália</h3><p>Volte ao resumo do país, roteiro e dicas de viagem.</p><a href="italia.html" class="cartao-link">Voltar →</a></article>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#"
+        class="voltar-topo"
+        id="voltar-topo"
+        aria-label="Voltar ao topo">
+        ↑
+    </a>
+
+
+    
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal tc-rodape" data-tc-rodape>
+
+        <div class="rodape-conteudo tc-rodape-grade tc-container">
+
+            <div class="rodape-sobre">
+
+                <h2>✈ TURISMO<span>.COM</span></h2>
+
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+
+            </div>
+
+            <nav class="rodape-coluna tc-rodape-coluna"
+                aria-label="Navegação do rodapé">
+
+                <h3>Explorar</h3>
+
+                <a href="index.html">Início</a>
+                <a href="italia.html">Itália</a>
+                <a href="italia-cidades.html">Cidades italianas</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna"
+                aria-label="Conteúdo da Itália">
+
+                <h3>Conheça</h3>
+
+                <a href="italia-cultura.html">Cultura</a>
+                <a href="italia-culinaria.html">Gastronomia</a>
+                <a href="italia-pontos-turisticos.html">Pontos turísticos</a>
+                <a href="italia-curiosidades.html">Curiosidades</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna"
+                aria-label="Informações">
+
+                <h3>Informações</h3>
+
+                <a href="brasil.html">Brasil</a>
+                <a href="franca.html">França</a>
+                <a href="grecia.html">Grécia</a>
+
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior tc-rodape-inferior tc-container">
+
+            <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+
+            <p>Projeto acadêmico desenvolvido em equipe.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- FUNCIONALIDADES DA PÁGINA -->
+    <script>
+
+        // Animação de entrada das seções
+        const secoesParaRevelar =
+            document.querySelectorAll(".revelar");
+
+        if ("IntersectionObserver" in window) {
+
+            const observador = new IntersectionObserver((entradas) => {
+
+                entradas.forEach((entrada) => {
+
+                    if (entrada.isIntersecting) {
+
+                        entrada.target.classList.add("revelada");
+
+                        observador.unobserve(entrada.target);
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.12
+            });
+
+            secoesParaRevelar.forEach((secao) => {
+                observador.observe(secao);
+            });
+
+        } else {
+
+            secoesParaRevelar.forEach((secao) => {
+                secao.classList.add("revelada");
+            });
+
+        }
+
+
+        // Curiosidades interativas
+        const curiosidades = [
+
+            "A Itália possui duas cidades-estado independentes completamente cercadas por seu território: Vaticano e San Marino.",
+
+            "A Universidade de Bolonha, fundada em 1088, é tradicionalmente considerada a universidade mais antiga do mundo ocidental em funcionamento contínuo.",
+
+            "A Itália é formada por 20 regiões, cada uma com características culturais e gastronômicas próprias.",
+
+            "Veneza foi construída sobre um conjunto de ilhas ligadas por pontes e canais.",
+
+            "O Renascimento teve um de seus principais centros na Itália, especialmente em cidades como Florença.",
+
+            "A pizza napolitana possui uma tradição reconhecida internacionalmente e está associada à cidade de Nápoles.",
+
+            "O idioma italiano moderno tem forte influência do dialeto toscano, especialmente da variedade literária de Florença."
+
+        ];
+
+        const textoCuriosidade =
+            document.getElementById("voce-sabia-texto");
+
+        const botaoCuriosidade =
+            document.getElementById("voce-sabia-botao");
+
+        let curiosidadeAtual = 0;
+
+        if (textoCuriosidade && botaoCuriosidade) {
+
+            botaoCuriosidade.addEventListener("click", () => {
+
+                curiosidadeAtual =
+                    (curiosidadeAtual + 1) % curiosidades.length;
+
+                textoCuriosidade.classList.add("trocando");
+
+                setTimeout(() => {
+
+                    textoCuriosidade.textContent =
+                        curiosidades[curiosidadeAtual];
+
+                    textoCuriosidade.classList.remove("trocando");
+
+                }, 180);
+
+            });
+
+        }
+
+
+        // Botão voltar ao topo
+        const botaoTopo = document.getElementById("voltar-topo");
+
+        if (botaoTopo) {
+
+            window.addEventListener("scroll", () => {
+
+                botaoTopo.classList.toggle(
+                    "visivel",
+                    window.scrollY > 700
+                );
+
+            });
+
+        }
+
+    </script>
+
+    <!-- JavaScript compartilhado -->
+    <script src="./assets/js/site.js"></script>
+
+    <!-- MENU (hambúrguer + países). Fica depois do site.js para não duplicar o clique -->
+    <script>
+        (function () {
+            const cab = document.querySelector(".tc-cabecalho");
+            if (!cab) return;
+
+            // Remove qualquer listener anterior (ex.: do site.js) clonando os botões
+            const limpar = (el) => {
+                if (!el) return null;
+                const novo = el.cloneNode(true);
+                el.replaceWith(novo);
+                return novo;
+            };
+
+            const botaoMenu = limpar(cab.querySelector(".botao-menu"));
+            const botaoPaises = limpar(cab.querySelector(".botao-dropdown"));
+            const nav = cab.querySelector(".navegacao");
+
+            const abrirMenu = (abrir) => {
+                cab.setAttribute("data-menu-aberto", String(abrir));
+                botaoMenu.setAttribute("aria-expanded", String(abrir));
+                botaoMenu.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+                if (!abrir) abrirPaises(false);
+            };
+
+            const abrirPaises = (abrir) => {
+                cab.setAttribute("data-paises-aberto", String(abrir));
+                if (botaoPaises) botaoPaises.setAttribute("aria-expanded", String(abrir));
+            };
+
+            if (botaoMenu) {
+                botaoMenu.addEventListener("click", () => {
+                    abrirMenu(cab.getAttribute("data-menu-aberto") !== "true");
+                });
+            }
+
+            if (botaoPaises) {
+                botaoPaises.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    abrirPaises(cab.getAttribute("data-paises-aberto") !== "true");
+                });
+            }
+
+            // Fecha ao clicar em um link do menu
+            nav.addEventListener("click", (e) => {
+                if (e.target.closest("a")) abrirMenu(false);
+            });
+
+            // Fecha o dropdown ao clicar fora
+            document.addEventListener("click", (e) => {
+                if (!e.target.closest(".grupo-dropdown")) abrirPaises(false);
+            });
+
+            // Esc fecha tudo
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") { abrirMenu(false); abrirPaises(false); }
+            });
+
+            // Ao voltar para a tela grande, reseta o estado
+            window.matchMedia("(min-width: 901px)").addEventListener("change", (m) => {
+                if (m.matches) abrirMenu(false);
+            });
+        })();
+    </script>
+
+
+</body>
+</html>

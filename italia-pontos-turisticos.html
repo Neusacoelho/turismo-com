@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Monumentos, museus e paisagens para conhecer na Itália, organizados por região.">
+
+    <title>Pontos turísticos da Itália — Turismo.com</title>
+
+    <!-- CSS compartilhados -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/componentes.css">
+    <link rel="stylesheet" href="./assets/css/pais.css">
+
+    <!-- CSS específico da Itália -->
+    <link rel="stylesheet" href="./italia.css">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    <style>
+        .ponto-imagem {
+            width: 100%;
+            height: 210px;
+            display: block;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 13px;
+        }
+
+        .ponto-cartao {
+            overflow: hidden;
+        }
+
+        .credito-imagem {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 11px;
+            line-height: 1.5;
+            color: inherit;
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .credito-imagem:hover {
+            opacity: 1;
+        }
+
+        .explorar-imagem {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .marca-simbolo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .ponto-imagem {
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body class="tc-site pais-italia pagina-italia pagina-italia-pontos">
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-principal tc-cabecalho" data-tc-menu-pronto data-menu-aberto="false"
+        data-paises-aberto="false">
+
+        <div class="barra-cabecalho tc-barra-cabecalho tc-container">
+
+            <a href="index.html" class="marca tc-marca">
+
+                <span class="marca-simbolo tc-marca-simbolo">TC</span>
+
+                <span class="marca-texto tc-marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+
+            </a>
+
+            <nav class="navegacao tc-navegacao" aria-label="Menu principal">
+
+                <a href="index.html">Início</a>
+
+                <div class="grupo-dropdown tc-grupo-paises">
+
+                    <button class="botao-dropdown tc-botao-paises" type="button" aria-expanded="false">
+
+                        Países <span>⌄</span>
+
+                    </button>
+
+                    <div class="menu-dropdown tc-lista-paises">
+
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html" aria-current="page">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+
+                    </div>
+                </div>
+
+                <a href="#roma">Roma e Vaticano</a>
+                <a href="#toscana">Toscana</a>
+                <a href="#veneto">Norte</a>
+                <a href="#sul">Sul e ilhas</a>
+
+            </nav>
+
+            <button class="botao-menu tc-botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- BANNER -->
+        <section class="banner-italia banner-interno tc-banner" aria-labelledby="titulo-banner-italia">
+
+            <div class="banner-italia-conteudo tc-container">
+
+                <div class="banner-italia-texto">
+
+                    <nav class="migalhas" aria-label="Você está em">
+                        <a href="index.html">Início</a> /
+                        <a href="italia.html">Itália</a> /
+                        <span>Pontos turísticos</span>
+                    </nav>
+
+                    <span class="banner-etiqueta tc-etiqueta">ATRAÇÕES</span>
+
+                    <h1 id="titulo-banner-italia">
+                        Pontos turísticos: do Coliseu à Costa Amalfitana
+                    </h1>
+
+                    <p>
+                        Monumentos, museus e paisagens para conhecer na
+                        Itália, organizados por região.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="conteudo-italia tc-container">
+
+            <!-- ROMA E VATICANO -->
+            <section class="italia-pontos revelar tc-secao" id="roma" aria-labelledby="t-roma">
+
+                <span class="secao-etiqueta tc-etiqueta">ROMA E VATICANO</span>
+
+                <h2 class="secao-titulo" id="t-roma">
+                    Roma e Vaticano
+                </h2>
+
+                <p class="secao-intro">
+                    A capital reúne mais de dois mil anos de história
+                    em poucos quilômetros.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <!-- Coliseu -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum%2C%20Rome%2C%20Italy.jpg"
+                            alt="Coliseu de Roma" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Coliseu</h3>
+
+                        <p>
+                            Anfiteatro construído no século I, que recebia
+                            espetáculos para dezenas de milhares de pessoas.
+                            Reserve o ingresso com antecedência.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Fórum Romano -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://d1a1ntgk1j6wes.cloudfront.net/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg"
+                            alt="Ruínas do Fórum Romano" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Fórum Romano</h3>
+
+                        <p>
+                            Ruínas do centro político e religioso da Roma
+                            Antiga, ao lado do Coliseu.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Panteão -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://images.adsttc.com/media/images/585d/498f/e58e/ce63/6c00/002f/large_jpg/14984463972_453dd23785_o.jpg?1482508650"
+                            alt="Fachada do Panteão de Roma" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Panteão</h3>
+
+                        <p>
+                            Templo romano com uma cúpula de concreto que
+                            continua de pé há quase 1900 anos.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Fontana di Trevi -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://th.bing.com/th/id/R.0392192164db9f42865efeb5074bef32?rik=z0Kf6C%2bC8uj0Gw&pid=ImgRaw&r=0"
+                            alt="Fontana di Trevi em Roma" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Fontana di Trevi</h3>
+
+                        <p>
+                            Pela tradição, quem joga uma moeda de costas
+                            para a fonte volta a Roma.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Basílica de São Pedro -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://viajandobem.com.br/wp-content/uploads/2024/11/basilica-de-sao-pedro-em-roma.jpg"
+                            alt="Basílica de São Pedro no Vaticano" loading="lazy">
+
+                        <span class="ponto-tag">Vaticano</span>
+
+                        <h3>Basílica de São Pedro</h3>
+
+                        <p>
+                            Uma das maiores igrejas do mundo.
+                            A subida à cúpula oferece vista para a cidade.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Museus Vaticanos -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://th.bing.com/th/id/R.f1a908ff0f67f11a25b2b5d38db75eb9?rik=D2J6zle%2ffDH7pw&pid=ImgRaw&r=0"
+                            alt="Pinturas do teto da Capela Sistina" loading="lazy">
+
+                        <span class="ponto-tag">Vaticano</span>
+
+                        <h3>Museus Vaticanos</h3>
+
+                        <p>
+                            Incluem a Capela Sistina e as salas de Rafael.
+                            Costumam ter filas longas, então compre
+                            com antecedência.
+                        </p>
+
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- TOSCANA -->
+            <section class="explorar-italia revelar tc-secao" id="toscana" aria-labelledby="t-toscana">
+
+                <span class="secao-etiqueta tc-etiqueta">TOSCANA</span>
+
+                <h2 class="secao-titulo" id="t-toscana">
+                    Florença, Pisa e Toscana
+                </h2>
+
+                <p class="secao-intro">
+                    Arte renascentista, colinas com vinhedos e cidades medievais.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <!-- Duomo -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Florence%20Duomo%20from%20Michelangelo%20hill.jpg"
+                            alt="Catedral de Santa Maria del Fiore em Florença" loading="lazy">
+
+                        <span class="ponto-tag">Florença</span>
+
+                        <h3>Duomo e cúpula de Brunelleschi</h3>
+
+                        <p>
+                            Símbolo da cidade, com catedral, batistério
+                            e campanário.
+                        </p>
+
+                        <a class="credito-imagem" href="https://brunelleschidome.firenze.it/photos/" target="_blank"
+                            rel="noopener noreferrer">
+                            Foto: Petar Milošević — CC BY-SA 4.0
+                        </a>
+
+                    </article>
+
+
+                    <!-- Galleria dell'Accademia -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://www.galleriaaccademiafirenze.it/wp-content/uploads/2021/03/MBW_B_0004-2048x1534.jpg"
+                            alt="Escultura de Davi de Michelangelo" loading="lazy">
+
+                        <span class="ponto-tag">Florença</span>
+
+                        <h3>Galleria dell'Accademia</h3>
+
+                        <p>
+                            Abriga o Davi, de Michelangelo.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Uffizi -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://www.enflorencia.com/wp-content/uploads/2021/10/Galleria-de-los-Uffizi-en-Florencia-scaled.jpg"
+                            alt="Galeria Uffizi em Florença" loading="lazy">
+
+                        <span class="ponto-tag">Florença</span>
+
+                        <h3>Galeria Uffizi</h3>
+
+                        <p>
+                            Um dos museus de arte renascentista
+                            mais importantes do mundo.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Ponte Vecchio -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Ponte%20Vecchio%20Florence%20Italy.jpg"
+                            alt="Ponte Vecchio sobre o rio Arno" loading="lazy">
+
+                        <span class="ponto-tag">Florença</span>
+
+                        <h3>Ponte Vecchio</h3>
+
+                        <p>
+                            Ponte medieval sobre o rio Arno,
+                            com lojas de joias.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Torre de Pisa -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Leaning%20Tower%20of%20Pisa.jpg"
+                            alt="Torre inclinada de Pisa" loading="lazy">
+
+                        <span class="ponto-tag">Pisa</span>
+
+                        <h3>Torre de Pisa</h3>
+
+                        <p>
+                            Começou a inclinar ainda durante a construção,
+                            por causa do solo mole. Fica na Praça dos Milagres.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Piazza del Campo -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://wallpapers.com/images/hd/piazza-del-campo-and-tower-of-manja-in-siena-oihl8dj6m0xgmmnm.jpg"
+                            alt="Piazza del Campo em Siena" loading="lazy">
+
+                        <span class="ponto-tag">Siena</span>
+
+                        <h3>Piazza del Campo</h3>
+
+                        <p>
+                            Praça medieval em forma de concha,
+                            palco do Palio.
+                        </p>
+
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- NORTE -->
+            <section class="italia-pontos revelar tc-secao" id="veneto" aria-labelledby="t-veneto">
+
+                <span class="secao-etiqueta tc-etiqueta">NORTE</span>
+
+                <h2 class="secao-titulo" id="t-veneto">
+                    Veneza, Verona e o Norte
+                </h2>
+
+                <p class="secao-intro">
+                    Canais, lagos e montanhas.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <!-- Grande Canal -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Venice%20view%2C%20Grand%20Canal%2C%20Venice%2C%20Italy.jpg"
+                            alt="Grande Canal de Veneza" loading="lazy">
+
+                        <span class="ponto-tag">Veneza</span>
+
+                        <h3>Grande Canal</h3>
+
+                        <p>
+                            Principal via da cidade, cercada de palácios.
+                            Dá para percorrer de vaporetto.
+                        </p>
+
+                        <a class="credito-imagem"
+                            href="https://commons.wikimedia.org/wiki/File:Venice_view,_Grand_Canal,_Venice,_Italy.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Foto: Vyacheslav Argenberg — consulte licença na fonte
+                        </a>
+
+                    </article>
+
+
+                    <!-- Praça San Marco -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/St%20Marks%20Square.jpg"
+                            alt="Praça de São Marcos em Veneza" loading="lazy">
+
+                        <span class="ponto-tag">Veneza</span>
+
+                        <h3>Praça San Marco</h3>
+
+                        <p>
+                            Reúne a Basílica de São Marcos,
+                            o Palácio Ducal e o campanário.
+                        </p>
+
+                        <a class="credito-imagem" href="https://commons.wikimedia.org/wiki/File:St_Marks_Square.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Foto: Antonio Canaletto — obra em domínio público
+                        </a>
+
+                    </article>
+
+
+                    <!-- Murano e Burano -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://www.civitatis.com/f/italia/venecia/excursion-murano-burano-r32.jpg"
+                            alt="Casas coloridas da ilha de Burano" loading="lazy">
+
+                        <span class="ponto-tag">Veneza</span>
+
+                        <h3>Murano e Burano</h3>
+
+                        <p>
+                            Ilhas famosas pelo vidro artesanal
+                            e pelas casas coloridas.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Arena de Verona -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://tse3.mm.bing.net/th/id/OIP.AGDo5xZBdCCQDHZpfbTsEAHaE0?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Arena romana de Verona" loading="lazy">
+
+                        <span class="ponto-tag">Verona</span>
+
+                        <h3>Arena de Verona</h3>
+
+                        <p>
+                            Anfiteatro romano que ainda recebe
+                            óperas no verão.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Duomo de Milão -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://tse1.mm.bing.net/th/id/OIP.-0weT5s1Qp9IWT0-HPKI3gHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Catedral Duomo de Milão" loading="lazy">
+
+                        <span class="ponto-tag">Milão</span>
+
+                        <h3>Duomo de Milão</h3>
+
+                        <p>
+                            Catedral gótica com centenas de pináculos.
+                            Dá para subir ao terraço.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Lago di Como -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://www.viaggiamo.it/wp-content/uploads/2023/01/Le-localita-piu-belle-del-lago-di-como.jpg"
+                            alt="Paisagem do Lago di Como" loading="lazy">
+
+                        <span class="ponto-tag">Lombardia</span>
+
+                        <h3>Lago di Como</h3>
+
+                        <p>
+                            Vilas, jardins e montanhas ao redor
+                            de um dos lagos mais conhecidos do país.
+                        </p>
+
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- SUL E ILHAS -->
+            <section class="explorar-italia revelar tc-secao" id="sul" aria-labelledby="t-sul">
+
+                <span class="secao-etiqueta tc-etiqueta">SUL E ILHAS</span>
+
+                <h2 class="secao-titulo" id="t-sul">
+                    Nápoles, Costa Amalfitana e Sicília
+                </h2>
+
+                <p class="secao-intro">
+                    Mar, ruínas antigas e vilas à beira de penhascos.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <!-- Pompeia -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://tse3.mm.bing.net/th/id/OIP.AQ-n-cFZHTtfj9m59aeHiQHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Ruínas arqueológicas de Pompeia" loading="lazy">
+
+                        <span class="ponto-tag">Campânia</span>
+
+                        <h3>Pompeia</h3>
+
+                        <p>
+                            Cidade romana preservada pelas cinzas
+                            do Vesúvio em 79 d.C.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Costa Amalfitana -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://cdn.getyourguide.com/img/location/5c95ff244ef06.jpeg/88.jpg"
+                            alt="Paisagem da Costa Amalfitana" loading="lazy">
+
+                        <span class="ponto-tag">Campânia</span>
+
+                        <h3>Costa Amalfitana</h3>
+
+                        <p>
+                            Estrada panorâmica com vilas
+                            como Positano e Amalfi.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Capri -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://landoftravels.com/wp-content/uploads/2019/05/capri-faraglioni-rocks-italy-travel-guide-banner.jpg"
+                            alt="Formações rochosas da ilha de Capri" loading="lazy">
+
+                        <span class="ponto-tag">Campânia</span>
+
+                        <h3>Capri</h3>
+
+                        <p>
+                            Ilha famosa pelos penhascos,
+                            pela Gruta Azul e pelos jardins.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Vale dos Templos -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://1.bp.blogspot.com/-TE2LsZYk4nQ/Vkn0lEJqDeI/AAAAAAAAs3E/0tD_S2mTE8A/s1600/Agrigento.jpg"
+                            alt="Templos gregos do Vale dos Templos" loading="lazy">
+
+                        <span class="ponto-tag">Sicília</span>
+
+                        <h3>Vale dos Templos</h3>
+
+                        <p>
+                            Templos gregos bem preservados,
+                            perto de Agrigento.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Monte Etna -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://aventurasnahistoria.com.br/wp-content/uploads/2025/06/gettyimages-2218219347-1.jpg"
+                            alt="Monte Etna na Sicília" loading="lazy">
+
+                        <span class="ponto-tag">Sicília</span>
+
+                        <h3>Monte Etna</h3>
+
+                        <p>
+                            Um dos vulcões mais ativos da Europa,
+                            com passeios guiados.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Matera -->
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://cdn.pixabay.com/photo/2017/09/22/21/23/matera-2777091_1280.jpg"
+                            alt="Casas históricas de pedra em Matera" loading="lazy">
+
+                        <span class="ponto-tag">Basilicata</span>
+
+                        <h3>Matera</h3>
+
+                        <p>
+                            Cidade com casas escavadas na rocha,
+                            os Sassi.
+                        </p>
+
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- CONTINUE EXPLORANDO -->
+            <section class="italia-pontos revelar tc-secao" id="continue-explorando"
+                aria-labelledby="t-continue-explorando">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    CONTINUE EXPLORANDO
+                </span>
+
+                <h2 class="secao-titulo" id="t-continue-explorando">
+                    Mais para descobrir na Itália
+                </h2>
+
+                <div class="explorar-cartoes">
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <h3>Cultura</h3>
+
+                        <p>
+                            Arte, arquitetura, música, literatura e festas
+                            que fazem parte da identidade italiana.
+                        </p>
+
+                        <a href="italia-cultura.html" class="cartao-link">
+                            Ver página →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <h3>Gastronomia</h3>
+
+                        <p>
+                            Pratos regionais, doces, queijos, bebidas
+                            e costumes à mesa.
+                        </p>
+
+                        <a href="italia-culinaria.html" class="cartao-link">
+                            Ver página →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <h3>Curiosidades</h3>
+
+                        <p>
+                            Fatos curiosos sobre história,
+                            cidades e tradições da Itália.
+                        </p>
+
+                        <a href="italia-curiosidades.html" class="cartao-link">
+                            Ver página →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <h3>Cidades italianas</h3>
+
+                        <p>
+                            Roma, Florença, Veneza e outras cidades,
+                            com dicas de quando ir e quanto tempo ficar.
+                        </p>
+
+                        <a href="italia-cidades.html" class="cartao-link">
+                            Ver página →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <h3>Página da Itália</h3>
+
+                        <p>
+                            Volte ao resumo do país e conheça
+                            outras informações sobre a viagem.
+                        </p>
+
+                        <a href="italia.html" class="cartao-link">
+                            Voltar →
+                        </a>
+
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </a>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal tc-rodape" data-tc-rodape>
+
+        <div class="rodape-conteudo tc-rodape-grade tc-container">
+
+            <div class="rodape-sobre">
+
+                <h2>TURISMO<span>.COM</span></h2>
+
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+
+            </div>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Navegação do rodapé">
+
+                <h3>Explorar</h3>
+
+                <a href="index.html">Início</a>
+                <a href="italia.html">Itália</a>
+                <a href="italia-cidades.html">Cidades italianas</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Conteúdo da Itália">
+
+                <h3>Conheça</h3>
+
+                <a href="italia-cultura.html">Cultura</a>
+                <a href="italia-culinaria.html">Gastronomia</a>
+                <a href="italia-pontos-turisticos.html">Pontos turísticos</a>
+                <a href="italia-curiosidades.html">Curiosidades</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Informações">
+
+                <h3>Informações</h3>
+
+                <a href="brasil.html">Brasil</a>
+                <a href="franca.html">França</a>
+                <a href="grecia.html">Grécia</a>
+
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior tc-rodape-inferior tc-container">
+
+            <p>
+                © 2026 Turismo.com — Todos os direitos reservados.
+            </p>
+
+            <p>
+                Projeto acadêmico desenvolvido em equipe.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FUNCIONALIDADES DA PÁGINA -->
+    <script>
+
+        // Animação de entrada das seções
+        const secoesParaRevelar =
+            document.querySelectorAll(".revelar");
+
+        if ("IntersectionObserver" in window) {
+
+            const observador = new IntersectionObserver((entradas) => {
+
+                entradas.forEach((entrada) => {
+
+                    if (entrada.isIntersecting) {
+
+                        entrada.target.classList.add("revelada");
+
+                        observador.unobserve(entrada.target);
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.12
+            });
+
+            secoesParaRevelar.forEach((secao) => {
+                observador.observe(secao);
+            });
+
+        } else {
+
+            secoesParaRevelar.forEach((secao) => {
+                secao.classList.add("revelada");
+            });
+
+        }
+
+
+        // Botão voltar ao topo
+        const botaoTopo = document.getElementById("voltar-topo");
+
+        if (botaoTopo) {
+
+            window.addEventListener("scroll", () => {
+
+                botaoTopo.classList.toggle(
+                    "visivel",
+                    window.scrollY > 700
+                );
+
+            });
+
+        }
+
+    </script>
+
+
+    <!-- JavaScript compartilhado -->
+    <script src="./assets/js/site.js"></script>
+
+
+    <!-- MENU HAMBÚRGUER E DROPDOWN -->
+    <script>
+
+        (function () {
+
+            const cab = document.querySelector(".tc-cabecalho");
+
+            if (!cab) return;
+
+            const limpar = (el) => {
+
+                if (!el) return null;
+
+                const novo = el.cloneNode(true);
+
+                el.replaceWith(novo);
+
+                return novo;
+
+            };
+
+            const botaoMenu = limpar(
+                cab.querySelector(".botao-menu")
+            );
+
+            const botaoPaises = limpar(
+                cab.querySelector(".botao-dropdown")
+            );
+
+            const nav = cab.querySelector(".navegacao");
+
+
+            const abrirPaises = (abrir) => {
+
+                cab.setAttribute(
+                    "data-paises-aberto",
+                    String(abrir)
+                );
+
+                if (botaoPaises) {
+
+                    botaoPaises.setAttribute(
+                        "aria-expanded",
+                        String(abrir)
+                    );
+
+                }
+
+            };
+
+
+            const abrirMenu = (abrir) => {
+
+                cab.setAttribute(
+                    "data-menu-aberto",
+                    String(abrir)
+                );
+
+                if (botaoMenu) {
+
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        String(abrir)
+                    );
+
+                    botaoMenu.setAttribute(
+                        "aria-label",
+                        abrir ? "Fechar menu" : "Abrir menu"
+                    );
+
+                }
+
+                if (!abrir) abrirPaises(false);
+
+            };
+
+
+            if (botaoMenu) {
+
+                botaoMenu.addEventListener("click", () => {
+
+                    abrirMenu(
+                        cab.getAttribute("data-menu-aberto") !== "true"
+                    );
+
+                });
+
+            }
+
+
+            if (botaoPaises) {
+
+                botaoPaises.addEventListener("click", (e) => {
+
+                    e.stopPropagation();
+
+                    abrirPaises(
+                        cab.getAttribute("data-paises-aberto") !== "true"
+                    );
+
+                });
+
+            }
+
+
+            if (nav) {
+
+                nav.addEventListener("click", (e) => {
+
+                    if (e.target.closest("a")) {
+                        abrirMenu(false);
+                    }
+
+                });
+
+            }
+
+
+            document.addEventListener("click", (e) => {
+
+                if (!e.target.closest(".grupo-dropdown")) {
+                    abrirPaises(false);
+                }
+
+            });
+
+
+            document.addEventListener("keydown", (e) => {
+
+                if (e.key === "Escape") {
+
+                    abrirMenu(false);
+                    abrirPaises(false);
+
+                }
+
+            });
+
+
+            window.matchMedia("(min-width: 901px)")
+                .addEventListener("change", (m) => {
+
+                    if (m.matches) {
+                        abrirMenu(false);
+                    }
+
+                });
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
