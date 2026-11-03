@@ -634,11 +634,25 @@ html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .botao-dropdown { cursor
 
 /* A mesma largura para os ícones mantém títulos e valores alinhados em todas as colunas. */
 .pagina-portugal-inicio .resumo-icone {
-    flex: 0 0 26px;
-    min-width: 0;
-    font-size: 22px;
-    line-height: 1;
-    text-align: center;
+    display: inline-flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #d9f2f1;
+    color: #087c80;
+}
+
+.pagina-portugal-inicio .resumo-icone svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.65;
 }
 
 .pagina-portugal-inicio .resumo-item:not(:last-child) {
