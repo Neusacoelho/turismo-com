@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(() => { try { if (localStorage.getItem("turismo.portugal.tema") === "escuro") document.documentElement.dataset.portugalTema = "escuro"; } catch (_) {} })();</script>
     <script>document.documentElement.classList.add("js");</script>
     <meta name="description" content="Descubra a gastronomia de Portugal: pratos tradicionais, doces, sabores regionais e experiências para conhecer a cultura portuguesa à mesa.">
     <title>Gastronomia de Portugal | TURISMO.COM</title>
@@ -17,7 +18,9 @@
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <link rel="stylesheet" href="componentes/navegacao.css">
     <link rel="stylesheet" href="css/portugal-rodape.css">
+    <link rel="stylesheet" href="componentes/tema.css">
     <script src="componentes/navegacao.js" defer></script>
+    <script src="componentes/tema.js" defer></script>
 </head>
 
 <body class="tc-site pais-portugal pagina-gastronomia" data-raiz="../../" data-pais-nome="Portugal"

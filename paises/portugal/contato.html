@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script>(() => { try { if (localStorage.getItem("turismo.portugal.tema") === "escuro") document.documentElement.dataset.portugalTema = "escuro"; } catch (_) {} })();</script>
   <script>document.documentElement.classList.add("js");</script>
   <meta
     content="Entre em contato com o TURISMO.COM para conhecer mais sobre Portugal e compartilhar dúvidas ou sugestões."
@@ -20,7 +21,9 @@
   <link href="componentes/redes-sociais.css" rel="stylesheet" />
   <script defer src="componentes/voltar-ao-topo.js"></script>
   <link rel="stylesheet" href="componentes/navegacao.css">
+  <link rel="stylesheet" href="componentes/tema.css">
   <script src="componentes/navegacao.js" defer></script>
+  <script src="componentes/tema.js" defer></script>
 </head>
 
 <body class="tc-site pais-portugal pagina-contato" data-pais-nome="Portugal" data-pais-url="portugal.html"

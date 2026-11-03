@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(() => { try { if (localStorage.getItem("turismo.portugal.tema") === "escuro") document.documentElement.dataset.portugalTema = "escuro"; } catch (_) {} })();</script>
     <script>document.documentElement.classList.add("js");</script>
     <meta name="description" content="Galeria de fotos de Portugal: Torre de Belém, Palácio da Pena, Ribeira do Porto, Bom Jesus do Monte, Benagil e Lagoa das Sete Cidades.">
     <title>Galeria de fotos de Portugal | TURISMO.COM</title>
@@ -16,7 +17,9 @@
     <script src="paises/portugal/componentes/voltar-ao-topo.js" defer></script>
     <link rel="stylesheet" href="paises/portugal/componentes/navegacao.css">
     <link rel="stylesheet" href="paises/portugal/css/portugal-rodape.css">
+    <link rel="stylesheet" href="paises/portugal/componentes/tema.css">
     <script src="paises/portugal/componentes/navegacao.js" defer></script>
+    <script src="paises/portugal/componentes/tema.js" defer></script>
 </head>
 <body class="tc-site pais-portugal pagina-galeria-portugal" data-raiz="./"
       data-pais-nome="Portugal" data-pais-url="portugal.html" data-galeria-url="portugal-fotos.html">
