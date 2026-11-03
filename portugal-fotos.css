@@ -42,7 +42,27 @@
 }
 .pagina-galeria-portugal .pg-cartao figcaption { padding: 26px 28px 30px; }
 .pagina-galeria-portugal .pg-cartao h2 { font-size: clamp(23px, 2vw, 29px); line-height: 1.25; }
-.pagina-galeria-portugal .pg-icone { font-size: 0.72em; vertical-align: 0.06em; }
+.pagina-galeria-portugal .pg-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.22em;
+    border-radius: 50%;
+    background-color: #d9f2f1;
+    color: #087c80;
+    vertical-align: -0.15em;
+}
+.pagina-galeria-portugal .pg-icone svg {
+    width: 62%;
+    height: 62%;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.65;
+}
 .pagina-galeria-portugal .pg-cartao p { margin-top: 12px; line-height: 1.7; }
 
 .pagina-galeria-portugal .pg-retorno { justify-content: center; margin-top: 44px; }
