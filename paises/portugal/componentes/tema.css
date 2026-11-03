@@ -231,6 +231,12 @@ html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-apresentaca
 
 html[data-portugal-tema="escuro"] .pagina-contato .contato-campo label { color: #eef8fa; }
 
+/* Mantém os cartões de contato legíveis sobre a superfície escura, no mesmo
+   contraste turquesa dos botões de contorno. */
+html[data-portugal-tema="escuro"] body.tc-site.pais-portugal.pagina-contato .contato-cartao {
+    border-color: #67e8f0;
+}
+
 html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos :is(summary, li) { color: #c5d7de; }
 html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos summary { color: #eef8fa; }
 html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos a { color: #8af1f3; }
@@ -298,6 +304,17 @@ html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica p { colo
 
 /* Controles e superfícies da navegação compacta, somente no tema escuro. */
 @media (max-width: 980px) {
+    /* O cabeçalho dinâmico da galeria inclui um nó de texto após o ícone.
+       O rótulo acessível permanece no aria-label do botão. */
+    body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu {
+        font-size: 0;
+    }
+
+    body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu > span {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+
     html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] .botao-menu span {
         background: #eef8fa;
     }
