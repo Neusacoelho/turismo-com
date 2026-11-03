@@ -84,17 +84,6 @@
     background: #fff;
     box-shadow: 0 10px 28px rgb(22 59 80 / 7%);
 }
-.pagina-hospedagem .hospedagem-cartao .tc-cartao-numero {
-    display: grid;
-    place-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: #e0f4f5;
-    color: #006b75;
-    font-size: 0.83rem;
-    font-weight: 700;
-}
 .pagina-hospedagem .hospedagem-cartao h3 {
     color: #163b50;
     font-size: clamp(1.45rem, 2vw, 1.8rem);
