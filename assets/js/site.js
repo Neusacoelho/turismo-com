@@ -47,6 +47,7 @@
         ["Hospedagem", pagina.classList.contains("pais-portugal") ? "paises/portugal/hospedagem.html" : "hospedagem.html"],
         ["Alimentação", pagina.classList.contains("pais-portugal") ? "paises/portugal/alimentacao.html" : "alimentacao.html"],
         ["Compras", pagina.classList.contains("pais-portugal") ? "paises/portugal/compras.html" : "compras.html"],
+        ...(pagina.classList.contains("pais-portugal") ? [["Sobre", "sobre.html"]] : []),
         ["Contato", pagina.classList.contains("pais-portugal") ? "paises/portugal/contato.html" : "contato.html"]
     ];
 
