@@ -126,6 +126,11 @@ html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) 
     box-shadow: 0 10px 28px rgb(0 0 0 / 24%);
 }
 
+/* Destaca somente a borda esquerda dos fatos no tema escuro. */
+html[data-portugal-tema="escuro"] body.tc-site.pais-portugal.pagina-curiosidades .curio-fato {
+    border-left-color: #00a7b5;
+}
+
 html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.cultura-destaque, .gastronomia-destaque, .curio-destaque, .curio-numeros, .pt-numero, .pt-dias, .alimentacao-destaque, .compras-destaque, .contato-cartao) {
     background: #173947;
     color: #d5e3e8;
