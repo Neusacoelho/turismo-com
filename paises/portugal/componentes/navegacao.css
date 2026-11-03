@@ -1,5 +1,10 @@
 /* Navegação exclusiva de Portugal. Carregar após as folhas existentes.
    O atributo do cabeçalho impede atingir países que reutilizam portugal.css. */
+/* Mantém o avião do logotipo branco sobre o fundo turquesa. */
+body header[data-portugal-navegacao] .tc-marca-simbolo {
+    color: #ffffff;
+}
+
 body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao, .tc-navegacao-basica) a,
 body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises) {
     box-sizing: border-box;
