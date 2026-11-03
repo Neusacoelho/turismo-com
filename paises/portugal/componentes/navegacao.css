@@ -5,6 +5,11 @@ body header[data-portugal-navegacao] .tc-marca-simbolo {
     color: #ffffff;
 }
 
+/* O cabeçalho gerado substitui esta navegação básica após site.js iniciar. */
+html.js header.tc-cabecalho[data-portugal-navegacao] > .tc-navegacao-basica {
+    display: none;
+}
+
 body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.navegacao, .tc-navegacao, .tc-navegacao-basica) a,
 body :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises) {
     box-sizing: border-box;
@@ -64,8 +69,9 @@ body header[data-portugal-navegacao][data-portugal-menu-pronto] .grupo-dropdown.
     display: grid;
 }
 
-/* Mantém os links locais disponíveis se o JavaScript não carregar. */
-body:not(.menu-pronto) header.cabecalho-principal[data-portugal-navegacao] .grupo-dropdown .menu-dropdown {
+/* Mantém os links locais disponíveis sem JavaScript, sem expor o fallback
+   durante a inicialização dos controles. */
+html:not(.js) body:not(.menu-pronto) header.cabecalho-principal[data-portugal-navegacao] .grupo-dropdown .menu-dropdown {
     position: static;
     display: grid;
     max-width: 100%;
