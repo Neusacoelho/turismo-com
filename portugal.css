@@ -111,33 +111,6 @@ body.pagina-portugal {
     }
 }
 
-.pagina-portugal .galeria .foto-card {
-    max-width: calc(100% - 30px);
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-.pagina-portugal .creditos-fotos {
-    margin-top: 24px;
-    font-size: 0.9em;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-}
-
-.pagina-portugal .creditos-fotos summary {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.pagina-portugal .creditos-fotos ul {
-    padding-left: 24px;
-}
-
-.pagina-portugal .creditos-fotos li {
-    margin-top: 8px;
-}
-
-
 /* ===== BANNER PRINCIPAL DE PORTUGAL ===== */
 
 .pagina-portugal .banner-portugal {
@@ -581,6 +554,10 @@ body.pagina-portugal {
     display: flex;
     flex-direction: column;
     gap: 3px;
+}
+
+.pagina-portugal .cabecalho-principal .marca-texto {
+    text-align: left;
 }
 
 .pagina-portugal .marca-texto strong { font-size: 17px; }

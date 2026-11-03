@@ -61,11 +61,6 @@
     border-radius:1.1rem; background:#fff;
     box-shadow:0 10px 28px rgb(22 59 80 / 7%);
 }
-.pagina-contato .contato-aviso {
-    margin-bottom:1.6rem; padding:1rem 1.2rem; color:#164b55;
-    background:#e0f4f5; border-left:4px solid #00a7b5; border-radius:.5rem;
-    font-size:.93rem;
-}
 .pagina-contato .contato-formulario { display:grid; gap:1.25rem; }
 .pagina-contato .contato-campo { display:flex; flex-direction:column; gap:.4rem; }
 .pagina-contato .contato-campo label { color:#163b50; font-size:.96rem; font-weight:700; }

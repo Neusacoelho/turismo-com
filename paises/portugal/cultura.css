@@ -93,21 +93,6 @@ html:not(.js) .pagina-cultura:not(.menu-pronto) .grupo-dropdown:is(:hover, :focu
     line-height: 1.8;
 }
 
-/* Os espaços sem fotografia não carregam URLs externas nem arquivos inexistentes. */
-.pagina-cultura .cultura-imagem-pendente {
-    display: grid;
-    place-items: center;
-    background: linear-gradient(135deg, #e7eef0, #d4e3e7);
-    color: #526e7b;
-}
-
-.pagina-cultura .cultura-imagem-pendente > span {
-    padding: 8px 14px;
-    border: 1px solid #b5cbd1;
-    border-radius: 24px;
-    font-size: 12px;
-}
-
 /* Banner de largura total, seguindo a disposição do PDF. */
 .pagina-cultura .cultura-banner {
     position: relative;
