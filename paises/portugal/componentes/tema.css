@@ -296,6 +296,40 @@ html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica {
 html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica h2 { color: #eef8fa; }
 html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica p { color: #c5d7de; }
 
+/* Controles e superfícies da navegação compacta, somente no tema escuro. */
+@media (max-width: 980px) {
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] .botao-menu span {
+        background: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu {
+        border-color: #4f7887;
+        background: #173947;
+        color: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] .navegacao {
+        border: 1px solid #31505f;
+        background: #102a38;
+        box-shadow: 0 12px 28px rgb(0 0 0 / 35%);
+    }
+
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] :is(.navegacao a, .botao-dropdown) {
+        color: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao][data-tc-menu-pronto][data-menu-aberto="true"] .tc-navegacao {
+        border: 1px solid #31505f;
+        background: #102a38;
+        box-shadow: 0 12px 28px rgb(0 0 0 / 35%);
+    }
+
+    html[data-portugal-tema="escuro"] header[data-portugal-navegacao] :is(.menu-dropdown, .tc-lista-paises) {
+        border-color: #31505f;
+        background: #173947;
+    }
+}
+
 html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape {
     background: #08151e;
     color: #c5d7de;
