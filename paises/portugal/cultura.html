@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(() => { try { if (localStorage.getItem("turismo.portugal.tema") === "escuro") document.documentElement.dataset.portugalTema = "escuro"; } catch (_) {} })();</script>
     <script>document.documentElement.classList.add("js");</script>
     <meta name="description" content="Conheça a cultura de Portugal: fado, azulejos, festas populares, artesanato, patrimônio histórico e experiências culturais.">
     <title>Cultura de Portugal — Turismo.com</title>
@@ -14,7 +15,9 @@
     <script src="componentes/voltar-ao-topo.js" defer></script>
     <link rel="stylesheet" href="componentes/navegacao.css">
     <link rel="stylesheet" href="css/portugal-rodape.css">
+    <link rel="stylesheet" href="componentes/tema.css">
     <script src="componentes/navegacao.js" defer></script>
+    <script src="componentes/tema.js" defer></script>
 </head>
 <body class="pagina-portugal pagina-cultura">
     <a class="cultura-pular" href="#conteudo">Pular para o conteúdo</a>
