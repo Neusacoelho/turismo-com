@@ -70,7 +70,7 @@
 /* Nesta página, o estado visual acompanha o botão e seu aria-expanded. */
 .pagina-cultura .grupo-dropdown:hover .menu-dropdown { display: none; }
 .pagina-cultura .grupo-dropdown.aberto .menu-dropdown { display: block; }
-.pagina-cultura:not(.menu-pronto) .grupo-dropdown:is(:hover, :focus-within) .menu-dropdown { display: block; }
+html:not(.js) .pagina-cultura:not(.menu-pronto) .grupo-dropdown:is(:hover, :focus-within) .menu-dropdown { display: block; }
 
 .pagina-cultura .botao-menu { display: none; }
 
@@ -519,8 +519,8 @@
     .pagina-cultura .cultura-experiencias { grid-template-columns: 0.9fr 1.1fr; gap: 32px; }
 
     /* Sem JavaScript, a navegação permanece legível no fluxo da página. */
-    .pagina-cultura:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
-    .pagina-portugal.pagina-cultura:not(.menu-pronto) .cabecalho-principal .navegacao {
+    html:not(.js) .pagina-cultura:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
+    html:not(.js) .pagina-portugal.pagina-cultura:not(.menu-pronto) .cabecalho-principal .navegacao {
         position: static;
         display: flex;
         order: 3;
@@ -529,12 +529,12 @@
         overflow: visible;
         box-shadow: none;
     }
-    .pagina-portugal.pagina-cultura:not(.menu-pronto) .menu-dropdown {
+    html:not(.js) .pagina-portugal.pagina-cultura:not(.menu-pronto) .menu-dropdown {
         position: static;
         display: block;
         box-shadow: none;
     }
-    .pagina-cultura:not(.menu-pronto) .botao-dropdown { cursor: default; }
+    html:not(.js) .pagina-cultura:not(.menu-pronto) .botao-dropdown { cursor: default; }
 }
 
 @media (max-width: 768px) {

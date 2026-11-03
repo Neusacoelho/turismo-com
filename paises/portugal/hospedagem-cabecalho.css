@@ -253,19 +253,19 @@
     display: block;
 }
 
-.pais-portugal:not(.menu-pronto) .cabecalho-principal {
+html:not(.js) .pais-portugal:not(.menu-pronto) .cabecalho-principal {
     position: static;
 }
 
-.pais-portugal:not(.menu-pronto) .barra-cabecalho {
+html:not(.js) .pais-portugal:not(.menu-pronto) .barra-cabecalho {
     flex-wrap: wrap;
 }
 
-.pais-portugal:not(.menu-pronto) .botao-menu {
+html:not(.js) .pais-portugal:not(.menu-pronto) .botao-menu {
     display: none;
 }
 
-.pais-portugal:not(.menu-pronto) .cabecalho-principal .navegacao {
+html:not(.js) .pais-portugal:not(.menu-pronto) .cabecalho-principal .navegacao {
     position: static;
     display: flex;
     width: 100%;
@@ -275,7 +275,7 @@
     box-shadow: none;
 }
 
-.pais-portugal:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
+html:not(.js) .pais-portugal:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
     position: static;
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +283,7 @@
     box-shadow: none;
 }
 
-.pais-portugal:not(.menu-pronto) .botao-dropdown {
+html:not(.js) .pais-portugal:not(.menu-pronto) .botao-dropdown {
     cursor: default;
 }
 

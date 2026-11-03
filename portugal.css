@@ -770,10 +770,10 @@ body.pagina-portugal {
 .pagina-portugal-inicio.menu-pronto .grupo-dropdown.aberto .menu-dropdown { display: block; }
 
 /* Sem script, todos os links ficam no fluxo e nenhum controle depende de clique. */
-.pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal { position: static; }
-.pagina-portugal-inicio:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
-.pagina-portugal-inicio:not(.menu-pronto) .botao-menu { display: none; }
-.pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal .navegacao {
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal { position: static; }
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .botao-menu { display: none; }
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal .navegacao {
     position: static;
     display: flex;
     width: 100%;
@@ -782,14 +782,14 @@ body.pagina-portugal {
     flex-wrap: wrap;
     box-shadow: none;
 }
-.pagina-portugal-inicio:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
     position: static;
     display: flex;
     flex-wrap: wrap;
     min-width: 0;
     box-shadow: none;
 }
-.pagina-portugal-inicio:not(.menu-pronto) .botao-dropdown { cursor: default; }
+html:not(.js) .pagina-portugal-inicio:not(.menu-pronto) .botao-dropdown { cursor: default; }
 
 /* =====================================
    INFORMAÇÕES RÁPIDAS SOBRE PORTUGAL
