@@ -1,3 +1,27 @@
+.pagina-brasil {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.pagina-brasil :is(button, input, select, textarea) {
+    font-family: inherit;
+}
+ 
+.pagina-brasil img {
+    max-width: 100%;
+    height: auto;
+}
+ 
+
+.pagina-cultura .cultura-migalhas ol {
+    margin: 0;
+    padding: 0;
+}
+ 
+.pagina-cultura .cultura-migalhas a {
+    text-decoration: none;
+}
+
 
 /* ===== ESTRUTURA PRINCIPAL DE brasil ===== */
 
