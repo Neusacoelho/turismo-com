@@ -1,0 +1,375 @@
+/* ===== GALERIA DA GRÉCIA ===== */
+
+.pagina-grecia-fotos {
+    color: #163b50;
+}
+
+.pagina-grecia-fotos .conteudo-galeria {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    padding: 56px 0 0;
+}
+
+/* TÍTULOS E TEXTOS */
+
+.pagina-grecia-fotos .secao-titulo {
+    color: #163b50;
+}
+
+.pagina-grecia-fotos .secao-etiqueta {
+    color: #008c99;
+}
+
+.pagina-grecia-fotos .galeria-filtros {
+    margin-bottom: 32px;
+}
+
+.pagina-grecia-fotos .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* FILTROS */
+
+.pagina-grecia-fotos .filtro {
+    padding: 10px 20px;
+    border: 1px solid #00a7b5;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #163b50;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pagina-grecia-fotos .filtro:hover {
+    background: #e0f4f5;
+    color: #123448;
+}
+
+.pagina-grecia-fotos .filtro.ativo {
+    background: #163b50;
+    border-color: #163b50;
+    color: #ffffff;
+}
+
+.pagina-grecia-fotos .filtro:focus-visible {
+    outline: 3px solid #67e8f0;
+    outline-offset: 2px;
+}
+
+.pagina-grecia-fotos .galeria-contagem {
+    margin: 16px 0 0;
+    color: #465d69;
+    font-size: 14px;
+}
+
+/* GRADE */
+
+.pagina-grecia-fotos .galeria-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
+.pagina-grecia-fotos .galeria-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #163b50;
+    box-shadow: 0 6px 20px rgba(22, 59, 80, 0.12);
+}
+
+.pagina-grecia-fotos .galeria-item[hidden] {
+    display: none;
+}
+
+.pagina-grecia-fotos .galeria-item .foto-slot {
+    height: 100%;
+    min-height: 240px;
+    aspect-ratio: 4 / 3;
+    border-radius: 0;
+    cursor: zoom-in;
+}
+
+.pagina-grecia-fotos .galeria-item .foto-slot.larga {
+    grid-column: span 2;
+    aspect-ratio: auto;
+}
+
+.pagina-grecia-fotos .galeria-item:has(.foto-slot.larga) {
+    grid-column: span 2;
+}
+
+.pagina-grecia-fotos .galeria-item .foto-slot.sem-foto {
+    cursor: default;
+}
+
+.pagina-grecia-fotos .galeria-item img {
+    transition: transform 0.5s ease;
+}
+
+.pagina-grecia-fotos .galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+/* LEGENDAS DAS FOTOGRAFIAS */
+
+.pagina-grecia-fotos .galeria-item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 48px 18px 16px;
+    background: linear-gradient(
+        to top,
+        rgba(10, 34, 48, 0.96),
+        rgba(10, 34, 48, 0.72),
+        transparent
+    );
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.pagina-grecia-fotos .galeria-tag {
+    color: #67e8f0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pagina-grecia-fotos .galeria-item figcaption strong {
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pagina-grecia-fotos .galeria-desc {
+    max-height: 0;
+    overflow: hidden;
+    color: #f1f7fa;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.pagina-grecia-fotos .galeria-item:hover .galeria-desc,
+.pagina-grecia-fotos .galeria-item:focus-within .galeria-desc {
+    max-height: 80px;
+    opacity: 1;
+}
+
+/* CRÉDITOS E LICENÇAS */
+
+.pagina-grecia-fotos .credito-imagem {
+    display: block;
+    margin-top: 7px;
+    color: #d4e9ef;
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pagina-grecia-fotos .credito-imagem a {
+    color: #67e8f0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.pagina-grecia-fotos .credito-imagem a:hover {
+    color: #ffffff;
+}
+
+/* QUANDO A FOTO NÃO EXISTE */
+
+.pagina-grecia-fotos .galeria-item:has(.sem-foto) figcaption {
+    position: static;
+    padding: 14px 18px;
+    background: #163b50;
+}
+
+.pagina-grecia-fotos .galeria-item:has(.sem-foto) .galeria-desc {
+    max-height: none;
+    opacity: 1;
+}
+
+/* CONTINUAR EXPLORANDO */
+
+.pagina-grecia-fotos .continuar {
+    margin-top: 72px;
+}
+
+.pagina-grecia-fotos .continuar a {
+    color: #163b50;
+}
+
+/* ===== VISUALIZAÇÃO AMPLIADA ===== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    background: rgba(6, 20, 29, 0.96);
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-figura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: min(1100px, 100%);
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.lightbox-figura img {
+    max-width: 100%;
+    max-height: 78vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.lightbox-figura figcaption {
+    margin-top: 14px;
+    color: #f1f7fa;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.lightbox-figura figcaption strong {
+    display: block;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.lightbox-fechar,
+.lightbox-nav {
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lightbox-fechar:hover,
+.lightbox-nav:hover {
+    background: #00a7b5;
+    color: #ffffff;
+}
+
+.lightbox-fechar:focus-visible,
+.lightbox-nav:focus-visible {
+    outline: 3px solid #67e8f0;
+    outline-offset: 2px;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+}
+
+.lightbox-nav {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+/* BANNER E CRÉDITOS */
+
+.pagina-grecia-fotos .credito-banner {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.pagina-grecia-fotos .credito-banner a {
+    color: #67e8f0;
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .pagina-grecia-fotos .galeria-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pagina-grecia-fotos .conteudo-galeria {
+        width: calc(100% - 32px);
+        padding-top: 40px;
+    }
+
+    .pagina-grecia-fotos .galeria-grade {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pagina-grecia-fotos .galeria-item:has(.foto-slot.larga) {
+        grid-column: auto;
+    }
+
+    .pagina-grecia-fotos .galeria-item .foto-slot {
+        min-height: 0;
+    }
+
+    /* No celular, as descrições aparecem sempre */
+
+    .pagina-grecia-fotos .galeria-desc {
+        max-height: none;
+        opacity: 1;
+    }
+
+    .pagina-grecia-fotos .galeria-item figcaption {
+        pointer-events: auto;
+    }
+
+    .lightbox {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .lightbox-figura {
+        order: 1;
+        width: 100%;
+    }
+
+    .lightbox-nav {
+        order: 2;
+    }
+}

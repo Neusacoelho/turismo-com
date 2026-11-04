@@ -1,59 +1,994 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Itália — Turismo.com</title>
-    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/componentes.css">
+    <link rel="stylesheet" href="./assets/css/pais.css">
+    <link rel="stylesheet" href="./italia.css">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
 </head>
-<body>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
+<body class="tc-site pais-italia pagina-italia pagina-italia-inicio">
 
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="grecia.html">Grécia</a>
-        <a href="republica-dominicana.html">República Dominicana</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="japao.html">Japão</a>
-        <a href="china.html">China</a>
-        <a href="hospedagem.html">🏨 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛍️ Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-principal tc-cabecalho" data-tc-menu-pronto data-menu-aberto="false"
+        data-paises-aberto="false">
 
-<main>
-    <h2>Itália 🇮🇹</h2>
-    
-    <div class="secao">
-        <h3>🏙️ Cidades Históricas</h3>
-        <p>Roma — Coliseu, Vaticano; Veneza — canais; Florença — arte e cultura!</p>
-    </div>
+        <div class="barra-cabecalho tc-barra-cabecalho tc-container">
 
-    <div class="secao">
-        <h3>🏔️ Paisagens</h3>
-        <p>Alpes, Costa Amalfitana, Sicília, Lagos do Norte — beleza de todo lado!</p>
-    </div>
+            <a href="index.html" class="marca tc-marca">
+                <span class="marca-simbolo tc-marca-simbolo">✈</span>
 
-    <div class="secao">
-        <h3>🍕 Gastronomia</h3>
-        <p>Pizza, massa, lasanha, gelato, vinho — sabores que conquistam o mundo!</p>
-    </div>
-</main>
+                <span class="marca-texto tc-marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
 
-<footer>
-    <p>© 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+            <nav class="navegacao tc-navegacao" aria-label="Menu principal">
+
+                <a href="index.html">Início</a>
+
+                <div class="grupo-dropdown tc-grupo-paises">
+
+                    <button class="botao-dropdown tc-botao-paises" type="button" aria-expanded="false">
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown tc-lista-paises">
+
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html" aria-current="page">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                        <a href="republica-dominicana.html">República Dominicana</a>
+
+                    </div>
+                </div>
+
+                <a href="#conteudo-pontos-turisticos">Pontos turísticos</a>
+                <a href="#conteudo-dicas">Dicas</a>
+
+            </nav>
+
+            <button class="botao-menu tc-botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="banner-italia tc-banner" aria-labelledby="titulo-banner-italia">
+
+            <img class="tc-banner-imagem"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Colosseum_in_Rome,_Italy.jpg?width=1920"
+                alt="Coliseu de Roma, um dos principais monumentos da Itália" width="1920" height="1280">
+
+            <div class="banner-italia-conteudo tc-container">
+
+                <div class="banner-italia-texto">
+
+                    <span class="banner-etiqueta tc-etiqueta">
+                        BENVENUTI IN ITALIA
+                    </span>
+
+                    <h1 id="titulo-banner-italia">
+                        Itália: história, arte e sabores inesquecíveis
+                    </h1>
+
+                    <p>
+                        Descubra cidades históricas, monumentos grandiosos,
+                        paisagens encantadoras e uma gastronomia reconhecida
+                        mundialmente.
+                    </p>
+
+                    <a href="#titulo-apresentacao" class="banner-botao tc-botao">
+                        Explorar a Itália →
+                    </a>
+
+                    <ul class="banner-atalhos" aria-label="Atalhos da página">
+                        <li><a href="#conteudo-pontos-turisticos">Pontos turísticos</a></li>
+                        <li><a href="#conteudo-curiosidades">Curiosidades</a></li>
+                        <li><a href="#conteudo-dicas">Dicas</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- INFORMAÇÕES RÁPIDAS -->
+        <section class="resumo-italia tc-secao" aria-label="Informações rápidas sobre a Itália">
+
+            <div class="resumo-conteudo tc-container">
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🏛️</span>
+                    <div>
+                        <span class="resumo-label">CAPITAL</span>
+                        <strong>Roma</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗣️</span>
+                    <div>
+                        <span class="resumo-label">IDIOMA</span>
+                        <strong>Italiano</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">💶</span>
+                    <div>
+                        <span class="resumo-label">MOEDA</span>
+                        <strong>Euro (€)</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">☀️</span>
+                    <div>
+                        <span class="resumo-label">MELHOR ÉPOCA</span>
+                        <strong>Abril a junho e setembro</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="conteudo-italia tc-container">
+
+            <!-- APRESENTAÇÃO -->
+            <section class="apresentacao-italia tc-apresentacao tc-secao" aria-labelledby="titulo-apresentacao">
+
+                <div class="apresentacao-titulo">
+
+                    <span class="apresentacao-etiqueta tc-etiqueta">
+                        BENVENUTI IN ITALIA
+                    </span>
+
+                    <h2 id="titulo-apresentacao">
+                        Um país onde cada cidade conta uma história.
+                    </h2>
+
+                </div>
+
+                <div class="apresentacao-textos">
+
+                    <p>
+                        Localizada no sul da Europa, a Itália é conhecida
+                        por sua enorme contribuição para a história,
+                        a arte, a arquitetura e a cultura ocidental.
+                        O país foi o centro do Império Romano e teve
+                        papel fundamental no desenvolvimento do
+                        Renascimento.
+                    </p>
+
+                    <p>
+                        De Roma a Veneza, de Florença a Milão, a Itália
+                        reúne monumentos históricos, museus, paisagens
+                        naturais, vilarejos tradicionais e uma gastronomia
+                        que faz parte da identidade de cada região.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- CARTÕES DE NAVEGAÇÃO -->
+            <section class="explorar-italia tc-secao" aria-label="Explore mais sobre a Itália">
+
+                <div class="explorar-cartoes">
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <span class="cartao-numero tc-cartao-numero">01</span>
+
+                        <h3>Cultura</h3>
+
+                        <p>
+                            Conheça a arte, a arquitetura, a música,
+                            as tradições e os costumes que fazem
+                            parte da identidade italiana.
+                        </p>
+
+                        <a href="paises/italia/italia-cultura.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <span class="cartao-numero tc-cartao-numero">02</span>
+
+                        <h3>Gastronomia</h3>
+
+                        <p>
+                            Descubra pizzas, massas, risotos,
+                            sobremesas e especialidades tradicionais
+                            de diferentes regiões italianas.
+                        </p>
+
+                        <a href="paises/italia/italia-culinaria.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <span class="cartao-numero tc-cartao-numero">03</span>
+
+                        <h3>Pontos turísticos</h3>
+
+                        <p>
+                            Explore monumentos históricos, cidades
+                            encantadoras, construções famosas e
+                            paisagens naturais.
+                        </p>
+
+                        <a href="paises/italia/italia-pontos-turisticos.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+
+                    </article>
+
+                    <article class="explorar-cartao tc-cartao">
+
+                        <span class="cartao-numero tc-cartao-numero">04</span>
+
+                        <h3>Curiosidades</h3>
+
+                        <p>
+                            Descubra fatos interessantes sobre a
+                            história, os costumes, a língua e
+                            o cotidiano italiano.
+                        </p>
+
+                        <a href="paises/italia/italia-curiosidades.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ITÁLIA EM NÚMEROS -->
+            <section class="italia-numeros revelar tc-secao" aria-labelledby="titulo-numeros">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    A ITÁLIA EM NÚMEROS
+                </span>
+
+                <h2 id="titulo-numeros" class="secao-titulo">
+                    Um país de história e diversidade.
+                </h2>
+
+                <div class="numeros-grade">
+
+                    <div class="numero-item">
+                        <strong>20</strong>
+                        <span>regiões que compõem o território italiano</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>+50</strong>
+                        <span>locais reconhecidos como Patrimônio Mundial pela UNESCO</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>1861</strong>
+                        <span>ano da proclamação do Reino da Itália</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>2</strong>
+                        <span>países independentes totalmente cercados pelo território italiano: Vaticano e San Marino</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PONTOS TURÍSTICOS -->
+            <section class="italia-pontos revelar tc-secao" id="conteudo-pontos-turisticos"
+                aria-labelledby="titulo-pontos">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    PONTOS TURÍSTICOS
+                </span>
+
+                <h2 id="titulo-pontos" class="secao-titulo">
+                    Lugares que fazem a Itália inesquecível.
+                </h2>
+
+                <p class="secao-intro">
+                    De construções da Roma Antiga a paisagens
+                    cinematográficas, conheça alguns dos destinos
+                    mais marcantes do país.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum%2C%20Rome%2C%20Italy.jpg"
+                            alt="Coliseu de Roma" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Coliseu</h3>
+
+                        <p>
+                            Um dos monumentos mais conhecidos do mundo.
+                            Construído na Roma Antiga, o anfiteatro
+                            representa a grandiosidade da engenharia
+                            e da história romana.
+                        </p>
+
+                        <a class="credito-imagem" href="https://commons.wikimedia.org/wiki/Category:Colosseum_(Rome)"
+                            target="_blank" rel="noopener noreferrer">
+                            Fotografia e informações de licença: Wikimedia Commons
+                        </a>
+
+                    </article>
+
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Venice%20view%2C%20Grand%20Canal%2C%20Venice%2C%20Italy.jpg"
+                            alt="Grande Canal de Veneza com seus palácios históricos" loading="lazy">
+
+                        <span class="ponto-tag">Veneza</span>
+
+                        <h3>Grande Canal</h3>
+
+                        <p>
+                            Principal via aquática de Veneza, cercada
+                            por palácios históricos e atravessada por
+                            embarcações que fazem parte da rotina
+                            da cidade.
+                        </p>
+
+                        <a class="credito-imagem"
+                            href="https://commons.wikimedia.org/wiki/File:Venice_view,_Grand_Canal,_Venice,_Italy.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Fotografia e licença: Wikimedia Commons
+                        </a>
+
+                    </article>
+
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Leaning%20Tower%20of%20Pisa.jpg"
+                            alt="Torre inclinada de Pisa" loading="lazy">
+
+                        <span class="ponto-tag">Pisa</span>
+
+                        <h3>Torre de Pisa</h3>
+
+                        <p>
+                            Famosa por sua inclinação, a torre é
+                            uma construção medieval que se tornou
+                            um dos símbolos mais reconhecidos
+                            da arquitetura italiana.
+                        </p>
+
+                        <a class="credito-imagem"
+                            href="https://commons.wikimedia.org/wiki/Category:Leaning_Tower_of_Pisa" target="_blank"
+                            rel="noopener noreferrer">
+                            Fotografia e informações de licença: Wikimedia Commons
+                        </a>
+
+                    </article>
+
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://cdn.getyourguide.com/img/location/5c95ff244ef06.jpeg/88.jpg"
+                            alt="Paisagem da Costa Amalfitana com suas construções próximas ao mar" loading="lazy">
+
+                        <span class="ponto-tag">Campânia</span>
+
+                        <h3>Costa Amalfitana</h3>
+
+                        <p>
+                            Uma região costeira conhecida por seus
+                            vilarejos coloridos, estradas panorâmicas
+                            e paisagens voltadas para o Mar Mediterrâneo.
+                        </p>
+
+                        <a class="credito-imagem" href="https://www.getyourguide.com/" target="_blank"
+                            rel="noopener noreferrer">
+                            Fonte da imagem: GetYourGuide — consulte os termos de uso
+                        </a>
+
+                    </article>
+
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://d1a1ntgk1j6wes.cloudfront.net/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg"
+                            alt="Ruínas arqueológicas do Fórum Romano" loading="lazy">
+
+                        <span class="ponto-tag">Roma</span>
+
+                        <h3>Fórum Romano</h3>
+
+                        <p>
+                            Área arqueológica que reúne ruínas de
+                            edifícios públicos, templos e espaços
+                            importantes para a vida política e social
+                            da antiga Roma.
+                        </p>
+
+                        <a class="credito-imagem"
+                            href="https://d1a1ntgk1j6wes.cloudfront.net/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg"
+                            target="_blank" rel="noopener noreferrer">
+                            Fonte da imagem — consulte a licença com o responsável
+                        </a>
+
+                    </article>
+
+
+                    <article class="ponto-cartao">
+
+                        <img class="ponto-imagem"
+                            src="https://tse3.mm.bing.net/th/id/OIP.AQ-n-cFZHTtfj9m59aeHiQHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Ruínas arqueológicas da antiga cidade de Pompeia" loading="lazy">
+
+                        <span class="ponto-tag">Pompeia</span>
+
+                        <h3>Ruínas de Pompeia</h3>
+
+                        <p>
+                            A antiga cidade romana foi soterrada
+                            durante a erupção do Vesúvio em 79 d.C.
+                            Suas ruínas ajudam a compreender
+                            o cotidiano da época.
+                        </p>
+
+                        <a class="credito-imagem" href="https://commons.wikimedia.org/wiki/Category:Pompeii"
+                            target="_blank" rel="noopener noreferrer">
+                            Referência sobre o destino: Wikimedia Commons
+                        </a>
+
+                    </article>
+
+                </div>
+
+                <div class="secao-botao">
+
+                    <a href="paises/italia/italia-pontos-turisticos.html" class="botao-secundario tc-botao tc-botao-contorno">
+                        Conhecer mais atrações →
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- CURIOSIDADES -->
+            <section class="italia-curiosidades revelar tc-secao" id="conteudo-curiosidades"
+                aria-labelledby="titulo-curiosidades">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    CURIOSIDADES
+                </span>
+
+                <h2 id="titulo-curiosidades" class="secao-titulo">
+                    A Itália além dos cartões-postais.
+                </h2>
+
+                <div class="voce-sabia" aria-live="polite">
+
+                    <span class="voce-sabia-etiqueta">
+                        LO SAPEVI?
+                    </span>
+
+                    <p id="voce-sabia-texto">
+                        A Itália possui duas cidades-estado independentes
+                        completamente cercadas por seu território:
+                        Vaticano e San Marino.
+                    </p>
+
+                    <button type="button" class="voce-sabia-botao" id="voce-sabia-botao">
+                        Outra curiosidade ↻
+                    </button>
+
+                </div>
+
+                <div class="curiosidades-grade">
+
+                    <article class="curiosidade-cartao">
+                        <h3>Origem do nome Itália</h3>
+                        <p>
+                            A origem do nome possui diferentes
+                            interpretações históricas. Uma das hipóteses
+                            relaciona a palavra a povos antigos
+                            do sul da península.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Vários dialetos</h3>
+                        <p>
+                            Além do italiano padrão, diferentes regiões
+                            preservam línguas e variedades linguísticas
+                            próprias, ligadas à história local.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>O país da pizza</h3>
+                        <p>
+                            A pizza moderna está fortemente associada
+                            a Nápoles, cidade onde essa tradição
+                            gastronômica ganhou grande destaque.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Patrimônio histórico</h3>
+                        <p>
+                            A Itália reúne sítios arqueológicos,
+                            centros históricos, monumentos e paisagens
+                            reconhecidos internacionalmente.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PALAVRAS EM ITALIANO -->
+            <section class="italia-palavras revelar tc-secao" aria-labelledby="titulo-palavras">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    PARLA ITALIANO
+                </span>
+
+                <h2 id="titulo-palavras" class="secao-titulo">
+                    Cinco expressões para começar.
+                </h2>
+
+                <div class="palavras-grade">
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Buongiorno</span>
+                        <strong>Buon-djór-no</strong>
+                        <span>Bom dia</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Grazie</span>
+                        <strong>Grá-tsie</strong>
+                        <span>Obrigado(a)</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Per favore</span>
+                        <strong>Per fa-vó-re</strong>
+                        <span>Por favor</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Arrivederci</span>
+                        <strong>Ar-ri-ve-dér-tchi</strong>
+                        <span>Até logo</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Ciao</span>
+                        <strong>Tcháo</strong>
+                        <span>Olá / Tchau</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DICAS -->
+            <section class="italia-dicas revelar tc-secao" id="conteudo-dicas" aria-labelledby="titulo-dicas">
+
+                <span class="secao-etiqueta tc-etiqueta">
+                    DICAS DE VIAGEM
+                </span>
+
+                <h2 id="titulo-dicas" class="secao-titulo">
+                    Para aproveitar melhor sua viagem.
+                </h2>
+
+                <div class="dicas-grade">
+
+                    <div class="dica-item">
+
+                        <span class="dica-icone" aria-hidden="true">🚆</span>
+
+                        <div>
+                            <h3>Transporte entre cidades</h3>
+                            <p>
+                                Os trens são uma alternativa prática
+                                para viajar entre grandes cidades.
+                                Consulte horários e compre passagens
+                                com antecedência.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="dica-item">
+
+                        <span class="dica-icone" aria-hidden="true">🏛️</span>
+
+                        <div>
+                            <h3>Monumentos históricos</h3>
+                            <p>
+                                Algumas atrações exigem ingresso
+                                antecipado. Verifique as condições
+                                de visitação antes de organizar
+                                sua viagem.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="dica-item">
+
+                        <span class="dica-icone" aria-hidden="true">👟</span>
+
+                        <div>
+                            <h3>Calçados confortáveis</h3>
+                            <p>
+                                Muitas cidades possuem ruas de pedra
+                                e áreas históricas para explorar a pé.
+                                Prefira calçados confortáveis.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="dica-item">
+
+                        <span class="dica-icone" aria-hidden="true">🍝</span>
+
+                        <div>
+                            <h3>Gastronomia regional</h3>
+                            <p>
+                                Experimente pratos típicos de cada
+                                região. A culinária italiana varia
+                                bastante de uma cidade para outra.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DESTAQUE DA GALERIA -->
+            <section class="destaque-galeria tc-secao" aria-labelledby="titulo-destaque-galeria">
+
+                <div class="destaque-galeria-conteudo">
+
+                    <span class="destaque-galeria-etiqueta tc-etiqueta">
+                        OLHARES SOBRE A ITÁLIA
+                    </span>
+
+                    <h2 id="titulo-destaque-galeria">
+                        Conheça a Itália por outros ângulos.
+                    </h2>
+
+                    <p>
+                        Explore paisagens, monumentos, cidades
+                        históricas e construções que fazem da Itália
+                        um destino único.
+                    </p>
+
+                    <a href="paises/italia/italia-pontos-turisticos.html" class="destaque-galeria-botao tc-botao">
+                        Explorar fotografias e atrações →
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </a>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal tc-rodape" data-tc-rodape>
+
+        <div class="rodape-conteudo tc-rodape-grade tc-container">
+
+            <div class="rodape-sobre">
+
+                <h2>✈ TURISMO<span>.COM</span></h2>
+
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+
+            </div>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Navegação do rodapé">
+
+                <h3>Explorar</h3>
+
+                <a href="index.html">Início</a>
+                <a href="italia.html">Itália</a>
+                <a href="paises/italia/italia-cidades.html">Cidades italianas</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Conteúdo da Itália">
+
+                <h3>Conheça</h3>
+
+                <a href="paises/italia/italia-cultura.html">Cultura</a>
+                <a href="paises/italia/italia-culinaria.html">Gastronomia</a>
+                <a href="paises/italia/italia-pontos-turisticos.html">Pontos turísticos</a>
+                <a href="paises/italia/italia-curiosidades.html">Curiosidades</a>
+
+            </nav>
+
+            <nav class="rodape-coluna tc-rodape-coluna" aria-label="Informações">
+
+                <h3>Informações</h3>
+
+                <a href="brasil.html">Brasil</a>
+                <a href="franca.html">França</a>
+                <a href="grecia.html">Grécia</a>
+
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior tc-rodape-inferior tc-container">
+
+            <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+
+            <p>Projeto acadêmico desenvolvido em equipe.</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FUNCIONALIDADES DA PÁGINA -->
+    <script>
+
+        // Animação de entrada das seções
+        const secoesParaRevelar =
+            document.querySelectorAll(".revelar");
+
+        if ("IntersectionObserver" in window) {
+
+            const observador = new IntersectionObserver((entradas) => {
+
+                entradas.forEach((entrada) => {
+
+                    if (entrada.isIntersecting) {
+
+                        entrada.target.classList.add("revelada");
+
+                        observador.unobserve(entrada.target);
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.12
+            });
+
+            secoesParaRevelar.forEach((secao) => {
+                observador.observe(secao);
+            });
+
+        } else {
+
+            secoesParaRevelar.forEach((secao) => {
+                secao.classList.add("revelada");
+            });
+
+        }
+
+
+        // Curiosidades interativas
+        const curiosidades = [
+
+            "A Itália possui duas cidades-estado independentes completamente cercadas por seu território: Vaticano e San Marino.",
+
+            "A Universidade de Bolonha, fundada em 1088, é tradicionalmente considerada a universidade mais antiga do mundo ocidental em funcionamento contínuo.",
+
+            "A Itália é formada por 20 regiões, cada uma com características culturais e gastronômicas próprias.",
+
+            "Veneza foi construída sobre um conjunto de ilhas ligadas por pontes e canais.",
+
+            "O Renascimento teve um de seus principais centros na Itália, especialmente em cidades como Florença.",
+
+            "A pizza napolitana possui uma tradição reconhecida internacionalmente e está associada à cidade de Nápoles.",
+
+            "O idioma italiano moderno tem forte influência do dialeto toscano, especialmente da variedade literária de Florença."
+
+        ];
+
+        const textoCuriosidade =
+            document.getElementById("voce-sabia-texto");
+
+        const botaoCuriosidade =
+            document.getElementById("voce-sabia-botao");
+
+        let curiosidadeAtual = 0;
+
+        if (textoCuriosidade && botaoCuriosidade) {
+
+            botaoCuriosidade.addEventListener("click", () => {
+
+                curiosidadeAtual =
+                    (curiosidadeAtual + 1) % curiosidades.length;
+
+                textoCuriosidade.classList.add("trocando");
+
+                setTimeout(() => {
+
+                    textoCuriosidade.textContent =
+                        curiosidades[curiosidadeAtual];
+
+                    textoCuriosidade.classList.remove("trocando");
+
+                }, 180);
+
+            });
+
+        }
+
+
+        // Botão voltar ao topo
+        const botaoTopo = document.getElementById("voltar-topo");
+
+        if (botaoTopo) {
+
+            window.addEventListener("scroll", () => {
+
+                botaoTopo.classList.toggle(
+                    "visivel",
+                    window.scrollY > 700
+                );
+
+            });
+
+        }
+
+    </script>
+
+
+    <!-- JavaScript compartilhado -->
+    <script src="./assets/js/site.js"></script>
+
+
+    <!-- MENU (hambúrguer + países) -->
+    <script>
+        (function () {
+            const cab = document.querySelector(".tc-cabecalho");
+            if (!cab) return;
+
+            const limpar = (el) => {
+                if (!el) return null;
+                const novo = el.cloneNode(true);
+                el.replaceWith(novo);
+                return novo;
+            };
+
+            const botaoMenu = limpar(cab.querySelector(".botao-menu"));
+            const botaoPaises = limpar(cab.querySelector(".botao-dropdown"));
+            const nav = cab.querySelector(".navegacao");
+
+            const abrirPaises = (abrir) => {
+                cab.setAttribute("data-paises-aberto", String(abrir));
+
+                if (botaoPaises) {
+                    botaoPaises.setAttribute("aria-expanded", String(abrir));
+                }
+            };
+
+            const abrirMenu = (abrir) => {
+                cab.setAttribute("data-menu-aberto", String(abrir));
+
+                if (botaoMenu) {
+                    botaoMenu.setAttribute("aria-expanded", String(abrir));
+                    botaoMenu.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+                }
+
+                if (!abrir) abrirPaises(false);
+            };
+
+            if (botaoMenu) {
+                botaoMenu.addEventListener("click", () => {
+                    abrirMenu(cab.getAttribute("data-menu-aberto") !== "true");
+                });
+            }
+
+            if (botaoPaises) {
+                botaoPaises.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    abrirPaises(cab.getAttribute("data-paises-aberto") !== "true");
+                });
+            }
+
+            if (nav) {
+                nav.addEventListener("click", (e) => {
+                    if (e.target.closest("a")) abrirMenu(false);
+                });
+            }
+
+            document.addEventListener("click", (e) => {
+                if (!e.target.closest(".grupo-dropdown")) {
+                    abrirPaises(false);
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    abrirMenu(false);
+                    abrirPaises(false);
+                }
+            });
+
+            window.matchMedia("(min-width: 901px)").addEventListener("change", (m) => {
+                if (m.matches) abrirMenu(false);
+            });
+
+        })();
+    </script>
 
 </body>
 </html>

@@ -1,7 +1,5 @@
-/* Componente de rodapé exclusivo de Portugal.
-   Inspirado no rodapé de portugal.html, sem alterar cabeçalho ou conteúdo.
-   Carregar APÓS os demais estilos da página. */
-.tc-site.pais-portugal .tc-rodape {
+/* Componente de rodapé exclusivo de Portugal. Carregar após os estilos da página. */
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape {
     margin-top: 40px;
     padding: 48px 24px 20px;
     background: #163b50;
@@ -12,29 +10,29 @@
     text-align: left;
 }
 
-.tc-site.pais-portugal .tc-rodape > .tc-container {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape > .tc-container {
     width: 100%;
     max-width: 1180px;
     margin-inline: auto;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-grade {
     display: grid;
-    grid-template-columns: 2fr repeat(3, minmax(0, 1fr));
-    gap: 36px;
+    grid-template-columns: 1.6fr repeat(4, minmax(0, 1fr));
+    gap: 28px;
     align-items: start;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-fluxo h2 {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-fluxo h2 {
     margin: 0 0 14px;
     color: #fff;
     font-size: 22px;
     line-height: 1.6;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-fluxo h2 span { color: #00c2cf; }
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-fluxo h2 span { color: #00c2cf; }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-grade > .tc-fluxo > p {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-grade > .tc-fluxo > p {
     max-width: 280px;
     margin: 0;
     color: #d4e2e8;
@@ -42,21 +40,21 @@
     line-height: 1.7;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-coluna {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna h3 {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-coluna h3 {
     margin: 0 0 6px;
     color: #fff;
     font-size: 15px;
     line-height: 1.6;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-coluna a {
     margin: 0;
     color: #d4e2e8;
     font-size: 14px;
@@ -64,13 +62,32 @@
     text-decoration: none;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a:hover,
-.tc-site.pais-portugal .tc-rodape .tc-rodape-coluna a:focus-visible {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-coluna a:hover,
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-coluna a:focus-visible {
     color: #00c2cf;
     text-decoration: underline;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-inferior {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .redes-sociais-portugal__icones {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+}
+
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .redes-sociais-portugal__icone {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    color: #00a7b5;
+    background: #fff;
+    border: 1px solid #00a7b5;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-inferior {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -80,26 +97,38 @@
     border-top: 1px solid #456678;
 }
 
-.tc-site.pais-portugal .tc-rodape .tc-rodape-inferior p {
+:is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-inferior p {
     margin: 0;
     color: #d4e2e8;
     font-size: 12px;
 }
 
 @media (max-width: 768px) {
-    .tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-grade {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 30px;
     }
-    .tc-site.pais-portugal .tc-rodape .tc-rodape-inferior {
+
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-inferior {
         flex-direction: column;
         text-align: center;
     }
 }
 
+@media (max-width: 1100px) and (min-width: 769px) {
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-grade {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-fluxo {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 480px) {
-    .tc-site.pais-portugal .tc-rodape { padding: 36px 24px 20px; }
-    .tc-site.pais-portugal .tc-rodape .tc-rodape-grade {
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape { padding: 36px 24px 20px; }
+
+    :is(.tc-site.pais-portugal, .pagina-portugal) .tc-rodape .tc-rodape-grade {
         grid-template-columns: minmax(0, 1fr);
         gap: 28px;
     }

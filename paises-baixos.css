@@ -1,0 +1,595 @@
+/* =====================================================
+   PAÍSES BAIXOS — paises-baixos.css
+   Adaptado do grecia.css para a estrutura tc-* do HTML.
+   Todas as regras usam o escopo .paises-baixos (classe do <body>).
+   Paleta: azul-petróleo #163b50 | turquesa #00a7b5
+===================================================== */
+
+.paises-baixos {
+    --pb-azul: #163b50;
+    --pb-turquesa: #00a7b5;
+    --pb-turquesa-escuro: #008b98;
+    --pb-turquesa-claro: #67e8f0;
+    --pb-fundo-suave: #e0f4f5;
+    --pb-texto: #465d69;
+    --pb-borda: #e6edef;
+    --pb-largura: 1280px;
+    --pb-serifa: Georgia, "Times New Roman", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.paises-baixos [id] {
+    scroll-margin-top: 100px;
+}
+
+
+/* ===== ESTRUTURA GERAL ===== */
+
+.paises-baixos main {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.paises-baixos .tc-container {
+    width: calc(100% - 48px);
+    max-width: var(--pb-largura);
+    margin-inline: auto;
+}
+
+.paises-baixos .tc-secao {
+    margin: 72px 0;
+}
+
+@media (max-width: 600px) {
+    .paises-baixos .tc-container {
+        width: calc(100% - 32px);
+    }
+
+    .paises-baixos .tc-secao {
+        margin: 48px 0;
+    }
+}
+
+
+/* ===== LINK "PULAR PARA O CONTEÚDO" ===== */
+
+.paises-baixos .tc-pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 200;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--pb-turquesa);
+    color: #001018;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.paises-baixos .tc-pular-conteudo:focus {
+    top: 12px;
+}
+
+
+/* ===== CABEÇALHO E MENU ===== */
+
+.paises-baixos .tc-cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid #dce6e9;
+    color: var(--pb-azul);
+}
+
+.paises-baixos .tc-cabecalho .menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 28px;
+    width: calc(100% - 48px);
+    max-width: var(--pb-largura);
+    min-height: 68px;
+    margin: 0 auto;
+    padding: 12px 0;
+    background: transparent;
+}
+
+.paises-baixos .tc-cabecalho .menu a {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    color: var(--pb-azul);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.paises-baixos .tc-cabecalho .menu a:hover,
+.paises-baixos .tc-cabecalho .menu a.ativo {
+    color: var(--pb-turquesa);
+    border-bottom-color: var(--pb-turquesa);
+}
+
+@media (max-width: 600px) {
+    .paises-baixos .tc-cabecalho .menu {
+        width: calc(100% - 32px);
+        justify-content: flex-start;
+        gap: 4px 18px;
+    }
+
+    .paises-baixos .tc-cabecalho .menu a {
+        font-size: 13px;
+    }
+}
+
+
+/* ===== MENU "PAÍSES" (DROPDOWN) ===== */
+
+.paises-baixos .grupo-dropdown {
+    position: relative;
+}
+
+.paises-baixos .tc-cabecalho .botao-dropdown {
+    margin: 0;
+    padding: 8px 0;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--pb-azul);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.paises-baixos .tc-cabecalho .botao-dropdown:hover,
+.paises-baixos .tc-cabecalho .grupo-dropdown.aberto .botao-dropdown {
+    color: var(--pb-turquesa);
+    border-bottom-color: var(--pb-turquesa);
+}
+
+.paises-baixos .tc-cabecalho .botao-dropdown:focus-visible {
+    outline: 3px solid var(--pb-turquesa-claro);
+    outline-offset: 3px;
+}
+
+.paises-baixos .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 110;
+    min-width: 210px;
+    padding: 8px;
+    border: 1px solid #dce6e9;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(22, 59, 80, 0.12);
+}
+
+.paises-baixos .grupo-dropdown:hover .menu-dropdown,
+.paises-baixos .grupo-dropdown:focus-within .menu-dropdown,
+.paises-baixos .grupo-dropdown.aberto .menu-dropdown {
+    display: block;
+}
+
+.paises-baixos .tc-cabecalho .menu-dropdown a {
+    display: block;
+    padding: 9px 12px;
+    border-bottom: 0;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.paises-baixos .tc-cabecalho .menu-dropdown a:hover {
+    background: var(--pb-fundo-suave);
+}
+
+@media (max-width: 600px) {
+    .paises-baixos .menu-dropdown {
+        position: static;
+        min-width: 0;
+        margin: 4px 0;
+        box-shadow: none;
+    }
+}
+
+
+/* ===== BANNER PRINCIPAL ===== */
+
+.paises-baixos .tc-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 480px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 34, 48, 0.88) 0%,
+            rgba(10, 34, 48, 0.55) 55%,
+            rgba(10, 34, 48, 0.15) 100%
+        ),
+        url("https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=1800&q=80")
+            center / cover no-repeat,
+        var(--pb-azul);
+    color: #ffffff;
+}
+
+.paises-baixos .tc-banner .tc-container {
+    padding: 64px 0;
+}
+
+.paises-baixos .tc-banner .tc-container > * {
+    max-width: 650px;
+}
+
+.paises-baixos .tc-banner .tc-etiqueta {
+    display: inline-block;
+    margin: 0 0 16px;
+    color: var(--pb-turquesa-claro);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.paises-baixos .tc-banner h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.15;
+}
+
+.paises-baixos .tc-banner p {
+    margin: 0 0 26px;
+    color: #f0f7f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.paises-baixos .tc-banner p.tc-etiqueta {
+    color: var(--pb-turquesa-claro);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.paises-baixos .tc-botao {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: var(--pb-turquesa);
+    color: #001018;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.paises-baixos .tc-botao:hover {
+    background: var(--pb-turquesa-escuro);
+    color: #001018;
+}
+
+.paises-baixos .tc-botao:focus-visible {
+    outline: 3px solid var(--pb-turquesa-claro);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .paises-baixos .tc-banner {
+        min-height: 420px;
+    }
+
+    .paises-baixos .tc-banner .tc-container {
+        padding: 40px 0;
+    }
+
+    .paises-baixos .tc-banner p {
+        font-size: 15px;
+    }
+}
+
+
+/* ===== INFORMAÇÕES RÁPIDAS (CAPITAL, IDIOMA, MOEDA) ===== */
+
+.paises-baixos .tc-resumo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 32px 0 0;
+    padding: 12px 0;
+    border: 1px solid var(--pb-borda);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+}
+
+.paises-baixos .tc-resumo > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    padding: 14px 28px;
+    text-align: left;
+}
+
+.paises-baixos .tc-resumo > div:not(:last-child) {
+    border-right: 1px solid #e1e8eb;
+}
+
+.paises-baixos .tc-resumo dt {
+    margin: 0;
+    color: #607784;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.paises-baixos .tc-resumo dd {
+    margin: 0;
+    color: var(--pb-azul);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .paises-baixos .tc-resumo {
+        grid-template-columns: 1fr;
+        padding: 6px 0;
+    }
+
+    .paises-baixos .tc-resumo > div {
+        padding: 14px 20px;
+    }
+
+    .paises-baixos .tc-resumo > div:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #e1e8eb;
+    }
+}
+
+
+/* ===== APRESENTAÇÃO ===== */
+
+.paises-baixos .tc-apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    max-width: 1180px;
+    margin: 72px auto;
+    text-align: left;
+}
+
+.paises-baixos .tc-apresentacao .tc-etiqueta {
+    display: block;
+    margin: 0 0 18px;
+    color: var(--pb-turquesa);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.paises-baixos .tc-apresentacao h2 {
+    margin: 0;
+    color: var(--pb-azul);
+    font-family: var(--pb-serifa);
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.paises-baixos .tc-apresentacao p {
+    margin: 0 0 20px;
+    color: var(--pb-texto);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.paises-baixos .tc-apresentacao .tc-fluxo p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .paises-baixos .tc-apresentacao {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin: 48px auto;
+    }
+
+    .paises-baixos .tc-apresentacao h2 {
+        font-size: clamp(30px, 7vw, 40px);
+    }
+
+    .paises-baixos .tc-apresentacao p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+
+/* ===== EXPLORE OS PAÍSES BAIXOS (CARTÕES) ===== */
+
+.paises-baixos #explorar {
+    margin: 0 0 32px;
+    color: var(--pb-azul);
+    font-family: var(--pb-serifa);
+    font-size: clamp(30px, 3.2vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.paises-baixos .tc-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.paises-baixos .tc-cartao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 0 28px;
+    overflow: hidden;
+    border: 1px solid var(--pb-borda);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Faixa turquesa que aparece ao passar o mouse */
+.paises-baixos .tc-cartao::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--pb-turquesa);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.paises-baixos .tc-cartao:hover {
+    transform: translateY(-6px);
+    border-color: #bfe6e9;
+    box-shadow: 0 14px 32px rgba(22, 59, 80, 0.12);
+}
+
+.paises-baixos .tc-cartao:hover::after {
+    transform: scaleX(1);
+}
+
+/* Foto do cartão */
+.paises-baixos .tc-cartao-imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin: 0 0 22px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Número turquesa sobre a foto */
+.paises-baixos .tc-cartao-numero {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--pb-fundo-suave);
+    color: var(--pb-turquesa-escuro);
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(22, 59, 80, 0.2);
+}
+
+.paises-baixos .tc-cartao h3 {
+    margin: 0 24px 12px;
+    color: var(--pb-azul);
+    font-family: var(--pb-serifa);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.paises-baixos .tc-cartao p {
+    margin: 0 24px 24px;
+    color: var(--pb-texto);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.paises-baixos .tc-cartao > a {
+    margin: auto 24px 0;
+    color: var(--pb-turquesa-escuro);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.paises-baixos .tc-cartao > a:hover {
+    color: var(--pb-azul);
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .paises-baixos .tc-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .paises-baixos .tc-cartoes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+
+/* ===== RODAPÉ ===== */
+
+.paises-baixos .tc-rodape {
+    margin-top: 40px;
+    padding: 36px 24px;
+    background: var(--pb-azul);
+    color: #ffffff;
+    text-align: center;
+}
+
+.paises-baixos .tc-rodape .tc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.paises-baixos .tc-rodape p {
+    margin: 0;
+    color: #d4e2e8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.paises-baixos .tc-rodape a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.paises-baixos .tc-rodape a:hover {
+    color: #00c2cf;
+    text-decoration: underline;
+}

@@ -1,0 +1,378 @@
+/* Tema escuro exclusivo de Portugal. O claro permanece definido pelas folhas existentes. */
+html[data-portugal-tema="escuro"] {
+    color-scheme: dark;
+}
+
+html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pagina-portugal-inicio, body.tc-site.pais-portugal) {
+    --tc-branco: #162b38;
+    --tc-fundo: #0b1923;
+    --tc-texto: #d5e3e8;
+    --tc-marinho: #102a38;
+    --tc-link: #6de4e9;
+    --tc-borda: #31505f;
+    --tc-suave: #173947;
+    --pt-superficie: #162b38;
+    --pt-superficie-elevada: #1d3746;
+    --pt-texto-suave: #b9cdd5;
+    --pt-acento: #67e8f0;
+    --pt-titulo: #eef8fa;
+    background: var(--tc-fundo);
+    color: var(--tc-texto);
+}
+
+html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pagina-portugal-inicio, body.tc-site.pais-portugal) :is(h1, h2, h3) {
+    color: var(--pt-titulo);
+}
+
+html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pagina-portugal-inicio) {
+    background: #0b1923;
+    color: #d5e3e8;
+}
+
+html[data-portugal-tema="escuro"] .pagina-cultura {
+    --cultura-turquesa: #37bec7;
+    --cultura-marinho: #102a38;
+    --cultura-fundo: #0b1923;
+    --cultura-texto: #d5e3e8;
+    --cultura-suave: #173947;
+}
+
+html[data-portugal-tema="escuro"] :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] {
+    border-color: #31505f;
+    background: #102431;
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.marca, .tc-marca, .navegacao a, .tc-navegacao a, .tc-navegacao-basica a, .botao-dropdown, .tc-botao-paises) {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.cabecalho-principal, .tc-cabecalho)[data-portugal-navegacao] :is(.marca-texto small, .tc-marca-texto small) {
+    color: #b9cdd5;
+}
+
+html[data-portugal-tema="escuro"] body header[data-portugal-navegacao] :is(.navegacao, .tc-navegacao, .tc-navegacao-basica) a:is(:hover, :focus-visible, [aria-current="page"], [data-portugal-contexto]),
+html[data-portugal-tema="escuro"] body header[data-portugal-navegacao] :is(.botao-dropdown, .tc-botao-paises):is(:hover, :focus-visible, [data-portugal-contexto]) {
+    background: #1d4654;
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] body header[data-portugal-navegacao] [data-portugal-contexto] {
+    box-shadow: inset 0 0 0 1px #4f8d98;
+}
+
+html[data-portugal-tema="escuro"] :is(.menu-dropdown, .tc-lista-paises) {
+    border-color: #31505f;
+    background: #17303e;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 35%);
+}
+
+html[data-portugal-tema="escuro"] body header[data-portugal-navegacao] :is(a, button):focus-visible,
+html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pagina-portugal-inicio, body.tc-site.pais-portugal) :focus-visible {
+    outline-color: #8af1f3;
+    box-shadow: 0 0 0 3px #0b1923;
+}
+
+.portugal-tema-alternancia {
+    display: inline-grid;
+    flex: 0 0 auto;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    padding: 0;
+    border: 1px solid #93cfd4;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    color: #006b75;
+    cursor: pointer;
+}
+
+.portugal-tema-alternancia:hover {
+    background: #e0f4f5;
+    color: #004f57;
+}
+
+.portugal-tema-alternancia:focus-visible {
+    outline: 3px solid #006b75;
+    outline-offset: 3px;
+}
+
+.portugal-tema-icone {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.portugal-tema-icone-lua { display: none; }
+
+html[data-portugal-tema="escuro"] .portugal-tema-alternancia {
+    border-color: #4f8d98;
+    background: #173947;
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] .portugal-tema-alternancia:hover { background: #23505e; }
+html[data-portugal-tema="escuro"] .portugal-tema-icone-sol { display: none; }
+html[data-portugal-tema="escuro"] .portugal-tema-icone-lua { display: block; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-cartao, .pg-cartao, .explorar-cartao, .cultura-tradicao, .gastronomia-prato, .gastronomia-doce, .gastronomia-regiao, .gastronomia-continuar, .curio-cartao, .curio-fato, .curio-perguntas details, .curio-continuar, .curio-referencias, .pt-cartao, .pt-roteiro, .pt-dicas-faixa, .pt-continuar, .hospedagem-cartao, .alimentacao-cartao, .compras-cartao, .contato-cartao, .contato-formulario, .contato-formulario-secao) {
+    border-color: #31505f;
+    background: var(--pt-superficie);
+    color: var(--tc-texto);
+    box-shadow: 0 10px 28px rgb(0 0 0 / 24%);
+}
+
+/* Destaca somente a borda esquerda dos fatos no tema escuro. */
+html[data-portugal-tema="escuro"] body.tc-site.pais-portugal.pagina-curiosidades .curio-fato {
+    border-left-color: #00a7b5;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.cultura-destaque, .gastronomia-destaque, .curio-destaque, .curio-numeros, .pt-numero, .pt-dias, .alimentacao-destaque, .compras-destaque, .contato-cartao) {
+    background: #173947;
+    color: #d5e3e8;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-cartao, .pg-cartao, .explorar-cartao, .cultura-tradicao, .gastronomia-prato, .gastronomia-doce, .gastronomia-regiao, .gastronomia-continuar, .curio-cartao, .curio-fato, .curio-perguntas details, .curio-continuar, .curio-referencias, .pt-cartao, .pt-roteiro, .pt-dicas-faixa, .pt-continuar, .hospedagem-cartao, .alimentacao-cartao, .compras-cartao, .contato-cartao, .contato-formulario, .contato-formulario-secao) :is(h2, h3, strong, summary) {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-cartao, .pg-cartao, .explorar-cartao, .cultura-tradicao, .gastronomia-prato, .gastronomia-doce, .gastronomia-regiao, .gastronomia-continuar, .curio-cartao, .curio-fato, .curio-perguntas details, .curio-continuar, .curio-referencias, .pt-cartao, .pt-roteiro, .pt-dicas-faixa, .pt-continuar, .hospedagem-cartao, .alimentacao-cartao, .compras-cartao, .contato-cartao, .contato-formulario, .contato-formulario-secao) :is(p, li, dd, figcaption) {
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-cartao, .pg-cartao, .explorar-cartao, .cultura-tradicao, .gastronomia-prato, .gastronomia-doce, .gastronomia-regiao, .gastronomia-continuar, .curio-cartao, .curio-fato, .curio-perguntas details, .curio-continuar, .curio-referencias, .pt-cartao, .pt-roteiro, .pt-dicas-faixa, .pt-continuar, .hospedagem-cartao, .alimentacao-cartao, .compras-cartao, .contato-cartao, .contato-formulario, .contato-formulario-secao) a {
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.curio-perguntas details, .pt-dicas-faixa, .gastronomia-experiencias-lista li, .cultura-experiencias-lista li) {
+    border-color: #31505f;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-botao, .cultura-botao, .banner-botao, .destaque-galeria-botao) {
+    border-color: #37bec7;
+    background: #37bec7;
+    color: #06242d;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-botao, .cultura-botao, .banner-botao, .destaque-galeria-botao):hover {
+    border-color: #8af1f3;
+    background: #8af1f3;
+    color: #06242d;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) :is(.tc-botao-contorno, .cultura-botao-contorno) {
+    border-color: #67e8f0;
+    background: transparent;
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] .pagina-contato :is(input, textarea, select) {
+    border-color: #4f7887;
+    background: #0f2430;
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] .pagina-contato :is(input, textarea, select)::placeholder { color: #9db6c0; }
+
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio :is(.resumo-portugal, .explorar-cartao) { background: #162b38; border-color: #31505f; }
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio :is(.resumo-item, .explorar-cartao) { border-color: #31505f; }
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio :is(.resumo-icone, .cartao-numero, .pg-icone) { background: #173947; color: #8af1f3; }
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio :is(.resumo-label, .explorar-cartao p) { color: #c5d7de; }
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio .resumo-item strong { color: #eef8fa; }
+html[data-portugal-tema="escuro"] .pagina-portugal-inicio .apresentacao-textos p { color: #c5d7de; }
+html[data-portugal-tema="escuro"] .pagina-galeria-portugal .pg-icone { background: #173947; color: #8af1f3; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-migalhas, .pagina-curiosidades .curio-banner .tc-migalhas, .pagina-gastronomia .gastronomia-banner .tc-migalhas, .pagina-pontos-turisticos .pt-banner .tc-migalhas) a {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-migalhas, .pagina-curiosidades .curio-banner .tc-migalhas, .pagina-gastronomia .gastronomia-banner .tc-migalhas, .pagina-pontos-turisticos .pt-banner .tc-migalhas) a:hover {
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-migalhas, .pagina-curiosidades .curio-banner .tc-migalhas, .pagina-gastronomia .gastronomia-banner .tc-migalhas, .pagina-pontos-turisticos .pt-banner .tc-migalhas) li + li::before,
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-migalhas, .pagina-curiosidades .curio-banner .tc-migalhas, .pagina-gastronomia .gastronomia-banner .tc-migalhas, .pagina-pontos-turisticos .pt-banner .tc-migalhas) [aria-current] {
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-creditos, .pagina-pontos-turisticos .pt-creditos) :is(summary, p, li) {
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-creditos, .pagina-pontos-turisticos .pt-creditos) summary {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-creditos, .pagina-pontos-turisticos .pt-creditos) a {
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-cultura .cultura-creditos, .pagina-pontos-turisticos .pt-creditos) a:hover {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] .pagina-cultura .cultura-continuar {
+    background: #102a38;
+    color: #d5e3e8;
+}
+
+html[data-portugal-tema="escuro"] .pagina-cultura .cultura-continuar h2 { color: #eef8fa; }
+html[data-portugal-tema="escuro"] .pagina-cultura .cultura-continuar .cultura-etiqueta { color: #8af1f3; }
+
+/* Caminhos de navegação: uma escala única nas páginas que os oferecem. */
+:is(.pagina-galeria-portugal, .pagina-curiosidades, .pagina-gastronomia, .pagina-pontos-turisticos, .pagina-hospedagem, .pagina-alimentacao, .pagina-compras, .pagina-contato) .tc-migalhas,
+.pagina-cultura .cultura-migalhas {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-apresentacao-cards, .pagina-alimentacao .alimentacao-apresentacao-cards, .pagina-compras .compras-apresentacao-cards) {
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] .pagina-contato .contato-campo label { color: #eef8fa; }
+
+/* Mantém os cartões de contato legíveis sobre a superfície escura, no mesmo
+   contraste turquesa dos botões de contorno. */
+html[data-portugal-tema="escuro"] body.tc-site.pais-portugal.pagina-contato .contato-cartao {
+    border-color: #67e8f0;
+}
+
+html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos :is(summary, li) { color: #c5d7de; }
+html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos summary { color: #eef8fa; }
+html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos a { color: #8af1f3; }
+html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-creditos a:hover { color: #eef8fa; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem, .pagina-alimentacao, .pagina-compras, .pagina-contato) .tc-banner .tc-migalhas a {
+    color: #eef8fa;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem, .pagina-alimentacao, .pagina-compras, .pagina-contato) .tc-banner .tc-migalhas a:hover {
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem, .pagina-alimentacao, .pagina-compras, .pagina-contato) .tc-banner .tc-migalhas li + li::before,
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem, .pagina-alimentacao, .pagina-compras, .pagina-contato) .tc-banner .tc-migalhas [aria-current] {
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] .pagina-gastronomia .gastronomia-mercado strong { color: #eef8fa; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-dica, .pagina-compras .compras-dica) {
+    background: #173947;
+    color: #d5e3e8;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-dica, .pagina-compras .compras-dica) h2 { color: #eef8fa; }
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-dica, .pagina-compras .compras-dica) p { color: #c5d7de; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-card-foto, .pagina-compras .compras-card-foto) figcaption {
+    background: #102a38;
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-card-foto, .pagina-compras .compras-card-foto) figcaption a,
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-fontes, .pagina-compras .compras-fontes) a {
+    color: #8af1f3;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-fontes, .pagina-compras .compras-fontes) { color: #c5d7de; }
+
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-card-foto, .pagina-compras .compras-card-foto) figcaption a:hover,
+html[data-portugal-tema="escuro"] :is(.pagina-hospedagem .hospedagem-fontes, .pagina-compras .compras-fontes) a:hover { color: #eef8fa; }
+
+/* Estas páginas declaram 13px com maior especificidade que a regra comum. */
+:is(.pagina-curiosidades .curio-banner .tc-migalhas, .pagina-gastronomia .gastronomia-banner .tc-migalhas, .pagina-pontos-turisticos .pt-banner .tc-migalhas) {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-card-foto figcaption {
+    background: #102a38;
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-card-foto figcaption a { color: #8af1f3; }
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-card-foto figcaption a:hover { color: #eef8fa; }
+
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica {
+    background: #173947;
+    color: #d5e3e8;
+}
+
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica h2 { color: #eef8fa; }
+html[data-portugal-tema="escuro"] .pagina-alimentacao .alimentacao-dica p { color: #c5d7de; }
+
+/* Controles e superfícies da navegação compacta, somente no tema escuro. */
+@media (max-width: 980px) {
+    /* O cabeçalho dinâmico da galeria inclui um nó de texto após o ícone.
+       O rótulo acessível permanece no aria-label do botão. */
+    body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu {
+        font-size: 0;
+    }
+
+    body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu > span {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] .botao-menu span {
+        background: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao] .tc-botao-menu {
+        border-color: #4f7887;
+        background: #173947;
+        color: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] .navegacao {
+        border: 1px solid #31505f;
+        background: #102a38;
+        box-shadow: 0 12px 28px rgb(0 0 0 / 35%);
+    }
+
+    html[data-portugal-tema="escuro"] :is(body.pagina-portugal, body.pais-portugal) header.cabecalho-principal[data-portugal-navegacao] :is(.navegacao a, .botao-dropdown) {
+        color: #eef8fa;
+    }
+
+    html[data-portugal-tema="escuro"] body.tc-site.pais-portugal header.tc-cabecalho[data-portugal-navegacao][data-tc-menu-pronto][data-menu-aberto="true"] .tc-navegacao {
+        border: 1px solid #31505f;
+        background: #102a38;
+        box-shadow: 0 12px 28px rgb(0 0 0 / 35%);
+    }
+
+    html[data-portugal-tema="escuro"] header[data-portugal-navegacao] :is(.menu-dropdown, .tc-lista-paises) {
+        border-color: #31505f;
+        background: #173947;
+    }
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape {
+    background: #08151e;
+    color: #c5d7de;
+}
+
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape :is(h2, h3) { color: #eef8fa; }
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape :is(a, p) { color: #c5d7de; }
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape a:is(:hover, :focus-visible) { color: #8af1f3; }
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape .redes-sociais-portugal__icone { border-color: #37bec7; background: #173947; color: #8af1f3; }
+html[data-portugal-tema="escuro"] :is(.pagina-portugal, .tc-site.pais-portugal) .tc-rodape .tc-rodape-inferior { border-color: #31505f; }
+
+@media (max-width: 980px) {
+    .portugal-tema-alternancia {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .portugal-tema-alternancia {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+}

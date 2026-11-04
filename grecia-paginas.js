@@ -1,5 +1,5 @@
 // Script compartilhado pelas páginas internas da Grécia
-// (cultura, gastronomia, pontos turísticos e curiosidades)
+// (menu, dropdown de países, espaços de foto, animação de rolagem e botão de topo)
 
 // ===== Menu em celulares e tablets =====
 const botaoMenu = document.querySelector(".botao-menu");
