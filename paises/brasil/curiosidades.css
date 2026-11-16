@@ -1,0 +1,145 @@
+
+.pagina-curiosidades .cultura-banner-foto {
+    background-image:
+        linear-gradient(135deg, #0c3b2e 0%, #1e6114 48%, #5e8d0c 100%);
+}
+
+.pagina-curiosidades .curiosidades-secao { padding-bottom: 96px; }
+.pagina-curiosidades .curiosidades-secao-primeira { padding-top: 120px; }
+.pagina-curiosidades .curiosidades-secao .cultura-titulo-secao h2 { max-width: 760px; }
+
+.pagina-curiosidades .curiosidades-destaque {
+    padding: 48px 50px;
+    border-radius: 18px;
+    background: var(--cultura-marinho);
+    color: #fff;
+}
+
+.pagina-curiosidades .curiosidades-destaque .cultura-etiqueta {
+    margin-bottom: 18px;
+    color: #67e8f0;
+    font-size: 11px;
+}
+
+.pagina-curiosidades .curiosidades-fato {
+    min-height: 4.8em;
+    margin: 0 0 28px;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.6;
+}
+
+
+.pagina-curiosidades .curiosidades-fato.trocou { animation: curiosidade-entra 0.35s ease both; }
+
+@keyframes curiosidade-entra {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+
+.pagina-curiosidades .curiosidades-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 13px 22px;
+    border: 1px solid var(--cultura-turquesa);
+    border-radius: 8px;
+    background: var(--cultura-turquesa);
+    color: #092c3a;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.pagina-curiosidades .curiosidades-botao[hidden] { display: none; }
+.pagina-curiosidades .curiosidades-botao:hover {
+    border-color: #67e8f0;
+    background: #67e8f0;
+}
+.pagina-curiosidades .curiosidades-botao:focus-visible { outline-color: #fff; }
+
+.pagina-curiosidades .curiosidades-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-curiosidades .curiosidades-card {
+    min-width: 0;
+    padding: 36px 34px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+.pagina-curiosidades .curiosidades-card .cultura-etiqueta { margin-bottom: 12px; }
+.pagina-curiosidades .curiosidades-card h3 { margin: 0 0 12px; font-size: 26px; }
+.pagina-curiosidades .curiosidades-card p:not(.cultura-etiqueta) {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.pagina-curiosidades .curiosidades-fale {
+    padding: 48px 50px;
+    border-radius: 18px;
+    background: var(--cultura-marinho);
+    color: #fff;
+}
+.pagina-curiosidades .curiosidades-fale .cultura-etiqueta { color: #67e8f0; }
+.pagina-curiosidades .curiosidades-fale h2 {
+    margin-bottom: 28px;
+    color: #fff;
+    font-size: clamp(28px, 3vw, 44px);
+}
+
+.pagina-curiosidades .curiosidades-expressoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pagina-curiosidades .curiosidades-expressoes li {
+    min-width: 0;
+    padding: 14px 22px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 12%);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.pagina-curiosidades .curiosidades-expressoes strong { color: #fff; }
+.pagina-curiosidades .curiosidades-expressoes strong::after { content: " ·"; }
+.pagina-curiosidades .curiosidades-expressoes span { color: #a6eaf0; }
+
+.pagina-curiosidades .curiosidades-continuar { padding-bottom: 24px; }
+.pagina-curiosidades .curiosidades-continuar h2 { margin-bottom: 32px; }
+
+@media (max-width: 980px) {
+    .pagina-curiosidades .curiosidades-secao-primeira { padding-top: 88px; }
+    .pagina-curiosidades .curiosidades-destaque,
+    .pagina-curiosidades .curiosidades-fale { padding: 40px 36px; }
+}
+
+@media (max-width: 768px) {
+    .pagina-curiosidades .curiosidades-secao { padding-bottom: 64px; }
+    .pagina-curiosidades .curiosidades-secao-primeira { padding-top: 72px; }
+    .pagina-curiosidades .curiosidades-cards { grid-template-columns: 1fr; }
+    .pagina-curiosidades .curiosidades-card { padding: 28px 24px; }
+    .pagina-curiosidades .curiosidades-fato { min-height: 9em; }
+}
+
+@media (max-width: 600px) {
+    .pagina-curiosidades .curiosidades-secao-primeira { padding-top: 56px; }
+    .pagina-curiosidades .curiosidades-destaque,
+    .pagina-curiosidades .curiosidades-fale { padding: 32px 24px; }
+    .pagina-curiosidades .curiosidades-botao { width: 100%; justify-content: center; }
+    .pagina-curiosidades .curiosidades-expressoes li { border-radius: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-curiosidades .curiosidades-fato.trocou { animation: none; }
+}
