@@ -1,18 +1,12 @@
-/* Estilos exclusivos de Turismo (pontos-turisticos.html).
-   Carregue DEPOIS de cultura.css e gastronomia.css: banner, cabeçalho, etiquetas,
-   títulos de seção, espaços de imagem e os botões em cartão são reaproveitados de lá. */
 
-/* Foto do banner (a mesma da página principal do Brasil). */
 .pagina-turismo .cultura-banner-foto {
     background-image: url("../../imagens-brasil/pao-de-acucar.jpg");
 }
 
-/* Espaçamento entre as seções (o topo da primeira dá respiro depois do banner) */
 .pagina-turismo .turismo-secao { padding-bottom: 96px; }
 .pagina-turismo .turismo-secao-primeira { padding-top: 120px; }
 .pagina-turismo .turismo-secao .cultura-titulo-secao h2 { max-width: 640px; }
 
-/* ===== 1. Destino de destaque: cartão com foto e texto, alternando os lados ===== */
 .pagina-turismo .turismo-destaques {
     display: grid;
     gap: 28px;
@@ -30,7 +24,6 @@
     box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
 }
 
-/* Foto à esquerda no 1º cartão, à direita no 2º, e assim por diante. */
 .pagina-turismo .turismo-destaque:nth-child(even) .turismo-destaque-foto { order: 2; }
 
 .pagina-turismo .turismo-destaque-foto {
@@ -42,7 +35,6 @@
     background: #d4e2e8;
 }
 
-/* Espaço reservado e foto real ocupam todo o espaço da imagem. */
 .pagina-turismo .turismo-destaque-foto img,
 .pagina-turismo .turismo-destaque-foto .cultura-imagem-pendente {
     position: absolute;
@@ -87,7 +79,6 @@
 
 .pagina-turismo .turismo-texto { margin: 0; font-size: 16px; line-height: 1.8; }
 
-/* ===== 2. Lugares que valem a viagem: tabela com cabeçalho azul-marinho ===== */
 .pagina-turismo .turismo-tabela-caixa {
     overflow: hidden;
     border: 1px solid #e6edef;
@@ -102,7 +93,6 @@
     text-align: left;
 }
 
-/* Legenda só para leitores de tela */
 .pagina-turismo .turismo-sr {
     position: absolute;
     width: 1px;
@@ -138,7 +128,6 @@
     font-weight: 700;
 }
 
-/* Linhas alternadas e separadores leves para acompanhar a leitura */
 .pagina-turismo .turismo-tabela tbody tr:nth-child(odd) { background: #f6fafa; }
 .pagina-turismo .turismo-tabela tbody tr + tr :is(th, td) { border-top: 1px solid #e6edef; }
 .pagina-turismo .turismo-tabela tbody tr:hover { background: var(--cultura-suave); }
@@ -146,7 +135,6 @@
 .pagina-turismo .turismo-tabela :is(th, td):nth-child(1) { width: 38%; }
 .pagina-turismo .turismo-tabela :is(th, td):nth-child(2) { width: 34%; }
 
-/* ===== 3. Já esteja preparado! ===== */
 .pagina-turismo .turismo-preparado { padding-bottom: 24px; }
 .pagina-turismo .turismo-preparado h2 { margin-bottom: 18px; }
 .pagina-turismo .turismo-preparado-texto {
@@ -156,12 +144,10 @@
     line-height: 1.8;
 }
 
-/* Só dois botões (os estilos do cartão vêm de gastronomia.css). */
 .pagina-gastronomia .gastronomia-links.turismo-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* ---------- Responsivo ---------- */
 @media (max-width: 980px) {
     .pagina-turismo .turismo-secao-primeira { padding-top: 88px; }
     .pagina-turismo .turismo-destaque-foto { min-height: 320px; }
@@ -172,7 +158,6 @@
     .pagina-turismo .turismo-secao { padding-bottom: 64px; }
     .pagina-turismo .turismo-secao-primeira { padding-top: 72px; }
 
-    /* Uma coluna: a foto sempre vem antes do texto. */
     .pagina-turismo .turismo-destaque { grid-template-columns: 1fr; }
     .pagina-turismo .turismo-destaque:nth-child(even) .turismo-destaque-foto { order: 0; }
     .pagina-turismo .turismo-destaque-foto { min-height: 0; aspect-ratio: 16 / 10; }
@@ -187,7 +172,6 @@
 @media (max-width: 640px) {
     .pagina-turismo .turismo-secao-primeira { padding-top: 56px; }
 
-    /* A tabela vira uma lista: o nome do destino em cima, cidade e estado embaixo. */
     .pagina-turismo .turismo-tabela thead {
         position: absolute;
         width: 1px;

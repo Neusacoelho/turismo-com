@@ -1,0 +1,209 @@
+/*Estilos exclusivos de Hospedagem (paises/brasil/hospedagem.html).
+   Carregue DEPOIS de cultura.css e gastronomia.css: banner, cabeçalho, etiquetas,
+   títulos de seção e os botões em cartão são reaproveitados de lá. */
+
+/* Foto do banner: coloque o arquivo em imagens-brasil/ ou ajuste o nome.
+   Enquanto o arquivo não existir, aparece o degradê azul-marinho. */
+.pagina-hospedagem .cultura-banner-foto {
+    background-image:
+        url("../../imagens-brasil/Gramado-RS-Brasil-Hotel.jpg"),
+        linear-gradient(135deg, #0c2a3b 0%, #163b50 48%, #1f5470 100%);
+}
+
+/* Espaçamento entre as seções */
+.pagina-hospedagem .hospedagem-secao { padding-bottom: 96px; }
+.pagina-hospedagem .hospedagem-secao-primeira { padding-top: 120px; }
+.pagina-hospedagem .hospedagem-secao .cultura-titulo-secao h2 { max-width: 700px; }
+
+/* ===== Cartões com ícone (tipos de hospedagem e dicas) ===== */
+.pagina-hospedagem .hospedagem-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pagina-hospedagem .hospedagem-card {
+    min-width: 0;
+    padding: 32px 28px;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+
+.pagina-hospedagem .hospedagem-icone {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--cultura-suave);
+    font-size: 26px;
+    line-height: 1;
+}
+
+.pagina-hospedagem .hospedagem-card h3 { margin: 0 0 12px; font-size: 24px; }
+.pagina-hospedagem .hospedagem-card p { margin: 0; font-size: 14px; line-height: 1.8; }
+
+/* As dicas usam o azul claro do site para se diferenciar dos tipos de hospedagem. */
+.pagina-hospedagem .hospedagem-secao-dicas .hospedagem-card {
+    border-color: transparent;
+    background: var(--cultura-suave);
+    box-shadow: none;
+}
+.pagina-hospedagem .hospedagem-secao-dicas .hospedagem-icone { background: #fff; }
+
+/* ===== Onde ficar: tabela com cabeçalho azul-marinho, agrupada por região ===== */
+.pagina-hospedagem .hospedagem-tabela-caixa {
+    overflow: hidden;
+    border: 1px solid #e6edef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 59 80 / 6%);
+}
+
+.pagina-hospedagem .hospedagem-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Legenda só para leitores de tela */
+.pagina-hospedagem .hospedagem-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.pagina-hospedagem .hospedagem-tabela thead th {
+    padding: 20px 28px;
+    background: var(--cultura-marinho);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.pagina-hospedagem .hospedagem-tabela tbody th,
+.pagina-hospedagem .hospedagem-tabela tbody td {
+    padding: 18px 28px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.pagina-hospedagem .hospedagem-tabela tbody th {
+    color: var(--cultura-marinho);
+    font-family: inherit;
+    font-weight: 700;
+}
+
+/* Faixa com o nome da região */
+.pagina-hospedagem .hospedagem-tabela tbody .hospedagem-grupo th {
+    padding: 14px 28px;
+    border-top: 1px solid #e6edef;
+    background: var(--cultura-suave);
+    color: #007a85;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+.pagina-hospedagem .hospedagem-tabela tbody:first-of-type .hospedagem-grupo th { border-top: 0; }
+
+.pagina-hospedagem .hospedagem-tabela tbody tr:not(.hospedagem-grupo) :is(th, td) { border-top: 1px solid #e6edef; }
+.pagina-hospedagem .hospedagem-tabela tbody tr:not(.hospedagem-grupo):hover { background: #f6fafa; }
+
+.pagina-hospedagem .hospedagem-tabela :is(th, td):nth-child(1) { width: 24%; }
+.pagina-hospedagem .hospedagem-tabela :is(th, td):nth-child(2) { width: 30%; }
+
+.pagina-hospedagem .hospedagem-nota {
+    margin: 20px 0 0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ===== Continue sua viagem ===== */
+.pagina-hospedagem .hospedagem-continuar { padding-bottom: 24px; }
+.pagina-hospedagem .hospedagem-continuar h2 { margin-bottom: 18px; }
+.pagina-hospedagem .hospedagem-continuar-texto {
+    max-width: 760px;
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Dois botões (os estilos do cartão vêm de gastronomia.css). */
+.pagina-gastronomia .gastronomia-links.hospedagem-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 980px) {
+    .pagina-hospedagem .hospedagem-secao-primeira { padding-top: 88px; }
+    .pagina-hospedagem .hospedagem-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pagina-hospedagem .hospedagem-card { padding: 28px 24px; }
+}
+
+@media (max-width: 768px) {
+    .pagina-hospedagem .hospedagem-secao { padding-bottom: 64px; }
+    .pagina-hospedagem .hospedagem-secao-primeira { padding-top: 72px; }
+
+    .pagina-hospedagem .hospedagem-tabela thead th,
+    .pagina-hospedagem .hospedagem-tabela tbody th,
+    .pagina-hospedagem .hospedagem-tabela tbody td,
+    .pagina-hospedagem .hospedagem-tabela tbody .hospedagem-grupo th { padding-inline: 20px; }
+}
+
+@media (max-width: 640px) {
+    .pagina-hospedagem .hospedagem-secao-primeira { padding-top: 56px; }
+    .pagina-hospedagem .hospedagem-cards { grid-template-columns: 1fr; }
+
+    /* A tabela vira uma lista: destino em cima, local e público embaixo. */
+    .pagina-hospedagem .hospedagem-tabela thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    .pagina-hospedagem .hospedagem-tabela,
+    .pagina-hospedagem .hospedagem-tabela tbody,
+    .pagina-hospedagem .hospedagem-tabela tr,
+    .pagina-hospedagem .hospedagem-tabela tbody th {
+        display: block;
+        width: auto;
+    }
+    .pagina-hospedagem .hospedagem-tabela tbody tr:not(.hospedagem-grupo) {
+        padding: 16px 20px;
+        border-top: 1px solid #e6edef;
+    }
+    .pagina-hospedagem .hospedagem-tabela tbody tr:not(.hospedagem-grupo) :is(th, td) { border-top: 0; }
+    .pagina-hospedagem .hospedagem-tabela tbody tr:not(.hospedagem-grupo) th { padding: 0 0 6px; font-size: 16px; }
+    .pagina-hospedagem .hospedagem-tabela tbody td {
+        display: flex;
+        gap: 10px;
+        width: auto;
+        padding: 2px 0;
+        font-size: 14px;
+    }
+    .pagina-hospedagem .hospedagem-tabela tbody td::before {
+        min-width: 76px;
+        color: #007a85;
+        content: attr(data-label);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 2;
+        text-transform: uppercase;
+    }
+
+    .pagina-hospedagem .hospedagem-continuar-texto { font-size: 15px; }
+    .pagina-gastronomia .gastronomia-links.hospedagem-links { grid-template-columns: 1fr; }
+}
